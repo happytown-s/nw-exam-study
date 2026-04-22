@@ -1,0 +1,2906 @@
+[
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the subnet mask for /26 in decimal?",
+    "options": [
+      {
+        "text": "255.255.255.192",
+        "correct": true
+      },
+      {
+        "text": "255.255.255.128",
+        "correct": false
+      },
+      {
+        "text": "255.255.255.224",
+        "correct": false
+      },
+      {
+        "text": "255.255.255.240",
+        "correct": false
+      }
+    ],
+    "explanation": "/26 means 26 bits for network: 255.255.255.192. The last octet: 192 = 11000000 (2 host bits = 64-2=62 hosts).",
+    "cheatsheet": "/25 = 128, /26 = 192, /27 = 224, /28 = 240, /29 = 248, /30 = 252"
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "How many usable hosts does a /27 subnet have?",
+    "options": [
+      {
+        "text": "30",
+        "correct": true
+      },
+      {
+        "text": "32",
+        "correct": false
+      },
+      {
+        "text": "14",
+        "correct": false
+      },
+      {
+        "text": "62",
+        "correct": false
+      }
+    ],
+    "explanation": "/27 leaves 5 host bits: 2^5 = 32 total IPs, minus network and broadcast = 30 usable hosts.",
+    "cheatsheet": "Usable hosts = 2^(32-prefix) - 2. /24=254, /25=126, /26=62, /27=30, /28=14, /29=6, /30=2"
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the network address for 192.168.1.130/26?",
+    "options": [
+      {
+        "text": "192.168.1.128",
+        "correct": true
+      },
+      {
+        "text": "192.168.1.0",
+        "correct": false
+      },
+      {
+        "text": "192.168.1.64",
+        "correct": false
+      },
+      {
+        "text": "192.168.1.192",
+        "correct": false
+      }
+    ],
+    "explanation": "/26 has block size of 64. 130 falls in the 128 block (128+63=191). Network = 192.168.1.128.",
+    "cheatsheet": "Block size = 256 - mask octet. /26 = 256-192=64. Blocks: 0, 64, 128, 192."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the broadcast address for 10.0.0.0/23?",
+    "options": [
+      {
+        "text": "10.0.1.255",
+        "correct": true
+      },
+      {
+        "text": "10.0.0.255",
+        "correct": false
+      },
+      {
+        "text": "10.0.255.255",
+        "correct": false
+      },
+      {
+        "text": "10.255.255.255",
+        "correct": false
+      }
+    ],
+    "explanation": "/23 spans two class C: 10.0.0.0 to 10.0.1.255. The last address before the next subnet is broadcast.",
+    "cheatsheet": "/23 = 510 hosts, 2 consecutive /24s. Broadcast = last IP in range."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "You need 50 hosts per subnet. What is the minimum subnet mask?",
+    "options": [
+      {
+        "text": "/26",
+        "correct": true
+      },
+      {
+        "text": "/25",
+        "correct": false
+      },
+      {
+        "text": "/27",
+        "correct": false
+      },
+      {
+        "text": "/24",
+        "correct": false
+      }
+    ],
+    "explanation": "2^5-2=30 (too few), 2^6-2=62 (enough). So /26 (6 host bits) is the minimum mask.",
+    "cheatsheet": "Find smallest n where 2^n - 2 >= required hosts. Host bits = n, prefix = 32 - n."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the CIDR notation for subnet mask 255.255.255.248?",
+    "options": [
+      {
+        "text": "/29",
+        "correct": true
+      },
+      {
+        "text": "/28",
+        "correct": false
+      },
+      {
+        "text": "/30",
+        "correct": false
+      },
+      {
+        "text": "/27",
+        "correct": false
+      }
+    ],
+    "explanation": "248 in binary = 11111000 (5 ones in last octet). 24 + 5 = 29. Gives 6 usable hosts (8-2).",
+    "cheatsheet": "Count consecutive 1-bits: 255.255.255.x -> 24 + bits in x. 248=11111000=5 bits."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "How many /24 subnets can you create from 172.16.0.0/16?",
+    "options": [
+      {
+        "text": "256",
+        "correct": true
+      },
+      {
+        "text": "128",
+        "correct": false
+      },
+      {
+        "text": "254",
+        "correct": false
+      },
+      {
+        "text": "512",
+        "correct": false
+      }
+    ],
+    "explanation": "/16 to /24 borrows 8 bits: 2^8 = 256 subnets, each with 254 usable hosts.",
+    "cheatsheet": "New subnets = 2^(new_prefix - original_prefix). /16 to /24 = 2^8 = 256."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the first usable IP in 192.168.10.32/28?",
+    "options": [
+      {
+        "text": "192.168.10.33",
+        "correct": true
+      },
+      {
+        "text": "192.168.10.32",
+        "correct": false
+      },
+      {
+        "text": "192.168.10.34",
+        "correct": false
+      },
+      {
+        "text": "192.168.10.1",
+        "correct": false
+      }
+    ],
+    "explanation": "Network is 192.168.10.32, broadcast is 192.168.10.47. First usable = 192.168.10.33.",
+    "cheatsheet": "First usable = network + 1. Last usable = broadcast - 1."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "In VLSM, what is the subnet mask for a point-to-point link (2 hosts)?",
+    "options": [
+      {
+        "text": "/30 (255.255.255.252)",
+        "correct": true
+      },
+      {
+        "text": "/29",
+        "correct": false
+      },
+      {
+        "text": "/31",
+        "correct": false
+      },
+      {
+        "text": "/28",
+        "correct": false
+      }
+    ],
+    "explanation": "/30 provides 4 total IPs (2 usable) for point-to-point links. /31 (RFC 3021) gives 2 IPs with no network/broadcast.",
+    "cheatsheet": "Point-to-point: /30 (traditional) or /31 (RFC 3021, no net/bcast)."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the wildcard mask for 255.255.255.192?",
+    "options": [
+      {
+        "text": "0.0.0.63",
+        "correct": true
+      },
+      {
+        "text": "0.0.0.64",
+        "correct": false
+      },
+      {
+        "text": "0.0.0.127",
+        "correct": false
+      },
+      {
+        "text": "0.0.0.128",
+        "correct": false
+      }
+    ],
+    "explanation": "Wildcard = inverse of subnet mask. 255-255=0, 255-255=0, 255-255=0, 255-192=63.",
+    "cheatsheet": "Wildcard mask = 255.255.255.255 - subnet mask. 192 inverted = 63."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "How many subnets does 200.10.0.0/21 provide if subnetted to /24?",
+    "options": [
+      {
+        "text": "8",
+        "correct": true
+      },
+      {
+        "text": "4",
+        "correct": false
+      },
+      {
+        "text": "16",
+        "correct": false
+      },
+      {
+        "text": "7",
+        "correct": false
+      }
+    ],
+    "explanation": "Borrowing 3 bits from /21 to /24: 2^3 = 8 subnets, each a /24 with 254 hosts.",
+    "cheatsheet": "Subnets = 2^(target_prefix - current_prefix). /21 to /24 = 2^3 = 8."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the last usable IP in 10.10.10.0/25?",
+    "options": [
+      {
+        "text": "10.10.10.126",
+        "correct": true
+      },
+      {
+        "text": "10.10.10.127",
+        "correct": false
+      },
+      {
+        "text": "10.10.10.254",
+        "correct": false
+      },
+      {
+        "text": "10.10.10.128",
+        "correct": false
+      }
+    ],
+    "explanation": "/25: network=10.10.10.0, broadcast=10.10.10.127. Last usable = 10.10.10.126.",
+    "cheatsheet": "Broadcast = network + block_size - 1. Last usable = broadcast - 1."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the block size for a /28 subnet?",
+    "options": [
+      {
+        "text": "16",
+        "correct": true
+      },
+      {
+        "text": "8",
+        "correct": false
+      },
+      {
+        "text": "32",
+        "correct": false
+      },
+      {
+        "text": "4",
+        "correct": false
+      }
+    ],
+    "explanation": "/28 leaves 4 host bits: 2^4 = 16 IP addresses per subnet (block size).",
+    "cheatsheet": "Block size = 2^(32 - prefix). /28 = 2^4 = 16."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "How many bits must be borrowed from a /24 to create 10 subnets?",
+    "options": [
+      {
+        "text": "4",
+        "correct": true
+      },
+      {
+        "text": "3",
+        "correct": false
+      },
+      {
+        "text": "5",
+        "correct": false
+      },
+      {
+        "text": "2",
+        "correct": false
+      }
+    ],
+    "explanation": "2^3=8 (not enough), 2^4=16 (enough). Borrow 4 bits, giving /28 with 14 hosts each.",
+    "cheatsheet": "Find smallest n where 2^n >= required subnets. Borrow n bits."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the network address for 172.16.5.200/27?",
+    "options": [
+      {
+        "text": "172.16.5.192",
+        "correct": true
+      },
+      {
+        "text": "172.16.5.0",
+        "correct": false
+      },
+      {
+        "text": "172.16.5.128",
+        "correct": false
+      },
+      {
+        "text": "172.16.5.224",
+        "correct": false
+      }
+    ],
+    "explanation": "/27 block = 32. 200/32 = 6 remainder 8. Block 6 starts at 192 (6*32=192). Network = 172.16.5.192.",
+    "cheatsheet": "Network = floor(IP / block_size) * block_size. 200/32=6.25, floor=6, 6*32=192."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "If you have a /22 network, how many /28 subnets can you create?",
+    "options": [
+      {
+        "text": "64",
+        "correct": true
+      },
+      {
+        "text": "32",
+        "correct": false
+      },
+      {
+        "text": "128",
+        "correct": false
+      },
+      {
+        "text": "16",
+        "correct": false
+      }
+    ],
+    "explanation": "/22 to /28 borrows 6 bits: 2^6 = 64 subnets, each with 14 usable hosts.",
+    "cheatsheet": "Subnets = 2^(28-22) = 2^6 = 64."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the subnet mask for 192.168.100.0/22?",
+    "options": [
+      {
+        "text": "255.255.252.0",
+        "correct": true
+      },
+      {
+        "text": "255.255.254.0",
+        "correct": false
+      },
+      {
+        "text": "255.255.248.0",
+        "correct": false
+      },
+      {
+        "text": "255.255.255.0",
+        "correct": false
+      }
+    ],
+    "explanation": "/22 means 22 bits: 255.255.252.0 (252 = 11111100 in binary, 6 host bits).",
+    "cheatsheet": "/22 = 255.255.252.0, /23 = 255.255.254.0, /24 = 255.255.255.0"
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the broadcast address of 10.1.2.0/24?",
+    "options": [
+      {
+        "text": "10.1.2.255",
+        "correct": true
+      },
+      {
+        "text": "10.1.2.254",
+        "correct": false
+      },
+      {
+        "text": "10.1.2.0",
+        "correct": false
+      },
+      {
+        "text": "10.1.255.255",
+        "correct": false
+      }
+    ],
+    "explanation": "For /24, broadcast is the last IP in the range: 10.1.2.255. Last usable = 10.1.2.254.",
+    "cheatsheet": "/24 broadcast: x.y.z.255. /23 broadcast: x.y.(z+1).255."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "How many usable hosts are in 172.16.0.0/23?",
+    "options": [
+      {
+        "text": "510",
+        "correct": true
+      },
+      {
+        "text": "512",
+        "correct": false
+      },
+      {
+        "text": "254",
+        "correct": false
+      },
+      {
+        "text": "1022",
+        "correct": false
+      }
+    ],
+    "explanation": "/23 has 9 host bits: 2^9=512 total, minus 2 = 510 usable hosts.",
+    "cheatsheet": "/23 = 510 hosts, /22 = 1022, /21 = 2046, /20 = 4094."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What subnet does 192.168.1.47/28 belong to?",
+    "options": [
+      {
+        "text": "192.168.1.32",
+        "correct": true
+      },
+      {
+        "text": "192.168.1.16",
+        "correct": false
+      },
+      {
+        "text": "192.168.1.48",
+        "correct": false
+      },
+      {
+        "text": "192.168.1.0",
+        "correct": false
+      }
+    ],
+    "explanation": "/28 block=16. 47/16=2 remainder 15. Block 2 starts at 32. Network=192.168.1.32.",
+    "cheatsheet": "Block size = 2^(32-28)=16. Blocks: 0,16,32,48... 47 falls in 32-47."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the maximum number of /30 subnets in 192.168.0.0/24?",
+    "options": [
+      {
+        "text": "64",
+        "correct": true
+      },
+      {
+        "text": "62",
+        "correct": false
+      },
+      {
+        "text": "128",
+        "correct": false
+      },
+      {
+        "text": "32",
+        "correct": false
+      }
+    ],
+    "explanation": "/24 to /30 borrows 6 bits: 2^6=64 subnets, each with 2 usable hosts.",
+    "cheatsheet": "2^(30-24)=2^6=64 subnets. Each /30 = 4 IPs (2 usable)."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "You need 5 subnets from 192.168.1.0/24. What mask should you use?",
+    "options": [
+      {
+        "text": "/27",
+        "correct": true
+      },
+      {
+        "text": "/26",
+        "correct": false
+      },
+      {
+        "text": "/28",
+        "correct": false
+      },
+      {
+        "text": "/25",
+        "correct": false
+      }
+    ],
+    "explanation": "Need 5 subnets: 2^2=4 (not enough), 2^3=8 (enough). Borrow 3 bits: /24+3 = /27. 8 subnets of 30 hosts each.",
+    "cheatsheet": "Borrow bits: ceil(log2(required_subnets)). ceil(log2(5)) = 3 bits. /27."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "Convert subnet mask 255.255.128.0 to CIDR notation.",
+    "options": [
+      {
+        "text": "/17",
+        "correct": true
+      },
+      {
+        "text": "/18",
+        "correct": false
+      },
+      {
+        "text": "/16",
+        "correct": false
+      },
+      {
+        "text": "/19",
+        "correct": false
+      }
+    ],
+    "explanation": "255.255.128.0: first 16 bits + 1 bit in third octet (128=10000000). Total = 17 bits = /17.",
+    "cheatsheet": "128=1 bit, 192=2 bits, 224=3, 240=4, 248=5, 252=6, 254=7, 255=8."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the valid host range for 10.0.0.16/29?",
+    "options": [
+      {
+        "text": "10.0.0.17 to 10.0.0.30",
+        "correct": true
+      },
+      {
+        "text": "10.0.0.16 to 10.0.0.31",
+        "correct": false
+      },
+      {
+        "text": "10.0.0.1 to 10.0.0.14",
+        "correct": false
+      },
+      {
+        "text": "10.0.0.17 to 10.0.0.22",
+        "correct": false
+      }
+    ],
+    "explanation": "/29: network=10.0.0.16, broadcast=10.0.0.23. Host range=10.0.0.17 to 10.0.0.22.",
+    "cheatsheet": "Host range = network+1 to broadcast-1. Block=8: 16-23."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "How many total IP addresses are in a /28 subnet?",
+    "options": [
+      {
+        "text": "16",
+        "correct": true
+      },
+      {
+        "text": "14",
+        "correct": false
+      },
+      {
+        "text": "15",
+        "correct": false
+      },
+      {
+        "text": "8",
+        "correct": false
+      }
+    ],
+    "explanation": "/28 has 4 host bits: 2^4=16 total IPs (14 usable + network + broadcast).",
+    "cheatsheet": "Total IPs = 2^(32-prefix). Usable = total - 2."
+  },
+  {
+    "category": "Subnet Calculation",
+    "question": "What is the subnet mask that allows 100 hosts per subnet with maximum subnets from /24?",
+    "options": [
+      {
+        "text": "255.255.255.128",
+        "correct": true
+      },
+      {
+        "text": "255.255.255.192",
+        "correct": false
+      },
+      {
+        "text": "255.255.255.224",
+        "correct": false
+      },
+      {
+        "text": "255.255.255.0",
+        "correct": false
+      }
+    ],
+    "explanation": "2^7-2=126 (enough for 100), 2^6-2=62 (not enough). /25 gives 126 hosts, 2 subnets from /24.",
+    "cheatsheet": "2^n-2 >= 100: n=7 (126 hosts). Prefix=32-7=25. Mask=255.255.255.128."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "Convert 192.168.1.1 to binary.",
+    "options": [
+      {
+        "text": "11000000.10101000.00000001.00000001",
+        "correct": true
+      },
+      {
+        "text": "10101000.11000000.00000001.00000001",
+        "correct": false
+      },
+      {
+        "text": "11000000.10101000.1.1",
+        "correct": false
+      },
+      {
+        "text": "192.168.1.1 is not convertible to binary",
+        "correct": false
+      }
+    ],
+    "explanation": "192=11000000, 168=10101000, 1=00000001, 1=00000001.",
+    "cheatsheet": "Decimal to binary: divide by 2, collect remainders (right to left)."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What is the binary value of 255.255.0.0?",
+    "options": [
+      {
+        "text": "11111111.11111111.00000000.00000000",
+        "correct": true
+      },
+      {
+        "text": "11111111.11111111.11111111.00000000",
+        "correct": false
+      },
+      {
+        "text": "11111111.00000000.00000000.00000000",
+        "correct": false
+      },
+      {
+        "text": "255.255.0.0 has no binary form",
+        "correct": false
+      }
+    ],
+    "explanation": "255=11111111, 0=00000000. So 255.255.0.0 = 11111111.11111111.00000000.00000000.",
+    "cheatsheet": "Power of 2 chart: 128,64,32,16,8,4,2,1"
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What class is the IP address 172.16.0.1?",
+    "options": [
+      {
+        "text": "Class B",
+        "correct": true
+      },
+      {
+        "text": "Class A",
+        "correct": false
+      },
+      {
+        "text": "Class C",
+        "correct": false
+      },
+      {
+        "text": "Class D",
+        "correct": false
+      }
+    ],
+    "explanation": "Class B: 128.0.0.0 - 191.255.255.255 (first octet 128-191). Class A: 1-126. Class C: 192-223.",
+    "cheatsheet": "A:1-126, B:128-191, C:192-223, D:224-239, E:240-255"
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What is the binary value of decimal 172?",
+    "options": [
+      {
+        "text": "10101100",
+        "correct": true
+      },
+      {
+        "text": "11001100",
+        "correct": false
+      },
+      {
+        "text": "10101010",
+        "correct": false
+      },
+      {
+        "text": "10010100",
+        "correct": false
+      }
+    ],
+    "explanation": "172 = 128+32+8+4 = 10101100 in binary.",
+    "cheatsheet": "Break down: 172-128=44, 44-32=12, 12-8=4, 4-4=0. Positions: 128,32,8,4."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "How many Class A networks exist?",
+    "options": [
+      {
+        "text": "126",
+        "correct": true
+      },
+      {
+        "text": "128",
+        "correct": false
+      },
+      {
+        "text": "254",
+        "correct": false
+      },
+      {
+        "text": "255",
+        "correct": false
+      }
+    ],
+    "explanation": "Class A: first octet 1-126 (0 is reserved, 127 is loopback). So 126 networks.",
+    "cheatsheet": "Class A: 126 networks x 16M hosts. Class B: 16384 networks x 65K hosts. Class C: 2M networks x 254 hosts."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What is the default subnet mask for Class B?",
+    "options": [
+      {
+        "text": "255.255.0.0 (/16)",
+        "correct": true
+      },
+      {
+        "text": "255.0.0.0 (/8)",
+        "correct": false
+      },
+      {
+        "text": "255.255.255.0 (/24)",
+        "correct": false
+      },
+      {
+        "text": "255.255.128.0 (/17)",
+        "correct": false
+      }
+    ],
+    "explanation": "Class B default: /16 (255.255.0.0). Class A: /8. Class C: /24.",
+    "cheatsheet": "Class A=/8, Class B=/16, Class C=/24. These are the classful defaults."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "Convert binary 11000000.10101000.00000001.00000001 to decimal.",
+    "options": [
+      {
+        "text": "192.168.1.1",
+        "correct": true
+      },
+      {
+        "text": "192.168.1.0",
+        "correct": false
+      },
+      {
+        "text": "193.168.1.1",
+        "correct": false
+      },
+      {
+        "text": "192.169.1.1",
+        "correct": false
+      }
+    ],
+    "explanation": "11000000=128+64=192, 10101000=128+32+8=168, 00000001=1, 00000001=1.",
+    "cheatsheet": "Binary to decimal: sum of 2^position for each '1' bit."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "Is 192.168.1.0/24 a valid host address?",
+    "options": [
+      {
+        "text": "No, it is the network address",
+        "correct": true
+      },
+      {
+        "text": "Yes, it is a valid host",
+        "correct": false
+      },
+      {
+        "text": "No, it is the broadcast address",
+        "correct": false
+      },
+      {
+        "text": "It depends on the subnet mask",
+        "correct": false
+      }
+    ],
+    "explanation": "192.168.1.0 is the network (first) address of the /24 subnet. It cannot be assigned to a host.",
+    "cheatsheet": "Network address = all host bits 0. Broadcast = all host bits 1. Neither is assignable."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What is the APIPA address range?",
+    "options": [
+      {
+        "text": "169.254.0.0/16",
+        "correct": true
+      },
+      {
+        "text": "192.168.0.0/16",
+        "correct": false
+      },
+      {
+        "text": "10.0.0.0/8",
+        "correct": false
+      },
+      {
+        "text": "172.16.0.0/12",
+        "correct": false
+      }
+    ],
+    "explanation": "APIPA (Automatic Private IP Addressing): 169.254.0.0/16, assigned when DHCP is unavailable.",
+    "cheatsheet": "APIPA = 169.254.0.1 to 169.254.255.254. No gateway = no internet."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "How many host bits does a /22 have?",
+    "options": [
+      {
+        "text": "10",
+        "correct": true
+      },
+      {
+        "text": "8",
+        "correct": false
+      },
+      {
+        "text": "6",
+        "correct": false
+      },
+      {
+        "text": "12",
+        "correct": false
+      }
+    ],
+    "explanation": "/22 network bits, 32-22=10 host bits. 2^10=1024 total IPs, 1022 usable.",
+    "cheatsheet": "Host bits = 32 - prefix. /22 = 10 host bits."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What class is 10.0.0.1?",
+    "options": [
+      {
+        "text": "Class A",
+        "correct": true
+      },
+      {
+        "text": "Class B",
+        "correct": false
+      },
+      {
+        "text": "Class C",
+        "correct": false
+      },
+      {
+        "text": "Class D",
+        "correct": false
+      }
+    ],
+    "explanation": "Class A: first octet 1-126. 10 is in this range. Default mask /8.",
+    "cheatsheet": "Class A: 1-126, B: 128-191, C: 192-223, D: 224-239 (multicast), E: 240-255 (reserved)."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "Convert the third octet 192 to binary.",
+    "options": [
+      {
+        "text": "11000000",
+        "correct": true
+      },
+      {
+        "text": "10101010",
+        "correct": false
+      },
+      {
+        "text": "11110000",
+        "correct": false
+      },
+      {
+        "text": "10000000",
+        "correct": false
+      }
+    ],
+    "explanation": "192 = 128+64 = 11000000.",
+    "cheatsheet": "128+64=192, 128+64+32=224, 128+64+32+16=240, 128+64+32+16+8=248"
+  },
+  {
+    "category": "IP Addressing",
+    "question": "Which IP address is a loopback address?",
+    "options": [
+      {
+        "text": "127.0.0.1",
+        "correct": true
+      },
+      {
+        "text": "0.0.0.0",
+        "correct": false
+      },
+      {
+        "text": "255.255.255.255",
+        "correct": false
+      },
+      {
+        "text": "1.1.1.1",
+        "correct": false
+      }
+    ],
+    "explanation": "127.0.0.1 is the loopback address. Entire 127.0.0.0/8 range is loopback.",
+    "cheatsheet": "127.x.x.x = loopback. 0.0.0.0 = unspecified. 255.255.255.255 = limited broadcast."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "How many usable IPs in a Class C network?",
+    "options": [
+      {
+        "text": "254",
+        "correct": true
+      },
+      {
+        "text": "255",
+        "correct": false
+      },
+      {
+        "text": "256",
+        "correct": false
+      },
+      {
+        "text": "252",
+        "correct": false
+      }
+    ],
+    "explanation": "Class C is /24: 2^8=256 total, minus network and broadcast = 254 usable.",
+    "cheatsheet": "Class C: 256-2=254. /24 is 1 octet of host bits."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What is 192.168.1.255/24?",
+    "options": [
+      {
+        "text": "The broadcast address",
+        "correct": true
+      },
+      {
+        "text": "A valid host address",
+        "correct": false
+      },
+      {
+        "text": "The network address",
+        "correct": false
+      },
+      {
+        "text": "The gateway address",
+        "correct": false
+      }
+    ],
+    "explanation": "192.168.1.255 is the broadcast (last) address of the /24 subnet. Cannot be assigned to a host.",
+    "cheatsheet": "Last address in subnet = broadcast. All host bits set to 1."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "Convert 10101100 to decimal.",
+    "options": [
+      {
+        "text": "172",
+        "correct": true
+      },
+      {
+        "text": "184",
+        "correct": false
+      },
+      {
+        "text": "190",
+        "correct": false
+      },
+      {
+        "text": "168",
+        "correct": false
+      }
+    ],
+    "explanation": "1*128+0*64+1*32+0*16+1*8+1*4+0*2+0*1 = 128+32+8+4 = 172.",
+    "cheatsheet": "Positional values: 128,64,32,16,8,4,2,1. Sum positions with '1'."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "How many private Class B networks exist?",
+    "options": [
+      {
+        "text": "16",
+        "correct": true
+      },
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "256",
+        "correct": false
+      },
+      {
+        "text": "128",
+        "correct": false
+      }
+    ],
+    "explanation": "Class B private: 172.16.0.0/12. Ranges 172.16.x.x to 172.31.x.x. That is 16 Class B-equivalent networks.",
+    "cheatsheet": "Class B private: 172.16.0.0 - 172.31.255.255 (172.16 to 172.31 = 16 blocks)."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "What is 0.0.0.0 used for?",
+    "options": [
+      {
+        "text": "Default route or unspecified address",
+        "correct": true
+      },
+      {
+        "text": "Loopback address",
+        "correct": false
+      },
+      {
+        "text": "Broadcast address",
+        "correct": false
+      },
+      {
+        "text": "Network address only",
+        "correct": false
+      }
+    ],
+    "explanation": "0.0.0.0 means unspecified source or default route. In routing, it matches all destinations.",
+    "cheatsheet": "0.0.0.0 = default route / unspecified. 0.0.0.0/0 = match everything."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "How many private Class C networks exist?",
+    "options": [
+      {
+        "text": "256",
+        "correct": true
+      },
+      {
+        "text": "255",
+        "correct": false
+      },
+      {
+        "text": "16",
+        "correct": false
+      },
+      {
+        "text": "1",
+        "correct": false
+      }
+    ],
+    "explanation": "Class C private: 192.168.0.0/16. Each /24 within is a separate Class C network: 192.168.0-255 = 256 networks.",
+    "cheatsheet": "Class C private: 192.168.0.0 to 192.168.255.0 (256 networks)."
+  },
+  {
+    "category": "IP Addressing",
+    "question": "Which binary AND of 192.168.1.100 and 255.255.255.0 gives the network address?",
+    "options": [
+      {
+        "text": "192.168.1.0",
+        "correct": true
+      },
+      {
+        "text": "192.168.1.100",
+        "correct": false
+      },
+      {
+        "text": "192.168.0.0",
+        "correct": false
+      },
+      {
+        "text": "0.0.0.0",
+        "correct": false
+      }
+    ],
+    "explanation": "IP AND mask: 192.255=192, 168.255=168, 1.255=1, 100.0=0. Network=192.168.1.0.",
+    "cheatsheet": "Network address = IP AND subnet mask (bitwise AND operation)."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A 100 Mbps link has 10 ms RTT. What is the bandwidth-delay product?",
+    "options": [
+      {
+        "text": "125,000 bytes",
+        "correct": true
+      },
+      {
+        "text": "100,000 bytes",
+        "correct": false
+      },
+      {
+        "text": "1,000,000 bytes",
+        "correct": false
+      },
+      {
+        "text": "12,500 bytes",
+        "correct": false
+      }
+    ],
+    "explanation": "BDP = 100 Mbps x 0.01s = 1,000,000 bits = 125,000 bytes. TCP window should be >=125KB.",
+    "cheatsheet": "BDP (bits) = bandwidth (bps) x RTT (s). Convert to bytes: /8."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A 1 Gbps link has 50ms RTT. What is the bandwidth-delay product in KB?",
+    "options": [
+      {
+        "text": "6,250 KB",
+        "correct": true
+      },
+      {
+        "text": "50,000 KB",
+        "correct": false
+      },
+      {
+        "text": "1,000 KB",
+        "correct": false
+      },
+      {
+        "text": "62,500 KB",
+        "correct": false
+      }
+    ],
+    "explanation": "BDP = 1,000,000,000 x 0.05 = 50,000,000 bits = 6,250,000 bytes = 6,250 KB.",
+    "cheatsheet": "BDP = 1Gbps x 50ms = 50Mb = 6,250KB. Window scaling needed!"
+  },
+  {
+    "category": "Network Performance",
+    "question": "If throughput is 500 Mbps and bandwidth is 1 Gbps, what is the utilization?",
+    "options": [
+      {
+        "text": "50%",
+        "correct": true
+      },
+      {
+        "text": "25%",
+        "correct": false
+      },
+      {
+        "text": "100%",
+        "correct": false
+      },
+      {
+        "text": "75%",
+        "correct": false
+      }
+    ],
+    "explanation": "Utilization = (throughput / bandwidth) x 100 = (500/1000) x 100 = 50%.",
+    "cheatsheet": "Utilization % = (actual throughput / max bandwidth) x 100."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A TCP window of 64 KB on a link with 100ms RTT. What is max throughput?",
+    "options": [
+      {
+        "text": "5.12 Mbps",
+        "correct": true
+      },
+      {
+        "text": "64 Mbps",
+        "correct": false
+      },
+      {
+        "text": "640 Kbps",
+        "correct": false
+      },
+      {
+        "text": "10 Mbps",
+        "correct": false
+      }
+    ],
+    "explanation": "Throughput = window / RTT = 64KB / 0.1s = 640KB/s = 5.12 Mbps.",
+    "cheatsheet": "Max throughput = window_size / RTT. Window too small = underutilized."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What TCP window size is needed to fill a 10 Gbps link with 20ms RTT?",
+    "options": [
+      {
+        "text": "25 MB",
+        "correct": true
+      },
+      {
+        "text": "2.5 MB",
+        "correct": false
+      },
+      {
+        "text": "250 KB",
+        "correct": false
+      },
+      {
+        "text": "250 MB",
+        "correct": false
+      }
+    ],
+    "explanation": "BDP = 10Gbps x 0.02s = 200Mb = 25MB. Window scaling required (exceeds 65535).",
+    "cheatsheet": "Window = BWP x RTT. 10Gbps x 20ms = 200Mb = 25MB."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A packet of 1500 bytes takes 2ms queuing delay. How many packets can the queue hold if buffer is 48KB?",
+    "options": [
+      {
+        "text": "32 packets",
+        "correct": true
+      },
+      {
+        "text": "64 packets",
+        "correct": false
+      },
+      {
+        "text": "16 packets",
+        "correct": false
+      },
+      {
+        "text": "48 packets",
+        "correct": false
+      }
+    ],
+    "explanation": "48KB / 1500 bytes = 32 packets. Each packet buffered adds 2ms delay.",
+    "cheatsheet": "Queue depth = buffer_size / packet_size."
+  },
+  {
+    "category": "Network Performance",
+    "question": "File size is 100 MB. Transfer time is 80 seconds. What is the throughput in Mbps?",
+    "options": [
+      {
+        "text": "10 Mbps",
+        "correct": true
+      },
+      {
+        "text": "8 Mbps",
+        "correct": false
+      },
+      {
+        "text": "12.5 Mbps",
+        "correct": false
+      },
+      {
+        "text": "100 Mbps",
+        "correct": false
+      }
+    ],
+    "explanation": "100MB = 800Mb. Throughput = 800Mb / 80s = 10 Mbps.",
+    "cheatsheet": "Throughput = (file_size_bits / transfer_time_seconds). Convert MB to Mb: x8."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the one-way propagation delay if RTT is 40ms and processing delay is 2ms each way?",
+    "options": [
+      {
+        "text": "18ms",
+        "correct": true
+      },
+      {
+        "text": "20ms",
+        "correct": false
+      },
+      {
+        "text": "38ms",
+        "correct": false
+      },
+      {
+        "text": "22ms",
+        "correct": false
+      }
+    ],
+    "explanation": "RTT = 2 x (propagation + processing). 40 = 2 x (p + 2). p + 2 = 20. p = 18ms.",
+    "cheatsheet": "RTT = 2 x one_way_delay. Subtract processing/queuing from each direction."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A link has 1% packet loss. How does this affect TCP throughput approximately?",
+    "options": [
+      {
+        "text": "Throughput drops to roughly 1% of capacity (1/sqrt(loss))",
+        "correct": true
+      },
+      {
+        "text": "No effect on throughput",
+        "correct": false
+      },
+      {
+        "text": "Throughput halves",
+        "correct": false
+      },
+      {
+        "text": "Throughput drops by 1%",
+        "correct": false
+      }
+    ],
+    "explanation": "Mathis equation: throughput ~ MSS/RTT * 1/sqrt(p). 1% loss: 1/sqrt(0.01) = 1/0.1 = 10x reduction.",
+    "cheatsheet": "TCP throughput ~ (MSS/RTT) * 1/sqrt(loss_rate). Higher loss = much lower throughput."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the serialization delay for a 1500-byte frame on a 1 Gbps link?",
+    "options": [
+      {
+        "text": "12 microseconds",
+        "correct": true
+      },
+      {
+        "text": "120 microseconds",
+        "correct": false
+      },
+      {
+        "text": "1.2 milliseconds",
+        "correct": false
+      },
+      {
+        "text": "12 milliseconds",
+        "correct": false
+      }
+    ],
+    "explanation": "Serialization = frame_size / link_rate = 1500B x 8 / 1Gbps = 12000ns = 12us.",
+    "cheatsheet": "Serialization delay = (bytes x 8) / bps. Convert result to appropriate unit."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A 100 Mbps link with 10ms latency. How long to transfer a 50 MB file?",
+    "options": [
+      {
+        "text": "4.02 seconds",
+        "correct": true
+      },
+      {
+        "text": "4 seconds",
+        "correct": false
+      },
+      {
+        "text": "5 seconds",
+        "correct": false
+      },
+      {
+        "text": "0.5 seconds",
+        "correct": false
+      }
+    ],
+    "explanation": "Transfer time = (50MB x 8) / 100Mbps = 400/100 = 4s + latency = ~4.01s (minimal latency impact on large transfers).",
+    "cheatsheet": "Transfer time = file_size/bandwidth + overhead. For large files, latency is negligible."
+  },
+  {
+    "category": "Network Performance",
+    "question": "If a link has 10 Gbps capacity but average throughput is 3 Gbps, what is the utilization?",
+    "options": [
+      {
+        "text": "30%",
+        "correct": true
+      },
+      {
+        "text": "3%",
+        "correct": false
+      },
+      {
+        "text": "33%",
+        "correct": false
+      },
+      {
+        "text": "70%",
+        "correct": false
+      }
+    ],
+    "explanation": "Utilization = 3/10 x 100 = 30%. Remaining 70% is either available or unused.",
+    "cheatsheet": "Utilization = average_throughput / link_capacity."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the queuing delay if 10 packets are in a queue and each takes 0.5ms to transmit?",
+    "options": [
+      {
+        "text": "5ms",
+        "correct": true
+      },
+      {
+        "text": "0.5ms",
+        "correct": false
+      },
+      {
+        "text": "10ms",
+        "correct": false
+      },
+      {
+        "text": "1ms",
+        "correct": false
+      }
+    ],
+    "explanation": "Average queuing delay = (N/2) x transmission_time = (10/2) x 0.5ms = 2.5ms. Worst case = 10 x 0.5 = 5ms.",
+    "cheatsheet": "Max queuing delay = queue_depth x per_packet_transmit_time."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A VoIP call needs 100 Kbps with 150ms max latency. A 500ms RTT link is acceptable?",
+    "options": [
+      {
+        "text": "No, RTT exceeds one-way latency requirement",
+        "correct": true
+      },
+      {
+        "text": "Yes, bandwidth is sufficient",
+        "correct": false
+      },
+      {
+        "text": "Yes, RTT is within limit",
+        "correct": false
+      },
+      {
+        "text": "It depends on codec only",
+        "correct": false
+      }
+    ],
+    "explanation": "500ms RTT = 250ms one-way, exceeding the 150ms max latency requirement for VoIP.",
+    "cheatsheet": "One-way latency = RTT/2. Must be within application requirements."
+  },
+  {
+    "category": "Network Performance",
+    "question": "How many 64-byte voice packets per second are needed for a G.711 codec?",
+    "options": [
+      {
+        "text": "50 pps",
+        "correct": true
+      },
+      {
+        "text": "100 pps",
+        "correct": false
+      },
+      {
+        "text": "25 pps",
+        "correct": false
+      },
+      {
+        "text": "200 pps",
+        "correct": false
+      }
+    ],
+    "explanation": "G.711 with 20ms ptime: 1000/20 = 50 packets per second. Each packet = 160 bytes payload + headers.",
+    "cheatsheet": "Packets per second = 1000ms / packetization_interval."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What overhead does IPsec add to a packet (ESP tunnel mode)?",
+    "options": [
+      {
+        "text": "Approximately 50-70 bytes",
+        "correct": true
+      },
+      {
+        "text": "0 bytes",
+        "correct": false
+      },
+      {
+        "text": "10-20 bytes",
+        "correct": false
+      },
+      {
+        "text": "150 bytes",
+        "correct": false
+      }
+    ],
+    "explanation": "IPsec ESP tunnel adds: new IP header (20) + ESP header (8) + IV (16) + ESP trailer (2-16) + ICV (10-16) ~50-70 bytes.",
+    "cheatsheet": "IPsec overhead = ~50-70 bytes (tunnel). This may cause fragmentation."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A network has 3 Gbps total traffic with 4 links in an ECMP group. What is approximate per-link utilization?",
+    "options": [
+      {
+        "text": "75% of each link",
+        "correct": true
+      },
+      {
+        "text": "100% of one link, rest idle",
+        "correct": false
+      },
+      {
+        "text": "25% of each link",
+        "correct": false
+      },
+      {
+        "text": "33% of each link",
+        "correct": false
+      }
+    ],
+    "explanation": "With 4 equal-cost links (assume 1 Gbps each), 3 Gbps spread across 4 = 750 Mbps each = 75% utilization.",
+    "cheatsheet": "ECMP: per-link traffic = total_traffic / number_of_links."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the effective throughput if 20% of packets are lost and 80% need retransmission?",
+    "options": [
+      {
+        "text": "Approximately 20% of original throughput",
+        "correct": true
+      },
+      {
+        "text": "80% of original",
+        "correct": false
+      },
+      {
+        "text": "50% of original",
+        "correct": false
+      },
+      {
+        "text": "64% of original",
+        "correct": false
+      }
+    ],
+    "explanation": "Severe loss scenario: with 20% loss, TCP reduces window dramatically. Mathis: ~1/sqrt(0.2) = ~2.24x reduction. With retransmission overhead, effective throughput is much lower.",
+    "cheatsheet": "High packet loss severely impacts TCP throughput due to congestion control."
+  },
+  {
+    "category": "Network Performance",
+    "question": "A 1500-byte MTU link with TCP MSS of 1460 bytes. How many segments for 1 MB?",
+    "options": [
+      {
+        "text": "726 segments",
+        "correct": true
+      },
+      {
+        "text": "1000 segments",
+        "correct": false
+      },
+      {
+        "text": "685 segments",
+        "correct": false
+      },
+      {
+        "text": "500 segments",
+        "correct": false
+      }
+    ],
+    "explanation": "1MB / 1460 bytes = 1,048,576 / 1460 = ~718.5. With headers accounted, approximately 718-726 segments.",
+    "cheatsheet": "Segments = file_size / MSS. Include headers: segments = file / (MSS + headers)."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is goodput compared to throughput?",
+    "options": [
+      {
+        "text": "Goodput is application-level useful data; throughput includes all protocol overhead",
+        "correct": true
+      },
+      {
+        "text": "They are the same",
+        "correct": false
+      },
+      {
+        "text": "Goodput is always higher",
+        "correct": false
+      },
+      {
+        "text": "Throughput is application-level only",
+        "correct": false
+      }
+    ],
+    "explanation": "Goodput = useful application data transferred. Throughput includes headers, retransmissions, and protocol overhead.",
+    "cheatsheet": "Goodput < Throughput < Bandwidth. Headers, retransmissions reduce goodput."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "How many VLANs are needed if you have 5 departments with 50 hosts each and want full isolation?",
+    "options": [
+      {
+        "text": "5",
+        "correct": true
+      },
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "50",
+        "correct": false
+      },
+      {
+        "text": "10",
+        "correct": false
+      }
+    ],
+    "explanation": "One VLAN per department = 5 VLANs. Each VLAN is a separate broadcast domain.",
+    "cheatsheet": "Minimum VLANs = number of isolated broadcast domains needed."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "What subnet mask should each VLAN use for up to 200 hosts?",
+    "options": [
+      {
+        "text": "/24 (255.255.255.0)",
+        "correct": true
+      },
+      {
+        "text": "/25",
+        "correct": false
+      },
+      {
+        "text": "/23",
+        "correct": false
+      },
+      {
+        "text": "/22",
+        "correct": false
+      }
+    ],
+    "explanation": "/24 provides 254 usable hosts (2^8-2=254 >= 200). /25 only gives 126 (not enough).",
+    "cheatsheet": "Choose smallest mask where 2^host_bits - 2 >= max_hosts."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "With 10 VLANs using /24 subnets from 192.168.0.0/16, what is the address range for VLAN 3?",
+    "options": [
+      {
+        "text": "192.168.3.0/24",
+        "correct": true
+      },
+      {
+        "text": "192.168.30.0/24",
+        "correct": false
+      },
+      {
+        "text": "192.168.2.0/24",
+        "correct": false
+      },
+      {
+        "text": "192.168.10.0/24",
+        "correct": false
+      }
+    ],
+    "explanation": "Sequential allocation: VLAN 1=192.168.1.0, VLAN 2=192.168.2.0, VLAN 3=192.168.3.0, etc.",
+    "cheatsheet": "Simple VLAN allocation: VLAN N = 192.168.N.0/24."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "How many trunk ports are needed between two switches with 20 VLANs each?",
+    "options": [
+      {
+        "text": "At least 1 (or more for redundancy/bandwidth)",
+        "correct": true
+      },
+      {
+        "text": "20 (one per VLAN)",
+        "correct": false
+      },
+      {
+        "text": "10",
+        "correct": false
+      },
+      {
+        "text": "0",
+        "correct": false
+      }
+    ],
+    "explanation": "A single 802.1Q trunk carries all VLANs. Use EtherChannel/LACP for bandwidth and redundancy.",
+    "cheatsheet": "One trunk = all VLANs. Use LACP for multiple physical links as one trunk."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "How many /26 subnets can fit in a 192.168.0.0/22 address space?",
+    "options": [
+      {
+        "text": "16",
+        "correct": true
+      },
+      {
+        "text": "4",
+        "correct": false
+      },
+      {
+        "text": "8",
+        "correct": false
+      },
+      {
+        "text": "64",
+        "correct": false
+      }
+    ],
+    "explanation": "/22 to /26 borrows 4 bits: 2^4 = 16 subnets, each with 62 usable hosts.",
+    "cheatsheet": "Subnets = 2^(target - current) = 2^(26-22) = 2^4 = 16."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "What is the recommended VLAN ID range for data VLANs?",
+    "options": [
+      {
+        "text": "2-1001 (normal range)",
+        "correct": true
+      },
+      {
+        "text": "1002-1005 (reserved)",
+        "correct": false
+      },
+      {
+        "text": "1006-4094 (extended range)",
+        "correct": false
+      },
+      {
+        "text": "Only VLAN 1",
+        "correct": false
+      }
+    ],
+    "explanation": "VLANs 2-1001 are normal range (VTP capable). 1002-1005 are reserved for FDDI/Token Ring. 1006-4094 are extended.",
+    "cheatsheet": "Normal: 2-1001, Reserved: 1002-1005, Extended: 1006-4094, Native default: 1."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "How many subnets of /27 can you create from 10.0.0.0/21?",
+    "options": [
+      {
+        "text": "64",
+        "correct": true
+      },
+      {
+        "text": "32",
+        "correct": false
+      },
+      {
+        "text": "8",
+        "correct": false
+      },
+      {
+        "text": "128",
+        "correct": false
+      }
+    ],
+    "explanation": "/21 to /27 borrows 6 bits: 2^6 = 64 subnets, each with 30 hosts.",
+    "cheatsheet": "2^(27-21) = 2^6 = 64 subnets."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "In a 3-floor building with 100 users per floor, what is the most efficient VLAN design?",
+    "options": [
+      {
+        "text": "VLAN per department across floors (not per floor)",
+        "correct": true
+      },
+      {
+        "text": "One VLAN per floor",
+        "correct": false
+      },
+      {
+        "text": "One VLAN for the entire building",
+        "correct": false
+      },
+      {
+        "text": "One VLAN per user",
+        "correct": false
+      }
+    ],
+    "explanation": "Department-based VLANs keep users together regardless of location, simplifying policy and ACL management.",
+    "cheatsheet": "VLAN design: group by function/department rather than physical location."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "What is the maximum VLANs per port-channel trunk?",
+    "options": [
+      {
+        "text": "4094",
+        "correct": true
+      },
+      {
+        "text": "1005",
+        "correct": false
+      },
+      {
+        "text": "256",
+        "correct": false
+      },
+      {
+        "text": "Unlimited",
+        "correct": false
+      }
+    ],
+    "explanation": "802.1Q supports 4094 VLANs. Extended range (1006-4094) works on trunks but not with VTP versions 1/2.",
+    "cheatsheet": "Max VLANs = 4094 (limited by 12-bit VID field in 802.1Q)."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "How many IP addresses are wasted if a VLAN has 10 hosts using a /24 mask?",
+    "options": [
+      {
+        "text": "242 usable IPs wasted",
+        "correct": true
+      },
+      {
+        "text": "254",
+        "correct": false
+      },
+      {
+        "text": "0",
+        "correct": false
+      },
+      {
+        "text": "244",
+        "correct": false
+      }
+    ],
+    "explanation": "/24 has 254 usable. 10 hosts use 10. 254-10 = 244 wasted. Better to use /28 (14 usable).",
+    "cheatsheet": "Choose right-sized mask: /28 for up to 14 hosts saves significant address space."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "What happens when a frame enters a trunk port without a VLAN tag?",
+    "options": [
+      {
+        "text": "It is assigned to the native VLAN (default VLAN 1)",
+        "correct": true
+      },
+      {
+        "text": "It is dropped",
+        "correct": false
+      },
+      {
+        "text": "It is sent to all VLANs",
+        "correct": false
+      },
+      {
+        "text": "An error is generated",
+        "correct": false
+      }
+    ],
+    "explanation": "Untagged frames on a trunk are associated with the native VLAN (default VLAN 1).",
+    "cheatsheet": "Native VLAN (default 1) handles untagged frames on trunk ports."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "For 30 VLANs each needing 500 hosts, what minimum address space is required?",
+    "options": [
+      {
+        "text": "A /16 address block",
+        "correct": true
+      },
+      {
+        "text": "A /24 address block",
+        "correct": false
+      },
+      {
+        "text": "A /20 address block",
+        "correct": false
+      },
+      {
+        "text": "A /8 address block",
+        "correct": false
+      }
+    ],
+    "explanation": "500 hosts need /23 (510 hosts). 30 x /23 = 30 x 512 = 15360 IPs. /16 provides 65536 IPs (more than enough).",
+    "cheatsheet": "Calculate: hosts_per_vlan x num_vlans = total_IPs. Choose smallest block that fits."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "What is inter-VLAN routing?",
+    "options": [
+      {
+        "text": "Routing between VLANs using a router or Layer 3 switch",
+        "correct": true
+      },
+      {
+        "text": "Routing within a VLAN",
+        "correct": false
+      },
+      {
+        "text": "Routing between separate physical networks",
+        "correct": false
+      },
+      {
+        "text": "Automatic VLAN assignment",
+        "correct": false
+      }
+    ],
+    "explanation": "Inter-VLAN routing enables communication between VLANs using router-on-a-stick or SVIs on Layer 3 switches.",
+    "cheatsheet": "Methods: Router-on-a-Stick (subinterfaces) or Layer 3 switch SVI."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "How many access ports can a 24-port switch support if 2 ports are used as trunks?",
+    "options": [
+      {
+        "text": "22",
+        "correct": true
+      },
+      {
+        "text": "24",
+        "correct": false
+      },
+      {
+        "text": "20",
+        "correct": false
+      },
+      {
+        "text": "2",
+        "correct": false
+      }
+    ],
+    "explanation": "24 total - 2 trunk = 22 access ports for end devices.",
+    "cheatsheet": "Available access ports = total_ports - trunk_ports - management_ports."
+  },
+  {
+    "category": "VLAN Design",
+    "question": "What is the subnet for VLAN 10 if using scheme 10.10.VLAN.0/24?",
+    "options": [
+      {
+        "text": "10.10.10.0/24",
+        "correct": true
+      },
+      {
+        "text": "10.10.0.10/24",
+        "correct": false
+      },
+      {
+        "text": "10.10.100.0/24",
+        "correct": false
+      },
+      {
+        "text": "10.10.1.0/24",
+        "correct": false
+      }
+    ],
+    "explanation": "Scheme: 10.10.VLAN.0/24. VLAN 10 = 10.10.10.0/24. Simple and scalable.",
+    "cheatsheet": "Third octet = VLAN ID makes mapping intuitive and easy to manage."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "How many non-overlapping 20 MHz channels are available in 2.4 GHz (US)?",
+    "options": [
+      {
+        "text": "3",
+        "correct": true
+      },
+      {
+        "text": "11",
+        "correct": false
+      },
+      {
+        "text": "6",
+        "correct": false
+      },
+      {
+        "text": "1",
+        "correct": false
+      }
+    ],
+    "explanation": "2.4 GHz has 11 channels (US), each 22 MHz wide. Non-overlapping: 1, 6, 11 (3 channels).",
+    "cheatsheet": "2.4 GHz non-overlapping: 1, 6, 11. 5 GHz has many more non-overlapping channels."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "How many APs are needed to cover a 100m x 50m office with each AP covering 20m radius?",
+    "options": [
+      {
+        "text": "At least 4",
+        "correct": true
+      },
+      {
+        "text": "2",
+        "correct": false
+      },
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "8",
+        "correct": false
+      }
+    ],
+    "explanation": "Each AP covers ~40m diameter. Area: 100x50=5000m2. One AP covers ~1257m2. 5000/1257~4. Use overlap for roaming.",
+    "cheatsheet": "AP count = ceil(coverage_area / AP_coverage) + overlap buffer for roaming."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What channel spacing is used in 5 GHz for 20 MHz channels?",
+    "options": [
+      {
+        "text": "20 MHz with non-overlapping channels",
+        "correct": true
+      },
+      {
+        "text": "5 MHz",
+        "correct": false
+      },
+      {
+        "text": "10 MHz",
+        "correct": false
+      },
+      {
+        "text": "25 MHz",
+        "correct": false
+      }
+    ],
+    "explanation": "5 GHz 20 MHz channels are spaced 20 MHz apart, providing many non-overlapping channels (at least 20+ in UNII bands).",
+    "cheatsheet": "5 GHz: 20MHz non-overlap, 40MHz halves available, 80MHz quarters, 160MHz minimizes."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What is the recommended overlap between AP coverage cells for seamless roaming?",
+    "options": [
+      {
+        "text": "15-20% overlap",
+        "correct": true
+      },
+      {
+        "text": "0% overlap",
+        "correct": false
+      },
+      {
+        "text": "50% overlap",
+        "correct": false
+      },
+      {
+        "text": "100% overlap",
+        "correct": false
+      }
+    ],
+    "explanation": "15-20% overlap ensures clients can associate with the next AP before losing signal from current one.",
+    "cheatsheet": "Design overlap ~20% for seamless roaming without excessive co-channel interference."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "In a high-density environment with 300 users, how many APs are needed (assuming 30 users per AP)?",
+    "options": [
+      {
+        "text": "10",
+        "correct": true
+      },
+      {
+        "text": "5",
+        "correct": false
+      },
+      {
+        "text": "300",
+        "correct": false
+      },
+      {
+        "text": "15",
+        "correct": false
+      }
+    ],
+    "explanation": "300 users / 30 users per AP = 10 APs. High-density: typically 20-30 concurrent users per AP.",
+    "cheatsheet": "AP count = total_clients / clients_per_AP. Enterprise: 20-30 per AP for mixed traffic."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What is the primary cause of co-channel interference?",
+    "options": [
+      {
+        "text": "Multiple APs on the same channel in overlapping coverage areas",
+        "correct": true
+      },
+      {
+        "text": "Bluetooth devices",
+        "correct": false
+      },
+      {
+        "text": "Microwave ovens only",
+        "correct": false
+      },
+      {
+        "text": "Physical walls",
+        "correct": false
+      }
+    ],
+    "explanation": "Same-channel APs overlapping causes CSMA/CA contention, reducing throughput for all devices on that channel.",
+    "cheatsheet": "Assign non-overlapping channels to adjacent APs. Use 5 GHz for more channel options."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "How many non-overlapping 20 MHz channels does 5 GHz (UNII-1,2,3) typically provide?",
+    "options": [
+      {
+        "text": "20+ channels",
+        "correct": true
+      },
+      {
+        "text": "3 channels",
+        "correct": false
+      },
+      {
+        "text": "11 channels",
+        "correct": false
+      },
+      {
+        "text": "8 channels",
+        "correct": false
+      }
+    ],
+    "explanation": "5 GHz provides many channels across UNII bands (up to 25+ non-overlapping in DFS-enabled environments).",
+    "cheatsheet": "5 GHz: UNII-1 (36-48), UNII-2A (52-64), UNII-2C (100-144), UNII-3 (149-165)."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What is the typical coverage radius of a 5 GHz AP in an open office?",
+    "options": [
+      {
+        "text": "20-30 meters",
+        "correct": true
+      },
+      {
+        "text": "50-100 meters",
+        "correct": false
+      },
+      {
+        "text": "100+ meters",
+        "correct": false
+      },
+      {
+        "text": "5-10 meters",
+        "correct": false
+      }
+    ],
+    "explanation": "5 GHz has shorter range than 2.4 GHz due to higher frequency and absorption. Typical: 20-30m indoor.",
+    "cheatsheet": "2.4 GHz: ~30-50m. 5 GHz: ~20-30m. Use 5 GHz for capacity, 2.4 GHz for coverage."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What channel width should you use for a high-density deployment with many APs?",
+    "options": [
+      {
+        "text": "20 MHz",
+        "correct": true
+      },
+      {
+        "text": "160 MHz",
+        "correct": false
+      },
+      {
+        "text": "80 MHz",
+        "correct": false
+      },
+      {
+        "text": "40 MHz",
+        "correct": false
+      }
+    ],
+    "explanation": "Narrow channels (20 MHz) provide more non-overlapping channels for dense AP deployments.",
+    "cheatsheet": "High density: 20 MHz (more channels). Low density: 40/80 MHz (more speed per AP)."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What is the maximum recommended number of clients per 2.4 GHz radio?",
+    "options": [
+      {
+        "text": "20-25 clients",
+        "correct": true
+      },
+      {
+        "text": "100 clients",
+        "correct": false
+      },
+      {
+        "text": "5 clients",
+        "correct": false
+      },
+      {
+        "text": "50 clients",
+        "correct": false
+      }
+    ],
+    "explanation": "2.4 GHz: 20-25 clients recommended due to shared medium contention. 5 GHz supports more due to more channels.",
+    "cheatsheet": "2.4 GHz per AP: ~20-25 clients. 5 GHz: ~30-40. Use band steering to 5 GHz."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What DFS (Dynamic Frequency Selection) allows in 5 GHz?",
+    "options": [
+      {
+        "text": "Using radar channels when no radar is detected",
+        "correct": true
+      },
+      {
+        "text": "Switching to 2.4 GHz automatically",
+        "correct": false
+      },
+      {
+        "text": "Increasing transmission power",
+        "correct": false
+      },
+      {
+        "text": "Disabling unused channels",
+        "correct": false
+      }
+    ],
+    "explanation": "DFS enables use of 5 GHz weather/radar channels (52-144) by monitoring for radar signals and vacating if detected.",
+    "cheatsheet": "DFS channels (52-144) add ~12 channels but require radar detection capability."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What is the effect of using 40 MHz channels in 2.4 GHz?",
+    "options": [
+      {
+        "text": "Only 1 non-overlapping 40 MHz channel available (reduces capacity)",
+        "correct": true
+      },
+      {
+        "text": "Better capacity than 20 MHz",
+        "correct": false
+      },
+      {
+        "text": "No effect on channel count",
+        "correct": false
+      },
+      {
+        "text": "Doubles the range",
+        "correct": false
+      }
+    ],
+    "explanation": "2.4 GHz only supports one 40 MHz wide channel effectively, eliminating channel diversity.",
+    "cheatsheet": "Avoid 40 MHz in 2.4 GHz. Use it only in 5 GHz where channel space is abundant."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What is the estimated bandwidth per user with 100 users and 1 Gbps total capacity?",
+    "options": [
+      {
+        "text": "10 Mbps per user",
+        "correct": true
+      },
+      {
+        "text": "100 Mbps per user",
+        "correct": false
+      },
+      {
+        "text": "1 Gbps per user",
+        "correct": false
+      },
+      {
+        "text": "1 Mbps per user",
+        "correct": false
+      }
+    ],
+    "explanation": "1 Gbps / 100 users = 10 Mbps average per user (assuming even distribution).",
+    "cheatsheet": "Per-user BW = total_capacity / concurrent_users."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "Where should APs ideally be mounted in an office?",
+    "options": [
+      {
+        "text": "Ceiling-mounted for best omnidirectional coverage",
+        "correct": true
+      },
+      {
+        "text": "Under desks",
+        "correct": false
+      },
+      {
+        "text": "In server rooms only",
+        "correct": false
+      },
+      {
+        "text": "Behind walls",
+        "correct": false
+      }
+    ],
+    "explanation": "Ceiling mounting provides clear line-of-sight and best coverage pattern for most environments.",
+    "cheatsheet": "Mount APs at ceiling height for optimal coverage. Avoid mounting near metal objects."
+  },
+  {
+    "category": "Wireless Planning",
+    "question": "What is band steering?",
+    "options": [
+      {
+        "text": "Encouraging dual-band clients to use 5 GHz instead of 2.4 GHz",
+        "correct": true
+      },
+      {
+        "text": "Selecting between different 5 GHz channels",
+        "correct": false
+      },
+      {
+        "text": "Switching between 2.4 GHz channels",
+        "correct": false
+      },
+      {
+        "text": "Disabling 2.4 GHz radio",
+        "correct": false
+      }
+    ],
+    "explanation": "Band steering guides capable clients to 5 GHz, reducing 2.4 GHz congestion and improving overall performance.",
+    "cheatsheet": "Enable band steering to offload dual-band clients from crowded 2.4 GHz to 5 GHz."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is the overhead of ESP (Encapsulating Security Payload) in transport mode?",
+    "options": [
+      {
+        "text": "Approximately 20-30 bytes",
+        "correct": true
+      },
+      {
+        "text": "0 bytes",
+        "correct": false
+      },
+      {
+        "text": "100 bytes",
+        "correct": false
+      },
+      {
+        "text": "50 bytes",
+        "correct": false
+      }
+    ],
+    "explanation": "ESP transport: ESP header (8B) + IV (8-16B) + padding + ESP trailer (2-16B) + ICV (10-16B).",
+    "cheatsheet": "Transport overhead: ~20-30B. Tunnel overhead: ~50-70B (adds new IP header)."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "A 100 Mbps link running IPsec tunnel mode. What is the approximate maximum throughput?",
+    "options": [
+      {
+        "text": "95-97 Mbps (accounting for overhead)",
+        "correct": true
+      },
+      {
+        "text": "100 Mbps",
+        "correct": false
+      },
+      {
+        "text": "50 Mbps",
+        "correct": false
+      },
+      {
+        "text": "80 Mbps",
+        "correct": false
+      }
+    ],
+    "explanation": "IPsec overhead is small but CPU encryption limits throughput. Hardware-accelerated IPsec may achieve near wire speed.",
+    "cheatsheet": "Software IPsec: 50-80% of link speed. Hardware-accelerated: 95%+. Depends on cipher."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is the typical IPsec SA lifetime (Phase 2)?",
+    "options": [
+      {
+        "text": "1 hour (3600 seconds) or 100 MB",
+        "correct": true
+      },
+      {
+        "text": "24 hours",
+        "correct": false
+      },
+      {
+        "text": "1 minute",
+        "correct": false
+      },
+      {
+        "text": "No limit",
+        "correct": false
+      }
+    ],
+    "explanation": "Phase 2 SA default: 1 hour / 100MB (whichever first). Shorter lifetimes = more key changes = more security.",
+    "cheatsheet": "Phase 1: 24h/1GB. Phase 2: 1h/100MB. Shorter = more secure, more overhead."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What cipher provides the best performance in IPsec?",
+    "options": [
+      {
+        "text": "AES-GCM (combined encryption + authentication)",
+        "correct": true
+      },
+      {
+        "text": "3DES",
+        "correct": false
+      },
+      {
+        "text": "Blowfish",
+        "correct": false
+      },
+      {
+        "text": "RC4",
+        "correct": false
+      }
+    ],
+    "explanation": "AES-GCM provides both encryption and integrity in one operation, reducing overhead. AES-NI hardware acceleration helps.",
+    "cheatsheet": "AES-GCM: fast, combined enc+auth. AES-CBC + SHA: separate operations, more overhead."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "How many SAs are created in IPsec for bidirectional communication?",
+    "options": [
+      {
+        "text": "2 (one in each direction)",
+        "correct": true
+      },
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "4",
+        "correct": false
+      },
+      {
+        "text": "0",
+        "correct": false
+      }
+    ],
+    "explanation": "IPsec SAs are unidirectional. Bidirectional communication requires 2 SAs (inbound + outbound).",
+    "cheatsheet": "Each SA = one direction. Bidirectional = 2 SAs. Each requires SPI, keys, params."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is the typical IPsec Phase 1 lifetime?",
+    "options": [
+      {
+        "text": "86400 seconds (24 hours)",
+        "correct": true
+      },
+      {
+        "text": "3600 seconds (1 hour)",
+        "correct": false
+      },
+      {
+        "text": "300 seconds (5 minutes)",
+        "correct": false
+      },
+      {
+        "text": "No expiration",
+        "correct": false
+      }
+    ],
+    "explanation": "Phase 1 (IKE SA) default lifetime is 24 hours. This is re-keyed before expiry to maintain the management channel.",
+    "cheatsheet": "Phase 1 (IKE SA): 24h default. Phase 2 (IPsec SA): 1h default."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is the maximum MTU for an IPsec tunnel with 1500-byte underlay?",
+    "options": [
+      {
+        "text": "1430-1440 bytes (after IPsec overhead)",
+        "correct": true
+      },
+      {
+        "text": "1500 bytes",
+        "correct": false
+      },
+      {
+        "text": "1600 bytes",
+        "correct": false
+      },
+      {
+        "text": "1280 bytes",
+        "correct": false
+      }
+    ],
+    "explanation": "Tunnel mode adds ~50-70 bytes overhead. Effective MTU = 1500 - 60-70 = ~1430-1440 bytes.",
+    "cheatsheet": "Tunnel MTU = underlay_MTU - overhead. Typically 1420-1440 for IPsec on 1500 byte link."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "A VPN tunnel must support 50 Mbps throughput with AES-256 encryption. What CPU consideration?",
+    "options": [
+      {
+        "text": "Hardware crypto acceleration (AES-NI) is recommended",
+        "correct": true
+      },
+      {
+        "text": "Any CPU can handle 50 Mbps",
+        "correct": false
+      },
+      {
+        "text": "Software encryption is always sufficient",
+        "correct": false
+      },
+      {
+        "text": "Only dedicated hardware appliances work",
+        "correct": false
+      }
+    ],
+    "explanation": "AES-256 software can handle 50 Mbps on modern CPUs, but AES-NI hardware acceleration is recommended for reliability.",
+    "cheatsheet": "AES-NI offloads encryption to CPU hardware. Check for AES-NI support on VPN gateways."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is the difference between IKEv1 Main Mode and Aggressive Mode?",
+    "options": [
+      {
+        "text": "Main Mode: 6 messages, identity protected. Aggressive: 3 messages, identity exposed",
+        "correct": true
+      },
+      {
+        "text": "No difference in security",
+        "correct": false
+      },
+      {
+        "text": "Aggressive is more secure",
+        "correct": false
+      },
+      {
+        "text": "Main Mode uses fewer packets",
+        "correct": false
+      }
+    ],
+    "explanation": "Main Mode protects identity with encrypted exchange. Aggressive Mode is faster but exposes identities in cleartext.",
+    "cheatsheet": "Main Mode: secure, 6 messages. Aggressive: fast, 3 messages, identity visible."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is the purpose of IPsec replay protection?",
+    "options": [
+      {
+        "text": "Preventing an attacker from re-sending captured packets",
+        "correct": true
+      },
+      {
+        "text": "Preventing packet fragmentation",
+        "correct": false
+      },
+      {
+        "text": "Speeding up packet processing",
+        "correct": false
+      },
+      {
+        "text": "Compressing packets",
+        "correct": false
+      }
+    ],
+    "explanation": "Replay protection uses a sequence number window to reject duplicate packets, preventing replay attacks.",
+    "cheatsheet": "Anti-replay window checks sequence numbers. Out-of-window or duplicate packets are dropped."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What encryption overhead does AES-256-CBC add to a 1400-byte payload?",
+    "options": [
+      {
+        "text": "About 32-48 bytes",
+        "correct": true
+      },
+      {
+        "text": "256 bytes",
+        "correct": false
+      },
+      {
+        "text": "0 bytes",
+        "correct": false
+      },
+      {
+        "text": "10 bytes",
+        "correct": false
+      }
+    ],
+    "explanation": "AES-CBC: IV (16B) + padding (up to 16B) + ESP header (8B) + ICV (16B) = ~40-56 bytes total overhead.",
+    "cheatsheet": "AES block = 16 bytes. Padding aligns to block boundary. IV = 1 block."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "How many simultaneous VPN tunnels can a mid-range router typically support?",
+    "options": [
+      {
+        "text": "50-200 tunnels",
+        "correct": true
+      },
+      {
+        "text": "10,000+ tunnels",
+        "correct": false
+      },
+      {
+        "text": "5 tunnels",
+        "correct": false
+      },
+      {
+        "text": "Unlimited",
+        "correct": false
+      }
+    ],
+    "explanation": "Mid-range enterprise routers support 50-200 simultaneous tunnels. High-end appliances support thousands.",
+    "cheatsheet": "Check specs: concurrent tunnels, throughput with encryption, max SA count."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is Perfect Forward Secrecy (PFS) in IPsec?",
+    "options": [
+      {
+        "text": "Generating new key material for each Phase 2, so compromise of one key does not affect others",
+        "correct": true
+      },
+      {
+        "text": "Encrypting the encryption keys",
+        "correct": false
+      },
+      {
+        "text": "Using the same key for all sessions",
+        "correct": false
+      },
+      {
+        "text": "A certificate validation method",
+        "correct": false
+      }
+    ],
+    "explanation": "PFS (Diffie-Hellman in Phase 2) ensures each IPsec SA uses unique key material, limiting breach impact.",
+    "cheatsheet": "PFS enabled = new DH key exchange in Phase 2. Recommended: DH group 14 or higher."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is the estimated bandwidth overhead percentage for IPsec with AES and SHA-256?",
+    "options": [
+      {
+        "text": "Approximately 3-5% overhead",
+        "correct": true
+      },
+      {
+        "text": "50% overhead",
+        "correct": false
+      },
+      {
+        "text": "0% overhead",
+        "correct": false
+      },
+      {
+        "text": "20% overhead",
+        "correct": false
+      }
+    ],
+    "explanation": "IPsec adds ~50-70 bytes per packet. For 1500-byte MTU: 50/1500 ~ 3.3% overhead.",
+    "cheatsheet": "Overhead % = (overhead_bytes / MTU) x 100. Smaller packets = higher percentage."
+  },
+  {
+    "category": "VPN/IPsec",
+    "question": "What is a site-to-site VPN?",
+    "options": [
+      {
+        "text": "A permanent tunnel connecting two network locations (offices, data centers)",
+        "correct": true
+      },
+      {
+        "text": "A temporary connection for remote workers",
+        "correct": false
+      },
+      {
+        "text": "An encrypted web session",
+        "correct": false
+      },
+      {
+        "text": "A peer-to-peer file sharing tunnel",
+        "correct": false
+      }
+    ],
+    "explanation": "Site-to-site VPNs connect entire networks (router-to-router) with persistent IPsec tunnels.",
+    "cheatsheet": "Site-to-site: network-to-network. Remote-access: client-to-network. Always-on tunnels."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "With 4 servers and weighted round-robin (weights: 5, 3, 2, 1), what fraction of connections goes to the first server?",
+    "options": [
+      {
+        "text": "50%",
+        "correct": true
+      },
+      {
+        "text": "25%",
+        "correct": false
+      },
+      {
+        "text": "33%",
+        "correct": false
+      },
+      {
+        "text": "10%",
+        "correct": false
+      }
+    ],
+    "explanation": "Total weight = 5+3+2+1 = 11. First server: 5/11 = ~45% (~50%). Ratio: 5:3:2:1.",
+    "cheatsheet": "Server share = its_weight / sum(all_weights)."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "What is the health check interval recommendation for web servers?",
+    "options": [
+      {
+        "text": "5-10 seconds",
+        "correct": true
+      },
+      {
+        "text": "1 second",
+        "correct": false
+      },
+      {
+        "text": "60 seconds",
+        "correct": false
+      },
+      {
+        "text": "5 minutes",
+        "correct": false
+      }
+    ],
+    "explanation": "5-10 seconds balances responsiveness with overhead. Too fast wastes resources. Too slow misses failures.",
+    "cheatsheet": "Web: 5-10s. Database: 10-30s. Critical: 2-5s. Non-critical: 30-60s."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "If a server takes 3 seconds to respond to a health check, what should the timeout be set to?",
+    "options": [
+      {
+        "text": "Greater than 3 seconds (e.g., 5 seconds)",
+        "correct": true
+      },
+      {
+        "text": "1 second",
+        "correct": false
+      },
+      {
+        "text": "Exactly 3 seconds",
+        "correct": false
+      },
+      {
+        "text": "10 seconds",
+        "correct": false
+      }
+    ],
+    "explanation": "Timeout should exceed normal response time plus a margin. If response is 3s, set timeout to 5s+.",
+    "cheatsheet": "Timeout = normal_response_time x 1.5 to 2. Add buffer for network variance."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "With 10,000 requests and 5 servers using round-robin, how many requests does each server handle?",
+    "options": [
+      {
+        "text": "2,000 each",
+        "correct": true
+      },
+      {
+        "text": "5,000 each",
+        "correct": false
+      },
+      {
+        "text": "1,000 each",
+        "correct": false
+      },
+      {
+        "text": "10,000 each",
+        "correct": false
+      }
+    ],
+    "explanation": "Simple round-robin: 10000/5 = 2000 requests per server (assuming equal distribution).",
+    "cheatsheet": "Round-robin: requests / servers = per-server (when evenly divisible)."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "What is the minimum number of unhealthy responses before removing a server from the pool (typical default)?",
+    "options": [
+      {
+        "text": "3 consecutive failures",
+        "correct": true
+      },
+      {
+        "text": "1 failure",
+        "correct": false
+      },
+      {
+        "text": "10 failures",
+        "correct": false
+      },
+      {
+        "text": "Never removed",
+        "correct": false
+      }
+    ],
+    "explanation": "Most load balancers require 2-3 consecutive failures (unhealthy threshold) before marking a server down.",
+    "cheatsheet": "Threshold config: unhealthy_threshold (2-3) and healthy_threshold (2-3)."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "What is least connections load balancing?",
+    "options": [
+      {
+        "text": "Directing new requests to the server with fewest active connections",
+        "correct": true
+      },
+      {
+        "text": "Sending all traffic to the fastest server",
+        "correct": false
+      },
+      {
+        "text": "Distributing by client IP hash",
+        "correct": false
+      },
+      {
+        "text": "Random distribution",
+        "correct": false
+      }
+    ],
+    "explanation": "Least connections considers real-time load, making it ideal when request processing times vary significantly.",
+    "cheatsheet": "Least connections = best for variable request duration. Round-robin = similar duration."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "A load balancer handles 1000 RPS with 4 servers (each max 300 RPS). Is this sufficient?",
+    "options": [
+      {
+        "text": "Yes, 4 x 300 = 1200 RPS capacity > 1000 RPS demand",
+        "correct": true
+      },
+      {
+        "text": "No, one server can only handle 300",
+        "correct": false
+      },
+      {
+        "text": "Only if all requests are equal",
+        "correct": false
+      },
+      {
+        "text": "No, need 5 servers",
+        "correct": false
+      }
+    ],
+    "explanation": "Total capacity = 4 x 300 = 1200 RPS. Demand = 1000 RPS. Headroom = 200 RPS (20%). Adequate.",
+    "cheatsheet": "Required servers = ceil(peak_RPS / max_RPS_per_server) + N-1 redundancy."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "What is source IP hash load balancing used for?",
+    "options": [
+      {
+        "text": "Ensuring the same client always reaches the same server (session persistence)",
+        "correct": true
+      },
+      {
+        "text": "Distributing by response time",
+        "correct": false
+      },
+      {
+        "text": "Blocking specific IPs",
+        "correct": false
+      },
+      {
+        "text": "Encrypting client IPs",
+        "correct": false
+      }
+    ],
+    "explanation": "IP hash maps client IP to a specific server, providing session affinity without cookies.",
+    "cheatsheet": "IP hash = session persistence without cookies. Hash = consistent mapping."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "What is the recommended health check for a database server?",
+    "options": [
+      {
+        "text": "A lightweight query (SELECT 1 or similar)",
+        "correct": true
+      },
+      {
+        "text": "A full table scan",
+        "correct": false
+      },
+      {
+        "text": "Ping only",
+        "correct": false
+      },
+      {
+        "text": "No health check needed",
+        "correct": false
+      }
+    ],
+    "explanation": "Lightweight queries verify DB is functional. Pings only verify network reachability, not service health.",
+    "cheatsheet": "DB health check: simple SELECT query. Web: HTTP GET to health endpoint. TCP: port check."
+  },
+  {
+    "category": "Load Balancing",
+    "question": "What is the advantage of a Layer 7 (application) load balancer over Layer 4?",
+    "options": [
+      {
+        "text": "Content-based routing, SSL termination, and HTTP header inspection",
+        "correct": true
+      },
+      {
+        "text": "Faster processing",
+        "correct": false
+      },
+      {
+        "text": "Lower cost",
+        "correct": false
+      },
+      {
+        "text": "Simpler configuration",
+        "correct": false
+      }
+    ],
+    "explanation": "L7 LBs understand HTTP (URL, headers, cookies) enabling intelligent routing. L4 only sees IP/port.",
+    "cheatsheet": "L4: TCP/UDP, fast, cheap. L7: HTTP-aware, content routing, SSL termination, slower."
+  }
+]

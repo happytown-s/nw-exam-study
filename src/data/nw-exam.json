@@ -1,0 +1,5730 @@
+[
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which IEEE standard defines Ethernet (802.3) frame format and CSMA/CD access control?",
+    "options": [
+      {
+        "text": "IEEE 802.3",
+        "correct": true
+      },
+      {
+        "text": "IEEE 802.11",
+        "correct": false
+      },
+      {
+        "text": "IEEE 802.5",
+        "correct": false
+      },
+      {
+        "text": "IEEE 802.1Q",
+        "correct": false
+      }
+    ],
+    "explanation": "IEEE 802.3 defines Ethernet standards including frame format and CSMA/CD. 802.11 is Wi-Fi, 802.5 is Token Ring, 802.1Q is VLAN tagging."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the maximum cable length for a 1000BASE-T (Gigabit Ethernet) segment?",
+    "options": [
+      {
+        "text": "100 meters",
+        "correct": true
+      },
+      {
+        "text": "50 meters",
+        "correct": false
+      },
+      {
+        "text": "200 meters",
+        "correct": false
+      },
+      {
+        "text": "500 meters",
+        "correct": false
+      }
+    ],
+    "explanation": "1000BASE-T over Cat5e/Cat6 UTP has a maximum segment length of 100 meters, same as 10BASE-T and 100BASE-TX."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which protocol prevents broadcast storms in a network with redundant links?",
+    "options": [
+      {
+        "text": "STP (Spanning Tree Protocol)",
+        "correct": true
+      },
+      {
+        "text": "VTP (VLAN Trunking Protocol)",
+        "correct": false
+      },
+      {
+        "text": "CDP (Cisco Discovery Protocol)",
+        "correct": false
+      },
+      {
+        "text": "LACP (Link Aggregation Control Protocol)",
+        "correct": false
+      }
+    ],
+    "explanation": "STP (IEEE 802.1D) prevents broadcast storms by placing redundant ports in a blocking state, ensuring a loop-free topology."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the primary purpose of VLAN (Virtual LAN)?",
+    "options": [
+      {
+        "text": "To logically segment a physical network into separate broadcast domains",
+        "correct": true
+      },
+      {
+        "text": "To increase physical port density on a switch",
+        "correct": false
+      },
+      {
+        "text": "To encrypt traffic between switches",
+        "correct": false
+      },
+      {
+        "text": "To load balance traffic across multiple links",
+        "correct": false
+      }
+    ],
+    "explanation": "VLANs create logical broadcast domains on a single physical switch, reducing broadcast traffic and improving security."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which Ethernet standard uses fiber optic cabling and supports 10 Gbps at up to 40 km?",
+    "options": [
+      {
+        "text": "10GBASE-ER",
+        "correct": true
+      },
+      {
+        "text": "10GBASE-T",
+        "correct": false
+      },
+      {
+        "text": "1000BASE-SX",
+        "correct": false
+      },
+      {
+        "text": "10GBASE-CX4",
+        "correct": false
+      }
+    ],
+    "explanation": "10GBASE-ER (Extended Range) uses single-mode fiber and supports 10 Gbps up to 40 km. 10GBASE-T uses copper, CX4 uses twinax."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "In a collapsed core network architecture, which layers are combined into a single device?",
+    "options": [
+      {
+        "text": "Core and distribution layers",
+        "correct": true
+      },
+      {
+        "text": "Access and distribution layers",
+        "correct": false
+      },
+      {
+        "text": "Access and core layers",
+        "correct": false
+      },
+      {
+        "text": "All three layers into one device",
+        "correct": false
+      }
+    ],
+    "explanation": "A collapsed core architecture combines the core and distribution layers into a single device, suitable for smaller networks."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the default VLAN ID assigned to untagged frames on a trunk port?",
+    "options": [
+      {
+        "text": "VLAN 1",
+        "correct": true
+      },
+      {
+        "text": "VLAN 0",
+        "correct": false
+      },
+      {
+        "text": "VLAN 99",
+        "correct": false
+      },
+      {
+        "text": "VLAN 4095",
+        "correct": false
+      }
+    ],
+    "explanation": "VLAN 1 is the default native VLAN. Untagged frames on a trunk port are associated with the native VLAN."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which WAN technology uses cell switching with fixed 53-byte cells?",
+    "options": [
+      {
+        "text": "ATM (Asynchronous Transfer Mode)",
+        "correct": true
+      },
+      {
+        "text": "Frame Relay",
+        "correct": false
+      },
+      {
+        "text": "MPLS",
+        "correct": false
+      },
+      {
+        "text": "ISDN",
+        "correct": false
+      }
+    ],
+    "explanation": "ATM uses fixed 53-byte cells (5-byte header + 48-byte payload) for efficient switching. Frame Relay uses variable-length frames."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What does Rapid Spanning Tree Protocol (RSTP, 802.1w) improve over traditional STP?",
+    "options": [
+      {
+        "text": "Faster convergence time from 50 seconds to a few seconds",
+        "correct": true
+      },
+      {
+        "text": "Support for more VLANs",
+        "correct": false
+      },
+      {
+        "text": "Increased maximum hop count",
+        "correct": false
+      },
+      {
+        "text": "Native support for load balancing",
+        "correct": false
+      }
+    ],
+    "explanation": "RSTP reduces convergence from 50 seconds (STP) to a few seconds by introducing rapid transition to forwarding state and new port roles."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which type of Ethernet framing adds a 4-byte VLAN tag (802.1Q) to the frame?",
+    "options": [
+      {
+        "text": "802.1Q trunking",
+        "correct": true
+      },
+      {
+        "text": "ISL trunking",
+        "correct": false
+      },
+      {
+        "text": "802.3ad framing",
+        "correct": false
+      },
+      {
+        "text": "PPP framing",
+        "correct": false
+      }
+    ],
+    "explanation": "802.1Q inserts a 4-byte tag between the source MAC and EtherType fields, carrying VLAN ID (12 bits) and priority (3 bits)."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the primary advantage of MPLS over traditional IP routing?",
+    "options": [
+      {
+        "text": "Faster packet forwarding using labels instead of longest-prefix match",
+        "correct": true
+      },
+      {
+        "text": "End-to-end encryption of all traffic",
+        "correct": false
+      },
+      {
+        "text": "Automatic bandwidth allocation",
+        "correct": false
+      },
+      {
+        "text": "Built-in quality of service for voice traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "MPLS uses label-switched paths (LSPs) for fast forwarding. Packets are switched based on labels, avoiding full IP routing table lookups."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "In SD-WAN architecture, what determines the path selection for traffic?",
+    "options": [
+      {
+        "text": "Application-aware policies considering link quality, cost, and SLA requirements",
+        "correct": true
+      },
+      {
+        "text": "Static routing tables only",
+        "correct": false
+      },
+      {
+        "text": "OSPF cost calculations",
+        "correct": false
+      },
+      {
+        "text": "Round-robin across all available links",
+        "correct": false
+      }
+    ],
+    "explanation": "SD-WAN uses application-aware policies that consider real-time link quality metrics (latency, jitter, loss), cost, and SLA to select the optimal path."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which protocol is used to dynamically learn MAC addresses on a LAN switch?",
+    "options": [
+      {
+        "text": "The switch learns MAC addresses from the source address of incoming frames",
+        "correct": true
+      },
+      {
+        "text": "ARP is used to learn MAC addresses on switches",
+        "correct": false
+      },
+      {
+        "text": "Switches use ICMP to discover MAC addresses",
+        "correct": false
+      },
+      {
+        "text": "RARP protocol is used for MAC learning",
+        "correct": false
+      }
+    ],
+    "explanation": "LAN switches dynamically build their MAC address table by examining the source MAC address of each incoming frame and associating it with the ingress port."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the maximum number of VLANs supported by IEEE 802.1Q?",
+    "options": [
+      {
+        "text": "4094",
+        "correct": true
+      },
+      {
+        "text": "1024",
+        "correct": false
+      },
+      {
+        "text": "2048",
+        "correct": false
+      },
+      {
+        "text": "4096",
+        "correct": false
+      }
+    ],
+    "explanation": "802.1Q uses a 12-bit VLAN ID field, supporting 4096 values (0-4095). VLAN 0 and 4095 are reserved, leaving 4094 usable."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which network topology provides the highest redundancy for enterprise campus networks?",
+    "options": [
+      {
+        "text": "Full mesh",
+        "correct": true
+      },
+      {
+        "text": "Bus topology",
+        "correct": false
+      },
+      {
+        "text": "Star topology",
+        "correct": false
+      },
+      {
+        "text": "Ring topology",
+        "correct": false
+      }
+    ],
+    "explanation": "Full mesh provides the highest redundancy with direct links between all nodes. It is expensive but offers no single point of failure."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the purpose of EtherChannel (IEEE 802.3ad / LACP)?",
+    "options": [
+      {
+        "text": "To bundle multiple physical links into one logical link for increased bandwidth and redundancy",
+        "correct": true
+      },
+      {
+        "text": "To create VLAN trunks between switches",
+        "correct": false
+      },
+      {
+        "text": "To compress Ethernet frames for transmission",
+        "correct": false
+      },
+      {
+        "text": "To convert between Ethernet and fiber optic media",
+        "correct": false
+      }
+    ],
+    "explanation": "EtherChannel/LACP aggregates multiple physical links into one logical link, providing increased bandwidth and automatic failover."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which VLAN type carries traffic for multiple VLANs between switches?",
+    "options": [
+      {
+        "text": "Trunk port",
+        "correct": true
+      },
+      {
+        "text": "Access port",
+        "correct": false
+      },
+      {
+        "text": "Management port",
+        "correct": false
+      },
+      {
+        "text": "Console port",
+        "correct": false
+      }
+    ],
+    "explanation": "Trunk ports carry traffic for multiple VLANs using 802.1Q tags. Access ports carry traffic for only one VLAN."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What happens when a broadcast storm occurs in a network?",
+    "options": [
+      {
+        "text": "Excessive broadcast traffic floods the network, causing congestion and degradation",
+        "correct": true
+      },
+      {
+        "text": "The network automatically segments into smaller subnets",
+        "correct": false
+      },
+      {
+        "text": "Routers filter out all broadcast traffic",
+        "correct": false
+      },
+      {
+        "text": "Switches increase their forwarding rates to compensate",
+        "correct": false
+      }
+    ],
+    "explanation": "A broadcast storm occurs when broadcast packets multiply due to switching loops, flooding the network and potentially causing complete failure."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which technology allows multiple VLANs to share a single physical interface on a router?",
+    "options": [
+      {
+        "text": "Router on a Stick (subinterfaces)",
+        "correct": true
+      },
+      {
+        "text": "NAT overload",
+        "correct": false
+      },
+      {
+        "text": "Bridge groups",
+        "correct": false
+      },
+      {
+        "text": "Port forwarding",
+        "correct": false
+      }
+    ],
+    "explanation": "Router on a Stick uses subinterfaces on a single physical router interface, each with a different VLAN ID (802.1Q tagging) to route between VLANs."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the purpose of BPDU Guard in STP configuration?",
+    "options": [
+      {
+        "text": "To prevent unauthorized switches from becoming the root bridge",
+        "correct": true
+      },
+      {
+        "text": "To filter broadcast traffic",
+        "correct": false
+      },
+      {
+        "text": "To encrypt STP messages",
+        "correct": false
+      },
+      {
+        "text": "To load balance across multiple spanning trees",
+        "correct": false
+      }
+    ],
+    "explanation": "BPDU Guard disables a port if it receives a BPDU, preventing unauthorized devices from participating in STP."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "In a three-tier network hierarchy, which layer provides routing between VLANs and policy enforcement?",
+    "options": [
+      {
+        "text": "Distribution layer",
+        "correct": true
+      },
+      {
+        "text": "Core layer",
+        "correct": false
+      },
+      {
+        "text": "Access layer",
+        "correct": false
+      },
+      {
+        "text": "Edge layer",
+        "correct": false
+      }
+    ],
+    "explanation": "The distribution layer provides inter-VLAN routing, ACLs, QoS policies, and route summarization between the access and core layers."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which feature allows a switch to mirror traffic from one port to another for monitoring?",
+    "options": [
+      {
+        "text": "SPAN (Switched Port Analyzer) / Port Mirroring",
+        "correct": true
+      },
+      {
+        "text": "STP port mirroring",
+        "correct": false
+      },
+      {
+        "text": "VLAN mapping",
+        "correct": false
+      },
+      {
+        "text": "LACP monitoring",
+        "correct": false
+      }
+    ],
+    "explanation": "SPAN copies traffic from source ports/VLANs to a destination port where a monitoring device can analyze it."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the maximum number of hops in a Spanning Tree domain before a BPDU is discarded?",
+    "options": [
+      {
+        "text": "20",
+        "correct": true
+      },
+      {
+        "text": "15",
+        "correct": false
+      },
+      {
+        "text": "16",
+        "correct": false
+      },
+      {
+        "text": "255",
+        "correct": false
+      }
+    ],
+    "explanation": "STP has a maximum hop count of 20. BPDUs received after traversing 20 hops are discarded to prevent infinite loops."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which WAN technology provides a dedicated, always-on connection at guaranteed bandwidth?",
+    "options": [
+      {
+        "text": "Leased line (dedicated circuit)",
+        "correct": true
+      },
+      {
+        "text": "Frame Relay",
+        "correct": false
+      },
+      {
+        "text": "X.25",
+        "correct": false
+      },
+      {
+        "text": "DSL",
+        "correct": false
+      }
+    ],
+    "explanation": "Leased lines (T1/E1, T3/E3) provide dedicated, point-to-point connections with guaranteed bandwidth. Frame Relay and X.25 are shared."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the function of a Layer 3 switch compared to a traditional router?",
+    "options": [
+      {
+        "text": "It performs routing in hardware (ASIC) for faster inter-VLAN routing",
+        "correct": true
+      },
+      {
+        "text": "It only operates at Layer 2",
+        "correct": false
+      },
+      {
+        "text": "It provides WAN connectivity",
+        "correct": false
+      },
+      {
+        "text": "It replaces the need for any Layer 2 devices",
+        "correct": false
+      }
+    ],
+    "explanation": "Layer 3 switches route packets in hardware using ASICs, providing much faster inter-VLAN routing than software-based routing."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "Which protocol automates VLAN configuration across multiple switches?",
+    "options": [
+      {
+        "text": "VTP (VLAN Trunking Protocol)",
+        "correct": true
+      },
+      {
+        "text": "STP",
+        "correct": false
+      },
+      {
+        "text": "LACP",
+        "correct": false
+      },
+      {
+        "text": "CDP",
+        "correct": false
+      }
+    ],
+    "explanation": "VTP allows a VTP server to distribute VLAN configuration to all switches in the VTP domain, centralizing VLAN management."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the difference between half-duplex and full-duplex Ethernet?",
+    "options": [
+      {
+        "text": "Full-duplex allows simultaneous send/receive; half-duplex does not",
+        "correct": true
+      },
+      {
+        "text": "Half-duplex allows simultaneous send/receive; full-duplex does not",
+        "correct": false
+      },
+      {
+        "text": "Half-duplex supports higher bandwidth",
+        "correct": false
+      },
+      {
+        "text": "There is no practical difference in modern networks",
+        "correct": false
+      }
+    ],
+    "explanation": "Full-duplex allows simultaneous bidirectional communication. Half-duplex only allows one direction at a time. Modern switched networks use full-duplex."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "In MSTP (Multiple Spanning Tree Protocol), what can be achieved that RSTP alone cannot?",
+    "options": [
+      {
+        "text": "Different spanning tree instances for different VLAN groups",
+        "correct": true
+      },
+      {
+        "text": "Faster convergence than RSTP",
+        "correct": false
+      },
+      {
+        "text": "Support for more than 4094 VLANs",
+        "correct": false
+      },
+      {
+        "text": "Automatic load balancing across all links",
+        "correct": false
+      }
+    ],
+    "explanation": "MSTP (802.1s) maps multiple VLANs to a single spanning tree instance, allowing different VLAN groups to use different root bridges."
+  },
+  {
+    "category": "LAN/WAN Architecture",
+    "question": "What is the maximum data rate of 1000BASE-LX over single-mode fiber?",
+    "options": [
+      {
+        "text": "1 Gbps up to 5 km",
+        "correct": true
+      },
+      {
+        "text": "10 Gbps up to 40 km",
+        "correct": false
+      },
+      {
+        "text": "1 Gbps up to 100 m over copper",
+        "correct": false
+      },
+      {
+        "text": "100 Mbps up to 2 km",
+        "correct": false
+      }
+    ],
+    "explanation": "1000BASE-LX uses long-wavelength laser (1310 nm) on single-mode fiber up to 5 km at 1 Gbps."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which layer of the TCP/IP model corresponds to the OSI Data Link and Physical layers?",
+    "options": [
+      {
+        "text": "Network Access layer",
+        "correct": true
+      },
+      {
+        "text": "Internet layer",
+        "correct": false
+      },
+      {
+        "text": "Transport layer",
+        "correct": false
+      },
+      {
+        "text": "Application layer",
+        "correct": false
+      }
+    ],
+    "explanation": "The TCP/IP Network Access layer maps to OSI layers 1 and 2 (Physical and Data Link)."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the default TCP maximum segment size (MSS) when no option is specified?",
+    "options": [
+      {
+        "text": "536 bytes",
+        "correct": true
+      },
+      {
+        "text": "1500 bytes",
+        "correct": false
+      },
+      {
+        "text": "1024 bytes",
+        "correct": false
+      },
+      {
+        "text": "1460 bytes",
+        "correct": false
+      }
+    ],
+    "explanation": "TCP default MSS is 536 bytes (576 - 20 IP header - 20 TCP header = 536). The common MSS for Ethernet is 1460 bytes when path MTU is 1500."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which protocol is used to resolve an IP address to a MAC address?",
+    "options": [
+      {
+        "text": "ARP (Address Resolution Protocol)",
+        "correct": true
+      },
+      {
+        "text": "RARP",
+        "correct": false
+      },
+      {
+        "text": "ICMP",
+        "correct": false
+      },
+      {
+        "text": "DNS",
+        "correct": false
+      }
+    ],
+    "explanation": "ARP resolves IP addresses to MAC addresses by broadcasting a request. RARP does the reverse (MAC to IP)."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What does the TCP three-way handshake consist of?",
+    "options": [
+      {
+        "text": "SYN, SYN-ACK, ACK",
+        "correct": true
+      },
+      {
+        "text": "ACK, SYN, FIN",
+        "correct": false
+      },
+      {
+        "text": "SYN, ACK, FIN",
+        "correct": false
+      },
+      {
+        "text": "SYN, SYN, ACK",
+        "correct": false
+      }
+    ],
+    "explanation": "TCP connection establishment: client sends SYN, server responds with SYN-ACK, client sends ACK. This is the three-way handshake."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which field in the IPv4 header is decremented by each router to prevent infinite loops?",
+    "options": [
+      {
+        "text": "TTL (Time To Live)",
+        "correct": true
+      },
+      {
+        "text": "Header Checksum",
+        "correct": false
+      },
+      {
+        "text": "Identification",
+        "correct": false
+      },
+      {
+        "text": "Fragment Offset",
+        "correct": false
+      }
+    ],
+    "explanation": "TTL is decremented by each router. When it reaches zero, the packet is discarded and an ICMP Time Exceeded message is sent."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the primary difference between TCP and UDP?",
+    "options": [
+      {
+        "text": "TCP is connection-oriented with reliability; UDP is connectionless without guaranteed delivery",
+        "correct": true
+      },
+      {
+        "text": "TCP is faster than UDP",
+        "correct": false
+      },
+      {
+        "text": "UDP supports more data per packet than TCP",
+        "correct": false
+      },
+      {
+        "text": "TCP operates at the network layer; UDP at the transport layer",
+        "correct": false
+      }
+    ],
+    "explanation": "TCP provides connection-oriented, reliable delivery with sequencing and flow control. UDP is connectionless, faster, with no delivery guarantee."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which DNS record type maps a domain name to an IPv4 address?",
+    "options": [
+      {
+        "text": "A record",
+        "correct": true
+      },
+      {
+        "text": "AAAA record",
+        "correct": false
+      },
+      {
+        "text": "CNAME record",
+        "correct": false
+      },
+      {
+        "text": "MX record",
+        "correct": false
+      }
+    ],
+    "explanation": "A record maps a domain name to an IPv4 address. AAAA maps to IPv6. CNAME is an alias. MX is for mail servers."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the purpose of ICMP (Internet Control Message Protocol)?",
+    "options": [
+      {
+        "text": "To report errors and provide diagnostic information about network conditions",
+        "correct": true
+      },
+      {
+        "text": "To route packets between networks",
+        "correct": false
+      },
+      {
+        "text": "To encrypt data in transit",
+        "correct": false
+      },
+      {
+        "text": "To resolve domain names to IP addresses",
+        "correct": false
+      }
+    ],
+    "explanation": "ICMP reports errors (destination unreachable, TTL exceeded) and diagnostics (ping, traceroute). It is a companion protocol to IP."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which HTTP status code indicates a resource has been permanently moved?",
+    "options": [
+      {
+        "text": "301 Moved Permanently",
+        "correct": true
+      },
+      {
+        "text": "200 OK",
+        "correct": false
+      },
+      {
+        "text": "404 Not Found",
+        "correct": false
+      },
+      {
+        "text": "302 Found",
+        "correct": false
+      }
+    ],
+    "explanation": "301 indicates permanent redirection. 302 is temporary. 200 is success. 404 is not found."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the well-known port number for HTTPS?",
+    "options": [
+      {
+        "text": "443",
+        "correct": true
+      },
+      {
+        "text": "80",
+        "correct": false
+      },
+      {
+        "text": "8080",
+        "correct": false
+      },
+      {
+        "text": "22",
+        "correct": false
+      }
+    ],
+    "explanation": "HTTPS uses port 443. HTTP uses port 80. 8080 is an alternative HTTP port. 22 is SSH."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which TCP flag is used to initiate a connection?",
+    "options": [
+      {
+        "text": "SYN",
+        "correct": true
+      },
+      {
+        "text": "ACK",
+        "correct": false
+      },
+      {
+        "text": "FIN",
+        "correct": false
+      },
+      {
+        "text": "RST",
+        "correct": false
+      }
+    ],
+    "explanation": "SYN (Synchronize) flag is used to initiate a TCP connection. ACK acknowledges receipt. FIN terminates. RST resets the connection."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What protocol is used to send email from a client to a mail server?",
+    "options": [
+      {
+        "text": "SMTP",
+        "correct": true
+      },
+      {
+        "text": "POP3",
+        "correct": false
+      },
+      {
+        "text": "IMAP",
+        "correct": false
+      },
+      {
+        "text": "FTP",
+        "correct": false
+      }
+    ],
+    "explanation": "SMTP (port 25/587) sends email from client to server and between servers. POP3/IMAP retrieve email from servers. FTP is file transfer."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "How many bits are in an IPv4 address?",
+    "options": [
+      {
+        "text": "32 bits",
+        "correct": true
+      },
+      {
+        "text": "48 bits",
+        "correct": false
+      },
+      {
+        "text": "64 bits",
+        "correct": false
+      },
+      {
+        "text": "128 bits",
+        "correct": false
+      }
+    ],
+    "explanation": "IPv4 addresses are 32 bits (4 octets). IPv6 addresses are 128 bits. MAC addresses are 48 bits."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the TCP sliding window mechanism used for?",
+    "options": [
+      {
+        "text": "Flow control to prevent the sender from overwhelming the receiver",
+        "correct": true
+      },
+      {
+        "text": "Error detection in transmitted data",
+        "correct": false
+      },
+      {
+        "text": "Route optimization between networks",
+        "correct": false
+      },
+      {
+        "text": "Encryption of TCP payloads",
+        "correct": false
+      }
+    ],
+    "explanation": "The TCP sliding window controls the amount of unacknowledged data in flight, implementing flow control so the sender does not overwhelm the receiver."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which protocol operates at the Application layer and is used for secure file transfer?",
+    "options": [
+      {
+        "text": "SFTP (SSH File Transfer Protocol)",
+        "correct": true
+      },
+      {
+        "text": "TFTP",
+        "correct": false
+      },
+      {
+        "text": "FTP",
+        "correct": false
+      },
+      {
+        "text": "SCP",
+        "correct": false
+      }
+    ],
+    "explanation": "SFTP operates over SSH and provides encrypted file transfer. TFTP is simple/no-security. FTP is unencrypted. SCP is also over SSH."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the purpose of NAT (Network Address Translation)?",
+    "options": [
+      {
+        "text": "To translate private IP addresses to public addresses for internet access",
+        "correct": true
+      },
+      {
+        "text": "To encrypt traffic for security",
+        "correct": false
+      },
+      {
+        "text": "To speed up DNS resolution",
+        "correct": false
+      },
+      {
+        "text": "To compress IP packets for transmission",
+        "correct": false
+      }
+    ],
+    "explanation": "NAT translates private (RFC 1918) addresses to public addresses, allowing multiple internal hosts to share one or few public IPs."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which TCP congestion avoidance algorithm gradually increases the sending rate until packet loss occurs?",
+    "options": [
+      {
+        "text": "AIMD (Additive Increase Multiplicative Decrease)",
+        "correct": true
+      },
+      {
+        "text": "Slow Start only",
+        "correct": false
+      },
+      {
+        "text": "Fast Retransmit",
+        "correct": false
+      },
+      {
+        "text": "Selective Acknowledgment (SACK)",
+        "correct": false
+      }
+    ],
+    "explanation": "AIMD increases the congestion window linearly (additive) and decreases it multiplicatively on packet loss, balancing throughput and fairness."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What does the DNS recursive query do?",
+    "options": [
+      {
+        "text": "The DNS server resolves the query completely and returns the final answer",
+        "correct": true
+      },
+      {
+        "text": "The DNS server returns only cached results",
+        "correct": false
+      },
+      {
+        "text": "The client must resolve the query itself",
+        "correct": false
+      },
+      {
+        "text": "The DNS server forwards to another server only",
+        "correct": false
+      }
+    ],
+    "explanation": "In a recursive query, the DNS server takes full responsibility for resolving the query, iterating through the DNS hierarchy if needed."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which protocol uses port 53?",
+    "options": [
+      {
+        "text": "DNS (Domain Name System)",
+        "correct": true
+      },
+      {
+        "text": "DHCP",
+        "correct": false
+      },
+      {
+        "text": "NTP",
+        "correct": false
+      },
+      {
+        "text": "LDAP",
+        "correct": false
+      }
+    ],
+    "explanation": "DNS uses both UDP and TCP on port 53. DHCP uses 67/68. NTP uses 123. LDAP uses 389."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the maximum segment size of an Ethernet frame (MTU)?",
+    "options": [
+      {
+        "text": "1500 bytes",
+        "correct": true
+      },
+      {
+        "text": "1024 bytes",
+        "correct": false
+      },
+      {
+        "text": "9000 bytes",
+        "correct": false
+      },
+      {
+        "text": "1600 bytes",
+        "correct": false
+      }
+    ],
+    "explanation": "Standard Ethernet MTU is 1500 bytes. Jumbo frames can be up to 9000 bytes. IP MTU is typically 1500 bytes."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which HTTP method is used to update an existing resource?",
+    "options": [
+      {
+        "text": "PUT",
+        "correct": true
+      },
+      {
+        "text": "GET",
+        "correct": false
+      },
+      {
+        "text": "POST",
+        "correct": false
+      },
+      {
+        "text": "DELETE",
+        "correct": false
+      }
+    ],
+    "explanation": "PUT replaces an existing resource or creates one at a specific URL. POST creates a new resource. GET retrieves. DELETE removes."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the role of the DHCP ACK message?",
+    "options": [
+      {
+        "text": "To confirm the IP address lease offered to the client",
+        "correct": true
+      },
+      {
+        "text": "To discover available DHCP servers",
+        "correct": false
+      },
+      {
+        "text": "To request a specific IP address",
+        "correct": false
+      },
+      {
+        "text": "To release an IP address lease",
+        "correct": false
+      }
+    ],
+    "explanation": "DHCP ACK confirms the lease after the client sends a DHCP REQUEST. The DORA process: Discover, Offer, Request, ACK."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which transport layer protocol is used by DNS for most queries?",
+    "options": [
+      {
+        "text": "UDP",
+        "correct": true
+      },
+      {
+        "text": "TCP",
+        "correct": false
+      },
+      {
+        "text": "SCTP",
+        "correct": false
+      },
+      {
+        "text": "ICMP",
+        "correct": false
+      }
+    ],
+    "explanation": "DNS primarily uses UDP for queries (port 53). TCP is used for zone transfers and when responses exceed 512 bytes."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is CIDR (Classless Inter-Domain Routing) notation for the subnet mask 255.255.255.0?",
+    "options": [
+      {
+        "text": "/24",
+        "correct": true
+      },
+      {
+        "text": "/16",
+        "correct": false
+      },
+      {
+        "text": "/8",
+        "correct": false
+      },
+      {
+        "text": "/32",
+        "correct": false
+      }
+    ],
+    "explanation": "255.255.255.0 has 24 consecutive 1-bits, so CIDR notation is /24. /16 is 255.255.0.0, /8 is 255.0.0.0, /32 is a single host."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which protocol provides secure remote shell access with encryption?",
+    "options": [
+      {
+        "text": "SSH (Secure Shell)",
+        "correct": true
+      },
+      {
+        "text": "Telnet",
+        "correct": false
+      },
+      {
+        "text": "Rlogin",
+        "correct": false
+      },
+      {
+        "text": "FTP",
+        "correct": false
+      }
+    ],
+    "explanation": "SSH provides encrypted remote access on port 22. Telnet sends everything in cleartext. Rlogin is also unencrypted."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What happens when TCP receives three duplicate ACKs?",
+    "options": [
+      {
+        "text": "Fast retransmit is triggered, resending the suspected lost segment",
+        "correct": true
+      },
+      {
+        "text": "The connection is terminated",
+        "correct": false
+      },
+      {
+        "text": "The sending rate is doubled",
+        "correct": false
+      },
+      {
+        "text": "A new SYN is sent to restart the connection",
+        "correct": false
+      }
+    ],
+    "explanation": "Three duplicate ACKs trigger fast retransmit without waiting for the retransmission timer, reducing latency from lost segments."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which IP address range is defined as Class A private address space (RFC 1918)?",
+    "options": [
+      {
+        "text": "10.0.0.0 - 10.255.255.255",
+        "correct": true
+      },
+      {
+        "text": "172.16.0.0 - 172.31.255.255",
+        "correct": false
+      },
+      {
+        "text": "192.168.0.0 - 192.168.255.255",
+        "correct": false
+      },
+      {
+        "text": "169.254.0.0 - 169.254.255.255",
+        "correct": false
+      }
+    ],
+    "explanation": "Class A private: 10.0.0.0/8. Class B: 172.16.0.0/12. Class C: 192.168.0.0/16. 169.254.0.0/16 is APIPA/link-local."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the purpose of TCP FIN flag?",
+    "options": [
+      {
+        "text": "To initiate graceful connection termination",
+        "correct": true
+      },
+      {
+        "text": "To acknowledge received data",
+        "correct": false
+      },
+      {
+        "text": "To reset the connection immediately",
+        "correct": false
+      },
+      {
+        "text": "To synchronize sequence numbers",
+        "correct": false
+      }
+    ],
+    "explanation": "FIN indicates the sender has finished sending data and wants to close the connection. The four-way termination uses FIN, ACK, FIN, ACK."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "What is the difference between ARP and RARP?",
+    "options": [
+      {
+        "text": "ARP resolves IP to MAC; RARP resolves MAC to IP",
+        "correct": true
+      },
+      {
+        "text": "ARP resolves MAC to IP; RARP resolves IP to MAC",
+        "correct": false
+      },
+      {
+        "text": "Both resolve IP to MAC",
+        "correct": false
+      },
+      {
+        "text": "Both resolve MAC to IP",
+        "correct": false
+      }
+    ],
+    "explanation": "ARP maps IP addresses to MAC addresses. RARP (Reverse ARP) maps MAC addresses to IP addresses, now largely replaced by DHCP."
+  },
+  {
+    "category": "TCP/IP Protocol Stack",
+    "question": "Which protocol uses TLS to provide secure communication over a network?",
+    "options": [
+      {
+        "text": "HTTPS",
+        "correct": true
+      },
+      {
+        "text": "FTP",
+        "correct": false
+      },
+      {
+        "text": "SMTP",
+        "correct": false
+      },
+      {
+        "text": "HTTP",
+        "correct": false
+      }
+    ],
+    "explanation": "HTTPS (HTTP over TLS/SSL) encrypts HTTP traffic on port 443. Standard FTP, SMTP, and HTTP are unencrypted."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which routing protocol uses Dijkstra's shortest path algorithm and maintains a link-state database?",
+    "options": [
+      {
+        "text": "OSPF",
+        "correct": true
+      },
+      {
+        "text": "BGP",
+        "correct": false
+      },
+      {
+        "text": "RIP",
+        "correct": false
+      },
+      {
+        "text": "EIGRP",
+        "correct": false
+      }
+    ],
+    "explanation": "OSPF uses Dijkstra's SPF algorithm with a link-state database. BGP uses path-vector, RIP uses distance-vector (Bellman-Ford)."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the administrative distance of a directly connected route?",
+    "options": [
+      {
+        "text": "0",
+        "correct": true
+      },
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "90",
+        "correct": false
+      },
+      {
+        "text": "120",
+        "correct": false
+      }
+    ],
+    "explanation": "Directly connected routes have AD 0 (most trusted). Static routes have AD 1. EIGRP 90. OSPF 110. RIP 120."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which BGP attribute is used to prefer one exit point over another within an AS?",
+    "options": [
+      {
+        "text": "LOCAL_PREF",
+        "correct": true
+      },
+      {
+        "text": "AS_PATH",
+        "correct": false
+      },
+      {
+        "text": "NEXT_HOP",
+        "correct": false
+      },
+      {
+        "text": "ORIGIN",
+        "correct": false
+      }
+    ],
+    "explanation": "LOCAL_PREF is exchanged within an AS and influences outbound path selection. Higher LOCAL_PREF is preferred."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the maximum hop count for RIP?",
+    "options": [
+      {
+        "text": "15",
+        "correct": true
+      },
+      {
+        "text": "16",
+        "correct": false
+      },
+      {
+        "text": "30",
+        "correct": false
+      },
+      {
+        "text": "255",
+        "correct": false
+      }
+    ],
+    "explanation": "RIP max hop count is 15. A hop count of 16 means unreachable. This limits RIP to small networks."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "In OSPF, what is the purpose of Area 0?",
+    "options": [
+      {
+        "text": "It is the backbone area that all other areas must connect to",
+        "correct": true
+      },
+      {
+        "text": "It is used for external route redistribution",
+        "correct": false
+      },
+      {
+        "text": "It is a stub area",
+        "correct": false
+      },
+      {
+        "text": "It is the default area for all interfaces",
+        "correct": false
+      }
+    ],
+    "explanation": "OSPF Area 0 is the backbone. All non-backbone areas must connect to Area 0 directly or via virtual link."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which protocol natively supports VLSM and CIDR?",
+    "options": [
+      {
+        "text": "OSPF",
+        "correct": true
+      },
+      {
+        "text": "RIP version 1",
+        "correct": false
+      },
+      {
+        "text": "IGRP",
+        "correct": false
+      },
+      {
+        "text": "Both OSPF and EIGRP support VLSM",
+        "correct": false
+      }
+    ],
+    "explanation": "Link-state protocols (OSPF, IS-IS) and EIGRP, RIPv2, BGP all support VLSM. Only RIPv1 (classful) does not."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is route redistribution?",
+    "options": [
+      {
+        "text": "Injecting routes learned by one routing protocol into another",
+        "correct": true
+      },
+      {
+        "text": "Balancing traffic across equal-cost paths",
+        "correct": false
+      },
+      {
+        "text": "Converting static routes to dynamic",
+        "correct": false
+      },
+      {
+        "text": "Filtering routes by destination prefix",
+        "correct": false
+      }
+    ],
+    "explanation": "Route redistribution allows different routing protocols to share routes, enabling multi-protocol environments."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which OSPF LSA type describes routes to external networks?",
+    "options": [
+      {
+        "text": "Type 5 (AS-External LSA)",
+        "correct": true
+      },
+      {
+        "text": "Type 1 (Router LSA)",
+        "correct": false
+      },
+      {
+        "text": "Type 2 (Network LSA)",
+        "correct": false
+      },
+      {
+        "text": "Type 3 (Summary LSA)",
+        "correct": false
+      }
+    ],
+    "explanation": "Type 5 LSAs carry external routes from an ASBR. Type 1 = router, Type 2 = network (DR), Type 3 = inter-area summary."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the purpose of a default route (0.0.0.0/0)?",
+    "options": [
+      {
+        "text": "To forward all unmatched traffic to a designated next-hop",
+        "correct": true
+      },
+      {
+        "text": "To block all unmatched traffic",
+        "correct": false
+      },
+      {
+        "text": "To load balance across all interfaces",
+        "correct": false
+      },
+      {
+        "text": "To define administrative distance for all routes",
+        "correct": false
+      }
+    ],
+    "explanation": "A default route matches any destination not found in the routing table, acting as gateway of last resort."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "How does OSPF elect a Designated Router on a multi-access network?",
+    "options": [
+      {
+        "text": "Highest router priority, then highest router ID",
+        "correct": true
+      },
+      {
+        "text": "Lowest router ID",
+        "correct": false
+      },
+      {
+        "text": "Highest IP address on the interface",
+        "correct": false
+      },
+      {
+        "text": "First router to become active",
+        "correct": false
+      }
+    ],
+    "explanation": "DR election: highest priority (default 1) wins, ties broken by highest router ID. Priority 0 means ineligible."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the difference between OSPF and IS-IS?",
+    "options": [
+      {
+        "text": "OSPF uses IP; IS-IS is CLNS-based and protocol-independent",
+        "correct": true
+      },
+      {
+        "text": "OSPF is distance-vector; IS-IS is link-state",
+        "correct": false
+      },
+      {
+        "text": "IS-IS only supports IPv4",
+        "correct": false
+      },
+      {
+        "text": "OSPF does not support areas",
+        "correct": false
+      }
+    ],
+    "explanation": "Both are link-state. OSPF operates over IP; IS-IS over CLNS. IS-IS scales better and is widely used in ISP backbones."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is a routing loop and how does split horizon help?",
+    "options": [
+      {
+        "text": "A loop causes packets to circulate endlessly; split horizon prevents advertising routes back out the same interface",
+        "correct": true
+      },
+      {
+        "text": "Loops are caused by DNS failures",
+        "correct": false
+      },
+      {
+        "text": "Loops only occur in link-state protocols",
+        "correct": false
+      },
+      {
+        "text": "Split horizon balances traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "Split horizon prevents advertising routes back out the interface they were learned on, breaking distance-vector loops."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which BGP message type advertises reachable destinations?",
+    "options": [
+      {
+        "text": "UPDATE",
+        "correct": true
+      },
+      {
+        "text": "OPEN",
+        "correct": false
+      },
+      {
+        "text": "KEEPALIVE",
+        "correct": false
+      },
+      {
+        "text": "NOTIFICATION",
+        "correct": false
+      }
+    ],
+    "explanation": "BGP UPDATE carries NLRI and path attributes. OPEN establishes sessions, KEEPALIVE maintains them, NOTIFICATION reports errors."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What differentiates interior gateway protocols (IGPs) from exterior gateway protocols (EGPs)?",
+    "options": [
+      {
+        "text": "IGPs operate within one AS; EGPs route between different ASes",
+        "correct": true
+      },
+      {
+        "text": "IGPs are slower than EGPs",
+        "correct": false
+      },
+      {
+        "text": "EGPs use link-state; IGPs use distance-vector",
+        "correct": false
+      },
+      {
+        "text": "There is no functional difference",
+        "correct": false
+      }
+    ],
+    "explanation": "IGPs (OSPF, EIGRP, RIP) work within an AS. EGPs (BGP) exchange routes between autonomous systems."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is an OSPF stub area?",
+    "options": [
+      {
+        "text": "An area that does not receive external (Type 5) LSAs",
+        "correct": true
+      },
+      {
+        "text": "An area with only one router",
+        "correct": false
+      },
+      {
+        "text": "An area that blocks all hello packets",
+        "correct": false
+      },
+      {
+        "text": "An area requiring authentication",
+        "correct": false
+      }
+    ],
+    "explanation": "Stub areas filter Type 5 external LSAs, using a default route (Type 3) instead, reducing LSDB size."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What metric does OSPF use for path selection?",
+    "options": [
+      {
+        "text": "Cost (based on interface bandwidth)",
+        "correct": true
+      },
+      {
+        "text": "Hop count",
+        "correct": false
+      },
+      {
+        "text": "Delay",
+        "correct": false
+      },
+      {
+        "text": "Composite of bandwidth and delay",
+        "correct": false
+      }
+    ],
+    "explanation": "OSPF cost = reference bandwidth / interface bandwidth. Default reference is 100 Mbps. Lower cost is preferred."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the default administrative distance of OSPF?",
+    "options": [
+      {
+        "text": "110",
+        "correct": true
+      },
+      {
+        "text": "90",
+        "correct": false
+      },
+      {
+        "text": "120",
+        "correct": false
+      },
+      {
+        "text": "170",
+        "correct": false
+      }
+    ],
+    "explanation": "OSPF AD = 110. Connected = 0, Static = 1, EIGRP = 90, RIP = 120, eBGP = 20, iBGP = 200."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What does BGP AS_PATH prepend do?",
+    "options": [
+      {
+        "text": "Lengthens the AS_PATH to make a route less preferred for inbound traffic engineering",
+        "correct": true
+      },
+      {
+        "text": "Shortens the AS_PATH for faster convergence",
+        "correct": false
+      },
+      {
+        "text": "Removes duplicate AS numbers",
+        "correct": false
+      },
+      {
+        "text": "Encrypts path information",
+        "correct": false
+      }
+    ],
+    "explanation": "AS_PATH prepend adds extra AS numbers to make a route appear longer and less attractive to inbound traffic."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is Equal-Cost Multi-Path (ECMP) routing?",
+    "options": [
+      {
+        "text": "Load sharing across multiple paths with equal cost",
+        "correct": true
+      },
+      {
+        "text": "Using only the shortest path",
+        "correct": false
+      },
+      {
+        "text": "Balancing based on packet size",
+        "correct": false
+      },
+      {
+        "text": "Encrypting across redundant paths",
+        "correct": false
+      }
+    ],
+    "explanation": "ECMP allows routers to use multiple equal-cost paths simultaneously for load sharing."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which routing protocol converges fastest after a topology change?",
+    "options": [
+      {
+        "text": "EIGRP",
+        "correct": true
+      },
+      {
+        "text": "RIP",
+        "correct": false
+      },
+      {
+        "text": "OSPF",
+        "correct": false
+      },
+      {
+        "text": "BGP",
+        "correct": false
+      }
+    ],
+    "explanation": "EIGRP converges fastest due to DUAL maintaining feasible successors. OSPF is second. RIP is slowest."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is a floating static route?",
+    "options": [
+      {
+        "text": "A backup route with a higher administrative distance than the primary",
+        "correct": true
+      },
+      {
+        "text": "A route for load balancing",
+        "correct": false
+      },
+      {
+        "text": "A way to convert dynamic to static routes",
+        "correct": false
+      },
+      {
+        "text": "An advertisement method",
+        "correct": false
+      }
+    ],
+    "explanation": "Floating static routes have a higher AD than the primary route, activating only when the primary fails."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is longest prefix match in routing?",
+    "options": [
+      {
+        "text": "When multiple routes match, the most specific (longest prefix) is selected",
+        "correct": true
+      },
+      {
+        "text": "The first matching route is used",
+        "correct": false
+      },
+      {
+        "text": "The route with the lowest metric is always chosen",
+        "correct": false
+      },
+      {
+        "text": "All matching routes are used",
+        "correct": false
+      }
+    ],
+    "explanation": "Longest prefix match is fundamental: the route with the most specific matching prefix wins."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which protocol uses the DUAL (Diffusing Update Algorithm)?",
+    "options": [
+      {
+        "text": "EIGRP",
+        "correct": true
+      },
+      {
+        "text": "OSPF",
+        "correct": false
+      },
+      {
+        "text": "RIP",
+        "correct": false
+      },
+      {
+        "text": "BGP",
+        "correct": false
+      }
+    ],
+    "explanation": "EIGRP uses DUAL to ensure loop-free paths by maintaining successors and feasible successors."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the BGP synchronization rule?",
+    "options": [
+      {
+        "text": "iBGP should not advertise routes until they are also known via IGP (now disabled by default)",
+        "correct": true
+      },
+      {
+        "text": "BGP routes must match DNS records",
+        "correct": false
+      },
+      {
+        "text": "All peers must have identical tables",
+        "correct": false
+      },
+      {
+        "text": "Updates must be acknowledged by all",
+        "correct": false
+      }
+    ],
+    "explanation": "BGP sync prevented black-holing by requiring IGP awareness. Disabled by default in modern configurations."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What triggers an OSPF SPF recalculation?",
+    "options": [
+      {
+        "text": "A change in the link-state database",
+        "correct": true
+      },
+      {
+        "text": "Every 30 seconds automatically",
+        "correct": false
+      },
+      {
+        "text": "Only when manually triggered",
+        "correct": false
+      },
+      {
+        "text": "When CPU exceeds 90%",
+        "correct": false
+      }
+    ],
+    "explanation": "SPF runs when the LSDB changes. OSPF implements SPF throttling to limit computation frequency."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which BGP session type is between routers in the same AS?",
+    "options": [
+      {
+        "text": "iBGP (internal BGP)",
+        "correct": true
+      },
+      {
+        "text": "eBGP (external BGP)",
+        "correct": false
+      },
+      {
+        "text": "cBGP (confederation BGP)",
+        "correct": false
+      },
+      {
+        "text": "rBGP (reflected BGP)",
+        "correct": false
+      }
+    ],
+    "explanation": "iBGP runs within one AS. eBGP connects different ASes."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is route summarization (aggregation)?",
+    "options": [
+      {
+        "text": "Combining multiple specific routes into a single broader prefix",
+        "correct": true
+      },
+      {
+        "text": "Splitting networks into smaller subnets",
+        "correct": false
+      },
+      {
+        "text": "Converting dynamic to static routes",
+        "correct": false
+      },
+      {
+        "text": "Encrypting route information",
+        "correct": false
+      }
+    ],
+    "explanation": "Summarization reduces routing table size by advertising a broader prefix encompassing specific routes."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "Which protocol is classified as a hybrid routing protocol?",
+    "options": [
+      {
+        "text": "EIGRP",
+        "correct": true
+      },
+      {
+        "text": "OSPF",
+        "correct": false
+      },
+      {
+        "text": "RIP",
+        "correct": false
+      },
+      {
+        "text": "BGP",
+        "correct": false
+      }
+    ],
+    "explanation": "EIGRP is hybrid: distance-vector properties with link-state features like fast convergence."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is an OSPF virtual link?",
+    "options": [
+      {
+        "text": "A logical connection to Area 0 through a transit area",
+        "correct": true
+      },
+      {
+        "text": "A secure tunnel for OSPF",
+        "correct": false
+      },
+      {
+        "text": "A load balancing mechanism",
+        "correct": false
+      },
+      {
+        "text": "A way to increase hello interval",
+        "correct": false
+      }
+    ],
+    "explanation": "Virtual links provide connectivity to Area 0 when a non-backbone area cannot connect directly."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is BGP MED (Multi-Exit Discriminator)?",
+    "options": [
+      {
+        "text": "A non-transitive attribute suggesting a preferred entry point to a neighboring AS",
+        "correct": true
+      },
+      {
+        "text": "A BGP router ID mechanism",
+        "correct": false
+      },
+      {
+        "text": "A peer authentication method",
+        "correct": false
+      },
+      {
+        "text": "A route limit feature",
+        "correct": false
+      }
+    ],
+    "explanation": "MED suggests to the neighboring AS which entry point is preferred. Lower MED is preferred."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the OSPF hello interval on broadcast networks?",
+    "options": [
+      {
+        "text": "10 seconds",
+        "correct": true
+      },
+      {
+        "text": "30 seconds",
+        "correct": false
+      },
+      {
+        "text": "5 seconds",
+        "correct": false
+      },
+      {
+        "text": "60 seconds",
+        "correct": false
+      }
+    ],
+    "explanation": "OSPF hello = 10s on broadcast/P2P, 30s on NBMA. Dead interval = 4x hello."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is a route reflector in BGP?",
+    "options": [
+      {
+        "text": "A router that reflects iBGP routes to peers, eliminating full mesh requirement",
+        "correct": true
+      },
+      {
+        "text": "A device reflecting traffic between VLANs",
+        "correct": false
+      },
+      {
+        "text": "An OSPF-to-BGP converter",
+        "correct": false
+      },
+      {
+        "text": "A BGP firewall",
+        "correct": false
+      }
+    ],
+    "explanation": "Route reflectors allow iBGP route sharing without full mesh, reducing session count."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "How does RIPv2 differ from RIPv1?",
+    "options": [
+      {
+        "text": "RIPv2 supports VLSM, authentication, and multicast updates",
+        "correct": true
+      },
+      {
+        "text": "RIPv1 is faster and supports more hops",
+        "correct": false
+      },
+      {
+        "text": "RIPv2 uses TCP",
+        "correct": false
+      },
+      {
+        "text": "RIPv1 supports classless routing",
+        "correct": false
+      }
+    ],
+    "explanation": "RIPv2 added VLSM, MD5 auth, multicast (224.0.0.9), and next-hop. RIPv1 is classful."
+  },
+  {
+    "category": "Routing & Switching",
+    "question": "What is the administrative distance of eBGP?",
+    "options": [
+      {
+        "text": "20",
+        "correct": true
+      },
+      {
+        "text": "0",
+        "correct": false
+      },
+      {
+        "text": "110",
+        "correct": false
+      },
+      {
+        "text": "200",
+        "correct": false
+      }
+    ],
+    "explanation": "eBGP AD = 20 (very trusted). iBGP AD = 200. This makes eBGP routes preferred over most IGP routes."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is the primary function of a stateful firewall?",
+    "options": [
+      {
+        "text": "It tracks connection state and allows return traffic for established sessions",
+        "correct": true
+      },
+      {
+        "text": "It inspects all packets at layer 7",
+        "correct": false
+      },
+      {
+        "text": "It blocks all incoming traffic by default",
+        "correct": false
+      },
+      {
+        "text": "It encrypts all passing traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "Stateful firewalls maintain a connection table, allowing return traffic for established connections."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which IPsec mode encrypts both payload and original IP header?",
+    "options": [
+      {
+        "text": "Tunnel mode",
+        "correct": true
+      },
+      {
+        "text": "Transport mode",
+        "correct": false
+      },
+      {
+        "text": "Aggressive mode",
+        "correct": false
+      },
+      {
+        "text": "Main mode",
+        "correct": false
+      }
+    ],
+    "explanation": "Tunnel mode encrypts the entire original packet and adds a new IP header. Transport mode only encrypts the payload."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is the difference between IDS and IPS?",
+    "options": [
+      {
+        "text": "IDS detects and alerts; IPS detects and blocks malicious traffic",
+        "correct": true
+      },
+      {
+        "text": "IDS blocks; IPS only monitors",
+        "correct": false
+      },
+      {
+        "text": "They are the same technology",
+        "correct": false
+      },
+      {
+        "text": "IDS is Layer 2; IPS is Layer 7",
+        "correct": false
+      }
+    ],
+    "explanation": "IDS is passive (detect + alert). IPS is active (detect + block inline). Both analyze traffic patterns."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which protocol establishes a secure VPN tunnel using digital certificates?",
+    "options": [
+      {
+        "text": "IPsec with IKE",
+        "correct": true
+      },
+      {
+        "text": "PPTP",
+        "correct": false
+      },
+      {
+        "text": "L2F",
+        "correct": false
+      },
+      {
+        "text": "GRE",
+        "correct": false
+      }
+    ],
+    "explanation": "IPsec/IKE uses certificates or PSK for authentication. PPTP is old and insecure. GRE provides no encryption."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a DMZ in network security?",
+    "options": [
+      {
+        "text": "A segment for publicly accessible services between internal network and internet",
+        "correct": true
+      },
+      {
+        "text": "An encrypted network zone",
+        "correct": false
+      },
+      {
+        "text": "A zone for employee personal devices",
+        "correct": false
+      },
+      {
+        "text": "A disaster recovery network",
+        "correct": false
+      }
+    ],
+    "explanation": "A DMZ hosts public services (web, email, DNS) with controlled access from both internet and internal network."
+  },
+  {
+    "category": "Network Security",
+    "question": "What does a WAF protect against?",
+    "options": [
+      {
+        "text": "Layer 7 attacks: SQL injection, XSS, CSRF targeting web applications",
+        "correct": true
+      },
+      {
+        "text": "Network-level DDoS attacks",
+        "correct": false
+      },
+      {
+        "text": "Unauthorized physical access",
+        "correct": false
+      },
+      {
+        "text": "Email spam and phishing",
+        "correct": false
+      }
+    ],
+    "explanation": "WAFs operate at Layer 7, inspecting HTTP/HTTPS for application-layer attacks."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is 802.1X used for?",
+    "options": [
+      {
+        "text": "Port-based network access control authenticating users before granting access",
+        "correct": true
+      },
+      {
+        "text": "Encrypting wireless traffic",
+        "correct": false
+      },
+      {
+        "text": "Automatic VLAN assignment",
+        "correct": false
+      },
+      {
+        "text": "Uplink load balancing",
+        "correct": false
+      }
+    ],
+    "explanation": "802.1X uses EAP with RADIUS to authenticate users/devices before allowing network port access."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is PKI?",
+    "options": [
+      {
+        "text": "A framework for managing digital certificates and public-key encryption",
+        "correct": true
+      },
+      {
+        "text": "A firewall technology",
+        "correct": false
+      },
+      {
+        "text": "A file transfer protocol",
+        "correct": false
+      },
+      {
+        "text": "A load balancing method",
+        "correct": false
+      }
+    ],
+    "explanation": "PKI manages certificate creation, distribution, revocation for public-key crypto."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which DDoS attack type consumes bandwidth by flooding the network?",
+    "options": [
+      {
+        "text": "Volumetric attack",
+        "correct": true
+      },
+      {
+        "text": "Protocol attack",
+        "correct": false
+      },
+      {
+        "text": "Application layer attack",
+        "correct": false
+      },
+      {
+        "text": "Social engineering attack",
+        "correct": false
+      }
+    ],
+    "explanation": "Volumetric attacks consume bandwidth. Protocol attacks exhaust resources. Application attacks target Layer 7."
+  },
+  {
+    "category": "Network Security",
+    "question": "What differentiates SSL VPN from IPsec VPN?",
+    "options": [
+      {
+        "text": "SSL VPN uses a web browser (HTTPS); IPsec requires client software at Layer 3",
+        "correct": true
+      },
+      {
+        "text": "SSL VPN is less secure",
+        "correct": false
+      },
+      {
+        "text": "IPsec only works with web traffic",
+        "correct": false
+      },
+      {
+        "text": "They are interchangeable",
+        "correct": false
+      }
+    ],
+    "explanation": "SSL VPN works through firewalls via HTTPS with no client needed. IPsec operates at Layer 3 with dedicated client."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is an ACL primarily used for?",
+    "options": [
+      {
+        "text": "Filtering traffic based on rules (source/dest IP, port, protocol)",
+        "correct": true
+      },
+      {
+        "text": "Encrypting traffic",
+        "correct": false
+      },
+      {
+        "text": "Dynamic IP assignment",
+        "correct": false
+      },
+      {
+        "text": "Bandwidth monitoring",
+        "correct": false
+      }
+    ],
+    "explanation": "ACLs define permit/deny rules based on packet attributes to control traffic flow."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a SYN flood attack?",
+    "options": [
+      {
+        "text": "Sending many SYN packets without completing the TCP handshake, exhausting server resources",
+        "correct": true
+      },
+      {
+        "text": "Sending corrupted data",
+        "correct": false
+      },
+      {
+        "text": "Exploiting DNS vulnerabilities",
+        "correct": false
+      },
+      {
+        "text": "Intercepting encrypted traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "SYN flood exploits TCP: attacker sends many SYNs but never ACKs, filling the half-open connection queue."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is NAT's role in firewall contexts?",
+    "options": [
+      {
+        "text": "Hiding internal addresses and controlling address translation",
+        "correct": true
+      },
+      {
+        "text": "Speeding up packet processing",
+        "correct": false
+      },
+      {
+        "text": "Providing encryption",
+        "correct": false
+      },
+      {
+        "text": "Resolving DNS faster",
+        "correct": false
+      }
+    ],
+    "explanation": "Firewall NAT hides internal IPs, making it harder to target specific hosts."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which protocol provides mutual authentication using certificates?",
+    "options": [
+      {
+        "text": "EAP-TLS",
+        "correct": true
+      },
+      {
+        "text": "PAP",
+        "correct": false
+      },
+      {
+        "text": "CHAP",
+        "correct": false
+      },
+      {
+        "text": "RADIUS",
+        "correct": false
+      }
+    ],
+    "explanation": "EAP-TLS uses digital certificates for mutual auth. PAP sends cleartext. RADIUS is a server protocol."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a honeypot?",
+    "options": [
+      {
+        "text": "A decoy system designed to attract and study attackers",
+        "correct": true
+      },
+      {
+        "text": "A backup server",
+        "correct": false
+      },
+      {
+        "text": "An antivirus program",
+        "correct": false
+      },
+      {
+        "text": "A secure email gateway",
+        "correct": false
+      }
+    ],
+    "explanation": "Honeypots mimic real targets to attract attackers for study and early threat detection."
+  },
+  {
+    "category": "Network Security",
+    "question": "What does IKE Phase 1 accomplish?",
+    "options": [
+      {
+        "text": "Establishes the ISAKMP SA for negotiating IPsec parameters",
+        "correct": true
+      },
+      {
+        "text": "Encrypts user data",
+        "correct": false
+      },
+      {
+        "text": "Performs user authentication",
+        "correct": false
+      },
+      {
+        "text": "Creates the data tunnel",
+        "correct": false
+      }
+    ],
+    "explanation": "IKE Phase 1 establishes the management channel. Phase 2 creates the IPsec SA for data encryption."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which protocol provides AAA services?",
+    "options": [
+      {
+        "text": "RADIUS",
+        "correct": true
+      },
+      {
+        "text": "SNMP",
+        "correct": false
+      },
+      {
+        "text": "LDAP",
+        "correct": false
+      },
+      {
+        "text": "Syslog",
+        "correct": false
+      }
+    ],
+    "explanation": "RADIUS provides Authentication, Authorization, and Accounting."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is MAC address filtering?",
+    "options": [
+      {
+        "text": "Allowing/denying network access based on device MAC addresses",
+        "correct": true
+      },
+      {
+        "text": "Converting MAC to IP",
+        "correct": false
+      },
+      {
+        "text": "Encrypting with MAC as key",
+        "correct": false
+      },
+      {
+        "text": "Traffic balancing by MAC",
+        "correct": false
+      }
+    ],
+    "explanation": "MAC filtering allows only registered MACs. It provides weak security since MACs are easily spoofed."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a man-in-the-middle (MITM) attack?",
+    "options": [
+      {
+        "text": "Intercepting communication between two parties without their knowledge",
+        "correct": true
+      },
+      {
+        "text": "Gaining physical server access",
+        "correct": false
+      },
+      {
+        "text": "Overloading a server with requests",
+        "correct": false
+      },
+      {
+        "text": "Sending phishing emails",
+        "correct": false
+      }
+    ],
+    "explanation": "MITM places attacker between parties to intercept/modify traffic. TLS and IPsec prevent MITM."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which algorithm is commonly used in IPsec for bulk data encryption?",
+    "options": [
+      {
+        "text": "AES (Advanced Encryption Standard)",
+        "correct": true
+      },
+      {
+        "text": "RSA",
+        "correct": false
+      },
+      {
+        "text": "MD5",
+        "correct": false
+      },
+      {
+        "text": "SHA-256",
+        "correct": false
+      }
+    ],
+    "explanation": "AES is the standard symmetric encryption for IPsec data. RSA is asymmetric (key exchange)."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is switch port security?",
+    "options": [
+      {
+        "text": "Limiting MAC addresses per port to prevent MAC flooding attacks",
+        "correct": true
+      },
+      {
+        "text": "Encrypting port traffic",
+        "correct": false
+      },
+      {
+        "text": "Blocking TCP ports",
+        "correct": false
+      },
+      {
+        "text": "Enabling 802.1X",
+        "correct": false
+      }
+    ],
+    "explanation": "Port security limits learned MACs per port with actions when exceeded."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a zero-day vulnerability?",
+    "options": [
+      {
+        "text": "A previously unknown vulnerability with no available patch",
+        "correct": true
+      },
+      {
+        "text": "A vulnerability discovered on January 1st",
+        "correct": false
+      },
+      {
+        "text": "A patched but undeployed vulnerability",
+        "correct": false
+      },
+      {
+        "text": "A default configuration weakness",
+        "correct": false
+      }
+    ],
+    "explanation": "Zero-days are unknown to vendors with no existing patch, making them especially dangerous."
+  },
+  {
+    "category": "Network Security",
+    "question": "What differentiates asymmetric from symmetric encryption?",
+    "options": [
+      {
+        "text": "Asymmetric uses public/private key pairs; symmetric uses a single shared key",
+        "correct": true
+      },
+      {
+        "text": "Asymmetric is faster",
+        "correct": false
+      },
+      {
+        "text": "Symmetric uses public/private keys",
+        "correct": false
+      },
+      {
+        "text": "No significant difference",
+        "correct": false
+      }
+    ],
+    "explanation": "Asymmetric (RSA, ECC) uses key pairs. Symmetric (AES, 3DES) uses one shared key."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is network segmentation?",
+    "options": [
+      {
+        "text": "Dividing a network into isolated segments to improve security",
+        "correct": true
+      },
+      {
+        "text": "Combining multiple networks",
+        "correct": false
+      },
+      {
+        "text": "Encrypting all traffic",
+        "correct": false
+      },
+      {
+        "text": "Adding bandwidth",
+        "correct": false
+      }
+    ],
+    "explanation": "Segmentation uses VLANs, subnets, or firewalls to create isolated zones."
+  },
+  {
+    "category": "Network Security",
+    "question": "What does the TLS handshake accomplish?",
+    "options": [
+      {
+        "text": "Authenticates server, negotiates encryption, establishes shared secret",
+        "correct": true
+      },
+      {
+        "text": "Transfers website content",
+        "correct": false
+      },
+      {
+        "text": "Compresses data",
+        "correct": false
+      },
+      {
+        "text": "Checks client IP",
+        "correct": false
+      }
+    ],
+    "explanation": "TLS handshake: client hello, server hello + cert, key exchange, cipher spec, finished."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is ARP spoofing (poisoning)?",
+    "options": [
+      {
+        "text": "Sending fake ARP messages to associate attacker's MAC with legitimate IP",
+        "correct": true
+      },
+      {
+        "text": "Modifying DNS records",
+        "correct": false
+      },
+      {
+        "text": "Flooding with ICMP",
+        "correct": false
+      },
+      {
+        "text": "Intercepting TCP SYNs",
+        "correct": false
+      }
+    ],
+    "explanation": "ARP spoofing sends forged ARP replies linking attacker's MAC to a target IP."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which firewall type inspects up to Layer 7?",
+    "options": [
+      {
+        "text": "Application-layer (proxy) firewall",
+        "correct": true
+      },
+      {
+        "text": "Packet filtering firewall",
+        "correct": false
+      },
+      {
+        "text": "Stateful inspection firewall",
+        "correct": false
+      },
+      {
+        "text": "NAT gateway",
+        "correct": false
+      }
+    ],
+    "explanation": "Proxy firewalls understand specific protocols and inspect content at Layer 7."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a VACL used for?",
+    "options": [
+      {
+        "text": "Filtering traffic within the same VLAN",
+        "correct": true
+      },
+      {
+        "text": "Filtering between VLANs",
+        "correct": false
+      },
+      {
+        "text": "Assigning VLANs to ports",
+        "correct": false
+      },
+      {
+        "text": "Creating inter-VLAN routing",
+        "correct": false
+      }
+    ],
+    "explanation": "VACLs filter intra-VLAN traffic. RACLs filter inter-VLAN. PACLs filter on ports."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a DDoS amplification attack?",
+    "options": [
+      {
+        "text": "Using vulnerable third-party servers to amplify attack traffic toward target",
+        "correct": true
+      },
+      {
+        "text": "Sending many small requests",
+        "correct": false
+      },
+      {
+        "text": "Encrypting attack traffic",
+        "correct": false
+      },
+      {
+        "text": "Using compromised machines for legitimate traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "Amplification exploits protocols (DNS, NTP, memcached) where small requests generate huge responses."
+  },
+  {
+    "category": "Network Security",
+    "question": "What distinguishes TACACS+ from RADIUS?",
+    "options": [
+      {
+        "text": "TACACS+ separates AAA and uses TCP; RADIUS combines auth/authz and uses UDP",
+        "correct": true
+      },
+      {
+        "text": "TACACS+ uses UDP; RADIUS uses TCP",
+        "correct": false
+      },
+      {
+        "text": "RADIUS is more secure",
+        "correct": false
+      },
+      {
+        "text": "No significant difference",
+        "correct": false
+      }
+    ],
+    "explanation": "TACACS+ uses TCP, separates AAA, encrypts entire payload. RADIUS uses UDP, encrypts only passwords."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is a SIEM system?",
+    "options": [
+      {
+        "text": "Centralized system collecting, correlating, and analyzing security logs and events",
+        "correct": true
+      },
+      {
+        "text": "An advanced firewall",
+        "correct": false
+      },
+      {
+        "text": "A server antivirus",
+        "correct": false
+      },
+      {
+        "text": "A backup system",
+        "correct": false
+      }
+    ],
+    "explanation": "SIEM aggregates logs, correlates events, detects threats, and provides compliance reporting."
+  },
+  {
+    "category": "Network Security",
+    "question": "What does defense in depth mean?",
+    "options": [
+      {
+        "text": "Multiple layers of security controls across physical, network, host, and application layers",
+        "correct": true
+      },
+      {
+        "text": "A single strong perimeter firewall",
+        "correct": false
+      },
+      {
+        "text": "Encrypting all data at rest",
+        "correct": false
+      },
+      {
+        "text": "Using only open-source tools",
+        "correct": false
+      }
+    ],
+    "explanation": "Defense in depth applies controls at multiple layers so if one fails, others still protect."
+  },
+  {
+    "category": "Network Security",
+    "question": "Which principle ensures users only have necessary access?",
+    "options": [
+      {
+        "text": "Principle of least privilege",
+        "correct": true
+      },
+      {
+        "text": "Separation of duties",
+        "correct": false
+      },
+      {
+        "text": "Defense in depth",
+        "correct": false
+      },
+      {
+        "text": "Need to know",
+        "correct": false
+      }
+    ],
+    "explanation": "Least privilege grants minimum required access. Separation of duties splits critical tasks."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is the difference between a virus and a worm?",
+    "options": [
+      {
+        "text": "A virus attaches to a host file; a worm self-replicates without a host",
+        "correct": true
+      },
+      {
+        "text": "They are the same",
+        "correct": false
+      },
+      {
+        "text": "A worm needs a host; a virus spreads independently",
+        "correct": false
+      },
+      {
+        "text": "A virus affects hardware; a worm affects software",
+        "correct": false
+      }
+    ],
+    "explanation": "Viruses need host programs. Worms are standalone and self-replicate across networks."
+  },
+  {
+    "category": "Network Security",
+    "question": "What is the purpose of IPsec SA (Security Association)?",
+    "options": [
+      {
+        "text": "To define the security parameters (encryption, authentication, keys) for a communication",
+        "correct": true
+      },
+      {
+        "text": "To route packets",
+        "correct": false
+      },
+      {
+        "text": "To compress data",
+        "correct": false
+      },
+      {
+        "text": "To load balance traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "IPsec SA is a unidirectional logical connection defining security parameters for protecting traffic."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "Which Wi-Fi standard operates in both 2.4 GHz and 5 GHz bands with up to 6.93 Gbps?",
+    "options": [
+      {
+        "text": "802.11ax (Wi-Fi 6)",
+        "correct": true
+      },
+      {
+        "text": "802.11ac (Wi-Fi 5)",
+        "correct": false
+      },
+      {
+        "text": "802.11n (Wi-Fi 4)",
+        "correct": false
+      },
+      {
+        "text": "802.11g",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11ax (Wi-Fi 6) supports 2.4/5 GHz, OFDMA, 1024-QAM, and up to 9.6 Gbps theoretically."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is the maximum theoretical speed of 802.11ac (Wi-Fi 5)?",
+    "options": [
+      {
+        "text": "6.93 Gbps",
+        "correct": true
+      },
+      {
+        "text": "3 Gbps",
+        "correct": false
+      },
+      {
+        "text": "11 Mbps",
+        "correct": false
+      },
+      {
+        "text": "54 Mbps",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11ac Wave 2 supports up to 6.93 Gbps with 4x4 MIMO, 160 MHz channels, and 256-QAM."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "Which 802.11 standard was the first to use the 5 GHz band?",
+    "options": [
+      {
+        "text": "802.11a",
+        "correct": true
+      },
+      {
+        "text": "802.11b",
+        "correct": false
+      },
+      {
+        "text": "802.11g",
+        "correct": false
+      },
+      {
+        "text": "802.11n",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11a was the first 5 GHz standard (54 Mbps). 802.11b used 2.4 GHz (11 Mbps)."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is MIMO in wireless networking?",
+    "options": [
+      {
+        "text": "Multiple-Input Multiple-Output using multiple antennas for increased throughput",
+        "correct": true
+      },
+      {
+        "text": "Mobile Internet Management Overlay",
+        "correct": false
+      },
+      {
+        "text": "Multiple Interface Mode Operation",
+        "correct": false
+      },
+      {
+        "text": "Managed Internet Mesh Organization",
+        "correct": false
+      }
+    ],
+    "explanation": "MIMO uses multiple antennas to send/receive multiple data streams simultaneously, increasing throughput."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "Which band does 802.11b/g/n use?",
+    "options": [
+      {
+        "text": "2.4 GHz",
+        "correct": true
+      },
+      {
+        "text": "5 GHz only",
+        "correct": false
+      },
+      {
+        "text": "900 MHz",
+        "correct": false
+      },
+      {
+        "text": "60 GHz",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11b/g/n support 2.4 GHz. 802.11a/ac use 5 GHz. 802.11n/ax support both bands."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is the purpose of SSID hiding?",
+    "options": [
+      {
+        "text": "To prevent the network from appearing in passive scans (weak security measure)",
+        "correct": true
+      },
+      {
+        "text": "To encrypt wireless traffic",
+        "correct": false
+      },
+      {
+        "text": "To prevent unauthorized association",
+        "correct": false
+      },
+      {
+        "text": "To increase signal strength",
+        "correct": false
+      }
+    ],
+    "explanation": "SSID hiding removes the beacon but is easily discovered by active scanning. Not a real security measure."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "Which wireless security protocol is considered most secure?",
+    "options": [
+      {
+        "text": "WPA3",
+        "correct": true
+      },
+      {
+        "text": "WEP",
+        "correct": false
+      },
+      {
+        "text": "WPA",
+        "correct": false
+      },
+      {
+        "text": "Open (no encryption)",
+        "correct": false
+      }
+    ],
+    "explanation": "WPA3 uses SAE, 192-bit enterprise mode, and forward secrecy. WEP is broken. WPA has weaknesses."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is a wireless access point (AP)?",
+    "options": [
+      {
+        "text": "A device that bridges wireless clients to a wired network",
+        "correct": true
+      },
+      {
+        "text": "A wireless signal amplifier",
+        "correct": false
+      },
+      {
+        "text": "A router for wired connections only",
+        "correct": false
+      },
+      {
+        "text": "A type of antenna",
+        "correct": false
+      }
+    ],
+    "explanation": "An AP bridges wireless clients to the wired LAN, acting as a Layer 2 bridge."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What channel width does 802.11ac support for maximum throughput?",
+    "options": [
+      {
+        "text": "160 MHz",
+        "correct": true
+      },
+      {
+        "text": "20 MHz",
+        "correct": false
+      },
+      {
+        "text": "40 MHz",
+        "correct": false
+      },
+      {
+        "text": "80 MHz",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11ac supports 20/40/80/160 MHz channels. Wider channels provide higher throughput but fewer available channels."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is OFDMA in Wi-Fi 6 (802.11ax)?",
+    "options": [
+      {
+        "text": "Dividing channels into sub-channels (RUs) for simultaneous transmission to multiple clients",
+        "correct": true
+      },
+      {
+        "text": "A new encryption standard",
+        "correct": false
+      },
+      {
+        "text": "A beamforming technique",
+        "correct": false
+      },
+      {
+        "text": "A power saving mode",
+        "correct": false
+      }
+    ],
+    "explanation": "OFDMA (Orthogonal Frequency-Division Multiple Access) divides a channel into smaller Resource Units for multi-user efficiency."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is the main advantage of 5G over 4G LTE?",
+    "options": [
+      {
+        "text": "Higher throughput, lower latency, and massive device connectivity",
+        "correct": true
+      },
+      {
+        "text": "Lower power consumption only",
+        "correct": false
+      },
+      {
+        "text": "Longer range only",
+        "correct": false
+      },
+      {
+        "text": "Better voice quality only",
+        "correct": false
+      }
+    ],
+    "explanation": "5G offers up to 20 Gbps, sub-1ms latency, 1M devices/km2, compared to 4G's 1 Gbps and ~10ms."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "Which protocol is used for wireless client roaming between access points?",
+    "options": [
+      {
+        "text": "802.11r (Fast BSS Transition)",
+        "correct": true
+      },
+      {
+        "text": "802.11k",
+        "correct": false
+      },
+      {
+        "text": "802.11v",
+        "correct": false
+      },
+      {
+        "text": "802.11w",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11r reduces roaming time by accelerating the authentication process during BSS transitions."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is the maximum data rate of 802.11b?",
+    "options": [
+      {
+        "text": "11 Mbps",
+        "correct": true
+      },
+      {
+        "text": "54 Mbps",
+        "correct": false
+      },
+      {
+        "text": "300 Mbps",
+        "correct": false
+      },
+      {
+        "text": "1 Mbps",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11b supports up to 11 Mbps using DSSS/CCK in the 2.4 GHz band."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What does WPA2-Enterprise use for authentication?",
+    "options": [
+      {
+        "text": "802.1X with RADIUS server",
+        "correct": true
+      },
+      {
+        "text": "Pre-shared key (PSK)",
+        "correct": false
+      },
+      {
+        "text": "MAC address filtering",
+        "correct": false
+      },
+      {
+        "text": "Open authentication",
+        "correct": false
+      }
+    ],
+    "explanation": "WPA2-Enterprise uses 802.1X/EAP with a RADIUS server. WPA2-Personal uses a PSK."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is co-channel interference in wireless networks?",
+    "options": [
+      {
+        "text": "Interference between devices using the same frequency channel",
+        "correct": true
+      },
+      {
+        "text": "Interference between 2.4 GHz and 5 GHz bands",
+        "correct": false
+      },
+      {
+        "text": "Signal degradation due to physical obstacles",
+        "correct": false
+      },
+      {
+        "text": "Interference from Bluetooth devices only",
+        "correct": false
+      }
+    ],
+    "explanation": "Co-channel interference occurs when multiple APs or devices share the same channel in overlapping coverage areas."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "Which wireless technology is designed for IoT devices with low power consumption?",
+    "options": [
+      {
+        "text": "802.15.4 (Zigbee/Thread)",
+        "correct": true
+      },
+      {
+        "text": "802.11ac",
+        "correct": false
+      },
+      {
+        "text": "802.11ax",
+        "correct": false
+      },
+      {
+        "text": "LTE-Advanced",
+        "correct": false
+      }
+    ],
+    "explanation": "802.15.4 defines low-rate WPANs for IoT, used by Zigbee, Thread, and 6LoWPAN."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is beamforming in wireless networks?",
+    "options": [
+      {
+        "text": "Directing wireless signals toward specific clients for improved signal strength",
+        "correct": true
+      },
+      {
+        "text": "Blocking signals from certain directions",
+        "correct": false
+      },
+      {
+        "text": "Splitting signals across multiple bands",
+        "correct": false
+      },
+      {
+        "text": "Compressing wireless data",
+        "correct": false
+      }
+    ],
+    "explanation": "Beamforming uses multiple antennas to focus signals toward intended receivers, improving range and throughput."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "How many non-overlapping channels are available in the 2.4 GHz band?",
+    "options": [
+      {
+        "text": "3 (channels 1, 6, 11)",
+        "correct": true
+      },
+      {
+        "text": "11",
+        "correct": false
+      },
+      {
+        "text": "13",
+        "correct": false
+      },
+      {
+        "text": "1",
+        "correct": false
+      }
+    ],
+    "explanation": "In 2.4 GHz, channels 1, 6, 11 (or 1, 5, 9, 13 in some regions) do not overlap. Each channel is 22 MHz wide."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is TWT (Target Wake Time) in Wi-Fi 6?",
+    "options": [
+      {
+        "text": "Scheduling when devices wake to transmit, reducing power consumption",
+        "correct": true
+      },
+      {
+        "text": "A new encryption protocol",
+        "correct": false
+      },
+      {
+        "text": "A roaming standard",
+        "correct": false
+      },
+      {
+        "text": "A channel allocation method",
+        "correct": false
+      }
+    ],
+    "explanation": "TWT allows APs to schedule device wake times, improving battery life for IoT devices."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is the maximum number of spatial streams in 802.11ax?",
+    "options": [
+      {
+        "text": "8",
+        "correct": true
+      },
+      {
+        "text": "4",
+        "correct": false
+      },
+      {
+        "text": "2",
+        "correct": false
+      },
+      {
+        "text": "16",
+        "correct": false
+      }
+    ],
+    "explanation": "802.11ax supports up to 8 spatial streams (up from 4 in 802.11ac)."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "Which wireless authentication uses a pre-shared password for all users?",
+    "options": [
+      {
+        "text": "WPA2-PSK (Personal)",
+        "correct": true
+      },
+      {
+        "text": "WPA2-Enterprise",
+        "correct": false
+      },
+      {
+        "text": "Open authentication",
+        "correct": false
+      },
+      {
+        "text": "EAP-TLS",
+        "correct": false
+      }
+    ],
+    "explanation": "WPA2-PSK uses a single password for all users. Enterprise mode uses individual credentials via RADIUS."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is the typical range of a Wi-Fi access point in an office environment?",
+    "options": [
+      {
+        "text": "30-50 meters",
+        "correct": true
+      },
+      {
+        "text": "100-200 meters",
+        "correct": false
+      },
+      {
+        "text": "1-5 meters",
+        "correct": false
+      },
+      {
+        "text": "500+ meters",
+        "correct": false
+      }
+    ],
+    "explanation": "Typical indoor range is 30-50m depending on obstacles, frequency, and antenna. Outdoor range can be much longer."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is a wireless controller in enterprise WLAN architecture?",
+    "options": [
+      {
+        "text": "A centralized device managing multiple thin/ lightweight access points",
+        "correct": true
+      },
+      {
+        "text": "A remote control for wireless devices",
+        "correct": false
+      },
+      {
+        "text": "A firewall for wireless traffic",
+        "correct": false
+      },
+      {
+        "text": "A DHCP server for wireless clients",
+        "correct": false
+      }
+    ],
+    "explanation": "Wireless controllers manage CAPWAP tunnels, configuration, and roaming across multiple thin APs."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is BSS (Basic Service Set) in 802.11?",
+    "options": [
+      {
+        "text": "A single AP and its associated wireless clients",
+        "correct": true
+      },
+      {
+        "text": "Multiple APs connected by a distribution system",
+        "correct": false
+      },
+      {
+        "text": "The wired backbone network",
+        "correct": false
+      },
+      {
+        "text": "A wireless security protocol",
+        "correct": false
+      }
+    ],
+    "explanation": "BSS is one AP and its clients. ESS (Extended Service Set) connects multiple BSSs via a distribution system."
+  },
+  {
+    "category": "Wireless & Mobile",
+    "question": "What is NB-IoT?",
+    "options": [
+      {
+        "text": "A narrowband cellular technology designed for low-power IoT devices",
+        "correct": true
+      },
+      {
+        "text": "A Wi-Fi standard for IoT",
+        "correct": false
+      },
+      {
+        "text": "A Bluetooth protocol variant",
+        "correct": false
+      },
+      {
+        "text": "A satellite communication standard",
+        "correct": false
+      }
+    ],
+    "explanation": "NB-IoT operates in licensed spectrum, providing low-power wide-area connectivity for IoT devices."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is a VPC in cloud networking?",
+    "options": [
+      {
+        "text": "A virtual private cloud providing isolated virtual network within a cloud provider",
+        "correct": true
+      },
+      {
+        "text": "A physical data center",
+        "correct": false
+      },
+      {
+        "text": "A VPN connection type",
+        "correct": false
+      },
+      {
+        "text": "A load balancing service",
+        "correct": false
+      }
+    ],
+    "explanation": "A VPC is an isolated virtual network within AWS/Azure/GCP with private subnets, routing, and security groups."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is SDN (Software-Defined Networking)?",
+    "options": [
+      {
+        "text": "Decoupling the control plane from the data plane for programmable network management",
+        "correct": true
+      },
+      {
+        "text": "Replacing physical switches with virtual ones only",
+        "correct": false
+      },
+      {
+        "text": "A cloud-specific firewall",
+        "correct": false
+      },
+      {
+        "text": "A type of VPN",
+        "correct": false
+      }
+    ],
+    "explanation": "SDN separates control (decisions) from data (forwarding) planes, enabling centralized, programmable network management."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is NFV (Network Functions Virtualization)?",
+    "options": [
+      {
+        "text": "Virtualizing network functions (firewall, load balancer) as software on commodity hardware",
+        "correct": true
+      },
+      {
+        "text": "Replacing VMs with containers",
+        "correct": false
+      },
+      {
+        "text": "A new type of hypervisor",
+        "correct": false
+      },
+      {
+        "text": "Physical network optimization",
+        "correct": false
+      }
+    ],
+    "explanation": "NFV replaces dedicated hardware appliances with software-based network functions on COTS servers."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "Which AWS service provides DNS management?",
+    "options": [
+      {
+        "text": "Route 53",
+        "correct": true
+      },
+      {
+        "text": "CloudFront",
+        "correct": false
+      },
+      {
+        "text": "VPC",
+        "correct": false
+      },
+      {
+        "text": "ELB",
+        "correct": false
+      }
+    ],
+    "explanation": "Route 53 is AWS's DNS service. CloudFront is CDN. VPC is networking. ELB is load balancing."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is the purpose of a cloud security group?",
+    "options": [
+      {
+        "text": "A virtual firewall controlling inbound and outbound traffic at the instance level",
+        "correct": true
+      },
+      {
+        "text": "A user authentication group",
+        "correct": false
+      },
+      {
+        "text": "A storage management policy",
+        "correct": false
+      },
+      {
+        "text": "A DNS resolution group",
+        "correct": false
+      }
+    ],
+    "explanation": "Security groups are stateful, instance-level virtual firewalls controlling traffic based on rules."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is a VLAN in cloud networking equivalent to?",
+    "options": [
+      {
+        "text": "A subnet within a VPC",
+        "correct": true
+      },
+      {
+        "text": "A physical LAN segment",
+        "correct": false
+      },
+      {
+        "text": "A VPN tunnel",
+        "correct": false
+      },
+      {
+        "text": "A load balancer pool",
+        "correct": false
+      }
+    ],
+    "explanation": "Cloud subnets within a VPC function similarly to VLANs, segmenting IP ranges and controlling broadcast domains."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is hybrid cloud networking?",
+    "options": [
+      {
+        "text": "Connecting on-premises data centers with cloud environments using VPN or dedicated links",
+        "correct": true
+      },
+      {
+        "text": "Running only public cloud services",
+        "correct": false
+      },
+      {
+        "text": "Using multiple cloud providers",
+        "correct": false
+      },
+      {
+        "text": "A wireless cloud architecture",
+        "correct": false
+      }
+    ],
+    "explanation": "Hybrid cloud networking connects on-prem and cloud via VPN (site-to-site), Direct Connect, or ExpressRoute."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "Which Azure service provides virtual networking?",
+    "options": [
+      {
+        "text": "Azure VNet",
+        "correct": true
+      },
+      {
+        "text": "Azure DNS",
+        "correct": false
+      },
+      {
+        "text": "Azure AD",
+        "correct": false
+      },
+      {
+        "text": "Azure Blob",
+        "correct": false
+      }
+    ],
+    "explanation": "Azure VNet provides isolated virtual networks with subnets, NSGs, and peering capabilities."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is network peering in cloud environments?",
+    "options": [
+      {
+        "text": "Connecting two virtual networks (within or across regions) for private communication",
+        "correct": true
+      },
+      {
+        "text": "A type of load balancing",
+        "correct": false
+      },
+      {
+        "text": "A DNS resolution method",
+        "correct": false
+      },
+      {
+        "text": "A firewall configuration",
+        "correct": false
+      }
+    ],
+    "explanation": "VPC peering allows private connectivity between VPCs without traversing the public internet."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is an overlay network in virtualized environments?",
+    "options": [
+      {
+        "text": "A virtual network built on top of a physical underlay network using encapsulation",
+        "correct": true
+      },
+      {
+        "text": "A physical network topology",
+        "correct": false
+      },
+      {
+        "text": "A routing protocol",
+        "correct": false
+      },
+      {
+        "text": "A type of firewall",
+        "correct": false
+      }
+    ],
+    "explanation": "Overlay networks (VXLAN, GRE) create virtual tunnels over physical networks for VM/container connectivity."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is VXLAN used for?",
+    "options": [
+      {
+        "text": "Encapsulating Layer 2 frames in UDP for virtual network overlays with 24-bit VNIs",
+        "correct": true
+      },
+      {
+        "text": "Encrypting inter-VLAN traffic",
+        "correct": false
+      },
+      {
+        "text": "Load balancing TCP connections",
+        "correct": false
+      },
+      {
+        "text": "Managing DNS records",
+        "correct": false
+      }
+    ],
+    "explanation": "VXLAN supports 16 million segments (24-bit VNI) by encapsulating L2 in UDP (port 4789), overcoming VLAN's 4094 limit."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is a NAT gateway in cloud networking?",
+    "options": [
+      {
+        "text": "A managed service providing outbound internet access for private subnet resources",
+        "correct": true
+      },
+      {
+        "text": "An inbound load balancer",
+        "correct": false
+      },
+      {
+        "text": "A VPN endpoint",
+        "correct": false
+      },
+      {
+        "text": "A DNS resolver",
+        "correct": false
+      }
+    ],
+    "explanation": "Cloud NAT gateways allow resources in private subnets to access the internet while preventing inbound connections."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is the difference between a security group and a network ACL in AWS?",
+    "options": [
+      {
+        "text": "Security groups are stateful and instance-level; NACLs are stateless and subnet-level",
+        "correct": true
+      },
+      {
+        "text": "They are the same",
+        "correct": false
+      },
+      {
+        "text": "NACLs are stateful; security groups are stateless",
+        "correct": false
+      },
+      {
+        "text": "Only one can be used at a time",
+        "correct": false
+      }
+    ],
+    "explanation": "Security groups: stateful, allow rules only, instance-level. NACLs: stateless, allow/deny, subnet-level, numbered rules."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is SD-WAN's advantage in cloud connectivity?",
+    "options": [
+      {
+        "text": "Intelligent path selection across MPLS, internet, and cloud links with application awareness",
+        "correct": true
+      },
+      {
+        "text": "Replacing all MPLS with internet only",
+        "correct": false
+      },
+      {
+        "text": "Providing cloud-based firewall",
+        "correct": false
+      },
+      {
+        "text": "Reducing DNS resolution time",
+        "correct": false
+      }
+    ],
+    "explanation": "SD-WAN optimizes cloud connectivity by selecting best paths based on application requirements and link quality."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is the OpenFlow protocol used for?",
+    "options": [
+      {
+        "text": "Communicating between SDN controllers and switches",
+        "correct": true
+      },
+      {
+        "text": "Managing virtual machines",
+        "correct": false
+      },
+      {
+        "text": "Encrypting inter-switch traffic",
+        "correct": false
+      },
+      {
+        "text": "Load balancing applications",
+        "correct": false
+      }
+    ],
+    "explanation": "OpenFlow is the southbound API in SDN, allowing controllers to program switch forwarding tables."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is a cloud load balancer?",
+    "options": [
+      {
+        "text": "Distributing incoming traffic across multiple backend instances for high availability",
+        "correct": true
+      },
+      {
+        "text": "Balancing CPU usage across VMs",
+        "correct": false
+      },
+      {
+        "text": "Distributing storage across disks",
+        "correct": false
+      },
+      {
+        "text": "Managing DNS queries",
+        "correct": false
+      }
+    ],
+    "explanation": "Cloud load balancers (ALB, NLB, ELB) distribute traffic across targets for availability and fault tolerance."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is an Internet Gateway in AWS VPC?",
+    "options": [
+      {
+        "text": "A horizontally scaled gateway allowing communication between VPC and internet",
+        "correct": true
+      },
+      {
+        "text": "A VPN endpoint",
+        "correct": false
+      },
+      {
+        "text": "A peering connection",
+        "correct": false
+      },
+      {
+        "text": "A NAT service",
+        "correct": false
+      }
+    ],
+    "explanation": "Internet Gateways enable internet access for VPC resources with public IPs. NAT Gateways serve private subnet resources."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is container networking?",
+    "options": [
+      {
+        "text": "Network connectivity between containers, often using virtual Ethernet pairs and overlay networks",
+        "correct": true
+      },
+      {
+        "text": "Physical cabling between server racks",
+        "correct": false
+      },
+      {
+        "text": "Wireless networking for IoT",
+        "correct": false
+      },
+      {
+        "text": "VPN between data centers",
+        "correct": false
+      }
+    ],
+    "explanation": "Container networking (Docker, CNI) uses veth pairs, bridges, and overlay networks (VXLAN) for container connectivity."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is the AWS Direct Connect service?",
+    "options": [
+      {
+        "text": "A dedicated network connection between on-premises and AWS bypassing the internet",
+        "correct": true
+      },
+      {
+        "text": "A VPN service",
+        "correct": false
+      },
+      {
+        "text": "A DNS service",
+        "correct": false
+      },
+      {
+        "text": "A CDN service",
+        "correct": false
+      }
+    ],
+    "explanation": "Direct Connect provides dedicated, low-latency, private connectivity to AWS at speeds from 50 Mbps to 100 Gbps."
+  },
+  {
+    "category": "Cloud & Virtualization",
+    "question": "What is Infrastructure as a Service (IaaS)?",
+    "options": [
+      {
+        "text": "Cloud provider manages physical infrastructure; tenant manages OS, runtime, and applications",
+        "correct": true
+      },
+      {
+        "text": "Provider manages everything including applications",
+        "correct": false
+      },
+      {
+        "text": "Provider only manages hardware",
+        "correct": false
+      },
+      {
+        "text": "Tenant manages everything including physical servers",
+        "correct": false
+      }
+    ],
+    "explanation": "IaaS (AWS EC2, Azure VM) provides virtualized compute, storage, network. Tenant manages OS up. PaaS adds runtime. SaaS adds apps."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the difference between bandwidth and throughput?",
+    "options": [
+      {
+        "text": "Bandwidth is theoretical capacity; throughput is actual data transfer rate",
+        "correct": true
+      },
+      {
+        "text": "They are the same thing",
+        "correct": false
+      },
+      {
+        "text": "Throughput is always higher than bandwidth",
+        "correct": false
+      },
+      {
+        "text": "Bandwidth measures latency; throughput measures speed",
+        "correct": false
+      }
+    ],
+    "explanation": "Bandwidth is maximum theoretical capacity. Throughput is actual data transferred, always less than or equal to bandwidth."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is latency in networking?",
+    "options": [
+      {
+        "text": "The time it takes for a packet to travel from source to destination",
+        "correct": true
+      },
+      {
+        "text": "The total data transferred per second",
+        "correct": false
+      },
+      {
+        "text": "The number of packets lost in transit",
+        "correct": false
+      },
+      {
+        "text": "The number of hops a packet traverses",
+        "correct": false
+      }
+    ],
+    "explanation": "Latency is the round-trip or one-way delay, measured in milliseconds. It includes propagation, processing, and queuing delays."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is jitter?",
+    "options": [
+      {
+        "text": "Variation in packet arrival times (delay variation)",
+        "correct": true
+      },
+      {
+        "text": "Packet loss rate",
+        "correct": false
+      },
+      {
+        "text": "Bandwidth fluctuation",
+        "correct": false
+      },
+      {
+        "text": "Signal interference",
+        "correct": false
+      }
+    ],
+    "explanation": "Jitter is the variation in packet delay. High jitter degrades VoIP and video quality."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is QoS (Quality of Service)?",
+    "options": [
+      {
+        "text": "Prioritizing certain types of traffic over others for predictable performance",
+        "correct": true
+      },
+      {
+        "text": "Increasing total bandwidth",
+        "correct": false
+      },
+      {
+        "text": "Encrypting high-priority traffic",
+        "correct": false
+      },
+      {
+        "text": "Compressing all traffic equally",
+        "correct": false
+      }
+    ],
+    "explanation": "QoS mechanisms (classification, marking, queuing) ensure critical traffic gets priority bandwidth and low latency."
+  },
+  {
+    "category": "Network Performance",
+    "question": "Which QoS model provides guaranteed bandwidth and delay bounds?",
+    "options": [
+      {
+        "text": "IntServ (Integrated Services)",
+        "correct": true
+      },
+      {
+        "text": "DiffServ (Differentiated Services)",
+        "correct": false
+      },
+      {
+        "text": "Best Effort",
+        "correct": false
+      },
+      {
+        "text": "FIFO queuing",
+        "correct": false
+      }
+    ],
+    "explanation": "IntServ uses RSVP for per-flow guarantees but scales poorly. DiffServ uses DSCP for class-based, scalable QoS."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is traffic shaping?",
+    "options": [
+      {
+        "text": "Delaying packets to conform to a specified rate (bucket/token system)",
+        "correct": true
+      },
+      {
+        "text": "Dropping excess packets",
+        "correct": false
+      },
+      {
+        "text": "Prioritizing certain packets",
+        "correct": false
+      },
+      {
+        "text": "Encrypting traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "Shaping delays packets to match a contracted rate (using token bucket). Policing drops or remarks excess."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the bandwidth-delay product (BDP)?",
+    "options": [
+      {
+        "text": "The amount of data that can be in transit on a link at any given time (BW x RTT)",
+        "correct": true
+      },
+      {
+        "text": "The total bandwidth available",
+        "correct": false
+      },
+      {
+        "text": "The maximum packet size",
+        "correct": false
+      },
+      {
+        "text": "The queue depth on a router",
+        "correct": false
+      }
+    ],
+    "explanation": "BDP = bandwidth (bps) x RTT (seconds). It determines the optimal TCP window size for full utilization."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is a load balancer?",
+    "options": [
+      {
+        "text": "A device distributing incoming traffic across multiple servers",
+        "correct": true
+      },
+      {
+        "text": "A device compressing traffic",
+        "correct": false
+      },
+      {
+        "text": "A device encrypting traffic",
+        "correct": false
+      },
+      {
+        "text": "A device caching responses",
+        "correct": false
+      }
+    ],
+    "explanation": "Load balancers distribute traffic across multiple backend servers for availability, scalability, and fault tolerance."
+  },
+  {
+    "category": "Network Performance",
+    "question": "Which load balancing algorithm distributes based on server capacity?",
+    "options": [
+      {
+        "text": "Weighted round-robin",
+        "correct": true
+      },
+      {
+        "text": "Simple round-robin",
+        "correct": false
+      },
+      {
+        "text": "Random",
+        "correct": false
+      },
+      {
+        "text": "Source IP hash",
+        "correct": false
+      }
+    ],
+    "explanation": "Weighted round-robin assigns weights based on server capacity, sending more traffic to more powerful servers."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is queuing delay?",
+    "options": [
+      {
+        "text": "The time a packet waits in a router's output queue before transmission",
+        "correct": true
+      },
+      {
+        "text": "The time to process the packet header",
+        "correct": false
+      },
+      {
+        "text": "The time for signal propagation on the wire",
+        "correct": false
+      },
+      {
+        "text": "The time for TCP handshake",
+        "correct": false
+      }
+    ],
+    "explanation": "Queuing delay occurs when multiple packets contend for the same output interface. High congestion = high queuing delay."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What DSCP value is typically used for voice traffic?",
+    "options": [
+      {
+        "text": "EF (Expedited Forwarding) - DSCP 46",
+        "correct": true
+      },
+      {
+        "text": "AF41",
+        "correct": false
+      },
+      {
+        "text": "Best Effort - DSCP 0",
+        "correct": false
+      },
+      {
+        "text": "CS6",
+        "correct": false
+      }
+    ],
+    "explanation": "EF (DSCP 46) is for VoIP with lowest latency. AF (Assured Forwarding) for business-critical. CS for signaling."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is traffic policing?",
+    "options": [
+      {
+        "text": "Dropping or remarking packets that exceed a configured rate",
+        "correct": true
+      },
+      {
+        "text": "Delaying excess packets",
+        "correct": false
+      },
+      {
+        "text": "Compressing packets",
+        "correct": false
+      },
+      {
+        "text": "Encrypting priority packets",
+        "correct": false
+      }
+    ],
+    "explanation": "Policing enforces a rate limit by dropping or remarking excess traffic. Shaping buffers excess packets."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is TCP window scaling?",
+    "options": [
+      {
+        "text": "Extending the TCP receive window beyond 65,535 bytes for high-bandwidth links",
+        "correct": true
+      },
+      {
+        "text": "Changing TCP port numbers",
+        "correct": false
+      },
+      {
+        "text": "Resizing TCP headers",
+        "correct": false
+      },
+      {
+        "text": "Adjusting MTU dynamically",
+        "correct": false
+      }
+    ],
+    "explanation": "Window scaling (RFC 7323) allows TCP window > 65,535 bytes, essential for high-BDP links."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is packet loss?",
+    "options": [
+      {
+        "text": "Packets failing to reach their destination due to congestion or errors",
+        "correct": true
+      },
+      {
+        "text": "Packets being duplicated in transit",
+        "correct": false
+      },
+      {
+        "text": "Packets arriving out of order",
+        "correct": false
+      },
+      {
+        "text": "Packets being intentionally delayed",
+        "correct": false
+      }
+    ],
+    "explanation": "Packet loss occurs due to congestion, errors, or buffer overflow. TCP retransmits lost packets; UDP does not."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is Round-Trip Time (RTT)?",
+    "options": [
+      {
+        "text": "The total time for a packet to travel to destination and back",
+        "correct": true
+      },
+      {
+        "text": "The one-way travel time",
+        "correct": false
+      },
+      {
+        "text": "The processing time at destination",
+        "correct": false
+      },
+      {
+        "text": "The queuing time only",
+        "correct": false
+      }
+    ],
+    "explanation": "RTT = time from sending a packet to receiving its acknowledgment. Includes all delay components."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is DiffServ (Differentiated Services)?",
+    "options": [
+      {
+        "text": "A QoS model that classifies and marks traffic for class-based treatment",
+        "correct": true
+      },
+      {
+        "text": "A VPN protocol",
+        "correct": false
+      },
+      {
+        "text": "A routing protocol",
+        "correct": false
+      },
+      {
+        "text": "A load balancing algorithm",
+        "correct": false
+      }
+    ],
+    "explanation": "DiffServ uses DSCP marking (6 bits, 64 values) to classify traffic into classes for differentiated treatment."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the optimal TCP window size for a link?",
+    "options": [
+      {
+        "text": "Equal to or greater than the bandwidth-delay product",
+        "correct": true
+      },
+      {
+        "text": "Fixed at 65,535 bytes",
+        "correct": false
+      },
+      {
+        "text": "Always 1 MSS",
+        "correct": false
+      },
+      {
+        "text": "Equal to the MTU",
+        "correct": false
+      }
+    ],
+    "explanation": "Optimal TCP window >= BDP ensures the sender keeps the pipe full. Below BDP, bandwidth is underutilized."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is a CDN (Content Delivery Network)?",
+    "options": [
+      {
+        "text": "A distributed network of edge servers caching content for faster delivery to users",
+        "correct": true
+      },
+      {
+        "text": "A VPN service",
+        "correct": false
+      },
+      {
+        "text": "A backup system",
+        "correct": false
+      },
+      {
+        "text": "A monitoring tool",
+        "correct": false
+      }
+    ],
+    "explanation": "CDNs cache content at edge locations near users, reducing latency and origin server load."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is WFQ (Weighted Fair Queuing)?",
+    "options": [
+      {
+        "text": "A queuing algorithm that provides fair bandwidth allocation among flows based on weights",
+        "correct": true
+      },
+      {
+        "text": "A first-in-first-out queue",
+        "correct": false
+      },
+      {
+        "text": "A priority queue for voice only",
+        "correct": false
+      },
+      {
+        "text": "A load balancing method",
+        "correct": false
+      }
+    ],
+    "explanation": "WFQ allocates bandwidth proportionally to flow weights, ensuring no single flow monopolizes the link."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is the main cause of network congestion?",
+    "options": [
+      {
+        "text": "Traffic demand exceeding available bandwidth",
+        "correct": true
+      },
+      {
+        "text": "Hardware failures",
+        "correct": false
+      },
+      {
+        "text": "DNS resolution delays",
+        "correct": false
+      },
+      {
+        "text": "Encryption overhead",
+        "correct": false
+      }
+    ],
+    "explanation": "Congestion occurs when aggregate traffic demand exceeds link capacity, causing queues to fill and packets to drop."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What metric measures the percentage of sent packets that successfully arrive?",
+    "options": [
+      {
+        "text": "Packet delivery ratio",
+        "correct": true
+      },
+      {
+        "text": "Throughput",
+        "correct": false
+      },
+      {
+        "text": "Jitter",
+        "correct": false
+      },
+      {
+        "text": "Latency",
+        "correct": false
+      }
+    ],
+    "explanation": "Packet delivery ratio = (received / sent) x 100%. Directly related to the loss rate."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is an SLA in networking?",
+    "options": [
+      {
+        "text": "A contract defining guaranteed network performance levels (uptime, latency, bandwidth)",
+        "correct": true
+      },
+      {
+        "text": "A security policy document",
+        "correct": false
+      },
+      {
+        "text": "A network design template",
+        "correct": false
+      },
+      {
+        "text": "A hardware specification",
+        "correct": false
+      }
+    ],
+    "explanation": "SLAs define measurable service commitments: uptime (99.9%), latency (<10ms), throughput (1 Gbps), etc."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is header overhead in networking?",
+    "options": [
+      {
+        "text": "Non-payload bytes (headers) that consume bandwidth without carrying application data",
+        "correct": true
+      },
+      {
+        "text": "Data compression overhead",
+        "correct": false
+      },
+      {
+        "text": "Encryption processing time",
+        "correct": false
+      },
+      {
+        "text": "Routing table size",
+        "correct": false
+      }
+    ],
+    "explanation": "Headers (Ethernet 14B + IP 20B + TCP 20B = 54B) reduce effective throughput. MTU 1500B means only 1446B is payload."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is TCP slow start?",
+    "options": [
+      {
+        "text": "Starting with a small congestion window and doubling it each RTT until loss occurs",
+        "correct": true
+      },
+      {
+        "text": "Sending at maximum speed immediately",
+        "correct": false
+      },
+      {
+        "text": "Waiting for ACK before sending each packet",
+        "correct": false
+      },
+      {
+        "text": "Using a fixed window size",
+        "correct": false
+      }
+    ],
+    "explanation": "TCP slow start begins with cwnd = 1 MSS, doubling each RTT to quickly probe available bandwidth."
+  },
+  {
+    "category": "Network Performance",
+    "question": "What is network baseline?",
+    "options": [
+      {
+        "text": "A reference measurement of normal network performance for comparison during troubleshooting",
+        "correct": true
+      },
+      {
+        "text": "The minimum bandwidth required",
+        "correct": false
+      },
+      {
+        "text": "The initial network configuration",
+        "correct": false
+      },
+      {
+        "text": "A backup network topology",
+        "correct": false
+      }
+    ],
+    "explanation": "Baselines record normal metrics (throughput, latency, loss) to compare against when issues occur."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is SNMP used for?",
+    "options": [
+      {
+        "text": "Monitoring and managing network devices via a standardized protocol",
+        "correct": true
+      },
+      {
+        "text": "Routing packets",
+        "correct": false
+      },
+      {
+        "text": "Encrypting network traffic",
+        "correct": false
+      },
+      {
+        "text": "Resolving domain names",
+        "correct": false
+      }
+    ],
+    "explanation": "SNMP (UDP 161/162) collects metrics, manages configurations, and sends traps/alerts from network devices."
+  },
+  {
+    "category": "Network Management",
+    "question": "What are the three versions of SNMP?",
+    "options": [
+      {
+        "text": "SNMPv1, SNMPv2c, SNMPv3",
+        "correct": true
+      },
+      {
+        "text": "SNMP-A, SNMP-B, SNMP-C",
+        "correct": false
+      },
+      {
+        "text": "SNMP Basic, Standard, Advanced",
+        "correct": false
+      },
+      {
+        "text": "SNMP-Lite, SNMP-Pro, SNMP-Enterprise",
+        "correct": false
+      }
+    ],
+    "explanation": "SNMPv1 (community strings, cleartext), v2c (bulk operations), v3 (USM auth/privacy, view-based ACL)."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is NetFlow?",
+    "options": [
+      {
+        "text": "A Cisco protocol for collecting IP traffic flow information for monitoring and analysis",
+        "correct": true
+      },
+      {
+        "text": "A routing protocol",
+        "correct": false
+      },
+      {
+        "text": "A VPN technology",
+        "correct": false
+      },
+      {
+        "text": "A load balancing algorithm",
+        "correct": false
+      }
+    ],
+    "explanation": "NetFlow exports flow records (src/dst IP, ports, protocol, bytes, packets) to collectors for traffic analysis."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is the SNMP manager also called?",
+    "options": [
+      {
+        "text": "NMS (Network Management Station)",
+        "correct": true
+      },
+      {
+        "text": "Agent",
+        "correct": false
+      },
+      {
+        "text": "MIB",
+        "correct": false
+      },
+      {
+        "text": "Trap receiver only",
+        "correct": false
+      }
+    ],
+    "explanation": "The NMS queries agents and receives traps. Agents run on managed devices. MIBs define managed objects."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is a MIB (Management Information Base)?",
+    "options": [
+      {
+        "text": "A hierarchical database of managed objects defining device parameters",
+        "correct": true
+      },
+      {
+        "text": "A type of network cable",
+        "correct": false
+      },
+      {
+        "text": "A monitoring protocol",
+        "correct": false
+      },
+      {
+        "text": "A routing table",
+        "correct": false
+      }
+    ],
+    "explanation": "MIBs define the structure of management data using OIDs. SNMP agents expose MIB data to managers."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is sFlow?",
+    "options": [
+      {
+        "text": "A sampling-based traffic monitoring technology that captures packet headers at intervals",
+        "correct": true
+      },
+      {
+        "text": "A flow-based routing protocol",
+        "correct": false
+      },
+      {
+        "text": "A storage technology",
+        "correct": false
+      },
+      {
+        "text": "A security protocol",
+        "correct": false
+      }
+    ],
+    "explanation": "sFlow samples 1 in N packets and exports headers, providing scalable visibility with minimal overhead."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is a Syslog server used for?",
+    "options": [
+      {
+        "text": "Centralized collection and storage of log messages from network devices",
+        "correct": true
+      },
+      {
+        "text": "DNS resolution",
+        "correct": false
+      },
+      {
+        "text": "Traffic routing",
+        "correct": false
+      },
+      {
+        "text": "Bandwidth measurement",
+        "correct": false
+      }
+    ],
+    "explanation": "Syslog (UDP 514) collects system logs centrally for monitoring, troubleshooting, and compliance."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is an SNMP trap?",
+    "options": [
+      {
+        "text": "An unsolicited notification from an agent to the manager about an event",
+        "correct": true
+      },
+      {
+        "text": "A regular status query",
+        "correct": false
+      },
+      {
+        "text": "A configuration backup",
+        "correct": false
+      },
+      {
+        "text": "A routing update",
+        "correct": false
+      }
+    ],
+    "explanation": "Traps are asynchronous alerts sent by agents when events occur (link down, authentication failure, etc.)."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is NTP (Network Time Protocol)?",
+    "options": [
+      {
+        "text": "A protocol for synchronizing clocks across network devices",
+        "correct": true
+      },
+      {
+        "text": "A traffic shaping protocol",
+        "correct": false
+      },
+      {
+        "text": "A security protocol",
+        "correct": false
+      },
+      {
+        "text": "A file transfer protocol",
+        "correct": false
+      }
+    ],
+    "explanation": "NTP (UDP 123) synchronizes device clocks to within milliseconds, essential for logging, authentication, and certificates."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is network configuration management?",
+    "options": [
+      {
+        "text": "Tracking and managing device configurations, versions, and changes",
+        "correct": true
+      },
+      {
+        "text": "Only backing up configurations",
+        "correct": false
+      },
+      {
+        "text": "Routing table management",
+        "correct": false
+      },
+      {
+        "text": "IP address assignment",
+        "correct": false
+      }
+    ],
+    "explanation": "Config management tracks changes, enables rollback, ensures consistency, and automates deployments."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is FCAPS in network management?",
+    "options": [
+      {
+        "text": "Fault, Configuration, Accounting, Performance, Security management",
+        "correct": true
+      },
+      {
+        "text": "Forwarding, Control, Authentication, Policy, Security",
+        "correct": false
+      },
+      {
+        "text": "Fiber, Cable, Antenna, Power, Switch",
+        "correct": false
+      },
+      {
+        "text": "File, Cache, Access, Process, Session",
+        "correct": false
+      }
+    ],
+    "explanation": "FCAPS is the ISO network management model covering all aspects of network operations."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is a network topology map?",
+    "options": [
+      {
+        "text": "A visual representation of network devices and their connections",
+        "correct": true
+      },
+      {
+        "text": "A routing table diagram",
+        "correct": false
+      },
+      {
+        "text": "A bandwidth allocation chart",
+        "correct": false
+      },
+      {
+        "text": "A security policy document",
+        "correct": false
+      }
+    ],
+    "explanation": "Topology maps show physical and logical network layout, aiding troubleshooting and documentation."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is the difference between NetFlow and sFlow?",
+    "options": [
+      {
+        "text": "NetFlow tracks every flow; sFlow samples packets statistically",
+        "correct": true
+      },
+      {
+        "text": "They are identical",
+        "correct": false
+      },
+      {
+        "text": "sFlow tracks every flow; NetFlow samples",
+        "correct": false
+      },
+      {
+        "text": "NetFlow is Layer 2; sFlow is Layer 3",
+        "correct": false
+      }
+    ],
+    "explanation": "NetFlow tracks complete flows (more accurate). sFlow samples packets (more scalable for high-speed links)."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is SNMPv3 USM?",
+    "options": [
+      {
+        "text": "User-based Security Model providing authentication and encryption",
+        "correct": true
+      },
+      {
+        "text": "Universal Simple Management",
+        "correct": false
+      },
+      {
+        "text": "Unified System Monitor",
+        "correct": false
+      },
+      {
+        "text": "Unrestricted Socket Mode",
+        "correct": false
+      }
+    ],
+    "explanation": "USM provides authentication (MD5/SHA) and privacy (DES/AES), addressing v1/v2c security weaknesses."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is LLDP (Link Layer Discovery Protocol)?",
+    "options": [
+      {
+        "text": "A protocol for devices to advertise their identity and capabilities on a LAN",
+        "correct": true
+      },
+      {
+        "text": "A routing protocol",
+        "correct": false
+      },
+      {
+        "text": "A VPN protocol",
+        "correct": false
+      },
+      {
+        "text": "An encryption protocol",
+        "correct": false
+      }
+    ],
+    "explanation": "LLDP (802.1AB) enables neighbor discovery by advertising device info (chassis ID, port ID, capabilities)."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is the purpose of network monitoring?",
+    "options": [
+      {
+        "text": "Continuously tracking network health, performance, and availability",
+        "correct": true
+      },
+      {
+        "text": "Only detecting intrusions",
+        "correct": false
+      },
+      {
+        "text": "Only configuring devices",
+        "correct": false
+      },
+      {
+        "text": "Only backing up data",
+        "correct": false
+      }
+    ],
+    "explanation": "Monitoring tracks uptime, bandwidth, latency, errors, and resource utilization for proactive management."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is an SNMP community string?",
+    "options": [
+      {
+        "text": "A plaintext password used in SNMPv1/v2c for authentication",
+        "correct": true
+      },
+      {
+        "text": "An encrypted certificate",
+        "correct": false
+      },
+      {
+        "text": "A device hostname",
+        "correct": false
+      },
+      {
+        "text": "A routing protocol parameter",
+        "correct": false
+      }
+    ],
+    "explanation": "Community strings ('public' for read, 'private' for write) are sent in cleartext, making SNMPv1/v2c insecure."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is configuration backup important for?",
+    "options": [
+      {
+        "text": "Enabling quick recovery from device failures or misconfigurations",
+        "correct": true
+      },
+      {
+        "text": "Increasing bandwidth",
+        "correct": false
+      },
+      {
+        "text": "Reducing latency",
+        "correct": false
+      },
+      {
+        "text": "Load balancing",
+        "correct": false
+      }
+    ],
+    "explanation": "Config backups enable rollback to known-good states, critical for disaster recovery and change management."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is RMON (Remote Monitoring)?",
+    "options": [
+      {
+        "text": "SNMP MIB extensions for proactive monitoring beyond basic counters",
+        "correct": true
+      },
+      {
+        "text": "A routing protocol",
+        "correct": false
+      },
+      {
+        "text": "A VPN technology",
+        "correct": false
+      },
+      {
+        "text": "A DNS service",
+        "correct": false
+      }
+    ],
+    "explanation": "RMON provides advanced monitoring: history, alarm, event, and capture groups beyond standard SNMP MIB-II."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is the primary purpose of a network management protocol?",
+    "options": [
+      {
+        "text": "To collect operational data and manage devices remotely",
+        "correct": true
+      },
+      {
+        "text": "To encrypt all network traffic",
+        "correct": false
+      },
+      {
+        "text": "To route packets efficiently",
+        "correct": false
+      },
+      {
+        "text": "To provide wireless connectivity",
+        "correct": false
+      }
+    ],
+    "explanation": "NMS protocols (SNMP, NetFlow, Syslog) collect data, manage configs, and send alerts for operational awareness."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is the difference between SNMP GET and GET-NEXT?",
+    "options": [
+      {
+        "text": "GET retrieves a specific OID; GET-NEXT retrieves the next OID in the MIB tree",
+        "correct": true
+      },
+      {
+        "text": "GET-NEXT is faster than GET",
+        "correct": false
+      },
+      {
+        "text": "GET retrieves multiple OIDs; GET-NEXT retrieves one",
+        "correct": false
+      },
+      {
+        "text": "No difference",
+        "correct": false
+      }
+    ],
+    "explanation": "GET fetches one specific OID. GET-NEXT walks the MIB tree, useful for table traversal in SNMP WALK."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is an OID in SNMP?",
+    "options": [
+      {
+        "text": "Object Identifier - a unique numeric path identifying a managed object in the MIB tree",
+        "correct": true
+      },
+      {
+        "text": "An IP address",
+        "correct": false
+      },
+      {
+        "text": "A MAC address",
+        "correct": false
+      },
+      {
+        "text": "A port number",
+        "correct": false
+      }
+    ],
+    "explanation": "OIDs are dot-separated numbers (e.g., 1.3.6.1.2.1.1.1) uniquely identifying MIB objects hierarchically."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is proactive network management?",
+    "options": [
+      {
+        "text": "Identifying and resolving issues before they impact users",
+        "correct": true
+      },
+      {
+        "text": "Reacting to user complaints",
+        "correct": false
+      },
+      {
+        "text": "Replacing failed hardware",
+        "correct": false
+      },
+      {
+        "text": "Upgrading firmware only when required",
+        "correct": false
+      }
+    ],
+    "explanation": "Proactive management uses monitoring, baselines, and thresholds to detect and fix issues before outages."
+  },
+  {
+    "category": "Network Management",
+    "question": "What tool captures and analyzes network traffic packets?",
+    "options": [
+      {
+        "text": "Protocol analyzer / packet sniffer (e.g., Wireshark)",
+        "correct": true
+      },
+      {
+        "text": "Ping",
+        "correct": false
+      },
+      {
+        "text": "Traceroute",
+        "correct": false
+      },
+      {
+        "text": "Netstat",
+        "correct": false
+      }
+    ],
+    "explanation": "Packet analyzers capture raw frames/packets for deep protocol analysis and troubleshooting."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is a network baseline used for?",
+    "options": [
+      {
+        "text": "Comparing current performance against known-normal levels to detect anomalies",
+        "correct": true
+      },
+      {
+        "text": "Setting initial device configurations",
+        "correct": false
+      },
+      {
+        "text": "Load balancing traffic",
+        "correct": false
+      },
+      {
+        "text": "Encrypting management traffic",
+        "correct": false
+      }
+    ],
+    "explanation": "Baselines establish normal behavior patterns. Deviations from baseline indicate potential problems."
+  },
+  {
+    "category": "Network Management",
+    "question": "What is SNMP inform message?",
+    "options": [
+      {
+        "text": "A trap that requires acknowledgment from the manager",
+        "correct": true
+      },
+      {
+        "text": "A query from the agent",
+        "correct": false
+      },
+      {
+        "text": "A configuration command",
+        "correct": false
+      },
+      {
+        "text": "An encryption key exchange",
+        "correct": false
+      }
+    ],
+    "explanation": "Informs are acknowledged traps (SNMPv2c/v3), ensuring delivery. Regular traps are unacknowledged."
+  },
+  {
+    "category": "IPv6",
+    "question": "How many bits are in an IPv6 address?",
+    "options": [
+      {
+        "text": "128 bits",
+        "correct": true
+      },
+      {
+        "text": "32 bits",
+        "correct": false
+      },
+      {
+        "text": "64 bits",
+        "correct": false
+      },
+      {
+        "text": "256 bits",
+        "correct": false
+      }
+    ],
+    "explanation": "IPv6 addresses are 128 bits, written as 8 groups of 4 hex digits (e.g., 2001:0db8::1)."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is the IPv6 loopback address?",
+    "options": [
+      {
+        "text": "::1",
+        "correct": true
+      },
+      {
+        "text": "127.0.0.1",
+        "correct": false
+      },
+      {
+        "text": "0:0:0:0:0:0:0:0",
+        "correct": false
+      },
+      {
+        "text": "::",
+        "correct": false
+      }
+    ],
+    "explanation": "IPv6 loopback is ::1 (equivalent to 127.0.0.1 in IPv4). ::/128 is unspecified."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is dual-stack deployment?",
+    "options": [
+      {
+        "text": "Running both IPv4 and IPv6 simultaneously on the same device/interface",
+        "correct": true
+      },
+      {
+        "text": "Converting IPv6 to IPv4 only",
+        "correct": false
+      },
+      {
+        "text": "Using only IPv6",
+        "correct": false
+      },
+      {
+        "text": "Running IPv4 over IPv6 tunnels",
+        "correct": false
+      }
+    ],
+    "explanation": "Dual-stack runs both protocols natively. Each interface has both IPv4 and IPv6 addresses."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is NAT64 used for?",
+    "options": [
+      {
+        "text": "Translating IPv6 clients to communicate with IPv4 servers",
+        "correct": true
+      },
+      {
+        "text": "Translating IPv4 to IPv6",
+        "correct": false
+      },
+      {
+        "text": "Encrypting IPv6 traffic",
+        "correct": false
+      },
+      {
+        "text": "Load balancing IPv6",
+        "correct": false
+      }
+    ],
+    "explanation": "NAT64 allows IPv6-only clients to reach IPv4 servers by translating addresses and protocols."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is the IPv6 link-local address range?",
+    "options": [
+      {
+        "text": "fe80::/10",
+        "correct": true
+      },
+      {
+        "text": "fc00::/7",
+        "correct": false
+      },
+      {
+        "text": "2001:db8::/32",
+        "correct": false
+      },
+      {
+        "text": "ff00::/8",
+        "correct": false
+      }
+    ],
+    "explanation": "fe80::/10 is link-local (auto-configured, non-routable). fc00::/7 is ULA. 2001:db8::/32 is documentation."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is the equivalent of IPv4 broadcast in IPv6?",
+    "options": [
+      {
+        "text": "IPv6 has no broadcast; it uses multicast and anycast instead",
+        "correct": true
+      },
+      {
+        "text": "ff:ff:ff:ff:ff:ff",
+        "correct": false
+      },
+      {
+        "text": "::1",
+        "correct": false
+      },
+      {
+        "text": "ff00::/8",
+        "correct": false
+      }
+    ],
+    "explanation": "IPv6 eliminated broadcast. Multicast (ff00::/8) serves group communication. Anycast sends to nearest."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is SLAAC in IPv6?",
+    "options": [
+      {
+        "text": "Stateless Address Autoconfiguration using EUI-64 or random interface IDs",
+        "correct": true
+      },
+      {
+        "text": "A DHCPv6-only mechanism",
+        "correct": false
+      },
+      {
+        "text": "A routing protocol",
+        "correct": false
+      },
+      {
+        "text": "A tunneling mechanism",
+        "correct": false
+      }
+    ],
+    "explanation": "SLAAC uses router advertisements to auto-configure addresses. Hosts generate interface IDs (EUI-64 or random)."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is 6to4 tunneling?",
+    "options": [
+      {
+        "text": "Encapsulating IPv6 packets in IPv4 for communication across IPv4 networks",
+        "correct": true
+      },
+      {
+        "text": "Converting IPv6 to IPv4",
+        "correct": false
+      },
+      {
+        "text": "A security protocol",
+        "correct": false
+      },
+      {
+        "text": "A DNS mechanism",
+        "correct": false
+      }
+    ],
+    "explanation": "6to4 uses the 2002::/16 prefix with embedded IPv4 address for automatic IPv6-in-IPv4 tunneling."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is the global unicast address range assigned by IANA?",
+    "options": [
+      {
+        "text": "2000::/3",
+        "correct": true
+      },
+      {
+        "text": "fc00::/7",
+        "correct": false
+      },
+      {
+        "text": "fe80::/10",
+        "correct": false
+      },
+      {
+        "text": "ff00::/8",
+        "correct": false
+      }
+    ],
+    "explanation": "2000::/3 is global unicast (public routable). fc00::/7 is ULA (private). fe80::/10 is link-local."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is Teredo tunneling?",
+    "options": [
+      {
+        "text": "IPv6 over UDP/IPv4 through NAT devices",
+        "correct": true
+      },
+      {
+        "text": "IPv4 over IPv6 tunneling",
+        "correct": false
+      },
+      {
+        "text": "A routing protocol for IPv6",
+        "correct": false
+      },
+      {
+        "text": "An IPv6 security mechanism",
+        "correct": false
+      }
+    ],
+    "explanation": "Teredo encapsulates IPv6 in UDP (port 3544) over IPv4, working through NAT where 6to4 cannot."
+  },
+  {
+    "category": "IPv6",
+    "question": "Which IPv6 routing protocol is the equivalent of OSPFv2?",
+    "options": [
+      {
+        "text": "OSPFv3",
+        "correct": true
+      },
+      {
+        "text": "RIPng",
+        "correct": false
+      },
+      {
+        "text": "EIGRP for IPv6",
+        "correct": false
+      },
+      {
+        "text": "BGP4+",
+        "correct": false
+      }
+    ],
+    "explanation": "OSPFv3 extends OSPF for IPv6. It runs over IPv6 link-local addresses and separates protocol from addressing."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is DHCPv6?",
+    "options": [
+      {
+        "text": "Dynamic Host Configuration Protocol for IPv6 address assignment",
+        "correct": true
+      },
+      {
+        "text": "A tunneling protocol",
+        "correct": false
+      },
+      {
+        "text": "A routing protocol",
+        "correct": false
+      },
+      {
+        "text": "An encryption protocol",
+        "correct": false
+      }
+    ],
+    "explanation": "DHCPv6 provides stateful address assignment and configuration options (DNS, NTP) to IPv6 clients."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is an IPv6 anycast address?",
+    "options": [
+      {
+        "text": "An address assigned to multiple interfaces; packets routed to nearest one",
+        "correct": true
+      },
+      {
+        "text": "An address for all interfaces globally",
+        "correct": false
+      },
+      {
+        "text": "A loopback address",
+        "correct": false
+      },
+      {
+        "text": "A multicast address",
+        "correct": false
+      }
+    ],
+    "explanation": "Anycast addresses are shared by multiple devices. Packets are routed to the topologically nearest instance."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is the IPv6 default hop limit?",
+    "options": [
+      {
+        "text": "64",
+        "correct": true
+      },
+      {
+        "text": "128",
+        "correct": false
+      },
+      {
+        "text": "255",
+        "correct": false
+      },
+      {
+        "text": "32",
+        "correct": false
+      }
+    ],
+    "explanation": "IPv6 default hop limit is 64 (vs IPv4 TTL default of 128 on Windows, 64 on Linux)."
+  },
+  {
+    "category": "IPv6",
+    "question": "What is the main advantage of IPv6 over IPv4?",
+    "options": [
+      {
+        "text": "Much larger address space (2^128 vs 2^32) and simplified header",
+        "correct": true
+      },
+      {
+        "text": "Faster transmission speed",
+        "correct": false
+      },
+      {
+        "text": "Built-in encryption for all traffic",
+        "correct": false
+      },
+      {
+        "text": "Better QoS support only",
+        "correct": false
+      }
+    ],
+    "explanation": "IPv6 provides 340 undecillion addresses, simplified 40-byte header, no fragmentation, and built-in security (IPsec)."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What is the maximum length of a Category 6 Ethernet cable run?",
+    "options": [
+      {
+        "text": "100 meters (328 feet)",
+        "correct": true
+      },
+      {
+        "text": "50 meters",
+        "correct": false
+      },
+      {
+        "text": "185 meters",
+        "correct": false
+      },
+      {
+        "text": "500 meters",
+        "correct": false
+      }
+    ],
+    "explanation": "Cat6 maximum horizontal run is 100m (90m permanent + 10m patch), same as all UTP Ethernet standards."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "Which cable type is immune to electromagnetic interference (EMI)?",
+    "options": [
+      {
+        "text": "Fiber optic cable",
+        "correct": true
+      },
+      {
+        "text": "UTP (Unshielded Twisted Pair)",
+        "correct": false
+      },
+      {
+        "text": "STP (Shielded Twisted Pair)",
+        "correct": false
+      },
+      {
+        "text": "Coaxial cable",
+        "correct": false
+      }
+    ],
+    "explanation": "Fiber optic uses light, making it completely immune to EMI. Copper cables (UTP, STP, coax) are susceptible."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What is PoE (Power over Ethernet)?",
+    "options": [
+      {
+        "text": "Delivering electrical power along with data over Ethernet cables",
+        "correct": true
+      },
+      {
+        "text": "A type of network protocol",
+        "correct": false
+      },
+      {
+        "text": "An encryption standard",
+        "correct": false
+      },
+      {
+        "text": "A cable management system",
+        "correct": false
+      }
+    ],
+    "explanation": "PoE (802.3af/at/bt) delivers DC power over Cat5e+ cables, powering APs, IP phones, cameras (up to 90W for 802.3bt)."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What is single-mode fiber best suited for?",
+    "options": [
+      {
+        "text": "Long-distance transmissions (up to 100+ km)",
+        "correct": true
+      },
+      {
+        "text": "Short-distance, multi-connection runs",
+        "correct": false
+      },
+      {
+        "text": "Audio signal transmission",
+        "correct": false
+      },
+      {
+        "text": "High-frequency electrical signals",
+        "correct": false
+      }
+    ],
+    "explanation": "Single-mode fiber (9 micron core) has low loss over long distances. Multi-mode (50/62.5 micron) is for shorter runs (<500m)."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "Which Ethernet standard supports 25 Gbps over a single lane?",
+    "options": [
+      {
+        "text": "25GBASE-CR/SR",
+        "correct": true
+      },
+      {
+        "text": "10GBASE-T",
+        "correct": false
+      },
+      {
+        "text": "40GBASE-LR4",
+        "correct": false
+      },
+      {
+        "text": "100GBASE-SR4",
+        "correct": false
+      }
+    ],
+    "explanation": "25GBASE-CR (copper) / SR (multi-mode fiber) provides 25 Gbps per lane, used in data center leaf-spine architectures."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What is the T568B wiring standard pin order for RJ-45?",
+    "options": [
+      {
+        "text": "White-Orange, Orange, White-Green, Blue, White-Blue, Green, White-Brown, Brown",
+        "correct": true
+      },
+      {
+        "text": "White-Green, Green, White-Orange, Blue, White-Blue, Orange, White-Brown, Brown",
+        "correct": false
+      },
+      {
+        "text": "Blue, White-Blue, Green, White-Green, Orange, White-Orange, Brown, White-Brown",
+        "correct": false
+      },
+      {
+        "text": "No standard; any order works",
+        "correct": false
+      }
+    ],
+    "explanation": "T568B: W-O, O, W-G, Bl, W-Bl, G, W-Br, Br. T568A swaps Orange and Green pairs. Crossover = one end T568A, one T568B."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What is the difference between multi-mode and single-mode fiber?",
+    "options": [
+      {
+        "text": "Multi-mode has larger core (50/62.5um) for shorter distances; single-mode has small core (9um) for long distance",
+        "correct": true
+      },
+      {
+        "text": "They are the same",
+        "correct": false
+      },
+      {
+        "text": "Multi-mode is for long distance",
+        "correct": false
+      },
+      {
+        "text": "Single-mode has larger core",
+        "correct": false
+      }
+    ],
+    "explanation": "Multi-mode allows multiple light paths but has modal dispersion limiting distance. Single-mode allows one path for long distance."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What does structured cabling refer to?",
+    "options": [
+      {
+        "text": "Standardized cabling architecture using hierarchical design with work area, horizontal, and backbone subsystems",
+        "correct": true
+      },
+      {
+        "text": "Ad-hoc cabling without standards",
+        "correct": false
+      },
+      {
+        "text": "Wireless network design",
+        "correct": false
+      },
+      {
+        "text": "Fiber optic-only installation",
+        "correct": false
+      }
+    ],
+    "explanation": "Structured cabling (TIA-568/TIA-569) standardizes cabling into subsystems: entrance, equipment, backbone, horizontal, work area."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What is the maximum data rate supported by Category 6a cable?",
+    "options": [
+      {
+        "text": "10 Gbps up to 100 meters",
+        "correct": true
+      },
+      {
+        "text": "1 Gbps up to 100 meters",
+        "correct": false
+      },
+      {
+        "text": "10 Gbps up to 55 meters",
+        "correct": false
+      },
+      {
+        "text": "100 Gbps up to 100 meters",
+        "correct": false
+      }
+    ],
+    "explanation": "Cat6a supports 10GBASE-T up to 100m with improved alien crosstalk performance. Regular Cat6 supports 10GBASE-T only to 55m."
+  },
+  {
+    "category": "Cabling & Physical",
+    "question": "What PoE standard delivers up to 90W of power?",
+    "options": [
+      {
+        "text": "802.3bt (Type 4)",
+        "correct": true
+      },
+      {
+        "text": "802.3af (Type 1)",
+        "correct": false
+      },
+      {
+        "text": "802.3at (Type 2)",
+        "correct": false
+      },
+      {
+        "text": "802.3bt (Type 3)",
+        "correct": false
+      }
+    ],
+    "explanation": "802.3bt Type 4 delivers up to 90W (71.3W to device). Type 3 = 60W. Type 2 (at) = 30W. Type 1 (af) = 15.4W."
+  },
+  {"category":"LAN/WAN Architecture","question":"Which Ethernet frame type is used for carrying VLAN-tagged traffic between switches?","options":[{"text":"802.1Q tagged frame","correct":true},{"text":"802.3 untagged frame","correct":false},{"text":"802.11 management frame","correct":false},{"text":"PPP frame","correct":false}],"explanation":"802.1Q inserts a 4-byte tag (TPID + TCI) into the Ethernet frame, enabling VLAN identification on trunk links."}
+]
