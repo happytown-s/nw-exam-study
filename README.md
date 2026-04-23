@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# NW Exam Study
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> ネットワークスペシャリスト(NW)試験対策 Webアプリ。午前問題のクイズ、計算トレーニング、午後問題のトレーニングを収録した学習ツール。
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- クイズモード: カテゴリ別・全問ランダム出題
+- 模擬試験モード対応
+- 間違い復習: 誤答問題の自動記録と重点復習
+- 計算トレーニング: 121問のネットワーク特化計算問題
+- 午後問題トレーニング: 100問のSubject B形式問題演習
+- 進捗統計: カテゴリ別正答率の記録
 
-## React Compiler
+## Contents
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Quiz (NW試験 午前)
 
-## Expanding the ESLint configuration
+全250問、10カテゴリ:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| カテゴリ | 問題数 |
+|---|---|
+| Network Security | 35問 |
+| Routing & Switching | 34問 |
+| LAN/WAN Architecture | 30問 |
+| TCP/IP Protocol Stack | 30問 |
+| Network Management | 26問 |
+| Network Performance | 25問 |
+| Wireless & Mobile | 25問 |
+| Cloud & Virtualization | 20問 |
+| IPv6 | 15問 |
+| Cabling & Physical | 10問 |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 計算トレーニング
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+121問の計算問題を収録。
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 午後問題トレーニング (Subject B)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+100問の午後形式問題を収録。
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React + TypeScript + Vite
+- Tailwind CSS v4
+
+## Usage
+
+1. Clone the repository
+2. `npm install`
+3. `npm run dev`
+4. Open http://localhost:5173
+
+## Deployment
+
+- Deploy to Vercel: Import repository -> Deploy
+
+## License
+
+MIT
