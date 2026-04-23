@@ -1,7 +1,7 @@
 [
   {
-    "category": "Subnet Calculation",
-    "question": "What is the subnet mask for /26 in decimal?",
+    "category": "サブネット計算",
+    "question": "/26のサブネットマスクを10進数で示せ。",
     "options": [
       {
         "text": "255.255.255.192",
@@ -20,12 +20,12 @@
         "correct": false
       }
     ],
-    "explanation": "/26 means 26 bits for network: 255.255.255.192. The last octet: 192 = 11000000 (2 host bits = 64-2=62 hosts).",
+    "explanation": "/26は26ビットをネットワーク部に使用: 255.255.255.192。最終オクテット: 192 = 11000000 (2ホストビット = 64-2=62ホスト)。",
     "cheatsheet": "/25 = 128, /26 = 192, /27 = 224, /28 = 240, /29 = 248, /30 = 252"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "How many usable hosts does a /27 subnet have?",
+    "category": "サブネット計算",
+    "question": "/27サブネットの利用可能ホスト数はいくつか。",
     "options": [
       {
         "text": "30",
@@ -44,12 +44,12 @@
         "correct": false
       }
     ],
-    "explanation": "/27 leaves 5 host bits: 2^5 = 32 total IPs, minus network and broadcast = 30 usable hosts.",
-    "cheatsheet": "Usable hosts = 2^(32-prefix) - 2. /24=254, /25=126, /26=62, /27=30, /28=14, /29=6, /30=2"
+    "explanation": "/27は5ホストビット残す: 2^5 = 32総IP、ネットワークアドレスとブロードキャストを除くと30ホスト利用可能。",
+    "cheatsheet": "利用可能ホスト = 2^(32-プレフィックス) - 2。/24=254, /25=126, /26=62, /27=30, /28=14, /29=6, /30=2"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the network address for 192.168.1.130/26?",
+    "category": "サブネット計算",
+    "question": "192.168.1.130/26のネットワークアドレスはどれか。",
     "options": [
       {
         "text": "192.168.1.128",
@@ -68,12 +68,12 @@
         "correct": false
       }
     ],
-    "explanation": "/26 has block size of 64. 130 falls in the 128 block (128+63=191). Network = 192.168.1.128.",
-    "cheatsheet": "Block size = 256 - mask octet. /26 = 256-192=64. Blocks: 0, 64, 128, 192."
+    "explanation": "/26のブロックサイズは64。130は128ブロックに属する(128+63=191)。ネットワーク = 192.168.1.128。",
+    "cheatsheet": "ブロックサイズ = 256 - マスクオクテット。/26 = 256-192=64。ブロック: 0, 64, 128, 192。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the broadcast address for 10.0.0.0/23?",
+    "category": "サブネット計算",
+    "question": "10.0.0.0/23のブロードキャストアドレスはどれか。",
     "options": [
       {
         "text": "10.0.1.255",
@@ -92,12 +92,12 @@
         "correct": false
       }
     ],
-    "explanation": "/23 spans two class C: 10.0.0.0 to 10.0.1.255. The last address before the next subnet is broadcast.",
-    "cheatsheet": "/23 = 510 hosts, 2 consecutive /24s. Broadcast = last IP in range."
+    "explanation": "/23は2つのクラスCにまたがる: 10.0.0.0 から 10.0.1.255。次のサブネットの直前のアドレスがブロードキャスト。",
+    "cheatsheet": "/23 = 510ホスト、連続する2つの/24。ブロードキャスト = 範囲の最後のIP。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "You need 50 hosts per subnet. What is the minimum subnet mask?",
+    "category": "サブネット計算",
+    "question": "サブネットごとに50ホストが必要な場合、最小のサブネットマスクはどれか。",
     "options": [
       {
         "text": "/26",
@@ -116,12 +116,12 @@
         "correct": false
       }
     ],
-    "explanation": "2^5-2=30 (too few), 2^6-2=62 (enough). So /26 (6 host bits) is the minimum mask.",
-    "cheatsheet": "Find smallest n where 2^n - 2 >= required hosts. Host bits = n, prefix = 32 - n."
+    "explanation": "2^5-2=30(不足)、2^6-2=62(十分)。したがって/26(6ホストビット)が最小マスク。",
+    "cheatsheet": "2^n - 2 >= 必要ホスト数 となる最小のnを求める。ホストビット = n、プレフィックス = 32 - n。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the CIDR notation for subnet mask 255.255.255.248?",
+    "category": "サブネット計算",
+    "question": "サブネットマスク255.255.255.248のCIDR表記はどれか。",
     "options": [
       {
         "text": "/29",
@@ -140,12 +140,12 @@
         "correct": false
       }
     ],
-    "explanation": "248 in binary = 11111000 (5 ones in last octet). 24 + 5 = 29. Gives 6 usable hosts (8-2).",
-    "cheatsheet": "Count consecutive 1-bits: 255.255.255.x -> 24 + bits in x. 248=11111000=5 bits."
+    "explanation": "248の2進数 = 11111000(最終オクテットに5つの1)。24 + 5 = 29。6利用可能ホスト(8-2)。",
+    "cheatsheet": "連続する1ビットを数える: 255.255.255.x -> 24 + xのビット数。248=11111000=5ビット。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "How many /24 subnets can you create from 172.16.0.0/16?",
+    "category": "サブネット計算",
+    "question": "172.16.0.0/16から/24サブネットをいくつ作成できるか。",
     "options": [
       {
         "text": "256",
@@ -164,12 +164,12 @@
         "correct": false
       }
     ],
-    "explanation": "/16 to /24 borrows 8 bits: 2^8 = 256 subnets, each with 254 usable hosts.",
-    "cheatsheet": "New subnets = 2^(new_prefix - original_prefix). /16 to /24 = 2^8 = 256."
+    "explanation": "/16から/24へ8ビット借用: 2^8 = 256サブネット、各254利用可能ホスト。",
+    "cheatsheet": "新サブネット数 = 2^(新プレフィックス - 元プレフィックス)。/16から/24 = 2^8 = 256。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the first usable IP in 192.168.10.32/28?",
+    "category": "サブネット計算",
+    "question": "192.168.10.32/28の最初の利用可能IPはどれか。",
     "options": [
       {
         "text": "192.168.10.33",
@@ -188,12 +188,12 @@
         "correct": false
       }
     ],
-    "explanation": "Network is 192.168.10.32, broadcast is 192.168.10.47. First usable = 192.168.10.33.",
-    "cheatsheet": "First usable = network + 1. Last usable = broadcast - 1."
+    "explanation": "ネットワークは192.168.10.32、ブロードキャストは192.168.10.47。最初の利用可能IP = 192.168.10.33。",
+    "cheatsheet": "最初の利用可能IP = ネットワーク + 1。最後の利用可能IP = ブロードキャスト - 1。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "In VLSM, what is the subnet mask for a point-to-point link (2 hosts)?",
+    "category": "サブネット計算",
+    "question": "VLSMにおいて、ポイントツーポイントリンク(2ホスト)のサブネットマスクはどれか。",
     "options": [
       {
         "text": "/30 (255.255.255.252)",
@@ -212,12 +212,12 @@
         "correct": false
       }
     ],
-    "explanation": "/30 provides 4 total IPs (2 usable) for point-to-point links. /31 (RFC 3021) gives 2 IPs with no network/broadcast.",
-    "cheatsheet": "Point-to-point: /30 (traditional) or /31 (RFC 3021, no net/bcast)."
+    "explanation": "/30はポイントツーポイントリンク用に4総IP(2利用可能)を提供。/31(RFC 3021)はネットワーク/ブロードキャストなしで2IPを使用。",
+    "cheatsheet": "ポイントツーポイント: /30(従来) または /31(RFC 3021、ネット/ブロードキャストなし)。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the wildcard mask for 255.255.255.192?",
+    "category": "サブネット計算",
+    "question": "255.255.255.192のワイルドカードマスクはどれか。",
     "options": [
       {
         "text": "0.0.0.63",
@@ -236,12 +236,12 @@
         "correct": false
       }
     ],
-    "explanation": "Wildcard = inverse of subnet mask. 255-255=0, 255-255=0, 255-255=0, 255-192=63.",
-    "cheatsheet": "Wildcard mask = 255.255.255.255 - subnet mask. 192 inverted = 63."
+    "explanation": "ワイルドカード = サブネットマスクの反転。255-255=0, 255-255=0, 255-255=0, 255-192=63。",
+    "cheatsheet": "ワイルドカードマスク = 255.255.255.255 - サブネットマスク。192の反転 = 63。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "How many subnets does 200.10.0.0/21 provide if subnetted to /24?",
+    "category": "サブネット計算",
+    "question": "200.10.0.0/21を/24にサブネット化した場合、いくつのサブネットになるか。",
     "options": [
       {
         "text": "8",
@@ -260,12 +260,12 @@
         "correct": false
       }
     ],
-    "explanation": "Borrowing 3 bits from /21 to /24: 2^3 = 8 subnets, each a /24 with 254 hosts.",
-    "cheatsheet": "Subnets = 2^(target_prefix - current_prefix). /21 to /24 = 2^3 = 8."
+    "explanation": "/21から/24へ3ビット借用: 2^3 = 8サブネット、各/24で254ホスト。",
+    "cheatsheet": "サブネット数 = 2^(対象プレフィックス - 現在プレフィックス)。/21から/24 = 2^3 = 8。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the last usable IP in 10.10.10.0/25?",
+    "category": "サブネット計算",
+    "question": "10.10.10.0/25の最後の利用可能IPはどれか。",
     "options": [
       {
         "text": "10.10.10.126",
@@ -284,12 +284,12 @@
         "correct": false
       }
     ],
-    "explanation": "/25: network=10.10.10.0, broadcast=10.10.10.127. Last usable = 10.10.10.126.",
-    "cheatsheet": "Broadcast = network + block_size - 1. Last usable = broadcast - 1."
+    "explanation": "/25: ネットワーク=10.10.10.0、ブロードキャスト=10.10.10.127。最後の利用可能 = 10.10.10.126。",
+    "cheatsheet": "ブロードキャスト = ネットワーク + ブロックサイズ - 1。最後の利用可能 = ブロードキャスト - 1。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the block size for a /28 subnet?",
+    "category": "サブネット計算",
+    "question": "/28サブネットのブロックサイズはどれか。",
     "options": [
       {
         "text": "16",
@@ -308,12 +308,12 @@
         "correct": false
       }
     ],
-    "explanation": "/28 leaves 4 host bits: 2^4 = 16 IP addresses per subnet (block size).",
-    "cheatsheet": "Block size = 2^(32 - prefix). /28 = 2^4 = 16."
+    "explanation": "/28は4ホストビット残す: 2^4 = 16 IPアドレス/サブネット(ブロックサイズ)。",
+    "cheatsheet": "ブロックサイズ = 2^(32 - プレフィックス)。/28 = 2^4 = 16。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "How many bits must be borrowed from a /24 to create 10 subnets?",
+    "category": "サブネット計算",
+    "question": "/24から10サブネットを作成するには何ビット借用する必要があるか。",
     "options": [
       {
         "text": "4",
@@ -332,12 +332,12 @@
         "correct": false
       }
     ],
-    "explanation": "2^3=8 (not enough), 2^4=16 (enough). Borrow 4 bits, giving /28 with 14 hosts each.",
-    "cheatsheet": "Find smallest n where 2^n >= required subnets. Borrow n bits."
+    "explanation": "2^3=8(不足)、2^4=16(十分)。4ビット借用し、/28で各14ホストとなる。",
+    "cheatsheet": "2^n >= 必要サブネット数 となる最小のnを求める。nビット借用。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the network address for 172.16.5.200/27?",
+    "category": "サブネット計算",
+    "question": "172.16.5.200/27のネットワークアドレスはどれか。",
     "options": [
       {
         "text": "172.16.5.192",
@@ -356,12 +356,12 @@
         "correct": false
       }
     ],
-    "explanation": "/27 block = 32. 200/32 = 6 remainder 8. Block 6 starts at 192 (6*32=192). Network = 172.16.5.192.",
-    "cheatsheet": "Network = floor(IP / block_size) * block_size. 200/32=6.25, floor=6, 6*32=192."
+    "explanation": "/27のブロック = 32。200/32 = 6余り8。ブロック6は192から開始(6*32=192)。ネットワーク = 172.16.5.192。",
+    "cheatsheet": "ネットワーク = floor(IP / ブロックサイズ) * ブロックサイズ。200/32=6.25、floor=6、6*32=192。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "If you have a /22 network, how many /28 subnets can you create?",
+    "category": "サブネット計算",
+    "question": "/22ネットワークから/28サブネットをいくつ作成できるか。",
     "options": [
       {
         "text": "64",
@@ -380,12 +380,12 @@
         "correct": false
       }
     ],
-    "explanation": "/22 to /28 borrows 6 bits: 2^6 = 64 subnets, each with 14 usable hosts.",
-    "cheatsheet": "Subnets = 2^(28-22) = 2^6 = 64."
+    "explanation": "/22から/28へ6ビット借用: 2^6 = 64サブネット、各14利用可能ホスト。",
+    "cheatsheet": "サブネット数 = 2^(28-22) = 2^6 = 64。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the subnet mask for 192.168.100.0/22?",
+    "category": "サブネット計算",
+    "question": "192.168.100.0/22のサブネットマスクはどれか。",
     "options": [
       {
         "text": "255.255.252.0",
@@ -404,12 +404,12 @@
         "correct": false
       }
     ],
-    "explanation": "/22 means 22 bits: 255.255.252.0 (252 = 11111100 in binary, 6 host bits).",
+    "explanation": "/22は22ビット: 255.255.252.0(252 = 2進数11111100、6ホストビット)。",
     "cheatsheet": "/22 = 255.255.252.0, /23 = 255.255.254.0, /24 = 255.255.255.0"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the broadcast address of 10.1.2.0/24?",
+    "category": "サブネット計算",
+    "question": "10.1.2.0/24のブロードキャストアドレスはどれか。",
     "options": [
       {
         "text": "10.1.2.255",
@@ -428,12 +428,12 @@
         "correct": false
       }
     ],
-    "explanation": "For /24, broadcast is the last IP in the range: 10.1.2.255. Last usable = 10.1.2.254.",
-    "cheatsheet": "/24 broadcast: x.y.z.255. /23 broadcast: x.y.(z+1).255."
+    "explanation": "/24では、ブロードキャストは範囲の最後のIP: 10.1.2.255。最後の利用可能 = 10.1.2.254。",
+    "cheatsheet": "/24ブロードキャスト: x.y.z.255。/23ブロードキャスト: x.y.(z+1).255。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "How many usable hosts are in 172.16.0.0/23?",
+    "category": "サブネット計算",
+    "question": "172.16.0.0/23の利用可能ホスト数はいくつか。",
     "options": [
       {
         "text": "510",
@@ -452,12 +452,12 @@
         "correct": false
       }
     ],
-    "explanation": "/23 has 9 host bits: 2^9=512 total, minus 2 = 510 usable hosts.",
-    "cheatsheet": "/23 = 510 hosts, /22 = 1022, /21 = 2046, /20 = 4094."
+    "explanation": "/23は9ホストビット: 2^9=512総IP、2を引いて510利用可能ホスト。",
+    "cheatsheet": "/23 = 510ホスト, /22 = 1022, /21 = 2046, /20 = 4094。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What subnet does 192.168.1.47/28 belong to?",
+    "category": "サブネット計算",
+    "question": "192.168.1.47/28はどのサブネットに属するか。",
     "options": [
       {
         "text": "192.168.1.32",
@@ -476,12 +476,12 @@
         "correct": false
       }
     ],
-    "explanation": "/28 block=16. 47/16=2 remainder 15. Block 2 starts at 32. Network=192.168.1.32.",
-    "cheatsheet": "Block size = 2^(32-28)=16. Blocks: 0,16,32,48... 47 falls in 32-47."
+    "explanation": "/28ブロック=16。47/16=2余り15。ブロック2は32から開始。ネットワーク=192.168.1.32。",
+    "cheatsheet": "ブロックサイズ = 2^(32-28)=16。ブロック: 0,16,32,48... 47は32-47の範囲。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the maximum number of /30 subnets in 192.168.0.0/24?",
+    "category": "サブネット計算",
+    "question": "192.168.0.0/24から作成できる/30サブネットの最大数はいくつか。",
     "options": [
       {
         "text": "64",
@@ -500,12 +500,12 @@
         "correct": false
       }
     ],
-    "explanation": "/24 to /30 borrows 6 bits: 2^6=64 subnets, each with 2 usable hosts.",
-    "cheatsheet": "2^(30-24)=2^6=64 subnets. Each /30 = 4 IPs (2 usable)."
+    "explanation": "/24から/30へ6ビット借用: 2^6=64サブネット、各2利用可能ホスト。",
+    "cheatsheet": "2^(30-24)=2^6=64サブネット。各/30 = 4IP(2利用可能)。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "You need 5 subnets from 192.168.1.0/24. What mask should you use?",
+    "category": "サブネット計算",
+    "question": "192.168.1.0/24から5サブネットが必要な場合、どのマスクを使用すべきか。",
     "options": [
       {
         "text": "/27",
@@ -524,12 +524,12 @@
         "correct": false
       }
     ],
-    "explanation": "Need 5 subnets: 2^2=4 (not enough), 2^3=8 (enough). Borrow 3 bits: /24+3 = /27. 8 subnets of 30 hosts each.",
-    "cheatsheet": "Borrow bits: ceil(log2(required_subnets)). ceil(log2(5)) = 3 bits. /27."
+    "explanation": "5サブネット必要: 2^2=4(不足)、2^3=8(十分)。3ビット借用: /24+3 = /27。各30ホストの8サブネット。",
+    "cheatsheet": "借用ビット: ceil(log2(必要サブネット数))。ceil(log2(5)) = 3ビット。/27。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "Convert subnet mask 255.255.128.0 to CIDR notation.",
+    "category": "サブネット計算",
+    "question": "サブネットマスク255.255.128.0をCIDR表記に変換せよ。",
     "options": [
       {
         "text": "/17",
@@ -548,36 +548,36 @@
         "correct": false
       }
     ],
-    "explanation": "255.255.128.0: first 16 bits + 1 bit in third octet (128=10000000). Total = 17 bits = /17.",
-    "cheatsheet": "128=1 bit, 192=2 bits, 224=3, 240=4, 248=5, 252=6, 254=7, 255=8."
+    "explanation": "255.255.128.0: 最初の16ビット + 第3オクテットの1ビット(128=10000000)。合計 = 17ビット = /17。",
+    "cheatsheet": "128=1ビット, 192=2ビット, 224=3, 240=4, 248=5, 252=6, 254=7, 255=8。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the valid host range for 10.0.0.16/29?",
+    "category": "サブネット計算",
+    "question": "10.0.0.16/29の有効ホスト範囲はどれか。",
     "options": [
       {
-        "text": "10.0.0.17 to 10.0.0.30",
+        "text": "10.0.0.17 〜 10.0.0.22",
         "correct": true
       },
       {
-        "text": "10.0.0.16 to 10.0.0.31",
+        "text": "10.0.0.16 〜 10.0.0.31",
         "correct": false
       },
       {
-        "text": "10.0.0.1 to 10.0.0.14",
+        "text": "10.0.0.1 〜 10.0.0.14",
         "correct": false
       },
       {
-        "text": "10.0.0.17 to 10.0.0.22",
+        "text": "10.0.0.17 〜 10.0.0.30",
         "correct": false
       }
     ],
-    "explanation": "/29: network=10.0.0.16, broadcast=10.0.0.23. Host range=10.0.0.17 to 10.0.0.22.",
-    "cheatsheet": "Host range = network+1 to broadcast-1. Block=8: 16-23."
+    "explanation": "/29: ネットワーク=10.0.0.16、ブロードキャスト=10.0.0.23。ホスト範囲=10.0.0.17〜10.0.0.22。",
+    "cheatsheet": "ホスト範囲 = ネットワーク+1 〜 ブロードキャスト-1。ブロック=8: 16-23。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "How many total IP addresses are in a /28 subnet?",
+    "category": "サブネット計算",
+    "question": "/28サブネットの総IPアドレス数はいくつか。",
     "options": [
       {
         "text": "16",
@@ -596,12 +596,12 @@
         "correct": false
       }
     ],
-    "explanation": "/28 has 4 host bits: 2^4=16 total IPs (14 usable + network + broadcast).",
-    "cheatsheet": "Total IPs = 2^(32-prefix). Usable = total - 2."
+    "explanation": "/28は4ホストビット: 2^4=16総IP(14利用可能 + ネットワーク + ブロードキャスト)。",
+    "cheatsheet": "総IP = 2^(32-プレフィックス)。利用可能 = 総IP - 2。"
   },
   {
-    "category": "Subnet Calculation",
-    "question": "What is the subnet mask that allows 100 hosts per subnet with maximum subnets from /24?",
+    "category": "サブネット計算",
+    "question": "/24から最大サブネット数を作成しつつ、各サブネット100ホストを許容するマスクはどれか。",
     "options": [
       {
         "text": "255.255.255.128",
@@ -620,12 +620,12 @@
         "correct": false
       }
     ],
-    "explanation": "2^7-2=126 (enough for 100), 2^6-2=62 (not enough). /25 gives 126 hosts, 2 subnets from /24.",
-    "cheatsheet": "2^n-2 >= 100: n=7 (126 hosts). Prefix=32-7=25. Mask=255.255.255.128."
+    "explanation": "2^7-2=126(100に十分)、2^6-2=62(不足)。/25で126ホスト、/24から2サブネット。",
+    "cheatsheet": "2^n-2 >= 100: n=7(126ホスト)。プレフィックス=32-7=25。マスク=255.255.255.128。"
   },
   {
-    "category": "IP Addressing",
-    "question": "Convert 192.168.1.1 to binary.",
+    "category": "IPアドレッシング",
+    "question": "192.168.1.1を2進数に変換せよ。",
     "options": [
       {
         "text": "11000000.10101000.00000001.00000001",
@@ -640,16 +640,16 @@
         "correct": false
       },
       {
-        "text": "192.168.1.1 is not convertible to binary",
+        "text": "192.168.1.1は2進数に変換できない",
         "correct": false
       }
     ],
-    "explanation": "192=11000000, 168=10101000, 1=00000001, 1=00000001.",
-    "cheatsheet": "Decimal to binary: divide by 2, collect remainders (right to left)."
+    "explanation": "192=11000000, 168=10101000, 1=00000001, 1=00000001。",
+    "cheatsheet": "10進数から2進数: 2で除算し、余りを右から左に集める。"
   },
   {
-    "category": "IP Addressing",
-    "question": "What is the binary value of 255.255.0.0?",
+    "category": "IPアドレッシング",
+    "question": "255.255.0.0の2進数値はどれか。",
     "options": [
       {
         "text": "11111111.11111111.00000000.00000000",
@@ -664,40 +664,40 @@
         "correct": false
       },
       {
-        "text": "255.255.0.0 has no binary form",
+        "text": "255.255.0.0には2進数形式がない",
         "correct": false
       }
     ],
-    "explanation": "255=11111111, 0=00000000. So 255.255.0.0 = 11111111.11111111.00000000.00000000.",
-    "cheatsheet": "Power of 2 chart: 128,64,32,16,8,4,2,1"
+    "explanation": "255=11111111, 0=00000000。したがって255.255.0.0 = 11111111.11111111.00000000.00000000。",
+    "cheatsheet": "2のべき乗チャート: 128,64,32,16,8,4,2,1"
   },
   {
-    "category": "IP Addressing",
-    "question": "What class is the IP address 172.16.0.1?",
+    "category": "IPアドレッシング",
+    "question": "IPアドレス172.16.0.1のクラスはどれか。",
     "options": [
       {
-        "text": "Class B",
+        "text": "クラスB",
         "correct": true
       },
       {
-        "text": "Class A",
+        "text": "クラスA",
         "correct": false
       },
       {
-        "text": "Class C",
+        "text": "クラスC",
         "correct": false
       },
       {
-        "text": "Class D",
+        "text": "クラスD",
         "correct": false
       }
     ],
-    "explanation": "Class B: 128.0.0.0 - 191.255.255.255 (first octet 128-191). Class A: 1-126. Class C: 192-223.",
+    "explanation": "クラスB: 128.0.0.0 - 191.255.255.255(第1オクテット128-191)。クラスA: 1-126。クラスC: 192-223。",
     "cheatsheet": "A:1-126, B:128-191, C:192-223, D:224-239, E:240-255"
   },
   {
-    "category": "IP Addressing",
-    "question": "What is the binary value of decimal 172?",
+    "category": "IPアドレッシング",
+    "question": "10進数172の2進数値はどれか。",
     "options": [
       {
         "text": "10101100",
@@ -716,12 +716,12 @@
         "correct": false
       }
     ],
-    "explanation": "172 = 128+32+8+4 = 10101100 in binary.",
-    "cheatsheet": "Break down: 172-128=44, 44-32=12, 12-8=4, 4-4=0. Positions: 128,32,8,4."
+    "explanation": "172 = 128+32+8+4 = 10101100(2進数)。",
+    "cheatsheet": "分解: 172-128=44, 44-32=12, 12-8=4, 4-4=0。位置: 128,32,8,4。"
   },
   {
-    "category": "IP Addressing",
-    "question": "How many Class A networks exist?",
+    "category": "IPアドレッシング",
+    "question": "クラスAネットワークはいくつ存在するか。",
     "options": [
       {
         "text": "126",
@@ -740,12 +740,12 @@
         "correct": false
       }
     ],
-    "explanation": "Class A: first octet 1-126 (0 is reserved, 127 is loopback). So 126 networks.",
-    "cheatsheet": "Class A: 126 networks x 16M hosts. Class B: 16384 networks x 65K hosts. Class C: 2M networks x 254 hosts."
+    "explanation": "クラスA: 第1オクテット1-126(0は予約、127はループバック)。したがって126ネットワーク。",
+    "cheatsheet": "クラスA: 126ネットワーク x 1600万ホスト。クラスB: 16384ネットワーク x 6.5万ホスト。クラスC: 200万ネットワーク x 254ホスト。"
   },
   {
-    "category": "IP Addressing",
-    "question": "What is the default subnet mask for Class B?",
+    "category": "IPアドレッシング",
+    "question": "クラスBのデフォルトサブネットマスクはどれか。",
     "options": [
       {
         "text": "255.255.0.0 (/16)",
@@ -764,12 +764,12 @@
         "correct": false
       }
     ],
-    "explanation": "Class B default: /16 (255.255.0.0). Class A: /8. Class C: /24.",
-    "cheatsheet": "Class A=/8, Class B=/16, Class C=/24. These are the classful defaults."
+    "explanation": "クラスBデフォルト: /16 (255.255.0.0)。クラスA: /8。クラスC: /24。",
+    "cheatsheet": "クラスA=/8, クラスB=/16, クラスC=/24。これらがクラスフルデフォルト。"
   },
   {
-    "category": "IP Addressing",
-    "question": "Convert binary 11000000.10101000.00000001.00000001 to decimal.",
+    "category": "IPアドレッシング",
+    "question": "2進数11000000.10101000.00000001.00000001を10進数に変換せよ。",
     "options": [
       {
         "text": "192.168.1.1",
@@ -788,36 +788,36 @@
         "correct": false
       }
     ],
-    "explanation": "11000000=128+64=192, 10101000=128+32+8=168, 00000001=1, 00000001=1.",
-    "cheatsheet": "Binary to decimal: sum of 2^position for each '1' bit."
+    "explanation": "11000000=128+64=192, 10101000=128+32+8=168, 00000001=1, 00000001=1。",
+    "cheatsheet": "2進数から10進数: 各'1'ビットの2^位置の合計。"
   },
   {
-    "category": "IP Addressing",
-    "question": "Is 192.168.1.0/24 a valid host address?",
+    "category": "IPアドレッシング",
+    "question": "192.168.1.0/24は有効なホストアドレスか。",
     "options": [
       {
-        "text": "No, it is the network address",
+        "text": "いいえ、ネットワークアドレスである",
         "correct": true
       },
       {
-        "text": "Yes, it is a valid host",
+        "text": "はい、有効なホストである",
         "correct": false
       },
       {
-        "text": "No, it is the broadcast address",
+        "text": "いいえ、ブロードキャストアドレスである",
         "correct": false
       },
       {
-        "text": "It depends on the subnet mask",
+        "text": "サブネットマスクによる",
         "correct": false
       }
     ],
-    "explanation": "192.168.1.0 is the network (first) address of the /24 subnet. It cannot be assigned to a host.",
-    "cheatsheet": "Network address = all host bits 0. Broadcast = all host bits 1. Neither is assignable."
+    "explanation": "192.168.1.0は/24サブネットのネットワーク(先頭)アドレス。ホストに割り当て不可。",
+    "cheatsheet": "ネットワークアドレス = 全ホストビット0。ブロードキャスト = 全ホストビット1。いずれも割り当て不可。"
   },
   {
-    "category": "IP Addressing",
-    "question": "What is the APIPA address range?",
+    "category": "IPアドレッシング",
+    "question": "APIPAアドレス範囲はどれか。",
     "options": [
       {
         "text": "169.254.0.0/16",
@@ -836,12 +836,12 @@
         "correct": false
       }
     ],
-    "explanation": "APIPA (Automatic Private IP Addressing): 169.254.0.0/16, assigned when DHCP is unavailable.",
-    "cheatsheet": "APIPA = 169.254.0.1 to 169.254.255.254. No gateway = no internet."
+    "explanation": "APIPA(Automatic Private IP Addressing): 169.254.0.0/16、DHCPが利用不可の場合に割り当てられる。",
+    "cheatsheet": "APIPA = 169.254.0.1 〜 169.254.255.254。ゲートウェイなし = インターネット不可。"
   },
   {
-    "category": "IP Addressing",
-    "question": "How many host bits does a /22 have?",
+    "category": "IPアドレッシング",
+    "question": "/22のホストビット数はいくつか。",
     "options": [
       {
         "text": "10",
@@ -860,36 +860,36 @@
         "correct": false
       }
     ],
-    "explanation": "/22 network bits, 32-22=10 host bits. 2^10=1024 total IPs, 1022 usable.",
-    "cheatsheet": "Host bits = 32 - prefix. /22 = 10 host bits."
+    "explanation": "/22ネットワーク部、32-22=10ホストビット。2^10=1024総IP、1022利用可能。",
+    "cheatsheet": "ホストビット = 32 - プレフィックス。/22 = 10ホストビット。"
   },
   {
-    "category": "IP Addressing",
-    "question": "What class is 10.0.0.1?",
+    "category": "IPアドレッシング",
+    "question": "10.0.0.1のクラスはどれか。",
     "options": [
       {
-        "text": "Class A",
+        "text": "クラスA",
         "correct": true
       },
       {
-        "text": "Class B",
+        "text": "クラスB",
         "correct": false
       },
       {
-        "text": "Class C",
+        "text": "クラスC",
         "correct": false
       },
       {
-        "text": "Class D",
+        "text": "クラスD",
         "correct": false
       }
     ],
-    "explanation": "Class A: first octet 1-126. 10 is in this range. Default mask /8.",
-    "cheatsheet": "Class A: 1-126, B: 128-191, C: 192-223, D: 224-239 (multicast), E: 240-255 (reserved)."
+    "explanation": "クラスA: 第1オクテット1-126。10はこの範囲内。デフォルトマスク /8。",
+    "cheatsheet": "クラスA: 1-126, B: 128-191, C: 192-223, D: 224-239(マルチキャスト), E: 240-255(予約)。"
   },
   {
-    "category": "IP Addressing",
-    "question": "Convert the third octet 192 to binary.",
+    "category": "IPアドレッシング",
+    "question": "第3オクテット192を2進数に変換せよ。",
     "options": [
       {
         "text": "11000000",
@@ -908,12 +908,12 @@
         "correct": false
       }
     ],
-    "explanation": "192 = 128+64 = 11000000.",
+    "explanation": "192 = 128+64 = 11000000。",
     "cheatsheet": "128+64=192, 128+64+32=224, 128+64+32+16=240, 128+64+32+16+8=248"
   },
   {
-    "category": "IP Addressing",
-    "question": "Which IP address is a loopback address?",
+    "category": "IPアドレッシング",
+    "question": "ループバックアドレスはどれか。",
     "options": [
       {
         "text": "127.0.0.1",
@@ -932,12 +932,12 @@
         "correct": false
       }
     ],
-    "explanation": "127.0.0.1 is the loopback address. Entire 127.0.0.0/8 range is loopback.",
-    "cheatsheet": "127.x.x.x = loopback. 0.0.0.0 = unspecified. 255.255.255.255 = limited broadcast."
+    "explanation": "127.0.0.1はループバックアドレス。127.0.0.0/8全体がループバック。",
+    "cheatsheet": "127.x.x.x = ループバック。0.0.0.0 = 未指定。255.255.255.255 = リミテッドブロードキャスト。"
   },
   {
-    "category": "IP Addressing",
-    "question": "How many usable IPs in a Class C network?",
+    "category": "IPアドレッシング",
+    "question": "クラスCネットワークの利用可能IP数はいくつか。",
     "options": [
       {
         "text": "254",
@@ -956,36 +956,36 @@
         "correct": false
       }
     ],
-    "explanation": "Class C is /24: 2^8=256 total, minus network and broadcast = 254 usable.",
-    "cheatsheet": "Class C: 256-2=254. /24 is 1 octet of host bits."
+    "explanation": "クラスCは/24: 2^8=256総、ネットワークとブロードキャストを除いて254利用可能。",
+    "cheatsheet": "クラスC: 256-2=254。/24は1オクテットのホストビット。"
   },
   {
-    "category": "IP Addressing",
-    "question": "What is 192.168.1.255/24?",
+    "category": "IPアドレッシング",
+    "question": "192.168.1.255/24は何を示すか。",
     "options": [
       {
-        "text": "The broadcast address",
+        "text": "ブロードキャストアドレス",
         "correct": true
       },
       {
-        "text": "A valid host address",
+        "text": "有効なホストアドレス",
         "correct": false
       },
       {
-        "text": "The network address",
+        "text": "ネットワークアドレス",
         "correct": false
       },
       {
-        "text": "The gateway address",
+        "text": "ゲートウェイアドレス",
         "correct": false
       }
     ],
-    "explanation": "192.168.1.255 is the broadcast (last) address of the /24 subnet. Cannot be assigned to a host.",
-    "cheatsheet": "Last address in subnet = broadcast. All host bits set to 1."
+    "explanation": "192.168.1.255は/24サブネットのブロードキャスト(最終)アドレス。ホストに割り当て不可。",
+    "cheatsheet": "サブネットの最後のアドレス = ブロードキャスト。全ホストビットが1。"
   },
   {
-    "category": "IP Addressing",
-    "question": "Convert 10101100 to decimal.",
+    "category": "IPアドレッシング",
+    "question": "10101100を10進数に変換せよ。",
     "options": [
       {
         "text": "172",
@@ -1004,12 +1004,12 @@
         "correct": false
       }
     ],
-    "explanation": "1*128+0*64+1*32+0*16+1*8+1*4+0*2+0*1 = 128+32+8+4 = 172.",
-    "cheatsheet": "Positional values: 128,64,32,16,8,4,2,1. Sum positions with '1'."
+    "explanation": "1*128+0*64+1*32+0*16+1*8+1*4+0*2+0*1 = 128+32+8+4 = 172。",
+    "cheatsheet": "位置の重み: 128,64,32,16,8,4,2,1。'1'の位置を合計。"
   },
   {
-    "category": "IP Addressing",
-    "question": "How many private Class B networks exist?",
+    "category": "IPアドレッシング",
+    "question": "プライベートクラスBネットワークはいくつ存在するか。",
     "options": [
       {
         "text": "16",
@@ -1028,36 +1028,36 @@
         "correct": false
       }
     ],
-    "explanation": "Class B private: 172.16.0.0/12. Ranges 172.16.x.x to 172.31.x.x. That is 16 Class B-equivalent networks.",
-    "cheatsheet": "Class B private: 172.16.0.0 - 172.31.255.255 (172.16 to 172.31 = 16 blocks)."
+    "explanation": "クラスBプライベート: 172.16.0.0/12。範囲172.16.x.x〜172.31.x.x。16のクラスB相当ネットワーク。",
+    "cheatsheet": "クラスBプライベート: 172.16.0.0 - 172.31.255.255 (172.16〜172.31 = 16ブロック)。"
   },
   {
-    "category": "IP Addressing",
-    "question": "What is 0.0.0.0 used for?",
+    "category": "IPアドレッシング",
+    "question": "0.0.0.0は何に使用されるか。",
     "options": [
       {
-        "text": "Default route or unspecified address",
+        "text": "デフォルトルートまたは未指定アドレス",
         "correct": true
       },
       {
-        "text": "Loopback address",
+        "text": "ループバックアドレス",
         "correct": false
       },
       {
-        "text": "Broadcast address",
+        "text": "ブロードキャストアドレス",
         "correct": false
       },
       {
-        "text": "Network address only",
+        "text": "ネットワークアドレスのみ",
         "correct": false
       }
     ],
-    "explanation": "0.0.0.0 means unspecified source or default route. In routing, it matches all destinations.",
-    "cheatsheet": "0.0.0.0 = default route / unspecified. 0.0.0.0/0 = match everything."
+    "explanation": "0.0.0.0は未指定の送信元またはデフォルトルートを意味する。ルーティングでは全宛先にマッチ。",
+    "cheatsheet": "0.0.0.0 = デフォルトルート / 未指定。0.0.0.0/0 = 全てにマッチ。"
   },
   {
-    "category": "IP Addressing",
-    "question": "How many private Class C networks exist?",
+    "category": "IPアドレッシング",
+    "question": "プライベートクラスCネットワークはいくつ存在するか。",
     "options": [
       {
         "text": "256",
@@ -1076,12 +1076,12 @@
         "correct": false
       }
     ],
-    "explanation": "Class C private: 192.168.0.0/16. Each /24 within is a separate Class C network: 192.168.0-255 = 256 networks.",
-    "cheatsheet": "Class C private: 192.168.0.0 to 192.168.255.0 (256 networks)."
+    "explanation": "クラスCプライベート: 192.168.0.0/16。各/24は別のクラスCネットワーク: 192.168.0-255 = 256ネットワーク。",
+    "cheatsheet": "クラスCプライベート: 192.168.0.0 〜 192.168.255.0 (256ネットワーク)。"
   },
   {
-    "category": "IP Addressing",
-    "question": "Which binary AND of 192.168.1.100 and 255.255.255.0 gives the network address?",
+    "category": "IPアドレッシング",
+    "question": "192.168.1.100と255.255.255.0のAND演算でネットワークアドレスはどうなるか。",
     "options": [
       {
         "text": "192.168.1.0",
@@ -1100,36 +1100,36 @@
         "correct": false
       }
     ],
-    "explanation": "IP AND mask: 192.255=192, 168.255=168, 1.255=1, 100.0=0. Network=192.168.1.0.",
-    "cheatsheet": "Network address = IP AND subnet mask (bitwise AND operation)."
+    "explanation": "IP AND マスク: 192.255=192, 168.255=168, 1.255=1, 100.0=0。ネットワーク=192.168.1.0。",
+    "cheatsheet": "ネットワークアドレス = IP AND サブネットマスク(ビット単位のAND演算)。"
   },
   {
-    "category": "Network Performance",
-    "question": "A 100 Mbps link has 10 ms RTT. What is the bandwidth-delay product?",
+    "category": "ネットワーク性能",
+    "question": "100MbpsリンクでRTTが10msの場合、帯域遅延積はいくらか。",
     "options": [
       {
-        "text": "125,000 bytes",
+        "text": "125,000バイト",
         "correct": true
       },
       {
-        "text": "100,000 bytes",
+        "text": "100,000バイト",
         "correct": false
       },
       {
-        "text": "1,000,000 bytes",
+        "text": "1,000,000バイト",
         "correct": false
       },
       {
-        "text": "12,500 bytes",
+        "text": "12,500バイト",
         "correct": false
       }
     ],
-    "explanation": "BDP = 100 Mbps x 0.01s = 1,000,000 bits = 125,000 bytes. TCP window should be >=125KB.",
-    "cheatsheet": "BDP (bits) = bandwidth (bps) x RTT (s). Convert to bytes: /8."
+    "explanation": "BDP = 100Mbps x 0.01s = 1,000,000ビット = 125,000バイト。TCPウィンドウは125KB以上が必要。",
+    "cheatsheet": "BDP(ビット) = 帯域(bps) x RTT(s)。バイト変換: /8。"
   },
   {
-    "category": "Network Performance",
-    "question": "A 1 Gbps link has 50ms RTT. What is the bandwidth-delay product in KB?",
+    "category": "ネットワーク性能",
+    "question": "1GbpsリンクでRTTが50msの場合、帯域遅延積は何KBか。",
     "options": [
       {
         "text": "6,250 KB",
@@ -1148,12 +1148,12 @@
         "correct": false
       }
     ],
-    "explanation": "BDP = 1,000,000,000 x 0.05 = 50,000,000 bits = 6,250,000 bytes = 6,250 KB.",
-    "cheatsheet": "BDP = 1Gbps x 50ms = 50Mb = 6,250KB. Window scaling needed!"
+    "explanation": "BDP = 1,000,000,000 x 0.05 = 50,000,000ビット = 6,250,000バイト = 6,250KB。",
+    "cheatsheet": "BDP = 1Gbps x 50ms = 50Mb = 6,250KB。ウィンドウスケーリングが必要!"
   },
   {
-    "category": "Network Performance",
-    "question": "If throughput is 500 Mbps and bandwidth is 1 Gbps, what is the utilization?",
+    "category": "ネットワーク性能",
+    "question": "スループットが500Mbpsで帯域が1Gbpsの場合、利用率は何%か。",
     "options": [
       {
         "text": "50%",
@@ -1172,12 +1172,12 @@
         "correct": false
       }
     ],
-    "explanation": "Utilization = (throughput / bandwidth) x 100 = (500/1000) x 100 = 50%.",
-    "cheatsheet": "Utilization % = (actual throughput / max bandwidth) x 100."
+    "explanation": "利用率 = (スループット / 帯域) x 100 = (500/1000) x 100 = 50%。",
+    "cheatsheet": "利用率% = (実際のスループット / 最大帯域) x 100。"
   },
   {
-    "category": "Network Performance",
-    "question": "A TCP window of 64 KB on a link with 100ms RTT. What is max throughput?",
+    "category": "ネットワーク性能",
+    "question": "RTTが100msのリンクでTCPウィンドウ64KBの場合、最大スループットはいくらか。",
     "options": [
       {
         "text": "5.12 Mbps",
@@ -1196,12 +1196,12 @@
         "correct": false
       }
     ],
-    "explanation": "Throughput = window / RTT = 64KB / 0.1s = 640KB/s = 5.12 Mbps.",
-    "cheatsheet": "Max throughput = window_size / RTT. Window too small = underutilized."
+    "explanation": "スループット = ウィンドウ / RTT = 64KB / 0.1s = 640KB/s = 5.12Mbps。",
+    "cheatsheet": "最大スループット = ウィンドウサイズ / RTT。ウィンドウ小さい = 利用率低下。"
   },
   {
-    "category": "Network Performance",
-    "question": "What TCP window size is needed to fill a 10 Gbps link with 20ms RTT?",
+    "category": "ネットワーク性能",
+    "question": "RTTが20msの10Gbpsリンクをフル活用するには、必要なTCPウィンドウサイズはいくらか。",
     "options": [
       {
         "text": "25 MB",
@@ -1220,36 +1220,36 @@
         "correct": false
       }
     ],
-    "explanation": "BDP = 10Gbps x 0.02s = 200Mb = 25MB. Window scaling required (exceeds 65535).",
-    "cheatsheet": "Window = BWP x RTT. 10Gbps x 20ms = 200Mb = 25MB."
+    "explanation": "BDP = 10Gbps x 0.02s = 200Mb = 25MB。ウィンドウスケーリング必須(65535超)。",
+    "cheatsheet": "ウィンドウ = 帯域 x RTT。10Gbps x 20ms = 200Mb = 25MB。"
   },
   {
-    "category": "Network Performance",
-    "question": "A packet of 1500 bytes takes 2ms queuing delay. How many packets can the queue hold if buffer is 48KB?",
+    "category": "ネットワーク性能",
+    "question": "1500バイトパケットが2msのキューイング遅延の場合、バッファ48KBでキューに保持できるパケット数はいくつか。",
     "options": [
       {
-        "text": "32 packets",
+        "text": "32パケット",
         "correct": true
       },
       {
-        "text": "64 packets",
+        "text": "64パケット",
         "correct": false
       },
       {
-        "text": "16 packets",
+        "text": "16パケット",
         "correct": false
       },
       {
-        "text": "48 packets",
+        "text": "48パケット",
         "correct": false
       }
     ],
-    "explanation": "48KB / 1500 bytes = 32 packets. Each packet buffered adds 2ms delay.",
-    "cheatsheet": "Queue depth = buffer_size / packet_size."
+    "explanation": "48KB / 1500バイト = 32パケット。各パケットがバッファに追加されるごとに2ms遅延。",
+    "cheatsheet": "キューデプス = バッファサイズ / パケットサイズ。"
   },
   {
-    "category": "Network Performance",
-    "question": "File size is 100 MB. Transfer time is 80 seconds. What is the throughput in Mbps?",
+    "category": "ネットワーク性能",
+    "question": "ファイルサイズ100MB、転送時間80秒。スループットは何Mbpsか。",
     "options": [
       {
         "text": "10 Mbps",
@@ -1268,12 +1268,12 @@
         "correct": false
       }
     ],
-    "explanation": "100MB = 800Mb. Throughput = 800Mb / 80s = 10 Mbps.",
-    "cheatsheet": "Throughput = (file_size_bits / transfer_time_seconds). Convert MB to Mb: x8."
+    "explanation": "100MB = 800Mb。スループット = 800Mb / 80s = 10Mbps。",
+    "cheatsheet": "スループット = (ファイルサイズビット / 転送時間秒)。MB→Mb変換: x8。"
   },
   {
-    "category": "Network Performance",
-    "question": "What is the one-way propagation delay if RTT is 40ms and processing delay is 2ms each way?",
+    "category": "ネットワーク性能",
+    "question": "RTTが40msで片方向の処理遅延が2msの場合、片方向の伝搬遅延はいくらか。",
     "options": [
       {
         "text": "18ms",
@@ -1292,84 +1292,84 @@
         "correct": false
       }
     ],
-    "explanation": "RTT = 2 x (propagation + processing). 40 = 2 x (p + 2). p + 2 = 20. p = 18ms.",
-    "cheatsheet": "RTT = 2 x one_way_delay. Subtract processing/queuing from each direction."
+    "explanation": "RTT = 2 x (伝搬 + 処理)。40 = 2 x (p + 2)。p + 2 = 20。p = 18ms。",
+    "cheatsheet": "RTT = 2 x 片方向遅延。各方向の処理/キューイング遅延を引く。"
   },
   {
-    "category": "Network Performance",
-    "question": "A link has 1% packet loss. How does this affect TCP throughput approximately?",
+    "category": "ネットワーク性能",
+    "question": "リンクのパケットロス率が1%の場合、TCPスループットへの影響は概ねどれくらいか。",
     "options": [
       {
-        "text": "Throughput drops to roughly 1% of capacity (1/sqrt(loss))",
+        "text": "スループットが容量の約1/sqrt(ロス)に低下(約10%程度)",
         "correct": true
       },
       {
-        "text": "No effect on throughput",
+        "text": "スループットへの影響なし",
         "correct": false
       },
       {
-        "text": "Throughput halves",
+        "text": "スループットが半減",
         "correct": false
       },
       {
-        "text": "Throughput drops by 1%",
+        "text": "スループットが1%低下",
         "correct": false
       }
     ],
-    "explanation": "Mathis equation: throughput ~ MSS/RTT * 1/sqrt(p). 1% loss: 1/sqrt(0.01) = 1/0.1 = 10x reduction.",
-    "cheatsheet": "TCP throughput ~ (MSS/RTT) * 1/sqrt(loss_rate). Higher loss = much lower throughput."
+    "explanation": "Mathisの式: スループット ~ MSS/RTT * 1/sqrt(p)。1%ロス: 1/sqrt(0.01) = 1/0.1 = 10倍の低減。",
+    "cheatsheet": "TCPスループット ~ (MSS/RTT) * 1/sqrt(ロス率)。ロス率高い = スループット大幅低下。"
   },
   {
-    "category": "Network Performance",
-    "question": "What is the serialization delay for a 1500-byte frame on a 1 Gbps link?",
+    "category": "ネットワーク性能",
+    "question": "1Gbpsリンクで1500バイトフレームのシリアライゼーション遅延はいくらか。",
     "options": [
       {
-        "text": "12 microseconds",
+        "text": "12マイクロ秒",
         "correct": true
       },
       {
-        "text": "120 microseconds",
+        "text": "120マイクロ秒",
         "correct": false
       },
       {
-        "text": "1.2 milliseconds",
+        "text": "1.2ミリ秒",
         "correct": false
       },
       {
-        "text": "12 milliseconds",
+        "text": "12ミリ秒",
         "correct": false
       }
     ],
-    "explanation": "Serialization = frame_size / link_rate = 1500B x 8 / 1Gbps = 12000ns = 12us.",
-    "cheatsheet": "Serialization delay = (bytes x 8) / bps. Convert result to appropriate unit."
+    "explanation": "シリアライゼーション = フレームサイズ / リンク速度 = 1500B x 8 / 1Gbps = 12000ns = 12us。",
+    "cheatsheet": "シリアライゼーション遅延 = (バイト x 8) / bps。結果を適切な単位に変換。"
   },
   {
-    "category": "Network Performance",
-    "question": "A 100 Mbps link with 10ms latency. How long to transfer a 50 MB file?",
+    "category": "ネットワーク性能",
+    "question": "100Mbpsリンクでレイテンシ10msの場合、50MBファイルの転送時間は約何秒か。",
     "options": [
       {
-        "text": "4.02 seconds",
+        "text": "4.02秒",
         "correct": true
       },
       {
-        "text": "4 seconds",
+        "text": "4秒",
         "correct": false
       },
       {
-        "text": "5 seconds",
+        "text": "5秒",
         "correct": false
       },
       {
-        "text": "0.5 seconds",
+        "text": "0.5秒",
         "correct": false
       }
     ],
-    "explanation": "Transfer time = (50MB x 8) / 100Mbps = 400/100 = 4s + latency = ~4.01s (minimal latency impact on large transfers).",
-    "cheatsheet": "Transfer time = file_size/bandwidth + overhead. For large files, latency is negligible."
+    "explanation": "転送時間 = (50MB x 8) / 100Mbps = 400/100 = 4s + レイテンシ = ~4.01s(大容量転送ではレイテンシ影響は小さい)。",
+    "cheatsheet": "転送時間 = ファイルサイズ/帯域 + オーバーヘッド。大ファイルではレイテンシは無視できる程度。"
   },
   {
-    "category": "Network Performance",
-    "question": "If a link has 10 Gbps capacity but average throughput is 3 Gbps, what is the utilization?",
+    "category": "ネットワーク性能",
+    "question": "リンク容量10Gbpsで平均スループット3Gbpsの場合、利用率は何%か。",
     "options": [
       {
         "text": "30%",
@@ -1388,12 +1388,12 @@
         "correct": false
       }
     ],
-    "explanation": "Utilization = 3/10 x 100 = 30%. Remaining 70% is either available or unused.",
-    "cheatsheet": "Utilization = average_throughput / link_capacity."
+    "explanation": "利用率 = 3/10 x 100 = 30%。残り70%は利用可能または未使用。",
+    "cheatsheet": "利用率 = 平均スループット / リンク容量。"
   },
   {
-    "category": "Network Performance",
-    "question": "What is the queuing delay if 10 packets are in a queue and each takes 0.5ms to transmit?",
+    "category": "ネットワーク性能",
+    "question": "キューに10パケットあり、各パケットの送信に0.5msかかる場合、キューイング遅延は最大いくらか。",
     "options": [
       {
         "text": "5ms",
@@ -1412,36 +1412,36 @@
         "correct": false
       }
     ],
-    "explanation": "Average queuing delay = (N/2) x transmission_time = (10/2) x 0.5ms = 2.5ms. Worst case = 10 x 0.5 = 5ms.",
-    "cheatsheet": "Max queuing delay = queue_depth x per_packet_transmit_time."
+    "explanation": "最大キューイング遅延 = キューデプス x 1パケット送信時間 = 10 x 0.5 = 5ms。",
+    "cheatsheet": "最大キューイング遅延 = キューデプス x 1パケット送信時間。"
   },
   {
-    "category": "Network Performance",
-    "question": "A VoIP call needs 100 Kbps with 150ms max latency. A 500ms RTT link is acceptable?",
+    "category": "ネットワーク性能",
+    "question": "VoIP通話に100Kbpsと最大遅延150msが必要。RTTが500msのリンクは適切か。",
     "options": [
       {
-        "text": "No, RTT exceeds one-way latency requirement",
+        "text": "いいえ、RTTが片方向遅延要件を超えている",
         "correct": true
       },
       {
-        "text": "Yes, bandwidth is sufficient",
+        "text": "はい、帯域は十分",
         "correct": false
       },
       {
-        "text": "Yes, RTT is within limit",
+        "text": "はい、RTTは制限内",
         "correct": false
       },
       {
-        "text": "It depends on codec only",
+        "text": "コーデックのみによる",
         "correct": false
       }
     ],
-    "explanation": "500ms RTT = 250ms one-way, exceeding the 150ms max latency requirement for VoIP.",
-    "cheatsheet": "One-way latency = RTT/2. Must be within application requirements."
+    "explanation": "500ms RTT = 250ms片方向、VoIPの最大遅延要件150msを超過。",
+    "cheatsheet": "片方向遅延 = RTT/2。アプリケーションの要件内である必要がある。"
   },
   {
-    "category": "Network Performance",
-    "question": "How many 64-byte voice packets per second are needed for a G.711 codec?",
+    "category": "ネットワーク性能",
+    "question": "G.711コーデックで必要な64バイト音声パケットの毎秒パケット数はいくつか。",
     "options": [
       {
         "text": "50 pps",
@@ -1460,132 +1460,132 @@
         "correct": false
       }
     ],
-    "explanation": "G.711 with 20ms ptime: 1000/20 = 50 packets per second. Each packet = 160 bytes payload + headers.",
-    "cheatsheet": "Packets per second = 1000ms / packetization_interval."
+    "explanation": "G.711でptime 20ms: 1000/20 = 50パケット/秒。各パケット = 160バイトペイロード + ヘッダ。",
+    "cheatsheet": "毎秒パケット数 = 1000ms / パケット化間隔。"
   },
   {
-    "category": "Network Performance",
-    "question": "What overhead does IPsec add to a packet (ESP tunnel mode)?",
+    "category": "ネットワーク性能",
+    "question": "IPsec ESPトンネルモードのパケットへのオーバーヘッドは概ねどれくらいか。",
     "options": [
       {
-        "text": "Approximately 50-70 bytes",
+        "text": "約50-70バイト",
         "correct": true
       },
       {
-        "text": "0 bytes",
+        "text": "0バイト",
         "correct": false
       },
       {
-        "text": "10-20 bytes",
+        "text": "10-20バイト",
         "correct": false
       },
       {
-        "text": "150 bytes",
+        "text": "150バイト",
         "correct": false
       }
     ],
-    "explanation": "IPsec ESP tunnel adds: new IP header (20) + ESP header (8) + IV (16) + ESP trailer (2-16) + ICV (10-16) ~50-70 bytes.",
-    "cheatsheet": "IPsec overhead = ~50-70 bytes (tunnel). This may cause fragmentation."
+    "explanation": "IPsec ESPトンネル追加: 新IPヘッダ(20) + ESPヘッダ(8) + IV(16) + ESPトレーラ(2-16) + ICV(10-16) ~50-70バイト。",
+    "cheatsheet": "IPsecオーバーヘッド = ~50-70バイト(トンネル)。フラグメンテーションの原因になる可能性がある。"
   },
   {
-    "category": "Network Performance",
-    "question": "A network has 3 Gbps total traffic with 4 links in an ECMP group. What is approximate per-link utilization?",
+    "category": "ネットワーク性能",
+    "question": "合計トラフィック3Gbps、ECMPグループに4リンク。各リンクの利用率は概ねどれくらいか。",
     "options": [
       {
-        "text": "75% of each link",
+        "text": "各リンクの75%",
         "correct": true
       },
       {
-        "text": "100% of one link, rest idle",
+        "text": "1リンク100%、他はアイドル",
         "correct": false
       },
       {
-        "text": "25% of each link",
+        "text": "各リンクの25%",
         "correct": false
       },
       {
-        "text": "33% of each link",
+        "text": "各リンクの33%",
         "correct": false
       }
     ],
-    "explanation": "With 4 equal-cost links (assume 1 Gbps each), 3 Gbps spread across 4 = 750 Mbps each = 75% utilization.",
-    "cheatsheet": "ECMP: per-link traffic = total_traffic / number_of_links."
+    "explanation": "4等コストリンク(各1Gbpsと仮定)、3Gbpsを4分割 = 各750Mbps = 75%利用率。",
+    "cheatsheet": "ECMP: 各リンクトラフィック = 総トラフィック / リンク数。"
   },
   {
-    "category": "Network Performance",
-    "question": "What is the effective throughput if 20% of packets are lost and 80% need retransmission?",
+    "category": "ネットワーク性能",
+    "question": "パケットロス率20%で80%が再送必要な場合、実効スループットは概ねどれくらいか。",
     "options": [
       {
-        "text": "Approximately 20% of original throughput",
+        "text": "元のスループットの約20%",
         "correct": true
       },
       {
-        "text": "80% of original",
+        "text": "元の80%",
         "correct": false
       },
       {
-        "text": "50% of original",
+        "text": "元の50%",
         "correct": false
       },
       {
-        "text": "64% of original",
+        "text": "元の64%",
         "correct": false
       }
     ],
-    "explanation": "Severe loss scenario: with 20% loss, TCP reduces window dramatically. Mathis: ~1/sqrt(0.2) = ~2.24x reduction. With retransmission overhead, effective throughput is much lower.",
-    "cheatsheet": "High packet loss severely impacts TCP throughput due to congestion control."
+    "explanation": "深刻なロス: 20%ロスでTCPはウィンドウを大幅縮小。Mathis: ~1/sqrt(0.2) = ~2.24倍の低減。再送オーバーヘッドにより実効スループットはさらに低下。",
+    "cheatsheet": "高いパケットロスは輻輳制御によりTCPスループットに深刻な影響。"
   },
   {
-    "category": "Network Performance",
-    "question": "A 1500-byte MTU link with TCP MSS of 1460 bytes. How many segments for 1 MB?",
+    "category": "ネットワーク性能",
+    "question": "MTU 1500バイト、TCP MSS 1460バイトのリンクで1MB転送に必要なセグメント数はいくつか。",
     "options": [
       {
-        "text": "726 segments",
+        "text": "726セグメント",
         "correct": true
       },
       {
-        "text": "1000 segments",
+        "text": "1000セグメント",
         "correct": false
       },
       {
-        "text": "685 segments",
+        "text": "685セグメント",
         "correct": false
       },
       {
-        "text": "500 segments",
+        "text": "500セグメント",
         "correct": false
       }
     ],
-    "explanation": "1MB / 1460 bytes = 1,048,576 / 1460 = ~718.5. With headers accounted, approximately 718-726 segments.",
-    "cheatsheet": "Segments = file_size / MSS. Include headers: segments = file / (MSS + headers)."
+    "explanation": "1MB / 1460バイト = 1,048,576 / 1460 = ~718.5。ヘッダを考慮すると約718-726セグメント。",
+    "cheatsheet": "セグメント数 = ファイルサイズ / MSS。ヘッダ含む: セグメント数 = ファイル / (MSS + ヘッダ)。"
   },
   {
-    "category": "Network Performance",
-    "question": "What is goodput compared to throughput?",
+    "category": "ネットワーク性能",
+    "question": "グッドプットとスループットの違いは何か。",
     "options": [
       {
-        "text": "Goodput is application-level useful data; throughput includes all protocol overhead",
+        "text": "グッドプットはアプリケーションレベルの有効データ; スループットは全プロトコルオーバーヘッドを含む",
         "correct": true
       },
       {
-        "text": "They are the same",
+        "text": "同じものである",
         "correct": false
       },
       {
-        "text": "Goodput is always higher",
+        "text": "グッドプットの方が常に高い",
         "correct": false
       },
       {
-        "text": "Throughput is application-level only",
+        "text": "スループットがアプリケーションレベルのみ",
         "correct": false
       }
     ],
-    "explanation": "Goodput = useful application data transferred. Throughput includes headers, retransmissions, and protocol overhead.",
-    "cheatsheet": "Goodput < Throughput < Bandwidth. Headers, retransmissions reduce goodput."
+    "explanation": "グッドプット = 有効なアプリケーションデータ転送量。スループット = ヘッダ、再送、プロトコルオーバーヘッドを含む。",
+    "cheatsheet": "グッドプット < スループット < 帯域。ヘッダと再送がグッドプットを低下させる。"
   },
   {
-    "category": "VLAN Design",
-    "question": "How many VLANs are needed if you have 5 departments with 50 hosts each and want full isolation?",
+    "category": "VLAN設計",
+    "question": "5部署に各50ホストがあり、完全分離したい場合、必要なVLAN数はいくつか。",
     "options": [
       {
         "text": "5",
@@ -1604,12 +1604,12 @@
         "correct": false
       }
     ],
-    "explanation": "One VLAN per department = 5 VLANs. Each VLAN is a separate broadcast domain.",
-    "cheatsheet": "Minimum VLANs = number of isolated broadcast domains needed."
+    "explanation": "部署ごとに1VLAN = 5VLAN。各VLANは別のブロードキャストドメイン。",
+    "cheatsheet": "最小VLAN数 = 必要な分離ブロードキャストドメイン数。"
   },
   {
-    "category": "VLAN Design",
-    "question": "What subnet mask should each VLAN use for up to 200 hosts?",
+    "category": "VLAN設計",
+    "question": "各VLANで最大200ホストに対応する場合、推奨サブネットマスクはどれか。",
     "options": [
       {
         "text": "/24 (255.255.255.0)",
@@ -1628,12 +1628,12 @@
         "correct": false
       }
     ],
-    "explanation": "/24 provides 254 usable hosts (2^8-2=254 >= 200). /25 only gives 126 (not enough).",
-    "cheatsheet": "Choose smallest mask where 2^host_bits - 2 >= max_hosts."
+    "explanation": "/24は254利用可能ホストを提供(2^8-2=254 >= 200)。/25は126のみ(不足)。",
+    "cheatsheet": "2^ホストビット - 2 >= 最大ホスト数 となる最小マスクを選択。"
   },
   {
-    "category": "VLAN Design",
-    "question": "With 10 VLANs using /24 subnets from 192.168.0.0/16, what is the address range for VLAN 3?",
+    "category": "VLAN設計",
+    "question": "192.168.0.0/16から10VLANに/24を使用した場合、VLAN 3のアドレス範囲はどれか。",
     "options": [
       {
         "text": "192.168.3.0/24",
@@ -1652,19 +1652,19 @@
         "correct": false
       }
     ],
-    "explanation": "Sequential allocation: VLAN 1=192.168.1.0, VLAN 2=192.168.2.0, VLAN 3=192.168.3.0, etc.",
-    "cheatsheet": "Simple VLAN allocation: VLAN N = 192.168.N.0/24."
+    "explanation": "順次割り当て: VLAN 1=192.168.1.0, VLAN 2=192.168.2.0, VLAN 3=192.168.3.0、など。",
+    "cheatsheet": "シンプルVLAN割り当て: VLAN N = 192.168.N.0/24。"
   },
   {
-    "category": "VLAN Design",
-    "question": "How many trunk ports are needed between two switches with 20 VLANs each?",
+    "category": "VLAN設計",
+    "question": "各20VLANを持つ2台のスイッチ間に必要なトランクポート数はいくつか。",
     "options": [
       {
-        "text": "At least 1 (or more for redundancy/bandwidth)",
+        "text": "最低1つ(冗長性/帯域のため複数でも可)",
         "correct": true
       },
       {
-        "text": "20 (one per VLAN)",
+        "text": "20(VLANごとに1つ)",
         "correct": false
       },
       {
@@ -1676,12 +1676,12 @@
         "correct": false
       }
     ],
-    "explanation": "A single 802.1Q trunk carries all VLANs. Use EtherChannel/LACP for bandwidth and redundancy.",
-    "cheatsheet": "One trunk = all VLANs. Use LACP for multiple physical links as one trunk."
+    "explanation": "1つの802.1Qトランクで全VLANを搬送。EtherChannel/LACPで帯域と冗長性を確保。",
+    "cheatsheet": "1トランク = 全VLAN。LACPで複数物理リンクを1トランクに束ねる。"
   },
   {
-    "category": "VLAN Design",
-    "question": "How many /26 subnets can fit in a 192.168.0.0/22 address space?",
+    "category": "VLAN設計",
+    "question": "192.168.0.0/22のアドレス空間に収まる/26サブネットはいくつか。",
     "options": [
       {
         "text": "16",
@@ -1700,36 +1700,36 @@
         "correct": false
       }
     ],
-    "explanation": "/22 to /26 borrows 4 bits: 2^4 = 16 subnets, each with 62 usable hosts.",
-    "cheatsheet": "Subnets = 2^(target - current) = 2^(26-22) = 2^4 = 16."
+    "explanation": "/22から/26へ4ビット借用: 2^4 = 16サブネット、各62利用可能ホスト。",
+    "cheatsheet": "サブネット数 = 2^(対象 - 現在) = 2^(26-22) = 2^4 = 16。"
   },
   {
-    "category": "VLAN Design",
-    "question": "What is the recommended VLAN ID range for data VLANs?",
+    "category": "VLAN設計",
+    "question": "データVLANの推奨VLAN ID範囲はどれか。",
     "options": [
       {
-        "text": "2-1001 (normal range)",
+        "text": "2-1001(通常範囲)",
         "correct": true
       },
       {
-        "text": "1002-1005 (reserved)",
+        "text": "1002-1005(予約済み)",
         "correct": false
       },
       {
-        "text": "1006-4094 (extended range)",
+        "text": "1006-4094(拡張範囲)",
         "correct": false
       },
       {
-        "text": "Only VLAN 1",
+        "text": "VLAN 1のみ",
         "correct": false
       }
     ],
-    "explanation": "VLANs 2-1001 are normal range (VTP capable). 1002-1005 are reserved for FDDI/Token Ring. 1006-4094 are extended.",
-    "cheatsheet": "Normal: 2-1001, Reserved: 1002-1005, Extended: 1006-4094, Native default: 1."
+    "explanation": "VLAN 2-1001は通常範囲(VTP対応)。1002-1005はFDDI/Token Ring用予約。1006-4094は拡張範囲。",
+    "cheatsheet": "通常: 2-1001、予約: 1002-1005、拡張: 1006-4094、ネイティブデフォルト: 1。"
   },
   {
-    "category": "VLAN Design",
-    "question": "How many subnets of /27 can you create from 10.0.0.0/21?",
+    "category": "VLAN設計",
+    "question": "10.0.0.0/21から/27サブネットをいくつ作成できるか。",
     "options": [
       {
         "text": "64",
@@ -1748,36 +1748,36 @@
         "correct": false
       }
     ],
-    "explanation": "/21 to /27 borrows 6 bits: 2^6 = 64 subnets, each with 30 hosts.",
-    "cheatsheet": "2^(27-21) = 2^6 = 64 subnets."
+    "explanation": "/21から/27へ6ビット借用: 2^6 = 64サブネット、各30ホスト。",
+    "cheatsheet": "2^(27-21) = 2^6 = 64サブネット。"
   },
   {
-    "category": "VLAN Design",
-    "question": "In a 3-floor building with 100 users per floor, what is the most efficient VLAN design?",
+    "category": "VLAN設計",
+    "question": "3階建てで各階100ユーザーの建物で、最も効率的なVLAN設計はどれか。",
     "options": [
       {
-        "text": "VLAN per department across floors (not per floor)",
+        "text": "部署ごとのVLAN(階ごとではなく)",
         "correct": true
       },
       {
-        "text": "One VLAN per floor",
+        "text": "階ごとに1VLAN",
         "correct": false
       },
       {
-        "text": "One VLAN for the entire building",
+        "text": "建物全体で1VLAN",
         "correct": false
       },
       {
-        "text": "One VLAN per user",
+        "text": "ユーザーごとに1VLAN",
         "correct": false
       }
     ],
-    "explanation": "Department-based VLANs keep users together regardless of location, simplifying policy and ACL management.",
-    "cheatsheet": "VLAN design: group by function/department rather than physical location."
+    "explanation": "部署ベースのVLANは場所に関係なくユーザーをまとめ、ポリシーとACL管理を簡素化。",
+    "cheatsheet": "VLAN設計: 物理的な場所ではなく機能/部署でグループ化。"
   },
   {
-    "category": "VLAN Design",
-    "question": "What is the maximum VLANs per port-channel trunk?",
+    "category": "VLAN設計",
+    "question": "ポートチャネルトランクの最大VLAN数はいくつか。",
     "options": [
       {
         "text": "4094",
@@ -1792,19 +1792,19 @@
         "correct": false
       },
       {
-        "text": "Unlimited",
+        "text": "無制限",
         "correct": false
       }
     ],
-    "explanation": "802.1Q supports 4094 VLANs. Extended range (1006-4094) works on trunks but not with VTP versions 1/2.",
-    "cheatsheet": "Max VLANs = 4094 (limited by 12-bit VID field in 802.1Q)."
+    "explanation": "802.1Qは4094VLANをサポート。拡張範囲(1006-4094)はトランクで動作するがVTP v1/v2では不可。",
+    "cheatsheet": "最大VLAN = 4094(802.1Qの12ビットVIDフィールドによる制限)。"
   },
   {
-    "category": "VLAN Design",
-    "question": "How many IP addresses are wasted if a VLAN has 10 hosts using a /24 mask?",
+    "category": "VLAN設計",
+    "question": "10ホストのVLANで/24マスクを使用した場合、無駄になるIPアドレスはいくつか。",
     "options": [
       {
-        "text": "242 usable IPs wasted",
+        "text": "242利用可能IPが無駄",
         "correct": true
       },
       {
@@ -1820,84 +1820,84 @@
         "correct": false
       }
     ],
-    "explanation": "/24 has 254 usable. 10 hosts use 10. 254-10 = 244 wasted. Better to use /28 (14 usable).",
-    "cheatsheet": "Choose right-sized mask: /28 for up to 14 hosts saves significant address space."
+    "explanation": "/24は254利用可能。10ホスト使用。254-10=244無駄。/28(14利用可能)を使用すべき。",
+    "cheatsheet": "適切なマスク選択: /28は最大14ホストまで対応し、アドレス空間を大幅に節約。"
   },
   {
-    "category": "VLAN Design",
-    "question": "What happens when a frame enters a trunk port without a VLAN tag?",
+    "category": "VLAN設計",
+    "question": "VLANタグなしのフレームがトランクポートに入ってくるとどうなるか。",
     "options": [
       {
-        "text": "It is assigned to the native VLAN (default VLAN 1)",
+        "text": "ネイティブVLAN(デフォルトVLAN 1)に割り当てられる",
         "correct": true
       },
       {
-        "text": "It is dropped",
+        "text": "破棄される",
         "correct": false
       },
       {
-        "text": "It is sent to all VLANs",
+        "text": "全VLANに送信される",
         "correct": false
       },
       {
-        "text": "An error is generated",
+        "text": "エラーが発生する",
         "correct": false
       }
     ],
-    "explanation": "Untagged frames on a trunk are associated with the native VLAN (default VLAN 1).",
-    "cheatsheet": "Native VLAN (default 1) handles untagged frames on trunk ports."
+    "explanation": "トランク上のタグなしフレームはネイティブVLAN(デフォルトVLAN 1)に関連付けられる。",
+    "cheatsheet": "ネイティブVLAN(デフォルト1)がトランクポートのタグなしフレームを処理。"
   },
   {
-    "category": "VLAN Design",
-    "question": "For 30 VLANs each needing 500 hosts, what minimum address space is required?",
+    "category": "VLAN設計",
+    "question": "30VLANで各500ホストが必要な場合、必要な最小アドレス空間はどれか。",
     "options": [
       {
-        "text": "A /16 address block",
+        "text": "/16アドレスブロック",
         "correct": true
       },
       {
-        "text": "A /24 address block",
+        "text": "/24アドレスブロック",
         "correct": false
       },
       {
-        "text": "A /20 address block",
+        "text": "/20アドレスブロック",
         "correct": false
       },
       {
-        "text": "A /8 address block",
+        "text": "/8アドレスブロック",
         "correct": false
       }
     ],
-    "explanation": "500 hosts need /23 (510 hosts). 30 x /23 = 30 x 512 = 15360 IPs. /16 provides 65536 IPs (more than enough).",
-    "cheatsheet": "Calculate: hosts_per_vlan x num_vlans = total_IPs. Choose smallest block that fits."
+    "explanation": "500ホストには/23(510ホスト)が必要。30 x /23 = 30 x 512 = 15360IP。/16は65536IP(十分)。",
+    "cheatsheet": "計算: ホスト/VLAN x VLAN数 = 総IP。収まる最小ブロックを選択。"
   },
   {
-    "category": "VLAN Design",
-    "question": "What is inter-VLAN routing?",
+    "category": "VLAN設計",
+    "question": "VLAN間ルーティングとは何か。",
     "options": [
       {
-        "text": "Routing between VLANs using a router or Layer 3 switch",
+        "text": "ルータまたはレイヤ3スイッチを使用したVLAN間のルーティング",
         "correct": true
       },
       {
-        "text": "Routing within a VLAN",
+        "text": "VLAN内のルーティング",
         "correct": false
       },
       {
-        "text": "Routing between separate physical networks",
+        "text": "別の物理ネットワーク間のルーティング",
         "correct": false
       },
       {
-        "text": "Automatic VLAN assignment",
+        "text": "自動VLAN割り当て",
         "correct": false
       }
     ],
-    "explanation": "Inter-VLAN routing enables communication between VLANs using router-on-a-stick or SVIs on Layer 3 switches.",
-    "cheatsheet": "Methods: Router-on-a-Stick (subinterfaces) or Layer 3 switch SVI."
+    "explanation": "VLAN間ルーティングによりルータオンスティックまたはレイヤ3スイッチのSVIでVLAN間通信を可能にする。",
+    "cheatsheet": "方式: Router-on-a-Stick(サブインターフェース)またはレイヤ3スイッチSVI。"
   },
   {
-    "category": "VLAN Design",
-    "question": "How many access ports can a 24-port switch support if 2 ports are used as trunks?",
+    "category": "VLAN設計",
+    "question": "24ポートスイッチで2ポートをトランクに使用した場合、サポート可能なアクセスポート数はいくつか。",
     "options": [
       {
         "text": "22",
@@ -1916,12 +1916,12 @@
         "correct": false
       }
     ],
-    "explanation": "24 total - 2 trunk = 22 access ports for end devices.",
-    "cheatsheet": "Available access ports = total_ports - trunk_ports - management_ports."
+    "explanation": "24合計 - 2トランク = 22アクセスポート(エンドデバイス用)。",
+    "cheatsheet": "利用可能アクセスポート = 総ポート - トランクポート - 管理ポート。"
   },
   {
-    "category": "VLAN Design",
-    "question": "What is the subnet for VLAN 10 if using scheme 10.10.VLAN.0/24?",
+    "category": "VLAN設計",
+    "question": "スキーム10.10.VLAN.0/24を使用する場合、VLAN 10のサブネットはどれか。",
     "options": [
       {
         "text": "10.10.10.0/24",
@@ -1940,12 +1940,12 @@
         "correct": false
       }
     ],
-    "explanation": "Scheme: 10.10.VLAN.0/24. VLAN 10 = 10.10.10.0/24. Simple and scalable.",
-    "cheatsheet": "Third octet = VLAN ID makes mapping intuitive and easy to manage."
+    "explanation": "スキーム: 10.10.VLAN.0/24。VLAN 10 = 10.10.10.0/24。シンプルでスケーラブル。",
+    "cheatsheet": "第3オクテット = VLAN IDで直感的なマッピングと管理を容易にする。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "How many non-overlapping 20 MHz channels are available in 2.4 GHz (US)?",
+    "category": "無線設計",
+    "question": "2.4GHz(米国)で利用可能な非干渉20MHzチャネル数はいくつか。",
     "options": [
       {
         "text": "3",
@@ -1964,84 +1964,84 @@
         "correct": false
       }
     ],
-    "explanation": "2.4 GHz has 11 channels (US), each 22 MHz wide. Non-overlapping: 1, 6, 11 (3 channels).",
-    "cheatsheet": "2.4 GHz non-overlapping: 1, 6, 11. 5 GHz has many more non-overlapping channels."
+    "explanation": "2.4GHzは11チャネル(米国)、各22MHz幅。非干渉: 1, 6, 11(3チャネル)。",
+    "cheatsheet": "2.4GHz非干渉: 1, 6, 11。5GHzは非干渉チャネルがさらに多い。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "How many APs are needed to cover a 100m x 50m office with each AP covering 20m radius?",
+    "category": "無線設計",
+    "question": "100m x 50mのオフィスで各APが半径20mをカバーする場合、必要なAP数は最低いくつか。",
     "options": [
       {
-        "text": "At least 4",
+        "text": "最低4台",
         "correct": true
       },
       {
-        "text": "2",
+        "text": "2台",
         "correct": false
       },
       {
-        "text": "1",
+        "text": "1台",
         "correct": false
       },
       {
-        "text": "8",
+        "text": "8台",
         "correct": false
       }
     ],
-    "explanation": "Each AP covers ~40m diameter. Area: 100x50=5000m2. One AP covers ~1257m2. 5000/1257~4. Use overlap for roaming.",
-    "cheatsheet": "AP count = ceil(coverage_area / AP_coverage) + overlap buffer for roaming."
+    "explanation": "各APは約40m直径をカバー。面積: 100x50=5000m2。1APは約1257m2をカバー。5000/1257~4。ローミングにはオーバーラップが必要。",
+    "cheatsheet": "AP数 = ceil(カバー面積 / APカバー面積) + ローミング用オーバーラップ余裕。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What channel spacing is used in 5 GHz for 20 MHz channels?",
+    "category": "無線設計",
+    "question": "5GHzで20MHzチャネルに使用されるチャネル間隔はどれか。",
     "options": [
       {
-        "text": "20 MHz with non-overlapping channels",
+        "text": "20MHzで非干渉チャネル",
         "correct": true
       },
       {
-        "text": "5 MHz",
+        "text": "5MHz",
         "correct": false
       },
       {
-        "text": "10 MHz",
+        "text": "10MHz",
         "correct": false
       },
       {
-        "text": "25 MHz",
+        "text": "25MHz",
         "correct": false
       }
     ],
-    "explanation": "5 GHz 20 MHz channels are spaced 20 MHz apart, providing many non-overlapping channels (at least 20+ in UNII bands).",
-    "cheatsheet": "5 GHz: 20MHz non-overlap, 40MHz halves available, 80MHz quarters, 160MHz minimizes."
+    "explanation": "5GHzの20MHzチャネルは20MHz間隔で配置、多数の非干渉チャネルを提供(UNIIバンドで20以上)。",
+    "cheatsheet": "5GHz: 20MHz非干渉、40MHzで半減、80MHzで1/4、160MHzで最小化。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What is the recommended overlap between AP coverage cells for seamless roaming?",
+    "category": "無線設計",
+    "question": "シームレスローミングのためのAPカバーセル間の推奨オーバーラップはどれくらいか。",
     "options": [
       {
-        "text": "15-20% overlap",
+        "text": "15-20%のオーバーラップ",
         "correct": true
       },
       {
-        "text": "0% overlap",
+        "text": "0%のオーバーラップ",
         "correct": false
       },
       {
-        "text": "50% overlap",
+        "text": "50%のオーバーラップ",
         "correct": false
       },
       {
-        "text": "100% overlap",
+        "text": "100%のオーバーラップ",
         "correct": false
       }
     ],
-    "explanation": "15-20% overlap ensures clients can associate with the next AP before losing signal from current one.",
-    "cheatsheet": "Design overlap ~20% for seamless roaming without excessive co-channel interference."
+    "explanation": "15-20%オーバーラップにより、クライアントは現在のAPの信号を失う前に次のAPに接続できる。",
+    "cheatsheet": "オーバーラップ~20%でシームレスローミング。過度な同一チャネル干渉を避ける。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "In a high-density environment with 300 users, how many APs are needed (assuming 30 users per AP)?",
+    "category": "無線設計",
+    "question": "300ユーザーの高密度環境で(APあたり30ユーザーと仮定)、必要なAP数はいくつか。",
     "options": [
       {
         "text": "10",
@@ -2060,327 +2060,327 @@
         "correct": false
       }
     ],
-    "explanation": "300 users / 30 users per AP = 10 APs. High-density: typically 20-30 concurrent users per AP.",
-    "cheatsheet": "AP count = total_clients / clients_per_AP. Enterprise: 20-30 per AP for mixed traffic."
+    "explanation": "300ユーザー / 30ユーザー/AP = 10AP。高密度: 通常APあたり20-30同時ユーザー。",
+    "cheatsheet": "AP数 = 総クライアント / クライアント/AP。エンタープライズ: 混合トラフィックで20-30/AP。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What is the primary cause of co-channel interference?",
+    "category": "無線設計",
+    "question": "同一チャネル干渉の主な原因は何か。",
     "options": [
       {
-        "text": "Multiple APs on the same channel in overlapping coverage areas",
+        "text": "オーバーラップカバーエリアで同一チャネルを使用する複数AP",
         "correct": true
       },
       {
-        "text": "Bluetooth devices",
+        "text": "Bluetoothデバイス",
         "correct": false
       },
       {
-        "text": "Microwave ovens only",
+        "text": "電子レンジのみ",
         "correct": false
       },
       {
-        "text": "Physical walls",
+        "text": "物理的な壁",
         "correct": false
       }
     ],
-    "explanation": "Same-channel APs overlapping causes CSMA/CA contention, reducing throughput for all devices on that channel.",
-    "cheatsheet": "Assign non-overlapping channels to adjacent APs. Use 5 GHz for more channel options."
+    "explanation": "同一チャネルAPのオーバーラップはCSMA/CA競合を引き起こし、そのチャネルの全デバイスのスループットを低下させる。",
+    "cheatsheet": "隣接APに非干渉チャネルを割り当てる。5GHzでより多くのチャネルオプションを使用。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "How many non-overlapping 20 MHz channels does 5 GHz (UNII-1,2,3) typically provide?",
+    "category": "無線設計",
+    "question": "5GHz(UNII-1,2,3)で20MHz非干渉チャネルは通常いくつ提供されるか。",
     "options": [
       {
-        "text": "20+ channels",
+        "text": "20チャネル以上",
         "correct": true
       },
       {
-        "text": "3 channels",
+        "text": "3チャネル",
         "correct": false
       },
       {
-        "text": "11 channels",
+        "text": "11チャネル",
         "correct": false
       },
       {
-        "text": "8 channels",
+        "text": "8チャネル",
         "correct": false
       }
     ],
-    "explanation": "5 GHz provides many channels across UNII bands (up to 25+ non-overlapping in DFS-enabled environments).",
-    "cheatsheet": "5 GHz: UNII-1 (36-48), UNII-2A (52-64), UNII-2C (100-144), UNII-3 (149-165)."
+    "explanation": "5GHzはUNIIバンドにわたり多数のチャネルを提供(DFS環境で最大25以上の非干渉チャネル)。",
+    "cheatsheet": "5GHz: UNII-1(36-48), UNII-2A(52-64), UNII-2C(100-144), UNII-3(149-165)。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What is the typical coverage radius of a 5 GHz AP in an open office?",
+    "category": "無線設計",
+    "question": "オフィス環境での5GHz APの典型的カバーエリア半径はどれくらいか。",
     "options": [
       {
-        "text": "20-30 meters",
+        "text": "20-30メートル",
         "correct": true
       },
       {
-        "text": "50-100 meters",
+        "text": "50-100メートル",
         "correct": false
       },
       {
-        "text": "100+ meters",
+        "text": "100メートル以上",
         "correct": false
       },
       {
-        "text": "5-10 meters",
+        "text": "5-10メートル",
         "correct": false
       }
     ],
-    "explanation": "5 GHz has shorter range than 2.4 GHz due to higher frequency and absorption. Typical: 20-30m indoor.",
-    "cheatsheet": "2.4 GHz: ~30-50m. 5 GHz: ~20-30m. Use 5 GHz for capacity, 2.4 GHz for coverage."
+    "explanation": "5GHzは高周波による吸収で2.4GHzより短い。屋内では通常20-30m。",
+    "cheatsheet": "2.4GHz: ~30-50m。5GHz: ~20-30m。5GHzは容量、2.4GHzはカバレッジに使用。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What channel width should you use for a high-density deployment with many APs?",
+    "category": "無線設計",
+    "question": "多数のAPがある高密度デプロイではどのチャネル幅を使用すべきか。",
     "options": [
       {
-        "text": "20 MHz",
+        "text": "20MHz",
         "correct": true
       },
       {
-        "text": "160 MHz",
+        "text": "160MHz",
         "correct": false
       },
       {
-        "text": "80 MHz",
+        "text": "80MHz",
         "correct": false
       },
       {
-        "text": "40 MHz",
+        "text": "40MHz",
         "correct": false
       }
     ],
-    "explanation": "Narrow channels (20 MHz) provide more non-overlapping channels for dense AP deployments.",
-    "cheatsheet": "High density: 20 MHz (more channels). Low density: 40/80 MHz (more speed per AP)."
+    "explanation": "狭いチャネル(20MHz)は高密度APデプロイでより多くの非干渉チャネルを提供。",
+    "cheatsheet": "高密度: 20MHz(チャネル数多い)。低密度: 40/80MHz(APあたり速度高い)。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What is the maximum recommended number of clients per 2.4 GHz radio?",
+    "category": "無線設計",
+    "question": "2.4GHzラジオあたりの推奨最大クライアント数はいくつか。",
     "options": [
       {
-        "text": "20-25 clients",
+        "text": "20-25クライアント",
         "correct": true
       },
       {
-        "text": "100 clients",
+        "text": "100クライアント",
         "correct": false
       },
       {
-        "text": "5 clients",
+        "text": "5クライアント",
         "correct": false
       },
       {
-        "text": "50 clients",
+        "text": "50クライアント",
         "correct": false
       }
     ],
-    "explanation": "2.4 GHz: 20-25 clients recommended due to shared medium contention. 5 GHz supports more due to more channels.",
-    "cheatsheet": "2.4 GHz per AP: ~20-25 clients. 5 GHz: ~30-40. Use band steering to 5 GHz."
+    "explanation": "2.4GHz: 共有メディアの競合により20-25クライアント推奨。5GHzはチャネルが多いためより多くサポート。",
+    "cheatsheet": "2.4GHz/AP: ~20-25クライアント。5GHz: ~30-40。バンドステアリングで5GHzに誘導。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What DFS (Dynamic Frequency Selection) allows in 5 GHz?",
+    "category": "無線設計",
+    "question": "5GHzのDFS(Dynamic Frequency Selection)は何を可能にするか。",
     "options": [
       {
-        "text": "Using radar channels when no radar is detected",
+        "text": "レーダーが検出されない場合にレーダーチャネルを使用すること",
         "correct": true
       },
       {
-        "text": "Switching to 2.4 GHz automatically",
+        "text": "自動的に2.4GHzに切り替えること",
         "correct": false
       },
       {
-        "text": "Increasing transmission power",
+        "text": "送信電力を増加すること",
         "correct": false
       },
       {
-        "text": "Disabling unused channels",
+        "text": "未使用チャネルを無効化すること",
         "correct": false
       }
     ],
-    "explanation": "DFS enables use of 5 GHz weather/radar channels (52-144) by monitoring for radar signals and vacating if detected.",
-    "cheatsheet": "DFS channels (52-144) add ~12 channels but require radar detection capability."
+    "explanation": "DFSは5GHzの気象/レーダーチャネル(52-144)をレーダー信号を監視し検出時に回避しつつ使用可能にする。",
+    "cheatsheet": "DFSチャネル(52-144)は~12チャネル追加だがレーダー検出機能が必要。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What is the effect of using 40 MHz channels in 2.4 GHz?",
+    "category": "無線設計",
+    "question": "2.4GHzで40MHzチャネルを使用した場合の影響は何か。",
     "options": [
       {
-        "text": "Only 1 non-overlapping 40 MHz channel available (reduces capacity)",
+        "text": "非干渉40MHzチャネルが1つのみ(容量が低下)",
         "correct": true
       },
       {
-        "text": "Better capacity than 20 MHz",
+        "text": "20MHzより良い容量",
         "correct": false
       },
       {
-        "text": "No effect on channel count",
+        "text": "チャネル数への影響なし",
         "correct": false
       },
       {
-        "text": "Doubles the range",
+        "text": "範囲が2倍になる",
         "correct": false
       }
     ],
-    "explanation": "2.4 GHz only supports one 40 MHz wide channel effectively, eliminating channel diversity.",
-    "cheatsheet": "Avoid 40 MHz in 2.4 GHz. Use it only in 5 GHz where channel space is abundant."
+    "explanation": "2.4GHzは実質1つの40MHz幅チャネルのみをサポートし、チャネルの多様性が失われる。",
+    "cheatsheet": "2.4GHzで40MHzは避ける。5GHzでチャネル空間が豊富な場合に使用。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What is the estimated bandwidth per user with 100 users and 1 Gbps total capacity?",
+    "category": "無線設計",
+    "question": "100ユーザーで総容量1Gbpsの場合、ユーザーあたりの推定帯域はどれくらいか。",
     "options": [
       {
-        "text": "10 Mbps per user",
+        "text": "ユーザーあたり10Mbps",
         "correct": true
       },
       {
-        "text": "100 Mbps per user",
+        "text": "ユーザーあたり100Mbps",
         "correct": false
       },
       {
-        "text": "1 Gbps per user",
+        "text": "ユーザーあたり1Gbps",
         "correct": false
       },
       {
-        "text": "1 Mbps per user",
+        "text": "ユーザーあたり1Mbps",
         "correct": false
       }
     ],
-    "explanation": "1 Gbps / 100 users = 10 Mbps average per user (assuming even distribution).",
-    "cheatsheet": "Per-user BW = total_capacity / concurrent_users."
+    "explanation": "1Gbps / 100ユーザー = ユーザーあたり10Mbps(均等分散と仮定)。",
+    "cheatsheet": "ユーザーあたり帯域 = 総容量 / 同時ユーザー数。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "Where should APs ideally be mounted in an office?",
+    "category": "無線設計",
+    "question": "オフィスでAPはどこに設置するのが理想的か。",
     "options": [
       {
-        "text": "Ceiling-mounted for best omnidirectional coverage",
+        "text": "天井設置で最良の全方向カバレッジ",
         "correct": true
       },
       {
-        "text": "Under desks",
+        "text": "机の下",
         "correct": false
       },
       {
-        "text": "In server rooms only",
+        "text": "サーバー室のみ",
         "correct": false
       },
       {
-        "text": "Behind walls",
+        "text": "壁の後ろ",
         "correct": false
       }
     ],
-    "explanation": "Ceiling mounting provides clear line-of-sight and best coverage pattern for most environments.",
-    "cheatsheet": "Mount APs at ceiling height for optimal coverage. Avoid mounting near metal objects."
+    "explanation": "天井設置は見通し線をクリアにし、ほとんどの環境で最良のカバレッジパターンを提供。",
+    "cheatsheet": "最適カバレッジのためにAPを天井の高さに設置。金属物の近くは避ける。"
   },
   {
-    "category": "Wireless Planning",
-    "question": "What is band steering?",
+    "category": "無線設計",
+    "question": "バンドステアリングとは何か。",
     "options": [
       {
-        "text": "Encouraging dual-band clients to use 5 GHz instead of 2.4 GHz",
+        "text": "デュアルバンドクライアントを2.4GHzではなく5GHzに誘導すること",
         "correct": true
       },
       {
-        "text": "Selecting between different 5 GHz channels",
+        "text": "異なる5GHzチャネル間の選択",
         "correct": false
       },
       {
-        "text": "Switching between 2.4 GHz channels",
+        "text": "2.4GHzチャネル間の切り替え",
         "correct": false
       },
       {
-        "text": "Disabling 2.4 GHz radio",
+        "text": "2.4GHzラジオの無効化",
         "correct": false
       }
     ],
-    "explanation": "Band steering guides capable clients to 5 GHz, reducing 2.4 GHz congestion and improving overall performance.",
-    "cheatsheet": "Enable band steering to offload dual-band clients from crowded 2.4 GHz to 5 GHz."
+    "explanation": "バンドステアリングは対応クライアントを5GHzに誘導し、2.4GHzの混雑を緩和して全体のパフォーマンスを向上。",
+    "cheatsheet": "バンドステアリングを有効化して混雑した2.4GHzから5GHzへデュアルバンドクライアントをオフロード。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is the overhead of ESP (Encapsulating Security Payload) in transport mode?",
+    "question": "ESP(Encapsulating Security Payload)トランスポートモードのオーバーヘッドはどれくらいか。",
     "options": [
       {
-        "text": "Approximately 20-30 bytes",
+        "text": "約20-30バイト",
         "correct": true
       },
       {
-        "text": "0 bytes",
+        "text": "0バイト",
         "correct": false
       },
       {
-        "text": "100 bytes",
+        "text": "100バイト",
         "correct": false
       },
       {
-        "text": "50 bytes",
+        "text": "50バイト",
         "correct": false
       }
     ],
-    "explanation": "ESP transport: ESP header (8B) + IV (8-16B) + padding + ESP trailer (2-16B) + ICV (10-16B).",
-    "cheatsheet": "Transport overhead: ~20-30B. Tunnel overhead: ~50-70B (adds new IP header)."
+    "explanation": "ESPトランスポート: ESPヘッダ(8B) + IV(8-16B) + パディング + ESPトレーラ(2-16B) + ICV(10-16B)。",
+    "cheatsheet": "トランスポートオーバーヘッド: ~20-30B。トンネルオーバーヘッド: ~50-70B(新IPヘッダ追加)。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "A 100 Mbps link running IPsec tunnel mode. What is the approximate maximum throughput?",
+    "question": "100MbpsリンクでIPsecトンネルモード稼働時の概算最大スループットはどれくらいか。",
     "options": [
       {
-        "text": "95-97 Mbps (accounting for overhead)",
+        "text": "95-97Mbps(オーバーヘッド考慮)",
         "correct": true
       },
       {
-        "text": "100 Mbps",
+        "text": "100Mbps",
         "correct": false
       },
       {
-        "text": "50 Mbps",
+        "text": "50Mbps",
         "correct": false
       },
       {
-        "text": "80 Mbps",
+        "text": "80Mbps",
         "correct": false
       }
     ],
-    "explanation": "IPsec overhead is small but CPU encryption limits throughput. Hardware-accelerated IPsec may achieve near wire speed.",
-    "cheatsheet": "Software IPsec: 50-80% of link speed. Hardware-accelerated: 95%+. Depends on cipher."
+    "explanation": "IPsecオーバーヘッドは小さいがCPU暗号化がスループットを制限。ハードウェアアクセラレーションでほぼワイヤスピード達成可。",
+    "cheatsheet": "ソフトウェアIPsec: リンク速度の50-80%。ハードウェアアクセラレーション: 95%以上。暗号による。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is the typical IPsec SA lifetime (Phase 2)?",
+    "question": "IPsec SAの一般的なライフタイム(フェーズ2)はどれくらいか。",
     "options": [
       {
-        "text": "1 hour (3600 seconds) or 100 MB",
+        "text": "1時間(3600秒)または100MB",
         "correct": true
       },
       {
-        "text": "24 hours",
+        "text": "24時間",
         "correct": false
       },
       {
-        "text": "1 minute",
+        "text": "1分",
         "correct": false
       },
       {
-        "text": "No limit",
+        "text": "制限なし",
         "correct": false
       }
     ],
-    "explanation": "Phase 2 SA default: 1 hour / 100MB (whichever first). Shorter lifetimes = more key changes = more security.",
-    "cheatsheet": "Phase 1: 24h/1GB. Phase 2: 1h/100MB. Shorter = more secure, more overhead."
+    "explanation": "フェーズ2SAデフォルト: 1時間/100MB(いずれか先)。短いライフタイム = キー変更多 = より安全。",
+    "cheatsheet": "フェーズ1: 24時間/1GB。フェーズ2: 1時間/100MB。短い = より安全、オーバーヘッド増。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What cipher provides the best performance in IPsec?",
+    "question": "IPsecで最良のパフォーマンスを提供する暗号方式はどれか。",
     "options": [
       {
-        "text": "AES-GCM (combined encryption + authentication)",
+        "text": "AES-GCM(暗号化+認証の統合)",
         "correct": true
       },
       {
@@ -2396,15 +2396,15 @@
         "correct": false
       }
     ],
-    "explanation": "AES-GCM provides both encryption and integrity in one operation, reducing overhead. AES-NI hardware acceleration helps.",
-    "cheatsheet": "AES-GCM: fast, combined enc+auth. AES-CBC + SHA: separate operations, more overhead."
+    "explanation": "AES-GCMは1つの操作で暗号化と完全性の両方を提供し、オーバーヘッドを削減。AES-NIハードウェアアクセラレーションが有効。",
+    "cheatsheet": "AES-GCM: 高速、暗号+認証統合。AES-CBC + SHA: 別操作、オーバーヘッド大。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "How many SAs are created in IPsec for bidirectional communication?",
+    "question": "IPsecで双方向通信のために作成されるSA数はいくつか。",
     "options": [
       {
-        "text": "2 (one in each direction)",
+        "text": "2(各方向に1つ)",
         "correct": true
       },
       {
@@ -2420,252 +2420,252 @@
         "correct": false
       }
     ],
-    "explanation": "IPsec SAs are unidirectional. Bidirectional communication requires 2 SAs (inbound + outbound).",
-    "cheatsheet": "Each SA = one direction. Bidirectional = 2 SAs. Each requires SPI, keys, params."
+    "explanation": "IPsec SAは単方向。双方向通信には2SA(インバウンド+アウトバウンド)が必要。",
+    "cheatsheet": "各SA = 1方向。双方向 = 2SA。各にSPI、キー、パラメータが必要。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is the typical IPsec Phase 1 lifetime?",
+    "question": "IPsecフェーズ1の一般的なライフタイムはどれくらいか。",
     "options": [
       {
-        "text": "86400 seconds (24 hours)",
+        "text": "86400秒(24時間)",
         "correct": true
       },
       {
-        "text": "3600 seconds (1 hour)",
+        "text": "3600秒(1時間)",
         "correct": false
       },
       {
-        "text": "300 seconds (5 minutes)",
+        "text": "300秒(5分)",
         "correct": false
       },
       {
-        "text": "No expiration",
+        "text": "期限なし",
         "correct": false
       }
     ],
-    "explanation": "Phase 1 (IKE SA) default lifetime is 24 hours. This is re-keyed before expiry to maintain the management channel.",
-    "cheatsheet": "Phase 1 (IKE SA): 24h default. Phase 2 (IPsec SA): 1h default."
+    "explanation": "フェーズ1(IKE SA)デフォルトライフタイムは24時間。期限切れ前に管理チャネルを維持するため再キーされる。",
+    "cheatsheet": "フェーズ1(IKE SA): 24時間デフォルト。フェーズ2(IPsec SA): 1時間デフォルト。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is the maximum MTU for an IPsec tunnel with 1500-byte underlay?",
+    "question": "1500バイトアンダーレイでのIPsecトンネルの最大MTUはどれくらいか。",
     "options": [
       {
-        "text": "1430-1440 bytes (after IPsec overhead)",
+        "text": "1430-1440バイト(IPsecオーバーヘッド後)",
         "correct": true
       },
       {
-        "text": "1500 bytes",
+        "text": "1500バイト",
         "correct": false
       },
       {
-        "text": "1600 bytes",
+        "text": "1600バイト",
         "correct": false
       },
       {
-        "text": "1280 bytes",
+        "text": "1280バイト",
         "correct": false
       }
     ],
-    "explanation": "Tunnel mode adds ~50-70 bytes overhead. Effective MTU = 1500 - 60-70 = ~1430-1440 bytes.",
-    "cheatsheet": "Tunnel MTU = underlay_MTU - overhead. Typically 1420-1440 for IPsec on 1500 byte link."
+    "explanation": "トンネルモードは~50-70バイトオーバーヘッドを追加。実効MTU = 1500 - 60-70 = ~1430-1440バイト。",
+    "cheatsheet": "トンネルMTU = アンダーレイMTU - オーバーヘッド。通常1500BリンクでIPsecは1420-1440。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "A VPN tunnel must support 50 Mbps throughput with AES-256 encryption. What CPU consideration?",
+    "question": "AES-256暗号化で50MbpsスループットのVPNトンネルをサポートする場合、CPUの考慮点は何か。",
     "options": [
       {
-        "text": "Hardware crypto acceleration (AES-NI) is recommended",
+        "text": "ハードウェア暗号アクセラレーション(AES-NI)が推奨される",
         "correct": true
       },
       {
-        "text": "Any CPU can handle 50 Mbps",
+        "text": "任意のCPUで50Mbps対応可能",
         "correct": false
       },
       {
-        "text": "Software encryption is always sufficient",
+        "text": "ソフトウェア暗号化で常に十分",
         "correct": false
       },
       {
-        "text": "Only dedicated hardware appliances work",
+        "text": "専用ハードウェア機器のみが動作可能",
         "correct": false
       }
     ],
-    "explanation": "AES-256 software can handle 50 Mbps on modern CPUs, but AES-NI hardware acceleration is recommended for reliability.",
-    "cheatsheet": "AES-NI offloads encryption to CPU hardware. Check for AES-NI support on VPN gateways."
+    "explanation": "AES-256ソフトウェアは最新CPUで50Mbpsを処理可能だが、AES-NIハードウェアアクセラレーションが信頼性のために推奨。",
+    "cheatsheet": "AES-NIは暗号化をCPUハードウェアにオフロード。VPNゲートウェイでAES-NI対応を確認。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is the difference between IKEv1 Main Mode and Aggressive Mode?",
+    "question": "IKEv1メインモードとアグレッシブモードの違いは何か。",
     "options": [
       {
-        "text": "Main Mode: 6 messages, identity protected. Aggressive: 3 messages, identity exposed",
+        "text": "メインモード: 6メッセージ、ID保護。アグレッシブ: 3メッセージ、ID公開",
         "correct": true
       },
       {
-        "text": "No difference in security",
+        "text": "セキュリティに差はない",
         "correct": false
       },
       {
-        "text": "Aggressive is more secure",
+        "text": "アグレッシブの方が安全",
         "correct": false
       },
       {
-        "text": "Main Mode uses fewer packets",
+        "text": "メインモードはパケット数が少ない",
         "correct": false
       }
     ],
-    "explanation": "Main Mode protects identity with encrypted exchange. Aggressive Mode is faster but exposes identities in cleartext.",
-    "cheatsheet": "Main Mode: secure, 6 messages. Aggressive: fast, 3 messages, identity visible."
+    "explanation": "メインモードは暗号化交換でIDを保護。アグレッシブモードは高速だがIDを平文で公開。",
+    "cheatsheet": "メインモード: 安全、6メッセージ。アグレッシブ: 高速、3メッセージ、ID可視。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is the purpose of IPsec replay protection?",
+    "question": "IPsecリプレイ保護の目的は何か。",
     "options": [
       {
-        "text": "Preventing an attacker from re-sending captured packets",
+        "text": "攻撃者がキャプチャしたパケットを再送信することを防止する",
         "correct": true
       },
       {
-        "text": "Preventing packet fragmentation",
+        "text": "パケットフラグメンテーションを防止する",
         "correct": false
       },
       {
-        "text": "Speeding up packet processing",
+        "text": "パケット処理を高速化する",
         "correct": false
       },
       {
-        "text": "Compressing packets",
+        "text": "パケットを圧縮する",
         "correct": false
       }
     ],
-    "explanation": "Replay protection uses a sequence number window to reject duplicate packets, preventing replay attacks.",
-    "cheatsheet": "Anti-replay window checks sequence numbers. Out-of-window or duplicate packets are dropped."
+    "explanation": "リプレイ保護はシーケンス番号ウィンドウを使用して重複パケットを拒否し、リプレイ攻撃を防止。",
+    "cheatsheet": "アンチリプレイウィンドウがシーケンス番号をチェック。範囲外または重複パケットは破棄。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What encryption overhead does AES-256-CBC add to a 1400-byte payload?",
+    "question": "AES-256-CBCが1400バイトペイロードに追加する暗号化オーバーヘッドはどれくらいか。",
     "options": [
       {
-        "text": "About 32-48 bytes",
+        "text": "約32-48バイト",
         "correct": true
       },
       {
-        "text": "256 bytes",
+        "text": "256バイト",
         "correct": false
       },
       {
-        "text": "0 bytes",
+        "text": "0バイト",
         "correct": false
       },
       {
-        "text": "10 bytes",
+        "text": "10バイト",
         "correct": false
       }
     ],
-    "explanation": "AES-CBC: IV (16B) + padding (up to 16B) + ESP header (8B) + ICV (16B) = ~40-56 bytes total overhead.",
-    "cheatsheet": "AES block = 16 bytes. Padding aligns to block boundary. IV = 1 block."
+    "explanation": "AES-CBC: IV(16B) + パディング(最大16B) + ESPヘッダ(8B) + ICV(16B) = ~40-56バイト総オーバーヘッド。",
+    "cheatsheet": "AESブロック = 16バイト。パディングでブロック境界に整列。IV = 1ブロック。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "How many simultaneous VPN tunnels can a mid-range router typically support?",
+    "question": "中堅ルータで同時にサポートできるVPNトンネル数は概ねどれくらいか。",
     "options": [
       {
-        "text": "50-200 tunnels",
+        "text": "50-200トンネル",
         "correct": true
       },
       {
-        "text": "10,000+ tunnels",
+        "text": "10,000トンネル以上",
         "correct": false
       },
       {
-        "text": "5 tunnels",
+        "text": "5トンネル",
         "correct": false
       },
       {
-        "text": "Unlimited",
+        "text": "無制限",
         "correct": false
       }
     ],
-    "explanation": "Mid-range enterprise routers support 50-200 simultaneous tunnels. High-end appliances support thousands.",
-    "cheatsheet": "Check specs: concurrent tunnels, throughput with encryption, max SA count."
+    "explanation": "中堅エンタープライズルータは50-200同時トンネルをサポート。ハイエンド機器は数千。",
+    "cheatsheet": "仕様確認: 同時トンネル数、暗号化時スループット、最大SA数。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is Perfect Forward Secrecy (PFS) in IPsec?",
+    "question": "IPsecのPFS(Perfect Forward Secrecy)とは何か。",
     "options": [
       {
-        "text": "Generating new key material for each Phase 2, so compromise of one key does not affect others",
+        "text": "各フェーズ2で新しい鍵素材を生成し、1つの鍵の漏洩が他に影響しないようにすること",
         "correct": true
       },
       {
-        "text": "Encrypting the encryption keys",
+        "text": "暗号化鍵を暗号化すること",
         "correct": false
       },
       {
-        "text": "Using the same key for all sessions",
+        "text": "全セッションで同じ鍵を使用すること",
         "correct": false
       },
       {
-        "text": "A certificate validation method",
+        "text": "証明書検証方法",
         "correct": false
       }
     ],
-    "explanation": "PFS (Diffie-Hellman in Phase 2) ensures each IPsec SA uses unique key material, limiting breach impact.",
-    "cheatsheet": "PFS enabled = new DH key exchange in Phase 2. Recommended: DH group 14 or higher."
+    "explanation": "PFS(フェーズ2のDiffie-Hellman)は各IPsec SAが固有の鍵素材を使用することを保証し、漏洩影響を制限。",
+    "cheatsheet": "PFS有効 = フェーズ2で新DH鍵交換。推奨: DHグループ14以上。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is the estimated bandwidth overhead percentage for IPsec with AES and SHA-256?",
+    "question": "AESおよびSHA-256使用時のIPsecの帯域オーバーヘッド率は概ねどれくらいか。",
     "options": [
       {
-        "text": "Approximately 3-5% overhead",
+        "text": "約3-5%のオーバーヘッド",
         "correct": true
       },
       {
-        "text": "50% overhead",
+        "text": "50%のオーバーヘッド",
         "correct": false
       },
       {
-        "text": "0% overhead",
+        "text": "0%のオーバーヘッド",
         "correct": false
       },
       {
-        "text": "20% overhead",
+        "text": "20%のオーバーヘッド",
         "correct": false
       }
     ],
-    "explanation": "IPsec adds ~50-70 bytes per packet. For 1500-byte MTU: 50/1500 ~ 3.3% overhead.",
-    "cheatsheet": "Overhead % = (overhead_bytes / MTU) x 100. Smaller packets = higher percentage."
+    "explanation": "IPsecはパケットあたり~50-70バイト追加。1500バイトMTUの場合: 50/1500 ~ 3.3%オーバーヘッド。",
+    "cheatsheet": "オーバーヘッド% = (オーバーヘッドバイト / MTU) x 100。小さいパケット = 高い割合。"
   },
   {
     "category": "VPN/IPsec",
-    "question": "What is a site-to-site VPN?",
+    "question": "サイトツーサイトVPNとは何か。",
     "options": [
       {
-        "text": "A permanent tunnel connecting two network locations (offices, data centers)",
+        "text": "2つのネットワーク拠点(オフィス、データセンター)を接続する永続的なトンネル",
         "correct": true
       },
       {
-        "text": "A temporary connection for remote workers",
+        "text": "リモートワーカー用の一時接続",
         "correct": false
       },
       {
-        "text": "An encrypted web session",
+        "text": "暗号化されたWebセッション",
         "correct": false
       },
       {
-        "text": "A peer-to-peer file sharing tunnel",
+        "text": "P2Pファイル共有トンネル",
         "correct": false
       }
     ],
-    "explanation": "Site-to-site VPNs connect entire networks (router-to-router) with persistent IPsec tunnels.",
-    "cheatsheet": "Site-to-site: network-to-network. Remote-access: client-to-network. Always-on tunnels."
+    "explanation": "サイトツーサイトVPNは永続的なIPsecトンネルでネットワーク全体をルーター間で接続。",
+    "cheatsheet": "サイトツーサイト: ネットワーク間接続。リモートアクセス: クライアント-ネットワーク。常時接続トンネル。"
   },
   {
-    "category": "Load Balancing",
-    "question": "With 4 servers and weighted round-robin (weights: 5, 3, 2, 1), what fraction of connections goes to the first server?",
+    "category": "ロードバランシング",
+    "question": "ウェイト付きラウンドロビン(ウェイト: 5, 3, 2, 1)で4サーバーの場合、最初のサーバーの接続割合はどれくらいか。",
     "options": [
       {
         "text": "50%",
@@ -2684,223 +2684,223 @@
         "correct": false
       }
     ],
-    "explanation": "Total weight = 5+3+2+1 = 11. First server: 5/11 = ~45% (~50%). Ratio: 5:3:2:1.",
-    "cheatsheet": "Server share = its_weight / sum(all_weights)."
+    "explanation": "総ウェイト = 5+3+2+1 = 11。最初のサーバー: 5/11 = ~45%(~50%)。比率: 5:3:2:1。",
+    "cheatsheet": "サーバー割合 = 自ウェイト / 総ウェイトの合計。"
   },
   {
-    "category": "Load Balancing",
-    "question": "What is the health check interval recommendation for web servers?",
+    "category": "ロードバランシング",
+    "question": "Webサーバーのヘルスチェック間隔の推奨はどれくらいか。",
     "options": [
       {
-        "text": "5-10 seconds",
+        "text": "5-10秒",
         "correct": true
       },
       {
-        "text": "1 second",
+        "text": "1秒",
         "correct": false
       },
       {
-        "text": "60 seconds",
+        "text": "60秒",
         "correct": false
       },
       {
-        "text": "5 minutes",
+        "text": "5分",
         "correct": false
       }
     ],
-    "explanation": "5-10 seconds balances responsiveness with overhead. Too fast wastes resources. Too slow misses failures.",
-    "cheatsheet": "Web: 5-10s. Database: 10-30s. Critical: 2-5s. Non-critical: 30-60s."
+    "explanation": "5-10秒は応答性とオーバーヘッドのバランス。速すぎるとリソース浪費、遅すぎると障害を見逃す。",
+    "cheatsheet": "Web: 5-10秒。DB: 10-30秒。重要: 2-5秒。非重要: 30-60秒。"
   },
   {
-    "category": "Load Balancing",
-    "question": "If a server takes 3 seconds to respond to a health check, what should the timeout be set to?",
+    "category": "ロードバランシング",
+    "question": "サーバーがヘルスチェックに3秒で応答する場合、タイムアウトをどれくらいに設定すべきか。",
     "options": [
       {
-        "text": "Greater than 3 seconds (e.g., 5 seconds)",
+        "text": "3秒より大きく(例: 5秒)",
         "correct": true
       },
       {
-        "text": "1 second",
+        "text": "1秒",
         "correct": false
       },
       {
-        "text": "Exactly 3 seconds",
+        "text": "正確に3秒",
         "correct": false
       },
       {
-        "text": "10 seconds",
+        "text": "10秒",
         "correct": false
       }
     ],
-    "explanation": "Timeout should exceed normal response time plus a margin. If response is 3s, set timeout to 5s+.",
-    "cheatsheet": "Timeout = normal_response_time x 1.5 to 2. Add buffer for network variance."
+    "explanation": "タイムアウトは通常応答時間+余裕を超える必要がある。応答3秒ならタイムアウト5秒以上に設定。",
+    "cheatsheet": "タイムアウト = 通常応答時間 x 1.5〜2。ネットワーク変動のバッファを追加。"
   },
   {
-    "category": "Load Balancing",
-    "question": "With 10,000 requests and 5 servers using round-robin, how many requests does each server handle?",
+    "category": "ロードバランシング",
+    "question": "10,000リクエストで5サーバーをラウンドロビン使用時、各サーバーの処理数はいくつか。",
     "options": [
       {
-        "text": "2,000 each",
+        "text": "各2,000",
         "correct": true
       },
       {
-        "text": "5,000 each",
+        "text": "各5,000",
         "correct": false
       },
       {
-        "text": "1,000 each",
+        "text": "各1,000",
         "correct": false
       },
       {
-        "text": "10,000 each",
+        "text": "各10,000",
         "correct": false
       }
     ],
-    "explanation": "Simple round-robin: 10000/5 = 2000 requests per server (assuming equal distribution).",
-    "cheatsheet": "Round-robin: requests / servers = per-server (when evenly divisible)."
+    "explanation": "シンプルラウンドロビン: 10000/5 = 各2000リクエスト(均等分散と仮定)。",
+    "cheatsheet": "ラウンドロビン: リクエスト/サーバー数 = サーバーあたり(割り切れる場合)。"
   },
   {
-    "category": "Load Balancing",
-    "question": "What is the minimum number of unhealthy responses before removing a server from the pool (typical default)?",
+    "category": "ロードバランシング",
+    "question": "サーバーをプールから除外するまでの最小異常応答回数はいくつが一般的か。",
     "options": [
       {
-        "text": "3 consecutive failures",
+        "text": "3回連続失敗",
         "correct": true
       },
       {
-        "text": "1 failure",
+        "text": "1回失敗",
         "correct": false
       },
       {
-        "text": "10 failures",
+        "text": "10回失敗",
         "correct": false
       },
       {
-        "text": "Never removed",
+        "text": "除外されない",
         "correct": false
       }
     ],
-    "explanation": "Most load balancers require 2-3 consecutive failures (unhealthy threshold) before marking a server down.",
-    "cheatsheet": "Threshold config: unhealthy_threshold (2-3) and healthy_threshold (2-3)."
+    "explanation": "ほとんどのロードバランサーは2-3回連続失敗(異常閾値)でサーバーをダウンとマーク。",
+    "cheatsheet": "閾値設定: unhealthy_threshold(2-3)とhealthy_threshold(2-3)。"
   },
   {
-    "category": "Load Balancing",
-    "question": "What is least connections load balancing?",
+    "category": "ロードバランシング",
+    "question": "最小接続ロードバランシングとは何か。",
     "options": [
       {
-        "text": "Directing new requests to the server with fewest active connections",
+        "text": "新リクエストをアクティブ接続が最も少ないサーバーに振り分けること",
         "correct": true
       },
       {
-        "text": "Sending all traffic to the fastest server",
+        "text": "全トラフィックを最速サーバーに送信すること",
         "correct": false
       },
       {
-        "text": "Distributing by client IP hash",
+        "text": "クライアントIPハッシュで分散すること",
         "correct": false
       },
       {
-        "text": "Random distribution",
+        "text": "ランダム分散",
         "correct": false
       }
     ],
-    "explanation": "Least connections considers real-time load, making it ideal when request processing times vary significantly.",
-    "cheatsheet": "Least connections = best for variable request duration. Round-robin = similar duration."
+    "explanation": "最小接続はリアルタイム負荷を考慮し、リクエスト処理時間が大きく異なる場合に最適。",
+    "cheatsheet": "最小接続 = 可変リクエスト時間に最適。ラウンドロビン = 同等な時間に最適。"
   },
   {
-    "category": "Load Balancing",
-    "question": "A load balancer handles 1000 RPS with 4 servers (each max 300 RPS). Is this sufficient?",
+    "category": "ロードバランシング",
+    "question": "ロードバランサーが1000RPSを処理し4サーバー(各最大300RPS)の場合、この構成は十分か。",
     "options": [
       {
-        "text": "Yes, 4 x 300 = 1200 RPS capacity > 1000 RPS demand",
+        "text": "はい、4 x 300 = 1200RPSの容量 > 1000RPSの需要",
         "correct": true
       },
       {
-        "text": "No, one server can only handle 300",
+        "text": "いいえ、1サーバーは300RPSしか処理できない",
         "correct": false
       },
       {
-        "text": "Only if all requests are equal",
+        "text": "全リクエストが等しい場合のみ",
         "correct": false
       },
       {
-        "text": "No, need 5 servers",
+        "text": "いいえ、5サーバーが必要",
         "correct": false
       }
     ],
-    "explanation": "Total capacity = 4 x 300 = 1200 RPS. Demand = 1000 RPS. Headroom = 200 RPS (20%). Adequate.",
-    "cheatsheet": "Required servers = ceil(peak_RPS / max_RPS_per_server) + N-1 redundancy."
+    "explanation": "総容量 = 4 x 300 = 1200RPS。需要 = 1000RPS。ヘッドルーム = 200RPS(20%)。十分。",
+    "cheatsheet": "必要サーバー数 = ceil(ピークRPS / 1サーバー最大RPS) + N-1冗長性。"
   },
   {
-    "category": "Load Balancing",
-    "question": "What is source IP hash load balancing used for?",
+    "category": "ロードバランシング",
+    "question": "送信元IPハッシュロードバランシングは何に使用されるか。",
     "options": [
       {
-        "text": "Ensuring the same client always reaches the same server (session persistence)",
+        "text": "同じクライアントが常に同じサーバーに到達するよう保証(セッション永続性)",
         "correct": true
       },
       {
-        "text": "Distributing by response time",
+        "text": "応答時間による分散",
         "correct": false
       },
       {
-        "text": "Blocking specific IPs",
+        "text": "特定IPのブロック",
         "correct": false
       },
       {
-        "text": "Encrypting client IPs",
+        "text": "クライアントIPの暗号化",
         "correct": false
       }
     ],
-    "explanation": "IP hash maps client IP to a specific server, providing session affinity without cookies.",
-    "cheatsheet": "IP hash = session persistence without cookies. Hash = consistent mapping."
+    "explanation": "IPハッシュはクライアントIPを特定サーバーにマッピングし、クッキーなしでセッションアフィニティを提供。",
+    "cheatsheet": "IPハッシュ = クッキーなしのセッション永続性。ハッシュ = 一貫性のあるマッピング。"
   },
   {
-    "category": "Load Balancing",
-    "question": "What is the recommended health check for a database server?",
+    "category": "ロードバランシング",
+    "question": "データベースサーバーの推奨ヘルスチェックは何か。",
     "options": [
       {
-        "text": "A lightweight query (SELECT 1 or similar)",
+        "text": "軽量クエリ(SELECT 1など)",
         "correct": true
       },
       {
-        "text": "A full table scan",
+        "text": "フルテーブルスキャン",
         "correct": false
       },
       {
-        "text": "Ping only",
+        "text": "pingのみ",
         "correct": false
       },
       {
-        "text": "No health check needed",
+        "text": "ヘルスチェック不要",
         "correct": false
       }
     ],
-    "explanation": "Lightweight queries verify DB is functional. Pings only verify network reachability, not service health.",
-    "cheatsheet": "DB health check: simple SELECT query. Web: HTTP GET to health endpoint. TCP: port check."
+    "explanation": "軽量クエリはDBの機能を検証。pingはネットワーク到達性のみ、サービス健全性は確認できない。",
+    "cheatsheet": "DBヘルスチェック: 単純なSELECTクエリ。Web: HTTP GET to ヘルスエンドポイント。TCP: ポートチェック。"
   },
   {
-    "category": "Load Balancing",
-    "question": "What is the advantage of a Layer 7 (application) load balancer over Layer 4?",
+    "category": "ロードバランシング",
+    "question": "レイヤ7(アプリケーション)ロードバランサのレイヤ4に対する利点は何か。",
     "options": [
       {
-        "text": "Content-based routing, SSL termination, and HTTP header inspection",
+        "text": "コンテンツベースルーティング、SSL終端、HTTPヘッダ検査",
         "correct": true
       },
       {
-        "text": "Faster processing",
+        "text": "高速な処理",
         "correct": false
       },
       {
-        "text": "Lower cost",
+        "text": "低コスト",
         "correct": false
       },
       {
-        "text": "Simpler configuration",
+        "text": "シンプルな設定",
         "correct": false
       }
     ],
-    "explanation": "L7 LBs understand HTTP (URL, headers, cookies) enabling intelligent routing. L4 only sees IP/port.",
-    "cheatsheet": "L4: TCP/UDP, fast, cheap. L7: HTTP-aware, content routing, SSL termination, slower."
+    "explanation": "L7 LBはHTTP(URL、ヘッダ、クッキー)を理解し、インテリジェントなルーティングを可能にする。L4はIP/ポートのみ。",
+    "cheatsheet": "L4: TCP/UDP、高速、低コスト。L7: HTTP対応、コンテンツルーティング、SSL終端、低速。"
   }
 ]

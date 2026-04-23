@@ -1,536 +1,536 @@
 [
   {
-    "category": "Network Design",
-    "question": "A company needs a campus network for 500 employees across 3 buildings. Which architecture is most appropriate?",
+    "category": "ネットワーク設計",
+    "question": "3棟の建物に500人の従業員がいる企業のキャンパスネットワークに最適なアーキテクチャはどれか。",
     "options": [
       {
-        "text": "Three-tier (core, distribution, access) with fiber backbone",
+        "text": "3層(コア、ディストリビューション、アクセス)にファイバーバックボーン",
         "correct": true
       },
       {
-        "text": "Flat network with one large switch",
+        "text": "1台の大規模スイッチによるフラットネットワーク",
         "correct": false
       },
       {
-        "text": "Point-to-point links between all devices",
+        "text": "全デバイス間のポイントツーポイントリンク",
         "correct": false
       },
       {
-        "text": "Wireless-only deployment",
+        "text": "ワイヤレスオンリーデプロイ",
         "correct": false
       }
     ],
-    "explanation": "Three-tier provides scalability, redundancy, and manageability. Fiber backbone connects buildings."
+    "explanation": "3層はスケーラビリティ、冗長性、管理性を提供。ファイバーバックボーンが建物を接続。"
   },
   {
-    "category": "Network Design",
-    "question": "In a data center, what is a spine-leaf architecture?",
+    "category": "ネットワーク設計",
+    "question": "データセンターにおけるスパインリーフアーキテクチャとは何か。",
     "options": [
       {
-        "text": "Two-tier design where every leaf connects to every spine for east-west traffic",
+        "text": "全リーフがイーストウェストトラフィックのために全スパインに接続する2層設計",
         "correct": true
       },
       {
-        "text": "Traditional three-tier with core, distribution, access",
+        "text": "コア、ディストリビューション、アクセスの従来型3層",
         "correct": false
       },
       {
-        "text": "A single switch connecting all servers",
+        "text": "全サーバーを接続する単一スイッチ",
         "correct": false
       },
       {
-        "text": "A wireless overlay for data center",
+        "text": "データセンター用ワイヤレスオーバーレイ",
         "correct": false
       }
     ],
-    "explanation": "Spine-leaf provides low-latency, predictable east-west traffic patterns with equal-cost paths between all leaves."
+    "explanation": "スパインリーフは全リーフ間で低遅延で予測可能なイーストウェストトラフィックパターンと等コストパスを提供。"
   },
   {
-    "category": "Network Design",
-    "question": "A branch office with 20 users needs connectivity to headquarters. What is the most cost-effective design?",
+    "category": "ネットワーク設計",
+    "question": "20ユーザーの支社が本社との接続性を必要としている。最もコスト効果の高い設計はどれか。",
     "options": [
       {
-        "text": "SD-WAN with broadband internet + site-to-site VPN backup",
+        "text": "ブロードバンドインターネット + サイトツーサイトVPNバックアップのSD-WAN",
         "correct": true
       },
       {
-        "text": "Dedicated leased line only",
+        "text": "専用回線のみ",
         "correct": false
       },
       {
-        "text": "Multiple MPLS circuits",
+        "text": "複数のMPLS回線",
         "correct": false
       },
       {
-        "text": "Satellite connection",
+        "text": "衛星接続",
         "correct": false
       }
     ],
-    "explanation": "SD-WAN with broadband is cost-effective for small branches, with VPN for security. Leased lines are expensive for small sites."
+    "explanation": "ブロードバンドSD-WANは小規模拠点にコスト効果が高く、VPNでセキュリティを確保。専用回線は小規模拠点には高コスト。"
   },
   {
-    "category": "Network Design",
-    "question": "What is the recommended redundancy level for enterprise core switches?",
+    "category": "ネットワーク設計",
+    "question": "エンタープライズコアスイッチの推奨冗長性レベルはどれか。",
     "options": [
       {
-        "text": "Dual redundant core switches in active/standby or active/active",
+        "text": "アクティブ/スタンバイまたはアクティブ/アクティブのデュアル冗長コアスイッチ",
         "correct": true
       },
       {
-        "text": "Single core switch",
+        "text": "単一コアスイッチ",
         "correct": false
       },
       {
-        "text": "Three or more core switches always",
+        "text": "常に3台以上のコアスイッチ",
         "correct": false
       },
       {
-        "text": "No redundancy needed",
+        "text": "冗長性は不要",
         "correct": false
       }
     ],
-    "explanation": "Dual core switches eliminate single point of failure. Active/active provides load sharing; active/standby provides failover."
+    "explanation": "デュアルコアスイッチは単一障害点を排除。アクティブ/アクティブは負荷分散、アクティブ/スタンバイはフェイルオーバーを提供。"
   },
   {
-    "category": "Network Design",
-    "question": "How should you segment a network for a company with HR, Finance, Engineering, and Guest departments?",
+    "category": "ネットワーク設計",
+    "question": "人事、財務、エンジニアリング、ゲスト部門がある企業のネットワークをどのようにセグメント化すべきか。",
     "options": [
       {
-        "text": "Separate VLANs for each department with inter-VLAN routing and ACLs",
+        "text": "各部門に別VLAN、VLAN間ルーティングとACLで制御",
         "correct": true
       },
       {
-        "text": "One flat network for all",
+        "text": "全員に1つのフラットネットワーク",
         "correct": false
       },
       {
-        "text": "Physical separate switches for each",
+        "text": "部門ごとに物理的に別スイッチ",
         "correct": false
       },
       {
-        "text": "Only separate guest network",
+        "text": "ゲストネットワークのみ分離",
         "correct": false
       }
     ],
-    "explanation": "VLANs + ACLs provide logical isolation. Finance/HR get restricted access. Engineering gets development resources. Guests get internet only."
+    "explanation": "VLAN + ACLで論理的分離を提供。財務/人事は制限付きアクセス、エンジニアリングは開発リソース、ゲストはインターネットのみ。"
   },
   {
-    "category": "Network Design",
-    "question": "What is the maximum distance for a fiber optic link between campus buildings?",
+    "category": "ネットワーク設計",
+    "question": "キャンパス建物間のファイバーリンクの最大距離はどれくらいか。",
     "options": [
       {
-        "text": "Up to 2 km (multi-mode) or 40+ km (single-mode)",
+        "text": "マルチモードで最大2km、シングルモードで40km以上",
         "correct": true
       },
       {
-        "text": "100 meters",
+        "text": "100メートル",
         "correct": false
       },
       {
-        "text": "500 meters",
+        "text": "500メートル",
         "correct": false
       },
       {
-        "text": "10 meters",
+        "text": "10メートル",
         "correct": false
       }
     ],
-    "explanation": "Multi-mode fiber: up to 2 km at 1 Gbps. Single-mode: 10-40+ km. Copper: limited to 100m."
+    "explanation": "マルチモードファイバ: 1Gbpsで最大2km。シングルモード: 10-40km以上。銅線: 100mに制限。"
   },
   {
-    "category": "Network Design",
-    "question": "For a data center with 200 servers, what network topology provides the best east-west traffic flow?",
+    "category": "ネットワーク設計",
+    "question": "200サーバーのデータセンターで最良のイーストウェストトラフィックフローを提供するネットワークトポロジはどれか。",
     "options": [
       {
-        "text": "Spine-leaf (Clos fabric)",
+        "text": "スパインリーフ(Closファブリック)",
         "correct": true
       },
       {
-        "text": "Traditional three-tier",
+        "text": "従来型3層",
         "correct": false
       },
       {
-        "text": "Flat Layer 2 network",
+        "text": "フラットレイヤ2ネットワーク",
         "correct": false
       },
       {
-        "text": "Hub and spoke",
+        "text": "ハブアンドスポーク",
         "correct": false
       }
     ],
-    "explanation": "Spine-leaf provides uniform latency between any two servers (1 hop leaf-spine-leaf), ideal for modern workloads."
+    "explanation": "スパインリーフは任意の2サーバー間で均一な遅延(1ホップリーフ-スパイン-リーフ)を提供し、モダンなワークロードに最適。"
   },
   {
-    "category": "Network Design",
-    "question": "What should be the first step in network design?",
+    "category": "ネットワーク設計",
+    "question": "ネットワーク設計の最初のステップは何か。",
     "options": [
       {
-        "text": "Requirements gathering (users, applications, performance, budget)",
+        "text": "要件収集(ユーザー数、アプリケーション、性能、予算)",
         "correct": true
       },
       {
-        "text": "Buying equipment",
+        "text": "機器購入",
         "correct": false
       },
       {
-        "text": "Configuring VLANs",
+        "text": "VLAN設定",
         "correct": false
       },
       {
-        "text": "Setting up monitoring",
+        "text": "監視設定",
         "correct": false
       }
     ],
-    "explanation": "Requirements gathering defines the scope: number of users, applications, bandwidth needs, growth plans, budget, and constraints."
+    "explanation": "要件収集が範囲を定義: ユーザー数、アプリケーション、帯域要件、拡張計画、予算、制約。"
   },
   {
-    "category": "Network Design",
-    "question": "How many access switches should connect to each distribution switch in a campus design?",
+    "category": "ネットワーク設計",
+    "question": "キャンパス設計で各ディストリビューションスイッチに接続するアクセススイッチ数はいくつが適切か。",
     "options": [
       {
-        "text": "Based on port density and redundancy requirements (typically 4-8)",
+        "text": "ポート密度と冗長性要件に基づく(通常4-8台)",
         "correct": true
       },
       {
-        "text": "Only 1",
+        "text": "1台のみ",
         "correct": false
       },
       {
-        "text": "As many as possible",
+        "text": "可能な限り多数",
         "correct": false
       },
       {
-        "text": "No more than 2",
+        "text": "2台以下",
         "correct": false
       }
     ],
-    "explanation": "Typical: 4-8 access switches per distribution pair, with uplinks providing redundancy and sufficient bandwidth."
+    "explanation": "通常: ディストリビューションペアあたり4-8アクセススイッチ、アップリンクで冗長性と十分な帯域を確保。"
   },
   {
-    "category": "Network Design",
-    "question": "What is high availability in network design?",
+    "category": "ネットワーク設計",
+    "question": "ネットワーク設計における高可用性(HA)とは何か。",
     "options": [
       {
-        "text": "Designing networks to minimize downtime through redundancy and failover",
+        "text": "冗長性とフェイルオーバーでダウンタイムを最小化する設計",
         "correct": true
       },
       {
-        "text": "Using the most expensive equipment",
+        "text": "最も高価な機器を使用すること",
         "correct": false
       },
       {
-        "text": "Having a backup internet connection only",
+        "text": "バックアップインターネット接続のみを持つこと",
         "correct": false
       },
       {
-        "text": "Keeping spare parts in stock",
+        "text": "予備部品を在庫すること",
         "correct": false
       }
     ],
-    "explanation": "HA combines redundant hardware, links, protocols (VRRP, HSRP), and failover mechanisms to achieve 99.99%+ uptime."
+    "explanation": "HAは冗長ハードウェア、リンク、プロトコル(VRRP, HSRP)、フェイルオーバーメカニズムを組み合わせて99.99%以上の稼働率を実現。"
   },
   {
-    "category": "Network Design",
-    "question": "A company plans to deploy VoIP. What network design consideration is most critical?",
+    "category": "ネットワーク設計",
+    "question": "VoIP導入を計画している企業で最も重要な設計考慮事項は何か。",
     "options": [
       {
-        "text": "QoS prioritization for voice traffic with sufficient bandwidth",
+        "text": "音声トラフィックのQoS優先制御と十分な帯域確保",
         "correct": true
       },
       {
-        "text": "Only adding more switches",
+        "text": "スイッチ追加のみ",
         "correct": false
       },
       {
-        "text": "Using wireless only for voice",
+        "text": "音声にワイヤレスのみを使用",
         "correct": false
       },
       {
-        "text": "Increasing MTU size",
+        "text": "MTUサイズの増加",
         "correct": false
       }
     ],
-    "explanation": "VoIP needs QoS (EF/DSCP 46), low latency (<150ms), low jitter (<30ms), and dedicated or prioritized VLAN."
+    "explanation": "VoIPにはQoS(EF/DSCP 46)、低遅延(150ms未満)、低ジッタ(30ms未満)、専用または優先VLANが必要。"
   },
   {
-    "category": "Network Design",
-    "question": "What is the recommended uplink bandwidth between access and distribution layers?",
+    "category": "ネットワーク設計",
+    "question": "アクセス層とディストリビューション層間の推奨アップリンク帯域はどれくらいか。",
     "options": [
       {
-        "text": "At least 10 Gbps (or aggregate for higher)",
+        "text": "最低10Gbps(またはそれ以上に集約)",
         "correct": true
       },
       {
-        "text": "100 Mbps",
+        "text": "100Mbps",
         "correct": false
       },
       {
-        "text": "1 Gbps is always sufficient",
+        "text": "1Gbpsで常に十分",
         "correct": false
       },
       {
-        "text": "Same as access port speed",
+        "text": "アクセスポートと同じ速度",
         "correct": false
       }
     ],
-    "explanation": "Uplinks should oversubscribe at 20:1 max ratio. 48 x 1Gbps access = need 10Gbps+ uplinks."
+    "explanation": "アップリンクは最大20:1のオーバーサブスクリプションにすべき。48 x 1Gbpsアクセス = 10Gbps以上のアップリンクが必要。"
   },
   {
-    "category": "Network Design",
-    "question": "Which design principle states that no single device failure should cause a complete network outage?",
+    "category": "ネットワーク設計",
+    "question": "単一デバイスの障害が完全なネットワーク停止を引き起こしてはならないとする設計原則はどれか。",
     "options": [
       {
-        "text": "No single point of failure",
+        "text": "単一障害点の排除(No Single Point of Failure)",
         "correct": true
       },
       {
-        "text": "Defense in depth",
+        "text": "防御の深層化(Defense in Depth)",
         "correct": false
       },
       {
-        "text": "Least privilege",
+        "text": "最小権限(Least Privilege)",
         "correct": false
       },
       {
-        "text": "Separation of duties",
+        "text": "職務の分離(Separation of Duties)",
         "correct": false
       }
     ],
-    "explanation": "Eliminating single points of failure through redundancy (dual links, dual switches, dual ISPs) is fundamental to reliable design."
+    "explanation": "冗長性(デュアルリンク、デュアルスイッチ、デュアルISP)による単一障害点の排除は信頼性の高い設計の基盤。"
   },
   {
-    "category": "Network Design",
-    "question": "What is the purpose of a demarcation point (demarc) in network design?",
+    "category": "ネットワーク設計",
+    "question": "ネットワーク設計におけるデマルケーションポイント(demarc)の目的は何か。",
     "options": [
       {
-        "text": "The point where the service provider's responsibility ends and the customer's begins",
+        "text": "事業者の責任範囲が終わり顧客の責任範囲が始まる点",
         "correct": true
       },
       {
-        "text": "A firewall placement point",
+        "text": "ファイアウォール配置ポイント",
         "correct": false
       },
       {
-        "text": "A server room location",
+        "text": "サーバー室の場所",
         "correct": false
       },
       {
-        "text": "A wireless coverage boundary",
+        "text": "ワイヤレスカバレッジ境界",
         "correct": false
       }
     ],
-    "explanation": "The demarc (often a smart jack or NIU) defines the boundary between carrier and customer networks."
+    "explanation": "デマルク(スマートジャックまたはNIU)はキャリアネットワークと顧客ネットワークの境界を定義。"
   },
   {
-    "category": "Network Design",
-    "question": "What is oversubscription in network design?",
+    "category": "ネットワーク設計",
+    "question": "ネットワーク設計におけるオーバーサブスクリプションとは何か。",
     "options": [
       {
-        "text": "When aggregate demand exceeds available bandwidth on an uplink",
+        "text": "アップリンクの帯域を総需要が超過すること",
         "correct": true
       },
       {
-        "text": "When bandwidth exceeds demand",
+        "text": "帯域が需要を超過すること",
         "correct": false
       },
       {
-        "text": "When using too many switches",
+        "text": "スイッチを使いすぎること",
         "correct": false
       },
       {
-        "text": "When over-provisioning capacity",
+        "text": "容量を過剰にプロビジョニングすること",
         "correct": false
       }
     ],
-    "explanation": "Typical oversubscription ratios: Access-Distribution 20:1, Distribution-Core 4:1. Must plan for peak usage."
+    "explanation": "一般的なオーバーサブスクリプション比: アクセス-ディストリビューション 20:1、ディストリビューション-コア 4:1。ピーク使用量を計画。"
   },
   {
-    "category": "Network Design",
-    "question": "For a branch of 5 users needing secure access to HQ, what is the best approach?",
+    "category": "ネットワーク設計",
+    "question": "5ユーザーの拠点が本社へのセキュアなアクセスを必要としている場合、最適なアプローチはどれか。",
     "options": [
       {
-        "text": "SD-WAN with broadband + ZTNA for security",
+        "text": "ブロードバンド + ZTNAでセキュリティ確保のSD-WAN",
         "correct": true
       },
       {
-        "text": "Expensive MPLS circuit",
+        "text": "高価なMPLS回線",
         "correct": false
       },
       {
-        "text": "Dial-up connection",
+        "text": "ダイヤルアップ接続",
         "correct": false
       },
       {
-        "text": "No connection needed",
+        "text": "接続不要",
         "correct": false
       }
     ],
-    "explanation": "Small branches benefit from SD-WAN broadband with zero-trust security. MPLS is overkill for 5 users."
+    "explanation": "小規模拠点はブロードバンドSD-WANとゼロトラストセキュリティが適切。MPLSは5ユーザーには過剰。"
   },
   {
-    "category": "Network Design",
-    "question": "What is network convergence time and why does it matter?",
+    "category": "ネットワーク設計",
+    "question": "ネットワークコンバージェンス時間とは何か、なぜ重要か。",
     "options": [
       {
-        "text": "Time for the network to adapt after a failure; shorter is better for critical apps",
+        "text": "障害後にネットワークが適応する時間; 重要アプリでは短いほど良い",
         "correct": true
       },
       {
-        "text": "How fast data travels",
+        "text": "データの転送速度",
         "correct": false
       },
       {
-        "text": "How quickly devices boot",
+        "text": "デバイスの起動速度",
         "correct": false
       },
       {
-        "text": "Time to configure devices",
+        "text": "デバイス設定の時間",
         "correct": false
       }
     ],
-    "explanation": "Convergence time determines outage duration during failures. VoIP needs <50ms, data can tolerate seconds."
+    "explanation": "コンバージェンス時間は障害時の停止期間を決定。VoIPは50ms未満、データは数秒まで許容。"
   },
   {
-    "category": "Network Design",
-    "question": "What information should a network diagram include?",
+    "category": "ネットワーク設計",
+    "question": "ネットワークダイアグラムには何を含めるべきか。",
     "options": [
       {
-        "text": "Devices, connections, IP addressing, VLANs, and WAN links",
+        "text": "デバイス、接続、IPアドレス指定、VLAN、WANリンク",
         "correct": true
       },
       {
-        "text": "Only physical device placement",
+        "text": "物理デバイス配置のみ",
         "correct": false
       },
       {
-        "text": "Only IP addresses",
+        "text": "IPアドレスのみ",
         "correct": false
       },
       {
-        "text": "Only wireless coverage map",
+        "text": "ワイヤレスカバレッジマップのみ",
         "correct": false
       }
     ],
-    "explanation": "Complete diagrams show topology, addressing, VLANs, routing, WAN circuits, and device roles for operations and troubleshooting."
+    "explanation": "完全なダイアグラムは運用とトラブルシューティングのためにトポロジ、アドレッシング、VLAN、ルーティング、WAN回線、デバイス役割を表示。"
   },
   {
-    "category": "Network Design",
-    "question": "How should DHCP be deployed for 500 users across multiple VLANs?",
+    "category": "ネットワーク設計",
+    "question": "複数VLANに500ユーザーがいる場合、DHCPをどのようにデプロイすべきか。",
     "options": [
       {
-        "text": "Centralized DHCP server with IP helper on routers for relay",
+        "text": "集中DHCPサーバーにルーターのIPヘルパーでリレー",
         "correct": true
       },
       {
-        "text": "DHCP on each switch",
+        "text": "各スイッチにDHCP",
         "correct": false
       },
       {
-        "text": "Static IP addresses for all",
+        "text": "全員に静的IP",
         "correct": false
       },
       {
-        "text": "One DHCP server per VLAN",
+        "text": "VLANごとに1DHCPサーバー",
         "correct": false
       }
     ],
-    "explanation": "Centralized DHCP with relay agents (ip helper-address) simplifies management while supporting multiple subnets."
+    "explanation": "集中DHCPとリレーエージェント(ip helper-address)で管理を簡素化しつつ複数サブネットをサポート。"
   },
   {
-    "category": "Network Design",
-    "question": "What is a network baseline used for in design?",
+    "category": "ネットワーク設計",
+    "question": "ネットワークベースラインは設計で何に使用されるか。",
     "options": [
       {
-        "text": "Establishing normal performance metrics to validate the design meets requirements",
+        "text": "設計が要件を満たすことを検証するための通常性能メトリクスの確立",
         "correct": true
       },
       {
-        "text": "Setting initial passwords",
+        "text": "初期パスワードの設定",
         "correct": false
       },
       {
-        "text": "Choosing equipment vendors",
+        "text": "機器ベンダーの選択",
         "correct": false
       },
       {
-        "text": "Defining VLAN IDs",
+        "text": "VLAN IDの定義",
         "correct": false
       }
     ],
-    "explanation": "Post-deployment baselines verify the design meets performance targets and provide reference for future troubleshooting."
+    "explanation": "デプロイ後のベースラインは設計が性能目標を満たすことを検証し、将来のトラブルシューティングの参照を提供。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "In a packet capture, you see TCP SYN from client but no SYN-ACK from server. What is the most likely cause?",
+    "category": "プロトコル分析",
+    "question": "パケットキャプチャでクライアントからのTCP SYNは見えるがサーバーからのSYN-ACKがない。最も考えられる原因は何か。",
     "options": [
       {
-        "text": "Server is down or a firewall is blocking the connection",
+        "text": "サーバーがダウンしているかファイアウォールが接続をブロックしている",
         "correct": true
       },
       {
-        "text": "DNS resolution failure",
+        "text": "DNS解決エラー",
         "correct": false
       },
       {
-        "text": "Routing loop",
+        "text": "ルーティングループ",
         "correct": false
       },
       {
-        "text": "ARP failure",
+        "text": "ARP障害",
         "correct": false
       }
     ],
-    "explanation": "Missing SYN-ACK indicates the SYN never reached the server, or server cannot respond (firewall, down server, ACL)."
+    "explanation": "SYN-ACKがないことはSYNがサーバーに届いていないか、サーバーが応答できない(ファイアウォール、サーバーダウン、ACL)ことを示す。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What does a TCP RST (Reset) flag in a capture indicate?",
+    "category": "プロトコル分析",
+    "question": "キャプチャでTCP RST(Reset)フラグが表示された場合、何を示すか。",
     "options": [
       {
-        "text": "Abnormal connection termination or port not listening",
+        "text": "異常な接続終了またはポートがリスニングしていない",
         "correct": true
       },
       {
-        "text": "Normal connection close",
+        "text": "正常な接続終了",
         "correct": false
       },
       {
-        "text": "Flow control signal",
+        "text": "フロー制御シグナル",
         "correct": false
       },
       {
-        "text": "Encryption request",
+        "text": "暗号化リクエスト",
         "correct": false
       }
     ],
-    "explanation": "RST immediately terminates the connection. Common causes: port closed, firewall rejection, application crash, timeout."
+    "explanation": "RSTは接続を即座に終了。一般的な原因: ポートクローズ、ファイアウォール拒否、アプリケーションクラッシュ、タイムアウト。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "You see many ARP requests for the same IP. What does this indicate?",
+    "category": "プロトコル分析",
+    "question": "同じIPに対する多数のARPリクエストが見える。これは何を示すか。",
     "options": [
       {
-        "text": "Possible ARP spoofing attack or IP conflict",
+        "text": "ARPスプーフィング攻撃またはIP競合の可能性",
         "correct": true
       },
       {
-        "text": "Normal ARP operation",
+        "text": "正常なARP動作",
         "correct": false
       },
       {
-        "text": "DHCP failure",
+        "text": "DHCP障害",
         "correct": false
       },
       {
-        "text": "DNS issue",
+        "text": "DNS問題",
         "correct": false
       }
     ],
-    "explanation": "Excessive ARP requests for one IP suggest gratuitous ARP (conflict) or spoofing (attacker claiming the IP)."
+    "explanation": "1つのIPに対する過剰なARPリクエストは Gratuitous ARP(競合)またはスプーフィング(攻撃者がIPを主張)を示唆。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "In a Wireshark capture, what filter shows all HTTP traffic?",
+    "category": "プロトコル分析",
+    "question": "WiresharkキャプチャでHTTPトラフィックを表示するフィルタはどれか。",
     "options": [
       {
         "text": "http",
@@ -549,57 +549,57 @@
         "correct": false
       }
     ],
-    "explanation": "The 'http' filter captures all HTTP traffic. 'tcp.port(80)' also works but is less specific. Both are valid."
+    "explanation": "'http'フィルタは全HTTPトラフィックをキャプチャ。'tcp.port(80)'も動作するが specificity が低い。両方有効。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What does a high number of TCP retransmissions in a capture indicate?",
+    "category": "プロトコル分析",
+    "question": "キャプチャで多数のTCP再送が見られる場合、何を示すか。",
     "options": [
       {
-        "text": "Packet loss, congestion, or high latency on the path",
+        "text": "パケットロス、輻輳、またはパス上の高遅延",
         "correct": true
       },
       {
-        "text": "Normal behavior",
+        "text": "正常な動作",
         "correct": false
       },
       {
-        "text": "Application error",
+        "text": "アプリケーションエラー",
         "correct": false
       },
       {
-        "text": "Encryption overhead",
+        "text": "暗号化オーバーヘッド",
         "correct": false
       }
     ],
-    "explanation": "Retransmissions indicate the sender did not receive an ACK in time, suggesting loss or congestion."
+    "explanation": "再送は送信者がタイムアウト内にACKを受信できなかったことを示し、ロスまたは輻輳を示唆。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "You see ICMP Destination Unreachable (Port Unreachable). What does this mean?",
+    "category": "プロトコル分析",
+    "question": "ICMP Destination Unreachable(Port Unreachable)が表示された場合、何を意味するか。",
     "options": [
       {
-        "text": "No application is listening on the target port",
+        "text": "ターゲットポートでリスニングしているアプリケーションがない",
         "correct": true
       },
       {
-        "text": "Host is powered off",
+        "text": "ホストの電源がオフ",
         "correct": false
       },
       {
-        "text": "Network is congested",
+        "text": "ネットワークが輻輳している",
         "correct": false
       },
       {
-        "text": "Firewall silently dropped packet",
+        "text": "ファイアウォールがパケットをサイレントドロップ",
         "correct": false
       }
     ],
-    "explanation": "Port Unreachable means the host received the packet but no application is bound to that port."
+    "explanation": "Port Unreachableはホストがパケットを受信したがそのポートにバインドされたアプリケーションがないことを意味。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What is the TCP three-way handshake captured sequence?",
+    "category": "プロトコル分析",
+    "question": "TCP 3ウェイハンドシェイクのキャプチャシーケンスはどれか。",
     "options": [
       {
         "text": "SYN -> SYN-ACK -> ACK",
@@ -618,195 +618,195 @@
         "correct": false
       }
     ],
-    "explanation": "Standard TCP connection: client SYN, server SYN-ACK, client ACK. This establishes the connection."
+    "explanation": "標準TCP接続: クライアントSYN、サーバーSYN-ACK、クライアントACK。これで接続を確立。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What does TCP window size of 0 in a capture indicate?",
+    "category": "プロトコル分析",
+    "question": "キャプチャでTCPウィンドウサイズが0の場合、何を示すか。",
     "options": [
       {
-        "text": "Receiver buffer is full; sender must wait",
+        "text": "受信バッファが満杯; 送信側は待機する必要がある",
         "correct": true
       },
       {
-        "text": "Connection is closing",
+        "text": "接続が切断中",
         "correct": false
       },
       {
-        "text": "No data to send",
+        "text": "送信データがない",
         "correct": false
       },
       {
-        "text": "Flow control is disabled",
+        "text": "フロー制御が無効",
         "correct": false
       }
     ],
-    "explanation": "Zero window means the receiver cannot accept more data. The sender waits for a window update before continuing."
+    "explanation": "ゼロウィンドウは受信側がこれ以上データを受信できないことを意味。送信側はウィンドウアップデートを待つ。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "You see duplicate ACKs without retransmission. What TCP mechanism is likely working?",
+    "category": "プロトコル分析",
+    "question": "再送なしで重複ACKが見られる場合、どのTCPメカニズムが動作している可能性が高いか。",
     "options": [
       {
-        "text": "Fast retransmit is about to trigger",
+        "text": "ファストリトランスミットがまさにトリガーされようとしている",
         "correct": true
       },
       {
-        "text": "Connection is closing",
+        "text": "接続が切断中",
         "correct": false
       },
       {
-        "text": "Congestion avoidance",
+        "text": "輻輳回避",
         "correct": false
       },
       {
-        "text": "Slow start",
+        "text": "スロースタート",
         "correct": false
       }
     ],
-    "explanation": "Three duplicate ACKs trigger fast retransmit, allowing recovery before the retransmission timer expires."
+    "explanation": "3つの重複ACKがファストリトランスミットをトリガーし、再送タイマー切れ前に回復を可能にする。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What does the TTL value in a captured packet tell you?",
+    "category": "プロトコル分析",
+    "question": "キャプチャしたパケットのTTL値は何を示すか。",
     "options": [
       {
-        "text": "Remaining hop count before the packet is discarded",
+        "text": "パケットが破棄されるまでの残りホップ数",
         "correct": true
       },
       {
-        "text": "Total latency experienced",
+        "text": "経験した総遅延",
         "correct": false
       },
       {
-        "text": "Time the packet was sent",
+        "text": "パケットの送信時刻",
         "correct": false
       },
       {
-        "text": "Encryption strength",
+        "text": "暗号強度",
         "correct": false
       }
     ],
-    "explanation": "TTL decrements at each hop. Traceroute exploits this to map the path by sending packets with incrementing TTL."
+    "explanation": "TTLは各ホップでデクリメント。tracerouteはこれを利用し、TTLを増加させたパケットを送信してパスをマッピング。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "In an HTTPS capture, why can't you see the HTTP content?",
+    "category": "プロトコル分析",
+    "question": "HTTPSキャプチャでHTTPコンテンツが見えないのはなぜか。",
     "options": [
       {
-        "text": "TLS encryption encrypts the payload",
+        "text": "TLS暗号化がペイロードを暗号化している",
         "correct": true
       },
       {
-        "text": "HTTP is not used with HTTPS",
+        "text": "HTTPSはHTTPを使用しない",
         "correct": false
       },
       {
-        "text": "The capture tool is broken",
+        "text": "キャプチャツールが壊れている",
         "correct": false
       },
       {
-        "text": "HTTPS uses UDP",
+        "text": "HTTPSはUDPを使用する",
         "correct": false
       }
     ],
-    "explanation": "TLS encrypts the HTTP payload. To inspect, you need the session keys (SSLKEYLOGFILE) for decryption in Wireshark."
+    "explanation": "TLSはHTTPペイロードを暗号化。検査にはWiresharkでの復号用セッションキー(SSLKEYLOGFILE)が必要。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What does a DNS response with NXDOMAIN indicate?",
+    "category": "プロトコル分析",
+    "question": "DNS応答のNXDOMAINは何を示すか。",
     "options": [
       {
-        "text": "The domain name does not exist",
+        "text": "ドメイン名が存在しない",
         "correct": true
       },
       {
-        "text": "DNS server is down",
+        "text": "DNSサーバーがダウン",
         "correct": false
       },
       {
-        "text": "Network is unreachable",
+        "text": "ネットワークに到達不可",
         "correct": false
       },
       {
-        "text": "The domain is blocked",
+        "text": "ドメインがブロックされている",
         "correct": false
       }
     ],
-    "explanation": "NXDOMAIN (rcode 3) means no records exist for the queried name."
+    "explanation": "NXDOMAIN(rcode 3)は問い合わせた名前のレコードが存在しないことを意味。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "You see many fragmented IP packets. What could cause this?",
+    "category": "プロトコル分析",
+    "question": "多くのフラグメント化されたIPパケットが見られる。原因として考えられるものは何か。",
     "options": [
       {
-        "text": "MTU mismatch, VPN overhead, or application sending large payloads",
+        "text": "MTU不一致、VPNオーバーヘッド、またはアプリケーションが大ペイロードを送信",
         "correct": true
       },
       {
-        "text": "Normal TCP operation",
+        "text": "正常なTCP動作",
         "correct": false
       },
       {
-        "text": "Encryption failure",
+        "text": "暗号化エラー",
         "correct": false
       },
       {
-        "text": "DNS resolution error",
+        "text": "DNS解決エラー",
         "correct": false
       }
     ],
-    "explanation": "Fragmentation occurs when packets exceed the path MTU. Common with VPN overhead or jumbo frames encountering 1500B MTU."
+    "explanation": "フラグメンテーションはパケットがパスMTUを超える場合に発生。VPNオーバーヘッドやジャンボフレームが1500B MTUに遭遇する場合に一般的。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What is a TCP handshake with MSS option used for?",
+    "category": "プロトコル分析",
+    "question": "MSSオプション付きのTCPハンドシェイクは何に使用されるか。",
     "options": [
       {
-        "text": "Negotiating the maximum segment size for the connection",
+        "text": "接続の最大セグメントサイズのネゴシエーション",
         "correct": true
       },
       {
-        "text": "Setting the retransmission timeout",
+        "text": "再送タイムアウトの設定",
         "correct": false
       },
       {
-        "text": "Enabling encryption",
+        "text": "暗号化の有効化",
         "correct": false
       },
       {
-        "text": "Configuring the window size",
+        "text": "ウィンドウサイズの設定",
         "correct": false
       }
     ],
-    "explanation": "MSS option (in SYN/SYN-ACK) tells the peer the maximum TCP payload size, preventing oversized segments."
+    "explanation": "MSSオプション(SYN/SYN-ACK内)はピアに最大TCPペイロードサイズを伝え、過大セグメントを防止。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "You see ICMP Time Exceeded messages. What does this indicate?",
+    "category": "プロトコル分析",
+    "question": "ICMP Time Exceededメッセージが見られる場合、何を示すか。",
     "options": [
       {
-        "text": "A packet's TTL reached zero (common in traceroute or routing loops)",
+        "text": "パケットのTTLがゼロに達した(tracerouteやルーティングループで一般的)",
         "correct": true
       },
       {
-        "text": "Authentication failure",
+        "text": "認証エラー",
         "correct": false
       },
       {
-        "text": "DNS timeout",
+        "text": "DNSタイムアウト",
         "correct": false
       },
       {
-        "text": "TCP connection refused",
+        "text": "TCP接続拒否",
         "correct": false
       }
     ],
-    "explanation": "TTL exceeded means the packet traversed too many hops. Traceroute uses this intentionally. In normal traffic, it suggests a loop."
+    "explanation": "TTL超過はパケットが多すぎるホップを通過したことを意味。tracerouteはこれを意図的に使用。通常トラフィックではループを示唆。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What filter in Wireshark shows traffic from a specific IP?",
+    "category": "プロトコル分析",
+    "question": "Wiresharkで特定IPのトラフィックを表示するフィルタはどれか。",
     "options": [
       {
         "text": "ip.addr == 192.168.1.1",
@@ -825,356 +825,356 @@
         "correct": false
       }
     ],
-    "explanation": "ip.addr matches both source and destination. ip.src or ip.dst for one direction only."
+    "explanation": "ip.addrは送信元と宛先の両方にマッチ。片方向のみはip.srcまたはip.dstを使用。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What does a DHCP OFFER message contain?",
+    "category": "プロトコル分析",
+    "question": "DHCP OFFERメッセージには何が含まれるか。",
     "options": [
       {
-        "text": "Offered IP address, subnet mask, lease time, and DHCP server identifier",
+        "text": "提供IPアドレス、サブネットマスク、リース時間、DHCPサーバー識別子",
         "correct": true
       },
       {
-        "text": "Client's MAC address only",
+        "text": "クライアントのMACアドレスのみ",
         "correct": false
       },
       {
-        "text": "DNS server IP only",
+        "text": "DNSサーバーIPのみ",
         "correct": false
       },
       {
-        "text": "Router configuration",
+        "text": "ルーター設定",
         "correct": false
       }
     ],
-    "explanation": "DHCP OFFER includes: yiaddr (offered IP), subnet mask, lease time, server identifier, and optional parameters."
+    "explanation": "DHCP OFFERには: yiaddr(提供IP)、サブネットマスク、リース時間、サーバー識別子、オプショナルパラメータが含まれる。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "You see HTTP 301/302 responses. What is happening?",
+    "category": "プロトコル分析",
+    "question": "HTTP 301/302応答が見られる場合、何が起きているか。",
     "options": [
       {
-        "text": "URL redirection to another location",
+        "text": "別の場所へのURLリダイレクト",
         "correct": true
       },
       {
-        "text": "Server error",
+        "text": "サーバーエラー",
         "correct": false
       },
       {
-        "text": "Content compression",
+        "text": "コンテンツ圧縮",
         "correct": false
       },
       {
-        "text": "Authentication challenge",
+        "text": "認証チャレンジ",
         "correct": false
       }
     ],
-    "explanation": "301 = permanent redirect, 302 = temporary redirect. The Location header specifies the new URL."
+    "explanation": "301 = 恒久リダイレクト、302 = 一時リダイレクト。Locationヘッダが新しいURLを指定。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "What does an OSPF Hello packet in a capture verify?",
+    "category": "プロトコル分析",
+    "question": "キャプチャ内のOSPF Helloパケットは何を検証するか。",
     "options": [
       {
-        "text": "Neighbor discovery and parameters (hello/dead intervals, area ID, auth)",
+        "text": "ネイバー検出とパラメータ(hello/dead間隔、エリアID、認証)",
         "correct": true
       },
       {
-        "text": "Route advertisements",
+        "text": "ルート広告",
         "correct": false
       },
       {
-        "text": "Database synchronization",
+        "text": "データベース同期",
         "correct": false
       },
       {
-        "text": "Area summary",
+        "text": "エリアサマリ",
         "correct": false
       }
     ],
-    "explanation": "OSPF Hello discovers neighbors and verifies matching parameters. Mismatched parameters prevent adjacency."
+    "explanation": "OSPF Helloはネイバーを検出し、パラメータの一致を検証。不一致パラメータは隣接関係を防止。"
   },
   {
-    "category": "Protocol Analysis",
-    "question": "You see BGP UPDATE messages. What are they advertising?",
+    "category": "プロトコル分析",
+    "question": "BGP UPDATEメッセージが見られる場合、何を広告しているか。",
     "options": [
       {
-        "text": "Reachable network prefixes with path attributes",
+        "text": "到達可能ネットワークプレフィックスとパスアトリビュート",
         "correct": true
       },
       {
-        "text": "MAC addresses",
+        "text": "MACアドレス",
         "correct": false
       },
       {
-        "text": "ARP entries",
+        "text": "ARPエントリ",
         "correct": false
       },
       {
-        "text": "DNS records",
+        "text": "DNSレコード",
         "correct": false
       }
     ],
-    "explanation": "BGP UPDATE carries NLRI (prefixes) and path attributes (AS_PATH, NEXT_HOP, LOCAL_PREF, etc.)."
+    "explanation": "BGP UPDATEはNLRI(プレフィックス)とパスアトリビュート(AS_PATH, NEXT_HOP, LOCAL_PREFなど)を搬送。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "A user cannot reach any external website but can ping internal servers. What is the most likely issue?",
+    "category": "トラブルシューティング",
+    "question": "ユーザーが外部Webサイトにアクセスできないが内部サーバーにはpingできる。最も考えられる問題は何か。",
     "options": [
       {
-        "text": "DNS failure or default gateway issue",
+        "text": "DNS障害またはデフォルトゲートウェイの問題",
         "correct": true
       },
       {
-        "text": "Switch misconfiguration",
+        "text": "スイッチの設定ミス",
         "correct": false
       },
       {
-        "text": "NAT issue",
+        "text": "NATの問題",
         "correct": false
       },
       {
-        "text": "WAN failure",
+        "text": "WAN障害",
         "correct": false
       }
     ],
-    "explanation": "Internal connectivity works = LAN is fine. External web = needs DNS resolution AND default gateway/WAN. Test: ping 8.8.8.8."
+    "explanation": "内部接続が機能 = LANは正常。外部Web = DNS解決とデフォルトゲートウェイ/WANが必要。テスト: ping 8.8.8.8。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What is the first step in network troubleshooting?",
+    "category": "トラブルシューティング",
+    "question": "ネットワークトラブルシューティングの最初のステップは何か。",
     "options": [
       {
-        "text": "Identify the problem (symptoms, scope, affected users)",
+        "text": "問題の特定(症状、範囲、影響ユーザー)",
         "correct": true
       },
       {
-        "text": "Reboot all devices",
+        "text": "全デバイスの再起動",
         "correct": false
       },
       {
-        "text": "Replace cables",
+        "text": "ケーブル交換",
         "correct": false
       },
       {
-        "text": "Call vendor support",
+        "text": "ベンダーサポートへの連絡",
         "correct": false
       }
     ],
-    "explanation": "Structured troubleshooting: 1) Identify problem, 2) Gather info, 3) Hypothesize, 4) Test, 5) Implement fix, 6) Verify."
+    "explanation": "構造化トラブルシューティング: 1)問題特定、2)情報収集、3)仮説、4)テスト、5)修正実装、6)検証。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "Users report slow network performance. Which tool should you use first?",
+    "category": "トラブルシューティング",
+    "question": "ユーザーからネットワークが遅いという報告がある。最初に使用すべきツールはどれか。",
     "options": [
       {
-        "text": "Ping and traceroute to identify where latency occurs",
+        "text": "遅延が発生する場所を特定するpingとtraceroute",
         "correct": true
       },
       {
-        "text": "Replace the switch",
+        "text": "スイッチの交換",
         "correct": false
       },
       {
-        "text": "Run a full security scan",
+        "text": "フルセキュリティスキャンの実行",
         "correct": false
       },
       {
-        "text": "Reboot the firewall",
+        "text": "ファイアウォールの再起動",
         "correct": false
       }
     ],
-    "explanation": "Ping/traceroute quickly identify if the issue is local, on the LAN, or on the WAN path."
+    "explanation": "ping/tracerouteは問題がローカル、LAN上、またはWANパス上のどこにあるかを迅速に特定。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "A switch port shows up/down rapidly. What is the likely cause?",
+    "category": "トラブルシューティング",
+    "question": "スイッチポートがup/downを繰り返している。考えられる原因は何か。",
     "options": [
       {
-        "text": "Physical layer issue (bad cable, duplex mismatch, or STP loop)",
+        "text": "物理層の問題(不良ケーブル、デュプレックス不一致、またはSTPループ)",
         "correct": true
       },
       {
-        "text": "Firewall rule",
+        "text": "ファイアウォールルール",
         "correct": false
       },
       {
-        "text": "DNS misconfiguration",
+        "text": "DNS設定ミス",
         "correct": false
       },
       {
-        "text": "Application bug",
+        "text": "アプリケーションのバグ",
         "correct": false
       }
     ],
-    "explanation": "Flapping ports indicate physical issues, duplex mismatch, or BPDU-related problems (STP reconvergence)."
+    "explanation": "フラッピングポートは物理的な問題、デュプレックス不一致、またはBPDU関連問題(STP再収束)を示す。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "A user can ping an IP but cannot reach a website by name. What is the issue?",
+    "category": "トラブルシューティング",
+    "question": "ユーザーがIPアドレスにはpingできるがWebサイト名ではアクセスできない。問題は何か。",
     "options": [
       {
-        "text": "DNS resolution failure",
+        "text": "DNS解決エラー",
         "correct": true
       },
       {
-        "text": "Firewall blocking ICMP",
+        "text": "ファイアウォールがICMPをブロック",
         "correct": false
       },
       {
-        "text": "Routing issue",
+        "text": "ルーティング問題",
         "correct": false
       },
       {
-        "text": "MTU problem",
+        "text": "MTU問題",
         "correct": false
       }
     ],
-    "explanation": "Ping by IP works = network is fine. Name resolution fails = DNS issue. Check DNS server settings and DNS server status."
+    "explanation": "IPでのpingが機能 = ネットワーク正常。名前解決が失敗 = DNS問題。DNSサーバー設定とDNSサーバー状態を確認。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What does intermittent connectivity between two sites suggest?",
+    "category": "トラブルシューティング",
+    "question": "2サイト間で断続的な接続性がある場合、何を示唆するか。",
     "options": [
       {
-        "text": "Unstable WAN link, flapping interface, or intermittent routing",
+        "text": "不安定なWANリンク、フラッピングインターフェース、または断続的なルーティング",
         "correct": true
       },
       {
-        "text": "DNS issue",
+        "text": "DNS問題",
         "correct": false
       },
       {
-        "text": "Application misconfiguration",
+        "text": "アプリケーション設定ミス",
         "correct": false
       },
       {
-        "text": "Certificate expiration",
+        "text": "証明書の期限切れ",
         "correct": false
       }
     ],
-    "explanation": "Intermittent connectivity usually indicates physical layer instability or routing protocol flapping."
+    "explanation": "断続的な接続性は通常、物理層の不安定性またはルーティングプロトコルのフラッピングを示す。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "You see high CPU utilization on a router. What could be the cause?",
+    "category": "トラブルシューティング",
+    "question": "ルーターのCPU使用率が高い場合、考えられる原因は何か。",
     "options": [
       {
-        "text": "Process-switched traffic, routing table instability, or ACL processing",
+        "text": "プロセススイッチング、ルーティングテーブル不安定、またはACL処理",
         "correct": true
       },
       {
-        "text": "Too many VLANs",
+        "text": "VLANが多すぎる",
         "correct": false
       },
       {
-        "text": "Excessive bandwidth",
+        "text": "帯域が過剰",
         "correct": false
       },
       {
-        "text": "Low memory",
+        "text": "メモリ不足",
         "correct": false
       }
     ],
-    "explanation": "High router CPU: process switching (not CEF), routing flaps, ACL logging, excessive SNMP polling, or attacks."
+    "explanation": "ルーターの高CPU: プロセススイッチング(CEFでない)、ルーティングフラップ、ACLログ、過剰なSNMPポーリング、または攻撃。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "A VPN tunnel keeps dropping. What should you check first?",
+    "category": "トラブルシューティング",
+    "question": "VPNトンネルが頻繁に切断される。まず何を確認すべきか。",
     "options": [
       {
-        "text": "IKE keepalive settings, NAT timeout, and internet stability",
+        "text": "IKEキープアライブ設定、NATタイムアウト、インターネット安定性",
         "correct": true
       },
       {
-        "text": "Firewall rules only",
+        "text": "ファイアウォールルールのみ",
         "correct": false
       },
       {
-        "text": "Certificate validity only",
+        "text": "証明書の有効性のみ",
         "correct": false
       },
       {
-        "text": "MTU size only",
+        "text": "MTUサイズのみ",
         "correct": false
       }
     ],
-    "explanation": "VPN drops: check NAT keepalive, DPD (dead peer detection), ISP stability, Phase 1/2 lifetimes, and NAT-T support."
+    "explanation": "VPN切断: NATキープアライブ、DPD(デッドピア検出)、ISP安定性、フェーズ1/2ライフタイム、NAT-Tサポートを確認。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What is the OSI layer troubleshooting approach?",
+    "category": "トラブルシューティング",
+    "question": "OSIモデルベースのトラブルシューティングアプローチとは何か。",
     "options": [
       {
-        "text": "Start at Layer 1 (physical) and work up systematically",
+        "text": "レイヤ1(物理)から開始し、体系的に上に向かって進める",
         "correct": true
       },
       {
-        "text": "Start at Layer 7 and work down",
+        "text": "レイヤ7から開始し下に向かう",
         "correct": false
       },
       {
-        "text": "Check random layers",
+        "text": "ランダムなレイヤをチェック",
         "correct": false
       },
       {
-        "text": "Only check Layer 3",
+        "text": "レイヤ3のみをチェック",
         "correct": false
       }
     ],
-    "explanation": "Bottom-up approach: physical (cable/link) -> data link (MAC/VLAN) -> network (IP/routing) -> transport -> application."
+    "explanation": "ボトムアップアプローチ: 物理(ケーブル/リンク) -> データリンク(MAC/VLAN) -> ネットワーク(IP/ルーティング) -> トランスポート -> アプリケーション。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "After changing VLAN configuration, devices in the VLAN cannot communicate. What is most likely wrong?",
+    "category": "トラブルシューティング",
+    "question": "VLAN設定変更後、VLAN内のデバイスが通信できない。最も考えられる原因は何か。",
     "options": [
       {
-        "text": "Missing trunk configuration or native VLAN mismatch",
+        "text": "トランク設定の欠落またはネイティブVLANの不一致",
         "correct": true
       },
       {
-        "text": "Speed mismatch",
+        "text": "速度不一致",
         "correct": false
       },
       {
-        "text": "MTU too large",
+        "text": "MTUが大きすぎる",
         "correct": false
       },
       {
-        "text": "DNS failure",
+        "text": "DNS障害",
         "correct": false
       }
     ],
-    "explanation": "VLAN changes often require updating trunk allowed VLANs, ensuring consistent native VLANs, and verifying SVI/routed interface configs."
+    "explanation": "VLAN変更ではトランク許可VLANの更新、一貫したネイティブVLANの確認、SVI/ルーテッドインターフェース設定の検証が必要。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "Users report one specific application is slow while others work fine. What is the most likely cause?",
+    "category": "トラブルシューティング",
+    "question": "特定のアプリケーションだけが遅く、他は正常な場合、最も考えられる原因は何か。",
     "options": [
       {
-        "text": "Application server issue or specific firewall rule/QoS policy",
+        "text": "アプリケーションサーバーの問題または特定のファイアウォールルール/QoSポリシー",
         "correct": true
       },
       {
-        "text": "Network-wide congestion",
+        "text": "ネットワーク全体の輻輳",
         "correct": false
       },
       {
-        "text": "DNS failure",
+        "text": "DNS障害",
         "correct": false
       },
       {
-        "text": "Cable damage",
+        "text": "ケーブルの損傷",
         "correct": false
       }
     ],
-    "explanation": "Specific app slowness while others work = likely app server, specific ACL/rate limit, or QoS policy affecting that traffic."
+    "explanation": "特定アプリのみ遅い = アプリサーバー、特定ACL/レート制限、またはQoSポリシーがそのトラフィックに影響している可能性。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What command shows the routing table on a Cisco device?",
+    "category": "トラブルシューティング",
+    "question": "Ciscoデバイスでルーティングテーブルを表示するコマンドはどれか。",
     "options": [
       {
         "text": "show ip route",
@@ -1193,1110 +1193,1110 @@
         "correct": false
       }
     ],
-    "explanation": "show ip route displays all routes: connected, static, and dynamic (OSPF, BGP, etc.) with metrics."
+    "explanation": "show ip routeは全ルートを表示: connected、static、dynamic(OSPF, BGPなど)とメトリック付き。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "A broadcast storm is detected. What is the first action?",
+    "category": "トラブルシューティング",
+    "question": "ブロードキャストストームが検出された場合の最初の対応は何か。",
     "options": [
       {
-        "text": "Check for switching loops and verify STP is functioning",
+        "text": "スイッチングループを確認し、STPが正常に機能していることを検証",
         "correct": true
       },
       {
-        "text": "Reboot all switches",
+        "text": "全スイッチの再起動",
         "correct": false
       },
       {
-        "text": "Block all broadcast traffic",
+        "text": "全ブロードキャストトラフィックのブロック",
         "correct": false
       },
       {
-        "text": "Disconnect the firewall",
+        "text": "ファイアウォールの切断",
         "correct": false
       }
     ],
-    "explanation": "Broadcast storms are caused by switching loops. Check STP status, look for disabled ports, and verify trunk configurations."
+    "explanation": "ブロードキャストストームはスイッチングループが原因。STP状態を確認し、無効ポートを探し、トランク設定を検証。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What does 'show interfaces status' reveal?",
+    "category": "トラブルシューティング",
+    "question": "'show interfaces status'は何を表示するか。",
     "options": [
       {
-        "text": "Port status, speed, duplex, and VLAN assignment",
+        "text": "ポート状態、速度、デュプレックス、VLAN割り当て",
         "correct": true
       },
       {
-        "text": "Routing table",
+        "text": "ルーティングテーブル",
         "correct": false
       },
       {
-        "text": "CPU utilization",
+        "text": "CPU使用率",
         "correct": false
       },
       {
-        "text": "NAT translations",
+        "text": "NAT変換",
         "correct": false
       }
     ],
-    "explanation": "show interfaces status provides a quick view of all ports: connected/notconnect, speed, duplex, and VLAN."
+    "explanation": "show interfaces statusは全ポートの概要を表示: connected/notconnect、速度、デュプレックス、VLAN。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "An OSPF neighbor relationship is stuck in INIT state. What is the likely cause?",
+    "category": "トラブルシューティング",
+    "question": "OSPFネイバー関係がINIT状態で止まっている。考えられる原因は何か。",
     "options": [
       {
-        "text": "Unidirectional communication (one-way hellos) or ACL blocking",
+        "text": "一方向通信(片方向hello)またはACLによるブロック",
         "correct": true
       },
       {
-        "text": "Area mismatch",
+        "text": "エリア不一致",
         "correct": false
       },
       {
-        "text": "Wrong OSPF process ID",
+        "text": "OSPFプロセスIDの誤り",
         "correct": false
       },
       {
-        "text": "Subnet mask mismatch",
+        "text": "サブネットマスク不一致",
         "correct": false
       }
     ],
-    "explanation": "INIT = received hello from neighbor but our hello not reaching them. Check unidirectional link or ACL blocking OSPF."
+    "explanation": "INIT = ネイバーからのhelloは受信したが自helloが相手に届いていない。一方向リンクまたはOSPFをブロックするACLを確認。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What does excessive CRC errors on an interface indicate?",
+    "category": "トラブルシューティング",
+    "question": "インターフェースで過剰なCRCエラーが見られる場合、何を示すか。",
     "options": [
       {
-        "text": "Physical layer problem (cable, connector, or duplex mismatch)",
+        "text": "物理層の問題(ケーブル、コネクタ、またはデュプレックス不一致)",
         "correct": true
       },
       {
-        "text": "Software misconfiguration",
+        "text": "ソフトウェア設定ミス",
         "correct": false
       },
       {
-        "text": "Routing issue",
+        "text": "ルーティング問題",
         "correct": false
       },
       {
-        "text": "DNS problem",
+        "text": "DNS問題",
         "correct": false
       }
     ],
-    "explanation": "CRC errors are Layer 1 issues: damaged cables, bad connectors, EMI, or duplex mismatch causing collisions."
+    "explanation": "CRCエラーはレイヤ1の問題: 損傷ケーブル、不良コネクタ、EMI、またはデュプレックス不一致によるコリジョン。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "Ping works but SSH does not. What could be the issue?",
+    "category": "トラブルシューティング",
+    "question": "pingは機能するがSSHができない。考えられる問題は何か。",
     "options": [
       {
-        "text": "Firewall blocking TCP port 22, or SSH service not running",
+        "text": "ファイアウォールがTCPポート22をブロックしているかSSHサービスが稼働していない",
         "correct": true
       },
       {
-        "text": "DNS failure",
+        "text": "DNS障害",
         "correct": false
       },
       {
-        "text": "Routing issue",
+        "text": "ルーティング問題",
         "correct": false
       },
       {
-        "text": "Subnet mask error",
+        "text": "サブネットマスクの誤り",
         "correct": false
       }
     ],
-    "explanation": "Ping (ICMP) works = network is reachable. SSH (TCP 22) fails = firewall, ACL, or service not running."
+    "explanation": "ping(ICMP)が機能 = ネットワーク到達可能。SSH(TCP 22)が失敗 = ファイアウォール、ACL、またはサービス未稼働。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What does 'show logging' on a network device show?",
+    "category": "トラブルシューティング",
+    "question": "ネットワークデバイスで'show logging'は何を表示するか。",
     "options": [
       {
-        "text": "System logs including errors, warnings, and events",
+        "text": "エラー、警告、イベントを含むシステムログ",
         "correct": true
       },
       {
-        "text": "Routing updates",
+        "text": "ルーティングアップデート",
         "correct": false
       },
       {
-        "text": "Packet captures",
+        "text": "パケットキャプチャ",
         "correct": false
       },
       {
-        "text": "Traffic statistics",
+        "text": "トラフィック統計",
         "correct": false
       }
     ],
-    "explanation": "show logging displays buffered logs: interface status changes, ACL hits, OSPF events, errors, and system messages."
+    "explanation": "show loggingはバッファログを表示: インターフェース状態変更、ACLヒット、OSPFイベント、エラー、システムメッセージ。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "Users on VLAN 10 cannot reach VLAN 20. What should you check?",
+    "category": "トラブルシューティング",
+    "question": "VLAN 10のユーザーがVLAN 20に到達できない。何を確認すべきか。",
     "options": [
       {
-        "text": "Inter-VLAN routing configuration (SVI, router, or Layer 3 switch)",
+        "text": "VLAN間ルーティング設定(SVI、ルーター、またはレイヤ3スイッチ)",
         "correct": true
       },
       {
-        "text": "VLAN ACLs only",
+        "text": "VLAN ACLのみ",
         "correct": false
       },
       {
-        "text": "STP configuration",
+        "text": "STP設定",
         "correct": false
       },
       {
-        "text": "Port security",
+        "text": "ポートセキュリティ",
         "correct": false
       }
     ],
-    "explanation": "Inter-VLAN requires routing: SVI on Layer 3 switch, router-on-a-stick, or external router. Verify routing is enabled and correct."
+    "explanation": "VLAN間通信にはルーティングが必要: レイヤ3スイッチのSVI、ルータオンスティック、または外部ルーター。ルーティングが有効で正確か確認。"
   },
   {
-    "category": "Troubleshooting",
-    "question": "What is a split-half troubleshooting technique?",
+    "category": "トラブルシューティング",
+    "question": "分割半分(split-half)トラブルシューティング手法とは何か。",
     "options": [
       {
-        "text": "Dividing the network in half to isolate which section contains the fault",
+        "text": "ネットワークを半分に分割して障害が含まれるセクションを特定すること",
         "correct": true
       },
       {
-        "text": "Splitting cables",
+        "text": "ケーブルを分割すること",
         "correct": false
       },
       {
-        "text": "Dividing users into two groups",
+        "text": "ユーザーを2グループに分割すること",
         "correct": false
       },
       {
-        "text": "Using two separate tools",
+        "text": "2つの別ツールを使用すること",
         "correct": false
       }
     ],
-    "explanation": "Split-half: test at the midpoint to determine if the issue is in the first or second half, then narrow down further."
+    "explanation": "分割半分: 中間点でテストし問題が前半か後半かを判定し、さらに絞り込む。"
   },
   {
-    "category": "Security Design",
-    "question": "What is the recommended firewall placement in a network with DMZ?",
+    "category": "セキュリティ設計",
+    "question": "DMZがあるネットワークでの推奨ファイアウォール配置はどれか。",
     "options": [
       {
-        "text": "Firewall between internet and DMZ, and between DMZ and internal network",
+        "text": "インターネットとDMZの間、およびDMZと内部ネットワークの間にファイアウォール",
         "correct": true
       },
       {
-        "text": "One firewall only at the internet edge",
+        "text": "インターネットエッジに1台のみ",
         "correct": false
       },
       {
-        "text": "Firewall on each switch",
+        "text": "各スイッチにファイアウォール",
         "correct": false
       },
       {
-        "text": "No firewall in DMZ",
+        "text": "DMZにファイアウォールなし",
         "correct": false
       }
     ],
-    "explanation": "DMZ design: internet -> outer firewall -> DMZ -> inner firewall -> internal. Two firewalls provide defense in depth."
+    "explanation": "DMZ設計: インターネット -> 外部ファイアウォール -> DMZ -> 内部ファイアウォール -> 内部。2台のファイアウォールで防御の深層化。"
   },
   {
-    "category": "Security Design",
-    "question": "What firewall rule should be applied to traffic from DMZ to internal network?",
+    "category": "セキュリティ設計",
+    "question": "DMZから内部ネットワークへのトラフィックに適用すべきファイアウォールルールはどれか。",
     "options": [
       {
-        "text": "Allow only specific protocols/ports needed (deny by default)",
+        "text": "必要なプロトコル/ポートのみ許可(デフォルト拒否)",
         "correct": true
       },
       {
-        "text": "Allow all traffic",
+        "text": "全トラフィック許可",
         "correct": false
       },
       {
-        "text": "Deny all traffic",
+        "text": "全トラフィック拒否",
         "correct": false
       },
       {
-        "text": "Allow only ICMP",
+        "text": "ICMPのみ許可",
         "correct": false
       }
     ],
-    "explanation": "DMZ-to-internal: allow only what is necessary (e.g., database port from web server). Everything else denied."
+    "explanation": "DMZ-内部: 必要なもののみ許可(例: WebサーバーからのDBポート)。他は全て拒否。"
   },
   {
-    "category": "Security Design",
-    "question": "In a VPN design, where should the VPN concentrator be placed?",
+    "category": "セキュリティ設計",
+    "question": "VPN設計でVPNコンセントレータをどこに配置すべきか。",
     "options": [
       {
-        "text": "At the network edge, behind the internet-facing firewall (or integrated)",
+        "text": "ネットワークエッジ、インターネット向けファイアウォールの背後(または統合)",
         "correct": true
       },
       {
-        "text": "Inside the internal network",
+        "text": "内部ネットワーク内",
         "correct": false
       },
       {
-        "text": "In the DMZ only",
+        "text": "DMZのみ",
         "correct": false
       },
       {
-        "text": "On each endpoint",
+        "text": "各エンドポイントに",
         "correct": false
       }
     ],
-    "explanation": "VPN concentrators typically sit at the edge, terminating remote tunnels and inspecting traffic before entering the internal network."
+    "explanation": "VPNコンセントレータは通常エッジに配置し、リモートトンネルを終端し内部ネットワークに入る前にトラフィックを検査。"
   },
   {
-    "category": "Security Design",
-    "question": "What is a zero-trust network architecture?",
+    "category": "セキュリティ設計",
+    "question": "ゼロトラストネットワークアーキテクチャとは何か。",
     "options": [
       {
-        "text": "Never trust, always verify; authenticate and authorize every access request regardless of location",
+        "text": "常に検証、常に信頼しない; 位置に関係なく全アクセス要求を認証・認可",
         "correct": true
       },
       {
-        "text": "Trust all internal traffic",
+        "text": "全内部トラフィックを信頼",
         "correct": false
       },
       {
-        "text": "Only use VPN for security",
+        "text": "セキュリティはVPNのみを使用",
         "correct": false
       },
       {
-        "text": "Block all external traffic",
+        "text": "全外部トラフィックをブロック",
         "correct": false
       }
     ],
-    "explanation": "Zero trust removes the trusted internal network concept. Every request is authenticated, authorized, and encrypted."
+    "explanation": "ゼロトラストは信頼済み内部ネットワークの概念を排除。全リクエストが認証、認可、暗号化される。"
   },
   {
-    "category": "Security Design",
-    "question": "What is the recommended NAC deployment for a corporate network?",
+    "category": "セキュリティ設計",
+    "question": "企業ネットワークでの推奨NACデプロイはどれか。",
     "options": [
       {
-        "text": "802.1X on all access ports with RADIUS backend",
+        "text": "全アクセスポートで802.1XをRADIUSバックエンドで使用",
         "correct": true
       },
       {
-        "text": "MAC filtering on switches",
+        "text": "スイッチでMACフィルタリング",
         "correct": false
       },
       {
-        "text": "Open access for all",
+        "text": "全員にオープンアクセス",
         "correct": false
       },
       {
-        "text": "VPN only",
+        "text": "VPNのみ",
         "correct": false
       }
     ],
-    "explanation": "802.1X provides port-level authentication, preventing unauthorized devices. RADIUS manages credentials and policies."
+    "explanation": "802.1Xはポートレベル認証を提供し、不正デバイスを防止。RADIUSが資格情報とポリシーを管理。"
   },
   {
-    "category": "Security Design",
-    "question": "What is a firewall rule for allowing web traffic from internet to DMZ?",
+    "category": "セキュリティ設計",
+    "question": "インターネットからDMZへのWebトラフィックを許可するファイアウォールルールはどれか。",
     "options": [
       {
-        "text": "Allow TCP/80 and TCP/443 to DMZ web servers, deny all else",
+        "text": "DMZ WebサーバーへのTCP/80とTCP/443を許可、他は全て拒否",
         "correct": true
       },
       {
-        "text": "Allow all TCP ports",
+        "text": "全TCPポート許可",
         "correct": false
       },
       {
-        "text": "Allow TCP/3389 (RDP)",
+        "text": "TCP/3389(RDP)許可",
         "correct": false
       },
       {
-        "text": "Allow all UDP traffic",
+        "text": "全UDPトラフィック許可",
         "correct": false
       }
     ],
-    "explanation": "DMZ web rules: allow only HTTP/HTTPS to web server IPs. Block everything else. No internal server access."
+    "explanation": "DMZ Webルール: WebサーバーIPへのHTTP/HTTPSのみ許可。他を全てブロック。内部サーバーアクセスなし。"
   },
   {
-    "category": "Security Design",
-    "question": "Where should IDS/IPS be deployed?",
+    "category": "セキュリティ設計",
+    "question": "IDS/IPSはどこにデプロイすべきか。",
     "options": [
       {
-        "text": "At network boundaries and critical internal segments (inline for IPS, span for IDS)",
+        "text": "ネットワーク境界と重要な内部セグメント(IPSはインライン、IDSはSPAN)",
         "correct": true
       },
       {
-        "text": "On end-user laptops only",
+        "text": "エンドユーザーのノートPCのみ",
         "correct": false
       },
       {
-        "text": "Only at the internet edge",
+        "text": "インターネットエッジのみ",
         "correct": false
       },
       {
-        "text": "On wireless access points only",
+        "text": "ワイヤレスAPのみ",
         "correct": false
       }
     ],
-    "explanation": "IDS/IPS at internet edge, DMZ, and between internal segments. Inline (IPS) blocks; passive (IDS) monitors."
+    "explanation": "IDS/IPSはインターネットエッジ、DMZ、内部セグメント間に配置。インライン(IPS)はブロック、パッシブ(IDS)は監視。"
   },
   {
-    "category": "Security Design",
-    "question": "What is the principle of least privilege in firewall design?",
+    "category": "セキュリティ設計",
+    "question": "ファイアウォール設計における最小権限の原則とは何か。",
     "options": [
       {
-        "text": "Allow only the minimum traffic required; deny everything else by default",
+        "text": "必要最小限のトラフィックのみ許可; デフォルトで他は全て拒否",
         "correct": true
       },
       {
-        "text": "Allow all traffic and block specific threats",
+        "text": "全トラフィックを許可して特定の脅威をブロック",
         "correct": false
       },
       {
-        "text": "Allow traffic from trusted IPs only",
+        "text": "信頼済みIPからのトラフィックのみ許可",
         "correct": false
       },
       {
-        "text": "No default deny rule",
+        "text": "デフォルト拒否ルールなし",
         "correct": false
       }
     ],
-    "explanation": "Implicit deny: only explicitly permitted traffic passes. Start with 'deny all', then add specific allow rules."
+    "explanation": "暗黙的拒否: 明示的に許可されたトラフィックのみ通過。'deny all'で開始し、特定の許可ルールを追加。"
   },
   {
-    "category": "Security Design",
-    "question": "What is a bastion host?",
+    "category": "セキュリティ設計",
+    "question": "バスティオンホストとは何か。",
     "options": [
       {
-        "text": "A hardened server exposed to the internet for specific services (mail, web, DNS)",
+        "text": "インターネットに公開された特定サービス(メール、Web、DNS)用にハードニングされたサーバー",
         "correct": true
       },
       {
-        "text": "The main firewall",
+        "text": "メインファイアウォール",
         "correct": false
       },
       {
-        "text": "A backup server",
+        "text": "バックアップサーバー",
         "correct": false
       },
       {
-        "text": "An internal database server",
+        "text": "内部データベースサーバー",
         "correct": false
       }
     ],
-    "explanation": "Bastion hosts are hardened systems in the DMZ that handle external-facing services with minimal attack surface."
+    "explanation": "バスティオンホストはDMZで外部向けサービスを処理するハードニングされたシステムで攻撃面を最小化。"
   },
   {
-    "category": "Security Design",
-    "question": "What log retention period is typical for network security events?",
+    "category": "セキュリティ設計",
+    "question": "ネットワークセキュリティイベントの一般的なログ保持期間はどれくらいか。",
     "options": [
       {
-        "text": "6-12 months for security logs, longer for compliance requirements",
+        "text": "セキュリティログで6-12ヶ月、コンプライアンス要件でより長期間",
         "correct": true
       },
       {
-        "text": "1 week",
+        "text": "1週間",
         "correct": false
       },
       {
-        "text": "No retention needed",
+        "text": "保持不要",
         "correct": false
       },
       {
-        "text": "Forever",
+        "text": "永久",
         "correct": false
       }
     ],
-    "explanation": "Security best practice: 6-12 months minimum. Compliance (PCI-DSS, SOX) may require 1-7 years."
+    "explanation": "セキュリティのベストプラクティス: 最低6-12ヶ月。コンプライアンス(PCI-DSS, SOX)は1-7年を要求する場合がある。"
   },
   {
-    "category": "Security Design",
-    "question": "What is network microsegmentation?",
+    "category": "セキュリティ設計",
+    "question": "ネットワークマイクロセグメンテーションとは何か。",
     "options": [
       {
-        "text": "Creating security zones at the workload level within the data center",
+        "text": "データセンター内でワークロードレベルにセキュリティゾーンを作成すること",
         "correct": true
       },
       {
-        "text": "Adding more VLANs",
+        "text": "VLANを追加すること",
         "correct": false
       },
       {
-        "text": "Segmenting the physical network",
+        "text": "物理ネットワークをセグメント化すること",
         "correct": false
       },
       {
-        "text": "Using multiple firewalls",
+        "text": "複数ファイアウォールを使用すること",
         "correct": false
       }
     ],
-    "explanation": "Microsegmentation isolates individual workloads (VMs/containers) with per-workload firewalls, limiting lateral movement."
+    "explanation": "マイクロセグメンテーションは個別ワークロード(VM/コンテナ)をペーワークロードファイアウォールで分離し、ラテラルムーブメントを制限。"
   },
   {
-    "category": "Security Design",
-    "question": "What should be the default rule at the end of every firewall ACL?",
+    "category": "セキュリティ設計",
+    "question": "全ファイアウォールACLの最後に置くべきデフォルトルールは何か。",
     "options": [
       {
-        "text": "Deny all (implicit or explicit)",
+        "text": "全て拒否(暗黙的または明示的)",
         "correct": true
       },
       {
-        "text": "Allow all",
+        "text": "全て許可",
         "correct": false
       },
       {
-        "text": "Log all",
+        "text": "全てログ",
         "correct": false
       },
       {
-        "text": "No default rule",
+        "text": "デフォルトルールなし",
         "correct": false
       }
     ],
-    "explanation": "Default deny ensures any unlisted traffic is blocked. Most firewalls have implicit deny, but explicit is clearer."
+    "explanation": "デフォルト拒否はリストにないトラフィックがブロックされることを保証。ほとんどのファイアウォールは暗黙的拒否を持つが、明示的が明確。"
   },
   {
-    "category": "Security Design",
-    "question": "What is the purpose of a network security policy?",
+    "category": "セキュリティ設計",
+    "question": "ネットワークセキュリティポリシーの目的は何か。",
     "options": [
       {
-        "text": "Define rules, procedures, and guidelines for protecting network resources",
+        "text": "ネットワークリソース保護のためのルール、手順、ガイドラインの定義",
         "correct": true
       },
       {
-        "text": "Replace firewall rules",
+        "text": "ファイアウォールルールの置き換え",
         "correct": false
       },
       {
-        "text": "Configure routers automatically",
+        "text": "ルーターの自動設定",
         "correct": false
       },
       {
-        "text": "Monitor bandwidth usage",
+        "text": "帯域使用量の監視",
         "correct": false
       }
     ],
-    "explanation": "Security policies document what is allowed, prohibited, and required, serving as the foundation for technical controls."
+    "explanation": "セキュリティポリシーは許可、禁止、必要な事項を文書化し、技術的コントロールの基盤となる。"
   },
   {
-    "category": "Security Design",
-    "question": "Where should DNS servers be placed in a DMZ design?",
+    "category": "セキュリティ設計",
+    "question": "DMZ設計でDNSサーバーはどこに配置すべきか。",
     "options": [
       {
-        "text": "Internal DNS for internal zone; external DNS in DMZ for public records",
+        "text": "内部ゾーン用内部DNS; 公開レコード用DMZ内外部DNS",
         "correct": true
       },
       {
-        "text": "Both in the DMZ",
+        "text": "両方ともDMZ内",
         "correct": false
       },
       {
-        "text": "Both on the internal network",
+        "text": "両方とも内部ネットワーク",
         "correct": false
       },
       {
-        "text": "No DNS needed",
+        "text": "DNS不要",
         "correct": false
       }
     ],
-    "explanation": "Split DNS: internal DNS serves internal records, external DNS in DMZ serves public records. Never expose internal DNS."
+    "explanation": "スプリットDNS: 内部DNSは内部レコードを提供、DMZの外部DNSは公開レコードを提供。内部DNSは公開しない。"
   },
   {
-    "category": "Security Design",
-    "question": "What is a next-generation firewall (NGFW)?",
+    "category": "セキュリティ設計",
+    "question": "次世代ファイアウォール(NGFW)とは何か。",
     "options": [
       {
-        "text": "A firewall combining traditional filtering with application awareness, IPS, and threat intelligence",
+        "text": "従来のフィルタリングにアプリケーション認識、IPS、脅威インテリジェンスを統合したファイアウォール",
         "correct": true
       },
       {
-        "text": "A hardware upgrade only",
+        "text": "ハードウェアアップグレードのみ",
         "correct": false
       },
       {
-        "text": "A cloud-only firewall",
+        "text": "クラウドオンリーファイアウォール",
         "correct": false
       },
       {
-        "text": "An open-source firewall",
+        "text": "オープンソースファイアウォール",
         "correct": false
       }
     ],
-    "explanation": "NGFW adds application-level visibility, integrated IPS, SSL inspection, sandboxing, and user identity awareness."
+    "explanation": "NGFWはアプリケーションレベル可視性、統合IPS、SSL検査、サンドボックス、ユーザーID認識を追加。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is a VPC peering limitation?",
+    "category": "クラウドネットワーク",
+    "question": "VPCピアリングの制限は何か。",
     "options": [
       {
-        "text": "Peered VPCs cannot have overlapping CIDR blocks",
+        "text": "ピアリングされたVPCはCIDRブロックが重複してはならない",
         "correct": true
       },
       {
-        "text": "VPC peering does not support TCP",
+        "text": "VPCピアリングはTCPをサポートしない",
         "correct": false
       },
       {
-        "text": "Peering is limited to same region only",
+        "text": "ピアリングは同一リージョンのみに制限される",
         "correct": false
       },
       {
-        "text": "VPC peering requires a VPN",
+        "text": "VPCピアリングにはVPNが必要",
         "correct": false
       }
     ],
-    "explanation": "VPC peering requires non-overlapping CIDRs. Overlapping ranges cannot communicate via peering."
+    "explanation": "VPCピアリングは重複しないCIDRを必要とする。重複範囲はピアリング経由で通信不可。"
   },
   {
-    "category": "Cloud Network",
-    "question": "How do you connect an on-premises data center to AWS VPC?",
+    "category": "クラウドネットワーク",
+    "question": "オンプレミスデータセンターをAWS VPCに接続するにはどうするか。",
     "options": [
       {
-        "text": "AWS Direct Connect or Site-to-Site VPN",
+        "text": "AWS Direct ConnectまたはサイトツーサイトVPN",
         "correct": true
       },
       {
-        "text": "Only public internet",
+        "text": "パブリックインターネットのみ",
         "correct": false
       },
       {
-        "text": "Physical cable to AWS data center",
+        "text": "AWSデータセンターへの物理ケーブル",
         "correct": false
       },
       {
-        "text": "VPC peering",
+        "text": "VPCピアリング",
         "correct": false
       }
     ],
-    "explanation": "Direct Connect (dedicated/private) or VPN over internet (IPsec) connect on-premises to VPC."
+    "explanation": "Direct Connect(専用/プライベート)またはVPN over インターネット(IPsec)でオンプレミスをVPCに接続。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is an Azure Virtual Network (VNet)?",
+    "category": "クラウドネットワーク",
+    "question": "Azure Virtual Network(VNet)とは何か。",
     "options": [
       {
-        "text": "An isolated virtual network boundary for Azure resources",
+        "text": "Azureリソース用の分離された仮想ネットワーク境界",
         "correct": true
       },
       {
-        "text": "A physical network segment",
+        "text": "物理ネットワークセグメント",
         "correct": false
       },
       {
-        "text": "A DNS zone",
+        "text": "DNSゾーン",
         "correct": false
       },
       {
-        "text": "A load balancer",
+        "text": "ロードバランサー",
         "correct": false
       }
     ],
-    "explanation": "Azure VNet provides isolation, segmentation (subnets), routing, filtering (NSG), and peering for Azure resources."
+    "explanation": "Azure VNetは分離、セグメンテーション(サブネット)、ルーティング、フィルタリング(NSG)、ピアリングをAzureリソースに提供。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is GCP VPC compared to AWS VPC?",
+    "category": "クラウドネットワーク",
+    "question": "GCP VPCとAWS VPCの違いは何か。",
     "options": [
       {
-        "text": "GCP VPC is global by default; AWS VPC is regional",
+        "text": "GCP VPCはデフォルトでグローバル; AWS VPCはリージョナル",
         "correct": true
       },
       {
-        "text": "They are identical",
+        "text": "同一",
         "correct": false
       },
       {
-        "text": "GCP VPC is regional only",
+        "text": "GCP VPCはリージョナルのみ",
         "correct": false
       },
       {
-        "text": "AWS VPC is global by default",
+        "text": "AWS VPCはデフォルトでグローバル",
         "correct": false
       }
     ],
-    "explanation": "GCP VPC spans all regions by default (subnets in specific regions). AWS VPC is regional (VPC peering for inter-region)."
+    "explanation": "GCP VPCはデフォルトで全リージョンにまたがる(サブネットは特定リージョン)。AWS VPCはリージョナル(リージョン間はVPCピアリング)。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is a cloud NAT gateway used for?",
+    "category": "クラウドネットワーク",
+    "question": "クラウドNATゲートウェイは何に使用されるか。",
     "options": [
       {
-        "text": "Enabling private subnet resources to access the internet",
+        "text": "プライベートサブネットリソースのインターネットアクセスを有効化",
         "correct": true
       },
       {
-        "text": "Public IP assignment",
+        "text": "パブリックIP割り当て",
         "correct": false
       },
       {
-        "text": "DNS resolution",
+        "text": "DNS解決",
         "correct": false
       },
       {
-        "text": "VPN termination",
+        "text": "VPN終端",
         "correct": false
       }
     ],
-    "explanation": "NAT gateways provide outbound-only internet access for resources without public IPs, using a managed elastic IP."
+    "explanation": "NATゲートウェイはパブリックIPのないリソースにアウトバウンドのみのインターネットアクセスを提供し、管理されたElastic IPを使用。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is the difference between Azure NSG and AWS Security Group?",
+    "category": "クラウドネットワーク",
+    "question": "Azure NSGとAWSセキュリティグループの違いは何か。",
     "options": [
       {
-        "text": "NSGs are stateless and subnet-level; AWS SGs are stateful and instance-level",
+        "text": "NSGはステートレスでサブネットレベル; AWS SGはステートフルでインスタンスレベル",
         "correct": true
       },
       {
-        "text": "They are functionally identical",
+        "text": "機能的に同一",
         "correct": false
       },
       {
-        "text": "AWS SGs are stateless",
+        "text": "AWS SGはステートレス",
         "correct": false
       },
       {
-        "text": "NSGs are stateful",
+        "text": "NSGはステートフル",
         "correct": false
       }
     ],
-    "explanation": "Azure NSGs can be applied to subnets or NICs (stateful). AWS SGs are instance-level (stateful). Both support allow/deny rules."
+    "explanation": "Azure NSGはサブネットまたはNICに適用可能(ステートフル)。AWS SGはインスタンスレベル(ステートフル)。両方とも許可/拒否ルールをサポート。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is cloud SD-WAN used for?",
+    "category": "クラウドネットワーク",
+    "question": "クラウドSD-WANは何に使用されるか。",
     "options": [
       {
-        "text": "Intelligent connectivity between cloud environments, branches, and data centers",
+        "text": "クラウド環境、拠点、データセンター間のインテリジェント接続",
         "correct": true
       },
       {
-        "text": "Replacing cloud VPCs",
+        "text": "クラウドVPCの置き換え",
         "correct": false
       },
       {
-        "text": "Cloud load balancing only",
+        "text": "クラウドロードバランシングのみ",
         "correct": false
       },
       {
-        "text": "Cloud storage management",
+        "text": "クラウドストレージ管理",
         "correct": false
       }
     ],
-    "explanation": "Cloud SD-WAN provides optimized, secure connectivity across cloud VPCs, on-prem, and branches with path selection."
+    "explanation": "クラウドSD-WANはクラウドVPC、オンプレミス、拠点間でパス選択による最適化されたセキュア接続を提供。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is AWS Transit Gateway?",
+    "category": "クラウドネットワーク",
+    "question": "AWS Transit Gatewayとは何か。",
     "options": [
       {
-        "text": "A hub for connecting multiple VPCs and VPNs through a single gateway",
+        "text": "複数のVPCとVPNを単一ゲートウェイ経由で接続するハブ",
         "correct": true
       },
       {
-        "text": "An internet gateway",
+        "text": "インターネットゲートウェイ",
         "correct": false
       },
       {
-        "text": "A NAT service",
+        "text": "NATサービス",
         "correct": false
       },
       {
-        "text": "A DNS service",
+        "text": "DNSサービス",
         "correct": false
       }
     ],
-    "explanation": "Transit Gateway acts as a central hub, simplifying connectivity. Without it, you need full-mesh VPC peering (N*(N-1)/2 connections)."
+    "explanation": "Transit Gatewayは中央ハブとして機能し、接続性を簡素化。なしの場合はフルメッシュVPCピアリング(N*(N-1)/2接続)が必要。"
   },
   {
-    "category": "Cloud Network",
-    "question": "How do you achieve high availability for cloud network resources?",
+    "category": "クラウドネットワーク",
+    "question": "クラウドネットワークリソースの高可用性をどのように実現するか。",
     "options": [
       {
-        "text": "Deploy across multiple availability zones with redundant components",
+        "text": "複数アベイラビリティゾーンに冗長コンポーネントをデプロイ",
         "correct": true
       },
       {
-        "text": "Use a single large instance",
+        "text": "1つの大規模インスタンスを使用",
         "correct": false
       },
       {
-        "text": "Rely on cloud provider default settings",
+        "text": "クラウドプロバイダーのデフォルト設定に依存",
         "correct": false
       },
       {
-        "text": "Backup to external storage",
+        "text": "外部ストレージにバックアップ",
         "correct": false
       }
     ],
-    "explanation": "Multi-AZ deployment ensures resilience. Distribute resources across AZs with load balancers for automatic failover."
+    "explanation": "マルチAZデプロイは耐障害性を確保。AZにリソースを分散し、ロードバランサーで自動フェイルオーバー。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is the AWS PrivateLink service?",
+    "category": "クラウドネットワーク",
+    "question": "AWS PrivateLinkサービスとは何か。",
     "options": [
       {
-        "text": "Private connectivity to services without traversing the public internet",
+        "text": "パブリックインターネットを経由せずサービスへのプライベート接続",
         "correct": true
       },
       {
-        "text": "A VPN replacement",
+        "text": "VPNの置き換え",
         "correct": false
       },
       {
-        "text": "A public load balancer",
+        "text": "パブリックロードバランサー",
         "correct": false
       },
       {
-        "text": "A CDN service",
+        "text": "CDNサービス",
         "correct": false
       }
     ],
-    "explanation": "PrivateLink exposes services via private IPs (Interface VPC Endpoints) without public internet exposure."
+    "explanation": "PrivateLinkはサービスをプライベートIP(Interface VPC Endpoints)で公開し、パブリックインターネットへの公開なし。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is a GCP Cloud VPN?",
+    "category": "クラウドネットワーク",
+    "question": "GCP Cloud VPNとは何か。",
     "options": [
       {
-        "text": "IPsec VPN connecting on-premises to GCP VPC networks",
+        "text": "オンプレミスとGCP VPCネットワークを接続するIPsec VPN",
         "correct": true
       },
       {
-        "text": "A web proxy service",
+        "text": "Webプロキシサービス",
         "correct": false
       },
       {
-        "text": "A DNS service",
+        "text": "DNSサービス",
         "correct": false
       },
       {
-        "text": "A container orchestration tool",
+        "text": "コンテナオーケストレーションツール",
         "correct": false
       }
     ],
-    "explanation": "GCP Cloud VPN creates IPsec tunnels between on-premises and VPC, with HA options and 3 Gbps throughput per tunnel."
+    "explanation": "GCP Cloud VPNはオンプレミスとVPC間にIPsecトンネルを作成。HAオプションとトンネルあたり3Gbpsスループット。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is the challenge of hybrid cloud networking?",
+    "category": "クラウドネットワーク",
+    "question": "ハイブリッドクラウドネットワーキングの課題は何か。",
     "options": [
       {
-        "text": "Consistent policies, connectivity, latency, and management across environments",
+        "text": "環境間での一貫したポリシー、接続性、遅延、管理",
         "correct": true
       },
       {
-        "text": "Only bandwidth limitations",
+        "text": "帯域の制限のみ",
         "correct": false
       },
       {
-        "text": "Only security concerns",
+        "text": "セキュリティの懸念のみ",
         "correct": false
       },
       {
-        "text": "No challenges with modern tools",
+        "text": "モダンツールでの課題なし",
         "correct": false
       }
     ],
-    "explanation": "Hybrid cloud networking challenges: consistent security policies, low-latency connectivity, unified management, and compliance."
+    "explanation": "ハイブリッドクラウドネットワーキングの課題: 一貫したセキュリティポリシー、低遅延接続性、統合管理、コンプライアンス。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is Azure ExpressRoute?",
+    "category": "クラウドネットワーク",
+    "question": "Azure ExpressRouteとは何か。",
     "options": [
       {
-        "text": "A private, dedicated connection to Azure (bypassing public internet)",
+        "text": "Azureへのプライベート専用接続(パブリックインターネットをバイパス)",
         "correct": true
       },
       {
-        "text": "A VPN service",
+        "text": "VPNサービス",
         "correct": false
       },
       {
-        "text": "A CDN",
+        "text": "CDN",
         "correct": false
       },
       {
-        "text": "A load balancer",
+        "text": "ロードバランサー",
         "correct": false
       }
     ],
-    "explanation": "ExpressRoute provides private, dedicated connections (1-10 Gbps) through connectivity providers, with lower latency and higher reliability."
+    "explanation": "ExpressRouteはコネクティビティプロバイダー経由のプライベート専用接続(1-10Gbps)を提供し、低遅延と高信頼性。"
   },
   {
-    "category": "Cloud Network",
-    "question": "What is a cloud network function?",
+    "category": "クラウドネットワーク",
+    "question": "クラウドネットワーク機能とは何か。",
     "options": [
       {
-        "text": "A network service (firewall, load balancer, DNS) delivered as software in the cloud",
+        "text": "ファイアウォール、ロードバランサー、DNSなどのネットワークサービスをクラウドのソフトウェアとして提供",
         "correct": true
       },
       {
-        "text": "A physical network device",
+        "text": "物理ネットワークデバイス",
         "correct": false
       },
       {
-        "text": "A cloud storage type",
+        "text": "クラウドストレージタイプ",
         "correct": false
       },
       {
-        "text": "A VM image",
+        "text": "VMイメージ",
         "correct": false
       }
     ],
-    "explanation": "Cloud network functions (NFW, ALB, Cloud DNS) are managed services replacing traditional hardware appliances."
+    "explanation": "クラウドネットワーク機能(NFW, ALB, Cloud DNS)は従来のハードウェアアプライアンスに代わるマネージドサービス。"
   },
   {
-    "category": "Cloud Network",
-    "question": "Why is cloud network monitoring important?",
+    "category": "クラウドネットワーク",
+    "question": "クラウドネットワーク監視が重要な理由は何か。",
     "options": [
       {
-        "text": "Cloud resources are ephemeral; monitoring provides visibility, alerting, and cost control",
+        "text": "クラウドリソースは一時的; 監視が可視性、アラート、コスト管理を提供",
         "correct": true
       },
       {
-        "text": "Cloud providers handle all monitoring",
+        "text": "クラウドプロバイダーが全監視を処理",
         "correct": false
       },
       {
-        "text": "Monitoring is not needed in the cloud",
+        "text": "クラウドでは監視不要",
         "correct": false
       },
       {
-        "text": "Only for cost tracking",
+        "text": "コスト追跡のみ",
         "correct": false
       }
     ],
-    "explanation": "Cloud monitoring (VPC Flow Logs, CloudWatch, Azure Monitor) provides traffic visibility, security detection, and cost optimization."
+    "explanation": "クラウド監視(VPC Flow Logs, CloudWatch, Azure Monitor)はトラフィック可視性、セキュリティ検出、コスト最適化を提供。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "A company migrates from IPv4 to IPv6. What is the recommended transition strategy?",
+    "category": "移行シナリオ",
+    "question": "企業がIPv4からIPv6に移行する場合、推奨される移行戦略はどれか。",
     "options": [
       {
-        "text": "Dual-stack deployment (run both IPv4 and IPv6 simultaneously)",
+        "text": "デュアルスタックデプロイ(IPv4とIPv6を同時に運用)",
         "correct": true
       },
       {
-        "text": "Complete IPv4 shutdown and IPv6 enablement on the same day",
+        "text": "IPv4の完全シャットダウンと同日のIPv6有効化",
         "correct": false
       },
       {
-        "text": "IPv6 only immediately",
+        "text": "直ちにIPv6のみ",
         "correct": false
       },
       {
-        "text": "No migration needed",
+        "text": "移行不要",
         "correct": false
       }
     ],
-    "explanation": "Dual-stack allows gradual migration. Both protocols coexist. Once all services support IPv6, IPv4 can be deprecated."
+    "explanation": "デュアルスタックは段階的な移行を可能にする。両プロトコルが共存。全サービスがIPv6をサポートしたらIPv4を廃止可能。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "During a network upgrade from 1 Gbps to 10 Gbps, what must be verified?",
+    "category": "移行シナリオ",
+    "question": "ネットワークを1Gbpsから10Gbpsにアップグレードする際、何を確認する必要があるか。",
     "options": [
       {
-        "text": "Cabling, switch ports, SFP modules, and fiber/lighting support 10 Gbps",
+        "text": "ケーブル、スイッチポート、SFPモジュール、ファイバ/光が10Gbpsをサポートすること",
         "correct": true
       },
       {
-        "text": "Only software upgrade needed",
+        "text": "ソフトウェアアップグレードのみ",
         "correct": false
       },
       {
-        "text": "IP addressing change required",
+        "text": "IPアドレス変更が必要",
         "correct": false
       },
       {
-        "text": "No changes to physical infrastructure",
+        "text": "物理インフラの変更不要",
         "correct": false
       }
     ],
-    "explanation": "10 Gbps upgrade requires: Cat6a/6 (copper), or fiber (SFP+), compatible switch ports, and potentially new optics."
+    "explanation": "10Gbpsアップグレードには: Cat6a/6(銅)、またはファイバ(SFP+)、対応スイッチポート、新規オプティクスが必要。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "When upgrading a flat network to a VLAN-based design, what is the main consideration?",
+    "category": "移行シナリオ",
+    "question": "フラットネットワークからVLANベース設計へのアップグレードで主な考慮事項は何か。",
     "options": [
       {
-        "text": "Planning VLAN assignments, inter-VLAN routing, and trunk configuration",
+        "text": "VLAN割り当て、VLAN間ルーティング、トランク設定の計画",
         "correct": true
       },
       {
-        "text": "Only adding more switches",
+        "text": "スイッチ追加のみ",
         "correct": false
       },
       {
-        "text": "Changing all IP addresses",
+        "text": "全IPアドレスの変更",
         "correct": false
       },
       {
-        "text": "Only updating DNS",
+        "text": "DNS更新のみ",
         "correct": false
       }
     ],
-    "explanation": "VLAN migration: identify broadcast domains, assign VLANs, configure trunks, enable inter-VLAN routing, update ACLs."
+    "explanation": "VLAN移行: ブロードキャストドメインの特定、VLAN割り当て、トランク設定、VLAN間ルーティング有効化、ACL更新。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "A company moves applications to AWS. What network changes are needed?",
+    "category": "移行シナリオ",
+    "question": "企業がアプリケーションをAWSに移行する場合、必要なネットワーク変更は何か。",
     "options": [
       {
-        "text": "Set up VPC, subnets, security groups, connectivity to on-premises, and DNS",
+        "text": "VPC、サブネット、セキュリティグループの設定、オンプレミスとの接続、DNS",
         "correct": true
       },
       {
-        "text": "Only create EC2 instances",
+        "text": "EC2インスタンス作成のみ",
         "correct": false
       },
       {
-        "text": "Only configure firewall",
+        "text": "ファイアウォール設定のみ",
         "correct": false
       },
       {
-        "text": "No network changes needed",
+        "text": "ネットワーク変更不要",
         "correct": false
       }
     ],
-    "explanation": "Cloud migration requires: VPC design, subnet planning, security groups, hybrid connectivity (VPN/Direct Connect), and DNS."
+    "explanation": "クラウド移行には: VPC設計、サブネット計画、セキュリティグループ、ハイブリッド接続(VPN/Direct Connect)、DNSが必要。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "When migrating from RIP to OSPF, what is the recommended approach?",
+    "category": "移行シナリオ",
+    "question": "RIPからOSPFへの移行で推奨されるアプローチはどれか。",
     "options": [
       {
-        "text": "Run both protocols with route redistribution, then gradually remove RIP",
+        "text": "両プロトコルを併用してルート再配布し、段階的にRIPを削除",
         "correct": true
       },
       {
-        "text": "Immediate cutover to OSPF",
+        "text": "OSPFへの即時切替",
         "correct": false
       },
       {
-        "text": "Keep RIP permanently",
+        "text": "RIPを永続的に維持",
         "correct": false
       },
       {
-        "text": "Use static routes during transition",
+        "text": "移行中はスタティックルートを使用",
         "correct": false
       }
     ],
-    "explanation": "Gradual migration: deploy OSPF, redistribute routes between RIP and OSPF, verify, then remove RIP."
+    "explanation": "段階的移行: OSPFをデプロイし、RIPとOSPF間でルート再配布、検証後にRIPを削除。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "A company upgrades from 802.11ac to 802.11ax. What must be considered?",
+    "category": "移行シナリオ",
+    "question": "企業が802.11acから802.11axにアップグレードする場合、何を考慮すべきか。",
     "options": [
       {
-        "text": "Client device compatibility, AP firmware, channel planning, and power requirements",
+        "text": "クライアントデバイスの互換性、APファームウェア、チャネル計画、電力要件",
         "correct": true
       },
       {
-        "text": "Only AP replacement needed",
+        "text": "AP交換のみ",
         "correct": false
       },
       {
-        "text": "No planning required",
+        "text": "計画不要",
         "correct": false
       },
       {
-        "text": "Only channel change",
+        "text": "チャネル変更のみ",
         "correct": false
       }
     ],
-    "explanation": "Wi-Fi 6 migration: new APs, client support, OFDMA configuration, BSS coloring, and potentially new PoE requirements."
+    "explanation": "Wi-Fi 6移行: 新AP、クライアントサポート、OFDMA設定、BSSカラーイング、新規PoE要件の可能性。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "Migrating from hub-and-spoke to SD-WAN. What is the key advantage?",
+    "category": "移行シナリオ",
+    "question": "ハブアンドスポークからSD-WANへの移行で最大の利点は何か。",
     "options": [
       {
-        "text": "Direct any-to-any connectivity, dynamic path selection, and simplified management",
+        "text": "直接のany-to-any接続、動的パス選択、簡素化された管理",
         "correct": true
       },
       {
-        "text": "Only cost savings",
+        "text": "コスト削減のみ",
         "correct": false
       },
       {
-        "text": "Only better security",
+        "text": "より良いセキュリティのみ",
         "correct": false
       },
       {
-        "text": "Only faster internet",
+        "text": "より速いインターネットのみ",
         "correct": false
       }
     ],
-    "explanation": "SD-WAN replaces hub-and-spoke MPLS with any-to-any connectivity, intelligent path selection, and centralized management."
+    "explanation": "SD-WANはハブアンドスポークMPLSをany-to-any接続、インテリジェントパス選択、集中管理に置き換える。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "When consolidating data centers, what network migration step is critical?",
+    "category": "移行シナリオ",
+    "question": "データセンター統合で重要なネットワーク移行ステップは何か。",
     "options": [
       {
-        "text": "IP address renumbering and DNS updates without disrupting services",
+        "text": "サービスを中断せずにIPアドレスの再採番とDNS更新を行うこと",
         "correct": true
       },
       {
-        "text": "Power cycling all equipment",
+        "text": "全機器の電源サイクル",
         "correct": false
       },
       {
-        "text": "Changing all VLAN IDs",
+        "text": "全VLAN IDの変更",
         "correct": false
       },
       {
-        "text": "Only backing up configurations",
+        "text": "設定のバックアップのみ",
         "correct": false
       }
     ],
-    "explanation": "DC consolidation requires careful IP planning: avoid conflicts, update DNS, migrate in phases, and maintain connectivity."
+    "explanation": "DC統合には慎重なIP計画が必要: 衝突回避、DNS更新、フェーズでの移行、接続性維持。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "Migrating from hardware load balancers to cloud load balancers. What changes?",
+    "category": "移行シナリオ",
+    "question": "ハードウェアロードバランサーからクラウドロードバランサーへの移行で何が変わるか。",
     "options": [
       {
-        "text": "Configuration format, health check methods, and TLS termination differences",
+        "text": "設定形式、ヘルスチェック方法、TLS終端の違い",
         "correct": true
       },
       {
-        "text": "No changes needed",
+        "text": "変更不要",
         "correct": false
       },
       {
-        "text": "Only IP address changes",
+        "text": "IPアドレス変更のみ",
         "correct": false
       },
       {
-        "text": "Only certificate updates",
+        "text": "証明書更新のみ",
         "correct": false
       }
     ],
-    "explanation": "Cloud LBs have different configs (target groups, listeners vs pools), managed TLS, and auto-scaling integration."
+    "explanation": "クラウドLBは異なる設定(ターゲットグループ、リスナー vs プール)、マネージドTLS、オートスケーリング統合を持つ。"
   },
   {
-    "category": "Migration Scenarios",
-    "question": "During a firewall migration, what is critical to preserve?",
+    "category": "移行シナリオ",
+    "question": "ファイアウォール移行中に保持すべき重要なものは何か。",
     "options": [
       {
-        "text": "All existing security policies (ACLs, NAT rules, VPN configs) with equivalent coverage",
+        "text": "全既存セキュリティポリシー(ACL、NATルール、VPN設定)を同等のカバレッジで保持",
         "correct": true
       },
       {
-        "text": "Only default rules",
+        "text": "デフォルトルールのみ",
         "correct": false
       },
       {
-        "text": "Only VPN configurations",
+        "text": "VPN設定のみ",
         "correct": false
       },
       {
-        "text": "Only NAT rules",
+        "text": "NATルールのみ",
         "correct": false
       }
     ],
-    "explanation": "Firewall migration: map all existing policies to new platform, test thoroughly in lab, then cutover with rollback plan."
+    "explanation": "ファイアウォール移行: 全既存ポリシーを新プラットフォームにマッピング、ラボで徹底的テスト、ロールバック計画で切替。"
   }
 ]
