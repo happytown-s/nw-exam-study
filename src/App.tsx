@@ -7,10 +7,10 @@ import Progress from './components/Progress';
 type Tab = 'quiz' | 'calc' | 'subjectb' | 'progress';
 
 const tabs: { key: Tab; label: string }[] = [
-  { key: 'quiz', label: 'Quiz' },
-  { key: 'calc', label: 'Calc Training' },
-  { key: 'subjectb', label: 'Subject B' },
-  { key: 'progress', label: 'Progress' },
+  { key: 'quiz', label: '問題集' },
+  { key: 'calc', label: '計算トレーニング' },
+  { key: 'subjectb', label: '科目B' },
+  { key: 'progress', label: '進捗' },
 ];
 
 function App() {
